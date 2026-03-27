@@ -37,3 +37,7 @@ npm run start:dev
 ```bash
 npx prisma generate
 ```
+
+The generated Prisma client is committed in `generated/prisma`, so production
+deployments on shared hosting do not need to run `prisma generate` on the
+server unless the schema changes.

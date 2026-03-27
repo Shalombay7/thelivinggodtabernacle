@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/thelivin/app.thelivinggodtabernacle.org
+    - /bin/rsync -a --delete --exclude='.git' --exclude='node_modules' --exclude='.cpanel.yml' ./ "$DEPLOYPATH"/

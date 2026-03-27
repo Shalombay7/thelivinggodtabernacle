@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { validateEnv } from './config/validation';
 import { HealthModule } from './health/health.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { ScaffoldModule } from './scaffold/scaffold.module';
 import { RequestIdMiddleware } from './common/middleware/request-id.middleware';
 
 @Module({
@@ -15,6 +16,7 @@ import { RequestIdMiddleware } from './common/middleware/request-id.middleware';
     }),
     PrismaModule,
     HealthModule,
+    ScaffoldModule,
   ],
   controllers: [AppController],
   providers: [AppService],

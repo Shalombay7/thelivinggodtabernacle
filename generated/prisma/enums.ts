@@ -9,7 +9,107 @@
 * 🟢 You can import this file directly.
 */
 
+export const UserRole = {
+  MEMBER: 'MEMBER',
+  MODERATOR: 'MODERATOR',
+  ADMIN: 'ADMIN'
+} as const
+
+export type UserRole = (typeof UserRole)[keyof typeof UserRole]
 
 
-// This file is empty because there are no enums in the schema.
-export {}
+export const ContentType = {
+  BIBLE: 'BIBLE',
+  SERMON: 'SERMON',
+  PRAYER_REQUEST: 'PRAYER_REQUEST',
+  TESTIMONY: 'TESTIMONY',
+  EVENT: 'EVENT',
+  GROUP_POST: 'GROUP_POST',
+  ANNOUNCEMENT: 'ANNOUNCEMENT',
+  LOCATION: 'LOCATION',
+  DOWNLOAD: 'DOWNLOAD'
+} as const
+
+export type ContentType = (typeof ContentType)[keyof typeof ContentType]
+
+
+export const SermonLanguage = {
+  ENGLISH: 'ENGLISH',
+  OTHER: 'OTHER'
+} as const
+
+export type SermonLanguage = (typeof SermonLanguage)[keyof typeof SermonLanguage]
+
+
+export const ReadingPlanType = {
+  BIBLE: 'BIBLE',
+  SERMON: 'SERMON',
+  COMBINED: 'COMBINED'
+} as const
+
+export type ReadingPlanType = (typeof ReadingPlanType)[keyof typeof ReadingPlanType]
+
+
+export const PrayerStatus = {
+  OPEN: 'OPEN',
+  ANSWERED: 'ANSWERED',
+  HIDDEN: 'HIDDEN'
+} as const
+
+export type PrayerStatus = (typeof PrayerStatus)[keyof typeof PrayerStatus]
+
+
+export const TestimonyStatus = {
+  PENDING: 'PENDING',
+  PUBLISHED: 'PUBLISHED',
+  REJECTED: 'REJECTED'
+} as const
+
+export type TestimonyStatus = (typeof TestimonyStatus)[keyof typeof TestimonyStatus]
+
+
+export const GroupType = {
+  LOCAL: 'LOCAL',
+  STUDY: 'STUDY',
+  PRAYER: 'PRAYER',
+  DISCUSSION: 'DISCUSSION'
+} as const
+
+export type GroupType = (typeof GroupType)[keyof typeof GroupType]
+
+
+export const EventStatus = {
+  UPCOMING: 'UPCOMING',
+  LIVE: 'LIVE',
+  COMPLETED: 'COMPLETED',
+  CANCELLED: 'CANCELLED'
+} as const
+
+export type EventStatus = (typeof EventStatus)[keyof typeof EventStatus]
+
+
+export const RsvpStatus = {
+  GOING: 'GOING',
+  INTERESTED: 'INTERESTED',
+  NOT_GOING: 'NOT_GOING'
+} as const
+
+export type RsvpStatus = (typeof RsvpStatus)[keyof typeof RsvpStatus]
+
+
+export const LocationType = {
+  ASSEMBLY: 'ASSEMBLY',
+  HOUSE_FELLOWSHIP: 'HOUSE_FELLOWSHIP',
+  MINISTER: 'MINISTER'
+} as const
+
+export type LocationType = (typeof LocationType)[keyof typeof LocationType]
+
+
+export const ModerationStatus = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED'
+} as const
+
+export type ModerationStatus = (typeof ModerationStatus)[keyof typeof ModerationStatus]

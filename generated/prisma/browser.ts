@@ -17,4 +17,123 @@ import * as Prisma from './internal/prismaNamespaceBrowser.js'
 export { Prisma }
 export * as $Enums from './enums.js'
 export * from './enums.js';
-
+/**
+ * Model User
+ * 
+ */
+export type User = Prisma.UserModel
+/**
+ * Model BibleBook
+ * 
+ */
+export type BibleBook = Prisma.BibleBookModel
+/**
+ * Model BibleChapter
+ * 
+ */
+export type BibleChapter = Prisma.BibleChapterModel
+/**
+ * Model BibleVerse
+ * 
+ */
+export type BibleVerse = Prisma.BibleVerseModel
+/**
+ * Model Sermon
+ * 
+ */
+export type Sermon = Prisma.SermonModel
+/**
+ * Model SermonTopic
+ * 
+ */
+export type SermonTopic = Prisma.SermonTopicModel
+/**
+ * Model SermonTopicMap
+ * 
+ */
+export type SermonTopicMap = Prisma.SermonTopicMapModel
+/**
+ * Model ReadingPlan
+ * 
+ */
+export type ReadingPlan = Prisma.ReadingPlanModel
+/**
+ * Model ReadingPlanItem
+ * 
+ */
+export type ReadingPlanItem = Prisma.ReadingPlanItemModel
+/**
+ * Model Bookmark
+ * 
+ */
+export type Bookmark = Prisma.BookmarkModel
+/**
+ * Model Note
+ * 
+ */
+export type Note = Prisma.NoteModel
+/**
+ * Model Highlight
+ * 
+ */
+export type Highlight = Prisma.HighlightModel
+/**
+ * Model PrayerRequest
+ * 
+ */
+export type PrayerRequest = Prisma.PrayerRequestModel
+/**
+ * Model PrayerResponse
+ * 
+ */
+export type PrayerResponse = Prisma.PrayerResponseModel
+/**
+ * Model Testimony
+ * 
+ */
+export type Testimony = Prisma.TestimonyModel
+/**
+ * Model FellowshipGroup
+ * 
+ */
+export type FellowshipGroup = Prisma.FellowshipGroupModel
+/**
+ * Model FellowshipMember
+ * 
+ */
+export type FellowshipMember = Prisma.FellowshipMemberModel
+/**
+ * Model GroupPost
+ * 
+ */
+export type GroupPost = Prisma.GroupPostModel
+/**
+ * Model Event
+ * 
+ */
+export type Event = Prisma.EventModel
+/**
+ * Model EventRsvp
+ * 
+ */
+export type EventRsvp = Prisma.EventRsvpModel
+/**
+ * Model Location
+ * 
+ */
+export type Location = Prisma.LocationModel
+/**
+ * Model Download
+ * 
+ */
+export type Download = Prisma.DownloadModel
+/**
+ * Model Announcement
+ * 
+ */
+export type Announcement = Prisma.AnnouncementModel
+/**
+ * Model ModerationQueue
+ * 
+ */
+export type ModerationQueue = Prisma.ModerationQueueModel

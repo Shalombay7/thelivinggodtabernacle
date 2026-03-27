@@ -11,7 +11,7 @@
  * Please import the `PrismaClient` class from the `client.ts` file instead.
  */
 
-import * as runtime from "@prisma/client/runtime/library"
+import * as runtime from "@prisma/client/runtime/client"
 import type * as Prisma from "./prismaNamespace.js"
 
 
@@ -27,7 +27,7 @@ const config: runtime.GetPrismaClientConfig = {
       "fromEnvVar": null
     },
     "config": {
-      "engineType": "library"
+      "engineType": "client"
     },
     "binaryTargets": [
       {
@@ -46,7 +46,7 @@ const config: runtime.GetPrismaClientConfig = {
   "datasourceNames": [
     "db"
   ],
-  "activeProvider": "postgresql",
+  "activeProvider": "mysql",
   "postinstall": false,
   "inlineDatasources": {
     "db": {
@@ -56,8 +56,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n",
-  "inlineSchemaHash": "39ac28d186f1400e7d3fe83bcf93c2ef2c93d00f3eb4ea4ccba52368d26b476f",
+  "inlineSchema": "generator client {\n  provider   = \"prisma-client\"\n  output     = \"../generated/prisma\"\n  engineType = \"client\"\n}\n\ndatasource db {\n  provider = \"mysql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nenum UserRole {\n  MEMBER\n  MODERATOR\n  ADMIN\n}\n\nenum ContentType {\n  BIBLE\n  SERMON\n  PRAYER_REQUEST\n  TESTIMONY\n  EVENT\n  GROUP_POST\n  ANNOUNCEMENT\n  LOCATION\n  DOWNLOAD\n}\n\nenum SermonLanguage {\n  ENGLISH\n  OTHER\n}\n\nenum ReadingPlanType {\n  BIBLE\n  SERMON\n  COMBINED\n}\n\nenum PrayerStatus {\n  OPEN\n  ANSWERED\n  HIDDEN\n}\n\nenum TestimonyStatus {\n  PENDING\n  PUBLISHED\n  REJECTED\n}\n\nenum GroupType {\n  LOCAL\n  STUDY\n  PRAYER\n  DISCUSSION\n}\n\nenum EventStatus {\n  UPCOMING\n  LIVE\n  COMPLETED\n  CANCELLED\n}\n\nenum RsvpStatus {\n  GOING\n  INTERESTED\n  NOT_GOING\n}\n\nenum LocationType {\n  ASSEMBLY\n  HOUSE_FELLOWSHIP\n  MINISTER\n}\n\nenum ModerationStatus {\n  PENDING\n  APPROVED\n  REJECTED\n}\n\nmodel User {\n  id                    String             @id @default(cuid())\n  name                  String\n  email                 String?            @unique\n  passwordHash          String?\n  role                  UserRole           @default(MEMBER)\n  avatarUrl             String?\n  bio                   String?\n  location              String?\n  churchName            String?\n  createdAt             DateTime           @default(now())\n  updatedAt             DateTime           @updatedAt\n  bookmarks             Bookmark[]\n  notes                 Note[]\n  highlights            Highlight[]\n  prayerRequests        PrayerRequest[]\n  prayerResponses       PrayerResponse[]\n  testimonies           Testimony[]\n  createdGroups         FellowshipGroup[]  @relation(\"GroupCreatedBy\")\n  fellowshipMemberships FellowshipMember[]\n  groupPosts            GroupPost[]\n  eventRsvps            EventRsvp[]\n  downloads             Download[]\n  announcementsCreated  Announcement[]     @relation(\"AnnouncementCreatedBy\")\n  eventsCreated         Event[]            @relation(\"EventCreatedBy\")\n  moderatedItems        ModerationQueue[]  @relation(\"ModeratedBy\")\n}\n\nmodel BibleBook {\n  id        String         @id @default(cuid())\n  name      String         @unique\n  shortName String         @unique\n  order     Int            @unique\n  testament String\n  chapters  BibleChapter[]\n  verses    BibleVerse[]\n  createdAt DateTime       @default(now())\n  updatedAt DateTime       @updatedAt\n}\n\nmodel BibleChapter {\n  id            String       @id @default(cuid())\n  bookId        String\n  chapterNumber Int\n  verseCount    Int\n  book          BibleBook    @relation(fields: [bookId], references: [id], onDelete: Cascade)\n  verses        BibleVerse[]\n  createdAt     DateTime     @default(now())\n  updatedAt     DateTime     @updatedAt\n\n  @@unique([bookId, chapterNumber])\n  @@index([bookId])\n}\n\nmodel BibleVerse {\n  id              String       @id @default(cuid())\n  bookId          String\n  chapterId       String\n  verseNumber     Int\n  text            String\n  kjvText         String\n  crossReferences Json?\n  book            BibleBook    @relation(fields: [bookId], references: [id], onDelete: Cascade)\n  chapter         BibleChapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)\n  createdAt       DateTime     @default(now())\n  updatedAt       DateTime     @updatedAt\n\n  @@unique([chapterId, verseNumber])\n  @@index([bookId])\n  @@index([chapterId])\n}\n\nmodel Sermon {\n  id                  String           @id @default(cuid())\n  title               String\n  slug                String           @unique\n  preacherName        String           @default(\"William Marrion Branham\")\n  datePreached        DateTime\n  audioUrl            String?\n  transcript          String\n  summary             String?\n  theme               String?\n  tags                Json?\n  scriptureReferences Json?\n  seriesName          String?\n  duration            Int?\n  language            SermonLanguage   @default(ENGLISH)\n  featured            Boolean          @default(false)\n  sourceUrl           String?\n  createdAt           DateTime         @default(now())\n  updatedAt           DateTime         @updatedAt\n  topicMaps           SermonTopicMap[]\n}\n\nmodel SermonTopic {\n  id         String           @id @default(cuid())\n  name       String           @unique\n  slug       String           @unique\n  createdAt  DateTime         @default(now())\n  updatedAt  DateTime         @updatedAt\n  sermonMaps SermonTopicMap[]\n}\n\nmodel SermonTopicMap {\n  sermonId  String\n  topicId   String\n  sermon    Sermon      @relation(fields: [sermonId], references: [id], onDelete: Cascade)\n  topic     SermonTopic @relation(fields: [topicId], references: [id], onDelete: Cascade)\n  createdAt DateTime    @default(now())\n\n  @@id([sermonId, topicId])\n  @@index([topicId])\n}\n\nmodel ReadingPlan {\n  id          String            @id @default(cuid())\n  name        String\n  description String?\n  type        ReadingPlanType\n  createdAt   DateTime          @default(now())\n  updatedAt   DateTime          @updatedAt\n  items       ReadingPlanItem[]\n}\n\nmodel ReadingPlanItem {\n  id          String      @id @default(cuid())\n  planId      String\n  dayNumber   Int\n  orderIndex  Int         @default(0)\n  contentType ContentType\n  contentId   String\n  plan        ReadingPlan @relation(fields: [planId], references: [id], onDelete: Cascade)\n  createdAt   DateTime    @default(now())\n  updatedAt   DateTime    @updatedAt\n\n  @@unique([planId, dayNumber, orderIndex])\n  @@index([planId])\n  @@index([contentType, contentId])\n}\n\nmodel Bookmark {\n  id          String      @id @default(cuid())\n  userId      String\n  contentType ContentType\n  contentId   String\n  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)\n  createdAt   DateTime    @default(now())\n\n  @@unique([userId, contentType, contentId])\n  @@index([contentType, contentId])\n}\n\nmodel Note {\n  id          String      @id @default(cuid())\n  userId      String\n  contentType ContentType\n  contentId   String\n  body        String\n  verseRange  String?\n  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)\n  createdAt   DateTime    @default(now())\n  updatedAt   DateTime    @updatedAt\n\n  @@index([userId, contentType])\n  @@index([contentType, contentId])\n}\n\nmodel Highlight {\n  id           String      @id @default(cuid())\n  userId       String\n  contentType  ContentType\n  contentId    String\n  selectedText String\n  color        String\n  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)\n  createdAt    DateTime    @default(now())\n\n  @@index([userId, contentType])\n  @@index([contentType, contentId])\n}\n\nmodel PrayerRequest {\n  id          String           @id @default(cuid())\n  userId      String?\n  title       String\n  body        String\n  status      PrayerStatus     @default(OPEN)\n  isAnonymous Boolean          @default(false)\n  prayCount   Int              @default(0)\n  answeredAt  DateTime?\n  user        User?            @relation(fields: [userId], references: [id], onDelete: SetNull)\n  responses   PrayerResponse[]\n  createdAt   DateTime         @default(now())\n  updatedAt   DateTime         @updatedAt\n\n  @@index([status])\n  @@index([userId])\n}\n\nmodel PrayerResponse {\n  id        String        @id @default(cuid())\n  requestId String\n  userId    String?\n  body      String\n  request   PrayerRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)\n  user      User?         @relation(fields: [userId], references: [id], onDelete: SetNull)\n  createdAt DateTime      @default(now())\n\n  @@index([requestId])\n  @@index([userId])\n}\n\nmodel Testimony {\n  id         String          @id @default(cuid())\n  userId     String?\n  title      String\n  body       String\n  status     TestimonyStatus @default(PENDING)\n  isFeatured Boolean         @default(false)\n  user       User?           @relation(fields: [userId], references: [id], onDelete: SetNull)\n  createdAt  DateTime        @default(now())\n  updatedAt  DateTime        @updatedAt\n\n  @@index([status])\n  @@index([userId])\n}\n\nmodel FellowshipGroup {\n  id          String             @id @default(cuid())\n  name        String\n  slug        String             @unique\n  description String?\n  region      String?\n  type        GroupType\n  createdById String?\n  createdBy   User?              @relation(\"GroupCreatedBy\", fields: [createdById], references: [id], onDelete: SetNull)\n  members     FellowshipMember[]\n  posts       GroupPost[]\n  createdAt   DateTime           @default(now())\n  updatedAt   DateTime           @updatedAt\n\n  @@index([type])\n  @@index([region])\n}\n\nmodel FellowshipMember {\n  id       String          @id @default(cuid())\n  groupId  String\n  userId   String\n  role     String          @default(\"member\")\n  group    FellowshipGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)\n  user     User            @relation(fields: [userId], references: [id], onDelete: Cascade)\n  joinedAt DateTime        @default(now())\n\n  @@unique([groupId, userId])\n  @@index([userId])\n}\n\nmodel GroupPost {\n  id        String          @id @default(cuid())\n  groupId   String\n  userId    String\n  body      String\n  group     FellowshipGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)\n  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)\n  createdAt DateTime        @default(now())\n  updatedAt DateTime        @updatedAt\n\n  @@index([groupId])\n  @@index([userId])\n}\n\nmodel Event {\n  id           String      @id @default(cuid())\n  title        String\n  slug         String      @unique\n  description  String?\n  eventType    String\n  status       EventStatus @default(UPCOMING)\n  startsAt     DateTime\n  endsAt       DateTime?\n  locationName String?\n  address      String?\n  isLivestream Boolean     @default(false)\n  streamUrl    String?\n  createdById  String?\n  creator      User?       @relation(\"EventCreatedBy\", fields: [createdById], references: [id], onDelete: SetNull)\n  rsvps        EventRsvp[]\n  createdAt    DateTime    @default(now())\n  updatedAt    DateTime    @updatedAt\n\n  @@index([status])\n  @@index([startsAt])\n}\n\nmodel EventRsvp {\n  id        String     @id @default(cuid())\n  eventId   String\n  userId    String\n  status    RsvpStatus @default(GOING)\n  event     Event      @relation(fields: [eventId], references: [id], onDelete: Cascade)\n  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)\n  createdAt DateTime   @default(now())\n  updatedAt DateTime   @updatedAt\n\n  @@unique([eventId, userId])\n  @@index([userId])\n}\n\nmodel Location {\n  id           String       @id @default(cuid())\n  name         String\n  type         LocationType\n  region       String?\n  address      String?\n  phone        String?\n  email        String?\n  latitude     Decimal?     @db.Decimal(10, 7)\n  longitude    Decimal?     @db.Decimal(10, 7)\n  serviceTimes Json?\n  createdAt    DateTime     @default(now())\n  updatedAt    DateTime     @updatedAt\n\n  @@index([type])\n  @@index([region])\n}\n\nmodel Download {\n  id           String      @id @default(cuid())\n  userId       String\n  contentType  ContentType\n  contentId    String\n  downloadedAt DateTime    @default(now())\n  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@unique([userId, contentType, contentId])\n  @@index([contentType, contentId])\n}\n\nmodel Announcement {\n  id          String    @id @default(cuid())\n  title       String\n  body        String\n  audience    String?\n  publishedAt DateTime?\n  createdById String?\n  creator     User?     @relation(\"AnnouncementCreatedBy\", fields: [createdById], references: [id], onDelete: SetNull)\n  createdAt   DateTime  @default(now())\n  updatedAt   DateTime  @updatedAt\n\n  @@index([publishedAt])\n}\n\nmodel ModerationQueue {\n  id            String           @id @default(cuid())\n  itemType      ContentType\n  itemId        String\n  status        ModerationStatus @default(PENDING)\n  reason        String?\n  moderatedById String?\n  moderator     User?            @relation(\"ModeratedBy\", fields: [moderatedById], references: [id], onDelete: SetNull)\n  moderatedAt   DateTime?\n  createdAt     DateTime         @default(now())\n  updatedAt     DateTime         @updatedAt\n\n  @@index([itemType, itemId])\n  @@index([status])\n}\n",
+  "inlineSchemaHash": "0f602703b7938691cc0f530cdb7e0fc7a70c995ce2fa3aeceae28a27b77a0478",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
@@ -67,9 +67,23 @@ const config: runtime.GetPrismaClientConfig = {
   "dirname": ""
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"passwordHash\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"role\",\"kind\":\"enum\",\"type\":\"UserRole\"},{\"name\":\"avatarUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"bio\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"location\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"churchName\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"bookmarks\",\"kind\":\"object\",\"type\":\"Bookmark\",\"relationName\":\"BookmarkToUser\"},{\"name\":\"notes\",\"kind\":\"object\",\"type\":\"Note\",\"relationName\":\"NoteToUser\"},{\"name\":\"highlights\",\"kind\":\"object\",\"type\":\"Highlight\",\"relationName\":\"HighlightToUser\"},{\"name\":\"prayerRequests\",\"kind\":\"object\",\"type\":\"PrayerRequest\",\"relationName\":\"PrayerRequestToUser\"},{\"name\":\"prayerResponses\",\"kind\":\"object\",\"type\":\"PrayerResponse\",\"relationName\":\"PrayerResponseToUser\"},{\"name\":\"testimonies\",\"kind\":\"object\",\"type\":\"Testimony\",\"relationName\":\"TestimonyToUser\"},{\"name\":\"createdGroups\",\"kind\":\"object\",\"type\":\"FellowshipGroup\",\"relationName\":\"GroupCreatedBy\"},{\"name\":\"fellowshipMemberships\",\"kind\":\"object\",\"type\":\"FellowshipMember\",\"relationName\":\"FellowshipMemberToUser\"},{\"name\":\"groupPosts\",\"kind\":\"object\",\"type\":\"GroupPost\",\"relationName\":\"GroupPostToUser\"},{\"name\":\"eventRsvps\",\"kind\":\"object\",\"type\":\"EventRsvp\",\"relationName\":\"EventRsvpToUser\"},{\"name\":\"downloads\",\"kind\":\"object\",\"type\":\"Download\",\"relationName\":\"DownloadToUser\"},{\"name\":\"announcementsCreated\",\"kind\":\"object\",\"type\":\"Announcement\",\"relationName\":\"AnnouncementCreatedBy\"},{\"name\":\"eventsCreated\",\"kind\":\"object\",\"type\":\"Event\",\"relationName\":\"EventCreatedBy\"},{\"name\":\"moderatedItems\",\"kind\":\"object\",\"type\":\"ModerationQueue\",\"relationName\":\"ModeratedBy\"}],\"dbName\":null},\"BibleBook\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"shortName\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"order\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"testament\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"chapters\",\"kind\":\"object\",\"type\":\"BibleChapter\",\"relationName\":\"BibleBookToBibleChapter\"},{\"name\":\"verses\",\"kind\":\"object\",\"type\":\"BibleVerse\",\"relationName\":\"BibleBookToBibleVerse\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"BibleChapter\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"bookId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"chapterNumber\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"verseCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"book\",\"kind\":\"object\",\"type\":\"BibleBook\",\"relationName\":\"BibleBookToBibleChapter\"},{\"name\":\"verses\",\"kind\":\"object\",\"type\":\"BibleVerse\",\"relationName\":\"BibleChapterToBibleVerse\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"BibleVerse\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"bookId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"chapterId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"verseNumber\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"text\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"kjvText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"crossReferences\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"book\",\"kind\":\"object\",\"type\":\"BibleBook\",\"relationName\":\"BibleBookToBibleVerse\"},{\"name\":\"chapter\",\"kind\":\"object\",\"type\":\"BibleChapter\",\"relationName\":\"BibleChapterToBibleVerse\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Sermon\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"slug\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"preacherName\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"datePreached\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"audioUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"transcript\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"summary\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"theme\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"tags\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"scriptureReferences\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"seriesName\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"duration\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"language\",\"kind\":\"enum\",\"type\":\"SermonLanguage\"},{\"name\":\"featured\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"sourceUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"topicMaps\",\"kind\":\"object\",\"type\":\"SermonTopicMap\",\"relationName\":\"SermonToSermonTopicMap\"}],\"dbName\":null},\"SermonTopic\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"slug\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"sermonMaps\",\"kind\":\"object\",\"type\":\"SermonTopicMap\",\"relationName\":\"SermonTopicToSermonTopicMap\"}],\"dbName\":null},\"SermonTopicMap\":{\"fields\":[{\"name\":\"sermonId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"topicId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"sermon\",\"kind\":\"object\",\"type\":\"Sermon\",\"relationName\":\"SermonToSermonTopicMap\"},{\"name\":\"topic\",\"kind\":\"object\",\"type\":\"SermonTopic\",\"relationName\":\"SermonTopicToSermonTopicMap\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"ReadingPlan\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"ReadingPlanType\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"items\",\"kind\":\"object\",\"type\":\"ReadingPlanItem\",\"relationName\":\"ReadingPlanToReadingPlanItem\"}],\"dbName\":null},\"ReadingPlanItem\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"planId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"dayNumber\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"orderIndex\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"contentType\",\"kind\":\"enum\",\"type\":\"ContentType\"},{\"name\":\"contentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"plan\",\"kind\":\"object\",\"type\":\"ReadingPlan\",\"relationName\":\"ReadingPlanToReadingPlanItem\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Bookmark\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"contentType\",\"kind\":\"enum\",\"type\":\"ContentType\"},{\"name\":\"contentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"BookmarkToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Note\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"contentType\",\"kind\":\"enum\",\"type\":\"ContentType\"},{\"name\":\"contentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"body\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"verseRange\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"NoteToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Highlight\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"contentType\",\"kind\":\"enum\",\"type\":\"ContentType\"},{\"name\":\"contentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"selectedText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"color\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"HighlightToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"PrayerRequest\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"body\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"PrayerStatus\"},{\"name\":\"isAnonymous\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"prayCount\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"answeredAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"PrayerRequestToUser\"},{\"name\":\"responses\",\"kind\":\"object\",\"type\":\"PrayerResponse\",\"relationName\":\"PrayerRequestToPrayerResponse\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"PrayerResponse\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"requestId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"body\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"request\",\"kind\":\"object\",\"type\":\"PrayerRequest\",\"relationName\":\"PrayerRequestToPrayerResponse\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"PrayerResponseToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Testimony\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"body\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"TestimonyStatus\"},{\"name\":\"isFeatured\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"TestimonyToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"FellowshipGroup\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"slug\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"region\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"GroupType\"},{\"name\":\"createdById\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdBy\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"GroupCreatedBy\"},{\"name\":\"members\",\"kind\":\"object\",\"type\":\"FellowshipMember\",\"relationName\":\"FellowshipGroupToFellowshipMember\"},{\"name\":\"posts\",\"kind\":\"object\",\"type\":\"GroupPost\",\"relationName\":\"FellowshipGroupToGroupPost\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"FellowshipMember\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"groupId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"role\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"group\",\"kind\":\"object\",\"type\":\"FellowshipGroup\",\"relationName\":\"FellowshipGroupToFellowshipMember\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"FellowshipMemberToUser\"},{\"name\":\"joinedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"GroupPost\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"groupId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"body\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"group\",\"kind\":\"object\",\"type\":\"FellowshipGroup\",\"relationName\":\"FellowshipGroupToGroupPost\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"GroupPostToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Event\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"slug\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"eventType\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"EventStatus\"},{\"name\":\"startsAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"endsAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"locationName\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"address\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"isLivestream\",\"kind\":\"scalar\",\"type\":\"Boolean\"},{\"name\":\"streamUrl\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdById\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"creator\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"EventCreatedBy\"},{\"name\":\"rsvps\",\"kind\":\"object\",\"type\":\"EventRsvp\",\"relationName\":\"EventToEventRsvp\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"EventRsvp\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"eventId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"RsvpStatus\"},{\"name\":\"event\",\"kind\":\"object\",\"type\":\"Event\",\"relationName\":\"EventToEventRsvp\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"EventRsvpToUser\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Location\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"type\",\"kind\":\"enum\",\"type\":\"LocationType\"},{\"name\":\"region\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"address\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"phone\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"latitude\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"longitude\",\"kind\":\"scalar\",\"type\":\"Decimal\"},{\"name\":\"serviceTimes\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Download\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"contentType\",\"kind\":\"enum\",\"type\":\"ContentType\"},{\"name\":\"contentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"downloadedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"DownloadToUser\"}],\"dbName\":null},\"Announcement\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"body\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"audience\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"publishedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdById\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"creator\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"AnnouncementCreatedBy\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"ModerationQueue\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"itemType\",\"kind\":\"enum\",\"type\":\"ContentType\"},{\"name\":\"itemId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"ModerationStatus\"},{\"name\":\"reason\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"moderatedById\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"moderator\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"ModeratedBy\"},{\"name\":\"moderatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 config.engineWasm = undefined
-config.compilerWasm = undefined
+
+async function decodeBase64AsWasm(wasmBase64: string): Promise<WebAssembly.Module> {
+  const { Buffer } = await import('node:buffer')
+  const wasmArray = Buffer.from(wasmBase64, 'base64')
+  return new WebAssembly.Module(wasmArray)
+}
+
+config.compilerWasm = {
+  getRuntime: async () => await import("@prisma/client/runtime/query_compiler_bg.mysql.mjs"),
+
+  getQueryCompilerWasmModule: async () => {
+    const { wasm } = await import("@prisma/client/runtime/query_compiler_bg.mysql.wasm-base64.mjs")
+    return await decodeBase64AsWasm(wasm)
+  }
+}
 
 
 
@@ -202,7 +216,245 @@ export interface PrismaClient<
     extArgs: ExtArgs
   }>>
 
-    
+      /**
+   * `prisma.user`: Exposes CRUD operations for the **User** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Users
+    * const users = await prisma.user.findMany()
+    * ```
+    */
+  get user(): Prisma.UserDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.bibleBook`: Exposes CRUD operations for the **BibleBook** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more BibleBooks
+    * const bibleBooks = await prisma.bibleBook.findMany()
+    * ```
+    */
+  get bibleBook(): Prisma.BibleBookDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.bibleChapter`: Exposes CRUD operations for the **BibleChapter** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more BibleChapters
+    * const bibleChapters = await prisma.bibleChapter.findMany()
+    * ```
+    */
+  get bibleChapter(): Prisma.BibleChapterDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.bibleVerse`: Exposes CRUD operations for the **BibleVerse** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more BibleVerses
+    * const bibleVerses = await prisma.bibleVerse.findMany()
+    * ```
+    */
+  get bibleVerse(): Prisma.BibleVerseDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.sermon`: Exposes CRUD operations for the **Sermon** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Sermons
+    * const sermons = await prisma.sermon.findMany()
+    * ```
+    */
+  get sermon(): Prisma.SermonDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.sermonTopic`: Exposes CRUD operations for the **SermonTopic** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more SermonTopics
+    * const sermonTopics = await prisma.sermonTopic.findMany()
+    * ```
+    */
+  get sermonTopic(): Prisma.SermonTopicDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.sermonTopicMap`: Exposes CRUD operations for the **SermonTopicMap** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more SermonTopicMaps
+    * const sermonTopicMaps = await prisma.sermonTopicMap.findMany()
+    * ```
+    */
+  get sermonTopicMap(): Prisma.SermonTopicMapDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.readingPlan`: Exposes CRUD operations for the **ReadingPlan** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReadingPlans
+    * const readingPlans = await prisma.readingPlan.findMany()
+    * ```
+    */
+  get readingPlan(): Prisma.ReadingPlanDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.readingPlanItem`: Exposes CRUD operations for the **ReadingPlanItem** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReadingPlanItems
+    * const readingPlanItems = await prisma.readingPlanItem.findMany()
+    * ```
+    */
+  get readingPlanItem(): Prisma.ReadingPlanItemDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.bookmark`: Exposes CRUD operations for the **Bookmark** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Bookmarks
+    * const bookmarks = await prisma.bookmark.findMany()
+    * ```
+    */
+  get bookmark(): Prisma.BookmarkDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.note`: Exposes CRUD operations for the **Note** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Notes
+    * const notes = await prisma.note.findMany()
+    * ```
+    */
+  get note(): Prisma.NoteDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.highlight`: Exposes CRUD operations for the **Highlight** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Highlights
+    * const highlights = await prisma.highlight.findMany()
+    * ```
+    */
+  get highlight(): Prisma.HighlightDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.prayerRequest`: Exposes CRUD operations for the **PrayerRequest** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PrayerRequests
+    * const prayerRequests = await prisma.prayerRequest.findMany()
+    * ```
+    */
+  get prayerRequest(): Prisma.PrayerRequestDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.prayerResponse`: Exposes CRUD operations for the **PrayerResponse** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PrayerResponses
+    * const prayerResponses = await prisma.prayerResponse.findMany()
+    * ```
+    */
+  get prayerResponse(): Prisma.PrayerResponseDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.testimony`: Exposes CRUD operations for the **Testimony** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Testimonies
+    * const testimonies = await prisma.testimony.findMany()
+    * ```
+    */
+  get testimony(): Prisma.TestimonyDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.fellowshipGroup`: Exposes CRUD operations for the **FellowshipGroup** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FellowshipGroups
+    * const fellowshipGroups = await prisma.fellowshipGroup.findMany()
+    * ```
+    */
+  get fellowshipGroup(): Prisma.FellowshipGroupDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.fellowshipMember`: Exposes CRUD operations for the **FellowshipMember** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more FellowshipMembers
+    * const fellowshipMembers = await prisma.fellowshipMember.findMany()
+    * ```
+    */
+  get fellowshipMember(): Prisma.FellowshipMemberDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.groupPost`: Exposes CRUD operations for the **GroupPost** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GroupPosts
+    * const groupPosts = await prisma.groupPost.findMany()
+    * ```
+    */
+  get groupPost(): Prisma.GroupPostDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.event`: Exposes CRUD operations for the **Event** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Events
+    * const events = await prisma.event.findMany()
+    * ```
+    */
+  get event(): Prisma.EventDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.eventRsvp`: Exposes CRUD operations for the **EventRsvp** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more EventRsvps
+    * const eventRsvps = await prisma.eventRsvp.findMany()
+    * ```
+    */
+  get eventRsvp(): Prisma.EventRsvpDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.location`: Exposes CRUD operations for the **Location** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Locations
+    * const locations = await prisma.location.findMany()
+    * ```
+    */
+  get location(): Prisma.LocationDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.download`: Exposes CRUD operations for the **Download** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Downloads
+    * const downloads = await prisma.download.findMany()
+    * ```
+    */
+  get download(): Prisma.DownloadDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.announcement`: Exposes CRUD operations for the **Announcement** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Announcements
+    * const announcements = await prisma.announcement.findMany()
+    * ```
+    */
+  get announcement(): Prisma.AnnouncementDelegate<ExtArgs, { omit: OmitOpts }>;
+
+  /**
+   * `prisma.moderationQueue`: Exposes CRUD operations for the **ModerationQueue** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ModerationQueues
+    * const moderationQueues = await prisma.moderationQueue.findMany()
+    * ```
+    */
+  get moderationQueue(): Prisma.ModerationQueueDelegate<ExtArgs, { omit: OmitOpts }>;
 }
 
 export function getPrismaClientClass(dirname: string): PrismaClientConstructor {

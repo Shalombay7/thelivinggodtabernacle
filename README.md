@@ -35,9 +35,11 @@ npm run start:dev
 ## Prisma
 
 ```bash
+npm install
 npx prisma generate
 ```
 
-The generated Prisma client is committed in `generated/prisma`, so production
-deployments on shared hosting do not need to run `prisma generate` on the
-server unless the schema changes.
+The generated Prisma client is committed in `generated/prisma` so the cPanel
+deployment can run without platform-specific Prisma engines. The app now uses
+the Prisma MySQL adapter at runtime, so `DATABASE_URL` should point to the
+MySQL database on your hosting account.

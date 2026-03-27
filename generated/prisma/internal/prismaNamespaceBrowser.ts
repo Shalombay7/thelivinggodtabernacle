@@ -49,7 +49,30 @@ export const AnyNull = runtime.objectEnumValues.instances.AnyNull
 
 
 export const ModelName = {
-
+  User: 'User',
+  BibleBook: 'BibleBook',
+  BibleChapter: 'BibleChapter',
+  BibleVerse: 'BibleVerse',
+  Sermon: 'Sermon',
+  SermonTopic: 'SermonTopic',
+  SermonTopicMap: 'SermonTopicMap',
+  ReadingPlan: 'ReadingPlan',
+  ReadingPlanItem: 'ReadingPlanItem',
+  Bookmark: 'Bookmark',
+  Note: 'Note',
+  Highlight: 'Highlight',
+  PrayerRequest: 'PrayerRequest',
+  PrayerResponse: 'PrayerResponse',
+  Testimony: 'Testimony',
+  FellowshipGroup: 'FellowshipGroup',
+  FellowshipMember: 'FellowshipMember',
+  GroupPost: 'GroupPost',
+  Event: 'Event',
+  EventRsvp: 'EventRsvp',
+  Location: 'Location',
+  Download: 'Download',
+  Announcement: 'Announcement',
+  ModerationQueue: 'ModerationQueue'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -66,4 +89,633 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 } as const)
 
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
+
+
+export const UserScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  passwordHash: 'passwordHash',
+  role: 'role',
+  avatarUrl: 'avatarUrl',
+  bio: 'bio',
+  location: 'location',
+  churchName: 'churchName',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const BibleBookScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  shortName: 'shortName',
+  order: 'order',
+  testament: 'testament',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type BibleBookScalarFieldEnum = (typeof BibleBookScalarFieldEnum)[keyof typeof BibleBookScalarFieldEnum]
+
+
+export const BibleChapterScalarFieldEnum = {
+  id: 'id',
+  bookId: 'bookId',
+  chapterNumber: 'chapterNumber',
+  verseCount: 'verseCount',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type BibleChapterScalarFieldEnum = (typeof BibleChapterScalarFieldEnum)[keyof typeof BibleChapterScalarFieldEnum]
+
+
+export const BibleVerseScalarFieldEnum = {
+  id: 'id',
+  bookId: 'bookId',
+  chapterId: 'chapterId',
+  verseNumber: 'verseNumber',
+  text: 'text',
+  kjvText: 'kjvText',
+  crossReferences: 'crossReferences',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type BibleVerseScalarFieldEnum = (typeof BibleVerseScalarFieldEnum)[keyof typeof BibleVerseScalarFieldEnum]
+
+
+export const SermonScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  preacherName: 'preacherName',
+  datePreached: 'datePreached',
+  audioUrl: 'audioUrl',
+  transcript: 'transcript',
+  summary: 'summary',
+  theme: 'theme',
+  tags: 'tags',
+  scriptureReferences: 'scriptureReferences',
+  seriesName: 'seriesName',
+  duration: 'duration',
+  language: 'language',
+  featured: 'featured',
+  sourceUrl: 'sourceUrl',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SermonScalarFieldEnum = (typeof SermonScalarFieldEnum)[keyof typeof SermonScalarFieldEnum]
+
+
+export const SermonTopicScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  slug: 'slug',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SermonTopicScalarFieldEnum = (typeof SermonTopicScalarFieldEnum)[keyof typeof SermonTopicScalarFieldEnum]
+
+
+export const SermonTopicMapScalarFieldEnum = {
+  sermonId: 'sermonId',
+  topicId: 'topicId',
+  createdAt: 'createdAt'
+} as const
+
+export type SermonTopicMapScalarFieldEnum = (typeof SermonTopicMapScalarFieldEnum)[keyof typeof SermonTopicMapScalarFieldEnum]
+
+
+export const ReadingPlanScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  type: 'type',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ReadingPlanScalarFieldEnum = (typeof ReadingPlanScalarFieldEnum)[keyof typeof ReadingPlanScalarFieldEnum]
+
+
+export const ReadingPlanItemScalarFieldEnum = {
+  id: 'id',
+  planId: 'planId',
+  dayNumber: 'dayNumber',
+  orderIndex: 'orderIndex',
+  contentType: 'contentType',
+  contentId: 'contentId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ReadingPlanItemScalarFieldEnum = (typeof ReadingPlanItemScalarFieldEnum)[keyof typeof ReadingPlanItemScalarFieldEnum]
+
+
+export const BookmarkScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentType: 'contentType',
+  contentId: 'contentId',
+  createdAt: 'createdAt'
+} as const
+
+export type BookmarkScalarFieldEnum = (typeof BookmarkScalarFieldEnum)[keyof typeof BookmarkScalarFieldEnum]
+
+
+export const NoteScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentType: 'contentType',
+  contentId: 'contentId',
+  body: 'body',
+  verseRange: 'verseRange',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type NoteScalarFieldEnum = (typeof NoteScalarFieldEnum)[keyof typeof NoteScalarFieldEnum]
+
+
+export const HighlightScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentType: 'contentType',
+  contentId: 'contentId',
+  selectedText: 'selectedText',
+  color: 'color',
+  createdAt: 'createdAt'
+} as const
+
+export type HighlightScalarFieldEnum = (typeof HighlightScalarFieldEnum)[keyof typeof HighlightScalarFieldEnum]
+
+
+export const PrayerRequestScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  title: 'title',
+  body: 'body',
+  status: 'status',
+  isAnonymous: 'isAnonymous',
+  prayCount: 'prayCount',
+  answeredAt: 'answeredAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type PrayerRequestScalarFieldEnum = (typeof PrayerRequestScalarFieldEnum)[keyof typeof PrayerRequestScalarFieldEnum]
+
+
+export const PrayerResponseScalarFieldEnum = {
+  id: 'id',
+  requestId: 'requestId',
+  userId: 'userId',
+  body: 'body',
+  createdAt: 'createdAt'
+} as const
+
+export type PrayerResponseScalarFieldEnum = (typeof PrayerResponseScalarFieldEnum)[keyof typeof PrayerResponseScalarFieldEnum]
+
+
+export const TestimonyScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  title: 'title',
+  body: 'body',
+  status: 'status',
+  isFeatured: 'isFeatured',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TestimonyScalarFieldEnum = (typeof TestimonyScalarFieldEnum)[keyof typeof TestimonyScalarFieldEnum]
+
+
+export const FellowshipGroupScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  slug: 'slug',
+  description: 'description',
+  region: 'region',
+  type: 'type',
+  createdById: 'createdById',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type FellowshipGroupScalarFieldEnum = (typeof FellowshipGroupScalarFieldEnum)[keyof typeof FellowshipGroupScalarFieldEnum]
+
+
+export const FellowshipMemberScalarFieldEnum = {
+  id: 'id',
+  groupId: 'groupId',
+  userId: 'userId',
+  role: 'role',
+  joinedAt: 'joinedAt'
+} as const
+
+export type FellowshipMemberScalarFieldEnum = (typeof FellowshipMemberScalarFieldEnum)[keyof typeof FellowshipMemberScalarFieldEnum]
+
+
+export const GroupPostScalarFieldEnum = {
+  id: 'id',
+  groupId: 'groupId',
+  userId: 'userId',
+  body: 'body',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type GroupPostScalarFieldEnum = (typeof GroupPostScalarFieldEnum)[keyof typeof GroupPostScalarFieldEnum]
+
+
+export const EventScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  description: 'description',
+  eventType: 'eventType',
+  status: 'status',
+  startsAt: 'startsAt',
+  endsAt: 'endsAt',
+  locationName: 'locationName',
+  address: 'address',
+  isLivestream: 'isLivestream',
+  streamUrl: 'streamUrl',
+  createdById: 'createdById',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type EventScalarFieldEnum = (typeof EventScalarFieldEnum)[keyof typeof EventScalarFieldEnum]
+
+
+export const EventRsvpScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  userId: 'userId',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type EventRsvpScalarFieldEnum = (typeof EventRsvpScalarFieldEnum)[keyof typeof EventRsvpScalarFieldEnum]
+
+
+export const LocationScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  type: 'type',
+  region: 'region',
+  address: 'address',
+  phone: 'phone',
+  email: 'email',
+  latitude: 'latitude',
+  longitude: 'longitude',
+  serviceTimes: 'serviceTimes',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type LocationScalarFieldEnum = (typeof LocationScalarFieldEnum)[keyof typeof LocationScalarFieldEnum]
+
+
+export const DownloadScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentType: 'contentType',
+  contentId: 'contentId',
+  downloadedAt: 'downloadedAt'
+} as const
+
+export type DownloadScalarFieldEnum = (typeof DownloadScalarFieldEnum)[keyof typeof DownloadScalarFieldEnum]
+
+
+export const AnnouncementScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  body: 'body',
+  audience: 'audience',
+  publishedAt: 'publishedAt',
+  createdById: 'createdById',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type AnnouncementScalarFieldEnum = (typeof AnnouncementScalarFieldEnum)[keyof typeof AnnouncementScalarFieldEnum]
+
+
+export const ModerationQueueScalarFieldEnum = {
+  id: 'id',
+  itemType: 'itemType',
+  itemId: 'itemId',
+  status: 'status',
+  reason: 'reason',
+  moderatedById: 'moderatedById',
+  moderatedAt: 'moderatedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ModerationQueueScalarFieldEnum = (typeof ModerationQueueScalarFieldEnum)[keyof typeof ModerationQueueScalarFieldEnum]
+
+
+export const SortOrder = {
+  asc: 'asc',
+  desc: 'desc'
+} as const
+
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
+
+
+export const NullableJsonNullValueInput = {
+  DbNull: DbNull,
+  JsonNull: JsonNull
+} as const
+
+export type NullableJsonNullValueInput = (typeof NullableJsonNullValueInput)[keyof typeof NullableJsonNullValueInput]
+
+
+export const NullsOrder = {
+  first: 'first',
+  last: 'last'
+} as const
+
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
+
+
+export const UserOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  passwordHash: 'passwordHash',
+  avatarUrl: 'avatarUrl',
+  bio: 'bio',
+  location: 'location',
+  churchName: 'churchName'
+} as const
+
+export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum]
+
+
+export const BibleBookOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  shortName: 'shortName',
+  testament: 'testament'
+} as const
+
+export type BibleBookOrderByRelevanceFieldEnum = (typeof BibleBookOrderByRelevanceFieldEnum)[keyof typeof BibleBookOrderByRelevanceFieldEnum]
+
+
+export const BibleChapterOrderByRelevanceFieldEnum = {
+  id: 'id',
+  bookId: 'bookId'
+} as const
+
+export type BibleChapterOrderByRelevanceFieldEnum = (typeof BibleChapterOrderByRelevanceFieldEnum)[keyof typeof BibleChapterOrderByRelevanceFieldEnum]
+
+
+export const JsonNullValueFilter = {
+  DbNull: DbNull,
+  JsonNull: JsonNull,
+  AnyNull: AnyNull
+} as const
+
+export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
+
+
+export const QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
+} as const
+
+export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const BibleVerseOrderByRelevanceFieldEnum = {
+  id: 'id',
+  bookId: 'bookId',
+  chapterId: 'chapterId',
+  text: 'text',
+  kjvText: 'kjvText'
+} as const
+
+export type BibleVerseOrderByRelevanceFieldEnum = (typeof BibleVerseOrderByRelevanceFieldEnum)[keyof typeof BibleVerseOrderByRelevanceFieldEnum]
+
+
+export const SermonOrderByRelevanceFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  preacherName: 'preacherName',
+  audioUrl: 'audioUrl',
+  transcript: 'transcript',
+  summary: 'summary',
+  theme: 'theme',
+  seriesName: 'seriesName',
+  sourceUrl: 'sourceUrl'
+} as const
+
+export type SermonOrderByRelevanceFieldEnum = (typeof SermonOrderByRelevanceFieldEnum)[keyof typeof SermonOrderByRelevanceFieldEnum]
+
+
+export const SermonTopicOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  slug: 'slug'
+} as const
+
+export type SermonTopicOrderByRelevanceFieldEnum = (typeof SermonTopicOrderByRelevanceFieldEnum)[keyof typeof SermonTopicOrderByRelevanceFieldEnum]
+
+
+export const SermonTopicMapOrderByRelevanceFieldEnum = {
+  sermonId: 'sermonId',
+  topicId: 'topicId'
+} as const
+
+export type SermonTopicMapOrderByRelevanceFieldEnum = (typeof SermonTopicMapOrderByRelevanceFieldEnum)[keyof typeof SermonTopicMapOrderByRelevanceFieldEnum]
+
+
+export const ReadingPlanOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description'
+} as const
+
+export type ReadingPlanOrderByRelevanceFieldEnum = (typeof ReadingPlanOrderByRelevanceFieldEnum)[keyof typeof ReadingPlanOrderByRelevanceFieldEnum]
+
+
+export const ReadingPlanItemOrderByRelevanceFieldEnum = {
+  id: 'id',
+  planId: 'planId',
+  contentId: 'contentId'
+} as const
+
+export type ReadingPlanItemOrderByRelevanceFieldEnum = (typeof ReadingPlanItemOrderByRelevanceFieldEnum)[keyof typeof ReadingPlanItemOrderByRelevanceFieldEnum]
+
+
+export const BookmarkOrderByRelevanceFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentId: 'contentId'
+} as const
+
+export type BookmarkOrderByRelevanceFieldEnum = (typeof BookmarkOrderByRelevanceFieldEnum)[keyof typeof BookmarkOrderByRelevanceFieldEnum]
+
+
+export const NoteOrderByRelevanceFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentId: 'contentId',
+  body: 'body',
+  verseRange: 'verseRange'
+} as const
+
+export type NoteOrderByRelevanceFieldEnum = (typeof NoteOrderByRelevanceFieldEnum)[keyof typeof NoteOrderByRelevanceFieldEnum]
+
+
+export const HighlightOrderByRelevanceFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentId: 'contentId',
+  selectedText: 'selectedText',
+  color: 'color'
+} as const
+
+export type HighlightOrderByRelevanceFieldEnum = (typeof HighlightOrderByRelevanceFieldEnum)[keyof typeof HighlightOrderByRelevanceFieldEnum]
+
+
+export const PrayerRequestOrderByRelevanceFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  title: 'title',
+  body: 'body'
+} as const
+
+export type PrayerRequestOrderByRelevanceFieldEnum = (typeof PrayerRequestOrderByRelevanceFieldEnum)[keyof typeof PrayerRequestOrderByRelevanceFieldEnum]
+
+
+export const PrayerResponseOrderByRelevanceFieldEnum = {
+  id: 'id',
+  requestId: 'requestId',
+  userId: 'userId',
+  body: 'body'
+} as const
+
+export type PrayerResponseOrderByRelevanceFieldEnum = (typeof PrayerResponseOrderByRelevanceFieldEnum)[keyof typeof PrayerResponseOrderByRelevanceFieldEnum]
+
+
+export const TestimonyOrderByRelevanceFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  title: 'title',
+  body: 'body'
+} as const
+
+export type TestimonyOrderByRelevanceFieldEnum = (typeof TestimonyOrderByRelevanceFieldEnum)[keyof typeof TestimonyOrderByRelevanceFieldEnum]
+
+
+export const FellowshipGroupOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  slug: 'slug',
+  description: 'description',
+  region: 'region',
+  createdById: 'createdById'
+} as const
+
+export type FellowshipGroupOrderByRelevanceFieldEnum = (typeof FellowshipGroupOrderByRelevanceFieldEnum)[keyof typeof FellowshipGroupOrderByRelevanceFieldEnum]
+
+
+export const FellowshipMemberOrderByRelevanceFieldEnum = {
+  id: 'id',
+  groupId: 'groupId',
+  userId: 'userId',
+  role: 'role'
+} as const
+
+export type FellowshipMemberOrderByRelevanceFieldEnum = (typeof FellowshipMemberOrderByRelevanceFieldEnum)[keyof typeof FellowshipMemberOrderByRelevanceFieldEnum]
+
+
+export const GroupPostOrderByRelevanceFieldEnum = {
+  id: 'id',
+  groupId: 'groupId',
+  userId: 'userId',
+  body: 'body'
+} as const
+
+export type GroupPostOrderByRelevanceFieldEnum = (typeof GroupPostOrderByRelevanceFieldEnum)[keyof typeof GroupPostOrderByRelevanceFieldEnum]
+
+
+export const EventOrderByRelevanceFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  description: 'description',
+  eventType: 'eventType',
+  locationName: 'locationName',
+  address: 'address',
+  streamUrl: 'streamUrl',
+  createdById: 'createdById'
+} as const
+
+export type EventOrderByRelevanceFieldEnum = (typeof EventOrderByRelevanceFieldEnum)[keyof typeof EventOrderByRelevanceFieldEnum]
+
+
+export const EventRsvpOrderByRelevanceFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  userId: 'userId'
+} as const
+
+export type EventRsvpOrderByRelevanceFieldEnum = (typeof EventRsvpOrderByRelevanceFieldEnum)[keyof typeof EventRsvpOrderByRelevanceFieldEnum]
+
+
+export const LocationOrderByRelevanceFieldEnum = {
+  id: 'id',
+  name: 'name',
+  region: 'region',
+  address: 'address',
+  phone: 'phone',
+  email: 'email'
+} as const
+
+export type LocationOrderByRelevanceFieldEnum = (typeof LocationOrderByRelevanceFieldEnum)[keyof typeof LocationOrderByRelevanceFieldEnum]
+
+
+export const DownloadOrderByRelevanceFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  contentId: 'contentId'
+} as const
+
+export type DownloadOrderByRelevanceFieldEnum = (typeof DownloadOrderByRelevanceFieldEnum)[keyof typeof DownloadOrderByRelevanceFieldEnum]
+
+
+export const AnnouncementOrderByRelevanceFieldEnum = {
+  id: 'id',
+  title: 'title',
+  body: 'body',
+  audience: 'audience',
+  createdById: 'createdById'
+} as const
+
+export type AnnouncementOrderByRelevanceFieldEnum = (typeof AnnouncementOrderByRelevanceFieldEnum)[keyof typeof AnnouncementOrderByRelevanceFieldEnum]
+
+
+export const ModerationQueueOrderByRelevanceFieldEnum = {
+  id: 'id',
+  itemId: 'itemId',
+  reason: 'reason',
+  moderatedById: 'moderatedById'
+} as const
+
+export type ModerationQueueOrderByRelevanceFieldEnum = (typeof ModerationQueueOrderByRelevanceFieldEnum)[keyof typeof ModerationQueueOrderByRelevanceFieldEnum]
 

@@ -5,7 +5,7 @@ Backend API for The Living God Tabernacle.
 ## Requirements
 
 - Node.js 20+
-- PostgreSQL (optional unless you use Prisma-backed features)
+- MySQL (optional unless you use Prisma-backed features)
 
 ## Setup
 
@@ -17,7 +17,7 @@ Create `.env` (optional for now):
 
 ```bash
 PORT=3000
-DATABASE_URL=postgresql://user:pass@localhost:5432/lgt
+DATABASE_URL=mysql://user:pass@localhost:3306/lgt
 ```
 
 ## Run

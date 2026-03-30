@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, HttpCode } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
 
@@ -11,5 +11,11 @@ export class AppController {
   @ApiOkResponse({ description: 'Basic hello response' })
   getHello(): string {
     return this.appService.getHello();
+  }
+
+  @Get('favicon.ico')
+  @HttpCode(204)
+  getFavicon(): void {
+    return;
   }
 }

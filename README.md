@@ -28,6 +28,7 @@ npm run start:dev
 
 ## Endpoints
 
+- `GET /` public status response
 - `GET /api` basic hello response
 - `GET /api/health` health check
 - `GET /docs` Swagger UI

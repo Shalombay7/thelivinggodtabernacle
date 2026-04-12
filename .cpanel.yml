@@ -1,9 +1,4 @@
 deployment:
   tasks:
-    - name: Install dependencies
-      commands:
-        - npm install
-    - name: Build application
-      commands:
-        - npm run build
-  start: npm run start:prod
+    - npm install
+    - npm run build

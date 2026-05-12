@@ -1,0 +1,18 @@
+{
+  "name": "thelivinggodtabernacle",
+  "private": true,
+  "workspaces": [
+    "lgt-api",
+    "lgt-frontend"
+  ],
+  "dependencies": {
+    "next-pwa": "^5.6.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "start:prod": "node app.js",
+    "start:frontend": "npm --prefix lgt-frontend run dev",
+    "build": "npm --prefix lgt-api run build",
+    "build:frontend": "npm --prefix lgt-frontend run build"
+  }
+}

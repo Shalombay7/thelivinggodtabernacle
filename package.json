@@ -5,14 +5,14 @@
     "lgt-api",
     "lgt-frontend"
   ],
-  "dependencies": {
-    "next-pwa": "^5.6.0"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "node app.js",
     "start:prod": "node app.js",
-    "start:frontend": "npm --prefix lgt-frontend run dev",
-    "build": "npm --prefix lgt-api run build",
-    "build:frontend": "npm --prefix lgt-frontend run build"
+    "start:frontend": "npm run dev -w lgt-frontend",
+    "build:api": "npm run build -w lgt-api",
+    "build:frontend": "npm run build -w lgt-frontend",
+    "prisma:migrate": "npm run prisma:migrate -w lgt-api",
+    "prisma:studio": "npm run prisma:studio -w lgt-api"
   }
 }

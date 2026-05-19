@@ -3,6 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/thelivin/new-app
     - /bin/rsync -a --delete --exclude='.git' --exclude='node_modules' --exclude='.cpanel.yml' --exclude='.env' --exclude='*.tsbuildinfo' "$PWD"/ "$DEPLOYPATH"/
-    - cd "$DEPLOYPATH" && npm ci
+    - cd "$DEPLOYPATH" && npm ci --include=dev
     - cd "$DEPLOYPATH" && npm run build
     - cd "$DEPLOYPATH" && npm prune --omit=dev

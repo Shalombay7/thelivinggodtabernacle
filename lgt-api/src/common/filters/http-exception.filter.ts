@@ -23,8 +23,8 @@ export class HttpExceptionFilter implements ExceptionFilter {
       const message =
         typeof payload === 'string'
           ? payload
-          : (payload as { message?: string | string[] }).message ??
-            exception.message;
+          : ((payload as { message?: string | string[] }).message ??
+            exception.message);
 
       response.status(status).json({
         statusCode: status,

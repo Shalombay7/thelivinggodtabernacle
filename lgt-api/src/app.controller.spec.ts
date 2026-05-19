@@ -15,12 +15,15 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return service metadata', () => {
-      expect(appController.getHello()).toEqual({
-        service: 'LGT API',
-        status: 'online',
-        version: '1.0.0',
-        docs: '/docs',
-        health: '/api/health',
+      expect(appController.getHello()).toMatchObject({
+        service: 'The Living God Tabernacle',
+        vision:
+          'A welcoming home for worship, discipleship, prayer, and transformed lives.',
+        links: {
+          docs: '/docs',
+          health: '/api/health',
+          portal: '/',
+        },
       });
     });
 

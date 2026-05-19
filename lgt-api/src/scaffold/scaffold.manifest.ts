@@ -19,19 +19,44 @@ export const scaffoldManifest: ScaffoldManifest = {
       name: 'Home',
       routes: ['/api', '/api/scaffold'],
       components: ['HeroScripture', 'DailyQuoteCard', 'FeaturedSermonCard'],
-      notes: ['Root response should stay lightweight and route users into doctrine quickly.'],
+      notes: [
+        'Root response should stay lightweight and route users into doctrine quickly.',
+      ],
     },
     {
       name: 'Bible',
-      routes: ['/api/bible', '/api/bible/books', '/api/bible/books/:book/chapters/:chapter'],
-      components: ['BibleReader', 'VerseItem', 'CrossReferences', 'BookmarkButton'],
-      notes: ['KJV text is read-only and should never be mutated by user flows.'],
+      routes: [
+        '/api/bible',
+        '/api/bible/books',
+        '/api/bible/books/:book/chapters/:chapter',
+      ],
+      components: [
+        'BibleReader',
+        'VerseItem',
+        'CrossReferences',
+        'BookmarkButton',
+      ],
+      notes: [
+        'KJV text is read-only and should never be mutated by user flows.',
+      ],
     },
     {
       name: 'Sermons',
-      routes: ['/api/sermons', '/api/sermons/:slug', '/api/sermons/search', '/api/sermons/topics'],
-      components: ['SermonCard', 'SermonPlayer', 'TranscriptViewer', 'ScriptureReferences'],
-      notes: ['Treat sermons as canonical ministry content with topic and scripture metadata.'],
+      routes: [
+        '/api/sermons',
+        '/api/sermons/:slug',
+        '/api/sermons/search',
+        '/api/sermons/topics',
+      ],
+      components: [
+        'SermonCard',
+        'SermonPlayer',
+        'TranscriptViewer',
+        'ScriptureReferences',
+      ],
+      notes: [
+        'Treat sermons as canonical ministry content with topic and scripture metadata.',
+      ],
     },
     {
       name: 'Prayer',
@@ -41,7 +66,11 @@ export const scaffoldManifest: ScaffoldManifest = {
     },
     {
       name: 'Fellowship',
-      routes: ['/api/fellowship', '/api/fellowship/groups', '/api/fellowship/groups/:id'],
+      routes: [
+        '/api/fellowship',
+        '/api/fellowship/groups',
+        '/api/fellowship/groups/:id',
+      ],
       components: ['GroupCard', 'GroupFeed', 'DiscussionThread'],
       notes: ['Keep group content distinct from doctrine content.'],
     },
@@ -53,33 +82,57 @@ export const scaffoldManifest: ScaffoldManifest = {
     },
     {
       name: 'Testimonies',
-      routes: ['/api/testimonies', '/api/testimonies/share', '/api/testimonies/:id'],
+      routes: [
+        '/api/testimonies',
+        '/api/testimonies/share',
+        '/api/testimonies/:id',
+      ],
       components: ['TestimonyCard', 'TestimonyForm'],
       notes: ['Approve before publishing.'],
     },
     {
       name: 'Devotion',
-      routes: ['/api/devotion', '/api/devotion/daily', '/api/devotion/reading-plan'],
+      routes: [
+        '/api/devotion',
+        '/api/devotion/daily',
+        '/api/devotion/reading-plan',
+      ],
       components: ['DailyScriptureCard', 'DailyQuoteCard', 'ReflectionJournal'],
       notes: ['Combine KJV reading with Branham quote or excerpt.'],
     },
     {
       name: 'Locator',
-      routes: ['/api/locator', '/api/locator/assemblies', '/api/locator/ministers'],
+      routes: [
+        '/api/locator',
+        '/api/locator/assemblies',
+        '/api/locator/ministers',
+      ],
       components: ['MapView', 'LocationCard', 'RegionFilter'],
-      notes: ['Normalize assemblies, house fellowships, and ministers into one location model.'],
+      notes: [
+        'Normalize assemblies, house fellowships, and ministers into one location model.',
+      ],
     },
     {
       name: 'Downloads',
-      routes: ['/api/downloads', '/api/downloads/sermons', '/api/downloads/bible'],
-      components: ['OfflineLibraryManager', 'DownloadedSermons', 'DownloadedBibleContent'],
+      routes: [
+        '/api/downloads',
+        '/api/downloads/sermons',
+        '/api/downloads/bible',
+      ],
+      components: [
+        'OfflineLibraryManager',
+        'DownloadedSermons',
+        'DownloadedBibleContent',
+      ],
       notes: ['Track offline availability separately from canonical content.'],
     },
     {
       name: 'Profile',
       routes: ['/api/profile', '/api/profile/bookmarks', '/api/profile/notes'],
       components: ['ProfileHeader', 'UnifiedBookmarks', 'ReadingProgress'],
-      notes: ['Aggregate user state from content modules rather than duplicating it.'],
+      notes: [
+        'Aggregate user state from content modules rather than duplicating it.',
+      ],
     },
     {
       name: 'Support',
@@ -91,7 +144,9 @@ export const scaffoldManifest: ScaffoldManifest = {
       name: 'Admin',
       routes: ['/api/admin', '/api/admin/moderation', '/api/admin/sermons'],
       components: ['AdminDashboard', 'ModerationQueue', 'ContentManager'],
-      notes: ['All writes should pass through service-level validation and audit trails.'],
+      notes: [
+        'All writes should pass through service-level validation and audit trails.',
+      ],
     },
   ],
 };

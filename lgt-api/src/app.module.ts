@@ -2,7 +2,6 @@ import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { validateEnv } from './config/validation';
-import { PrismaModule } from './prisma/prisma.module';
 import { RequestIdMiddleware } from './common/middleware/request-id.middleware';
 import { HealthModule } from './health/health.module';
 
@@ -12,7 +11,6 @@ import { HealthModule } from './health/health.module';
       isGlobal: true,
       validate: validateEnv,
     }),
-    PrismaModule,
     HealthModule,
   ],
   controllers: [AppController],

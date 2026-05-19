@@ -3,12 +3,13 @@ import { ConfigService } from '@nestjs/config';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { existsSync } from 'fs';
 import helmet from 'helmet';
-import * as hbs from 'hbs';
+import hbs from 'hbs';
+import { join } from 'path';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
-import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -18,11 +19,26 @@ async function bootstrap() {
   const logger = new Logger('Bootstrap');
   app.useLogger(logger);
 
-  // MVC Configuration
-  app.useStaticAssets(join(process.cwd(), 'src', 'public'));
-  app.setBaseViewsDir(join(process.cwd(), 'src', 'views'));
-  
-  app.engine('hbs', hbs.__express);
+  const runtimeRoot = join(__dirname, '..');
+  const publicDir = join(runtimeRoot, 'public');
+  const viewsDir = join(runtimeRoot, 'views');
+
+  if (existsSync(publicDir)) {
+    app.useStaticAssets(publicDir);
+  }
+
+  const hbsEngine = (
+    hbs as unknown as {
+      __express: (
+        viewPath: string,
+        options: object,
+        callback: (error: Error | null, rendered?: string) => void,
+      ) => void;
+    }
+  ).__express;
+
+  app.setBaseViewsDir(viewsDir);
+  app.engine('hbs', hbsEngine);
   app.setViewEngine('hbs');
 
   app.enableShutdownHooks();
@@ -39,7 +55,7 @@ async function bootstrap() {
     helmet({
       contentSecurityPolicy: {
         directives: {
-          "style-src": ["'self'", "'unsafe-inline'"],
+          'style-src': ["'self'", "'unsafe-inline'"],
         },
       },
     }),
@@ -77,4 +93,4 @@ async function bootstrap() {
   logger.log(`Application is running on port ${port}`);
 }
 
-bootstrap();
+void bootstrap();

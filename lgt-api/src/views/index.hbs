@@ -3,117 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LGT Connect | The Living God Tabernacle</title>
+  <title>{{service}}</title>
   <style>
     :root {
-      --primary: #1e3a8a;
-      --accent: #d97706;
-      --bg: #fdfbf7;
-      --card: #ffffff;
-      --text: #111827;
-      --text-muted: #64748b;
-      --success: #10b981;
+      --primary: #114734;
+      --primary-strong: #0b3325;
+      --accent: #b5872a;
+      --bg: #f6f0e4;
+      --surface: rgba(255, 255, 255, 0.88);
+      --text: #13261e;
+      --text-muted: #5d675f;
+      --success: #114734;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(203, 161, 53, 0.18), transparent 32%),
+        linear-gradient(180deg, #fbf7ee 0%, var(--bg) 100%);
       color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      min-height: 100vh;
     }
-    .card {
-      background: var(--card);
-      padding: 3rem;
-      border-radius: 24px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-      width: 100%;
-      max-width: 500px;
-      text-align: center;
-      border: 1px solid #f3f4f6;
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 32px;
+      box-shadow: 0 28px 80px rgba(12, 33, 25, 0.09);
+      padding: 40px;
+      margin-top: 24px;
     }
     h1 {
-      margin: 0 0 0.5rem 0;
-      font-size: 2.25rem;
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
       color: var(--primary);
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
+      line-height: 1.02;
+    }
+    .eyebrow {
+      color: var(--accent);
+      margin: 0 0 16px 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
     }
     .tagline {
       color: var(--text-muted);
-      margin-bottom: 2rem;
-      font-style: italic;
+      margin: 24px 0 0 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 760px;
     }
     .grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 32px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(17, 71, 52, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(12, 33, 25, 0.08);
     }
     .feature-link {
-      display: flex;
-      align-items: center;
-      padding: 1.25rem;
-      background: #fff;
-      border: 2px solid #f3f4f6;
-      border-radius: 12px;
+      display: block;
       text-decoration: none;
       color: var(--text);
-      transition: all 0.3s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
     .feature-link:hover {
       border-color: var(--accent);
-      transform: translateX(5px);
-      background: #fffdfa;
+      transform: translateY(-2px);
     }
-    .feature-icon {
-      font-size: 1.5rem;
-      margin-right: 1rem;
+    .meta {
+      margin-top: 32px;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
-    .feature-text { text-align: left; }
-    .feature-title { font-weight: 700; display: block; }
-    .feature-desc { font-size: 0.8rem; color: var(--text-muted); }
-    
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
+    .label {
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .title {
+      color: var(--primary);
+      font-family: Georgia, serif;
+      font-size: 1.55rem;
+      margin: 12px 0 0 0;
+    }
+    .copy {
       color: var(--text-muted);
+      margin: 12px 0 0 0;
+      line-height: 1.75;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .button-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .button-secondary {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    .footer {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    ul {
+      margin: 16px 0 0 20px;
+      padding: 0;
+      color: var(--text-muted);
+      line-height: 1.7;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>The Living God Tabernacle</h1>
-    <p class="tagline">Overcoming together through faith and fellowship.</p>
-    
-    <div class="grid">
-      <a href="/altar" class="feature-link">
-        <span class="feature-icon">🔥</span>
-        <div class="feature-text">
-          <span class="feature-title">The Family Altar</span>
-          <span class="feature-desc">Daily devotionals for your household.</span>
-        </div>
-      </a>
-      <a href="/connect" class="feature-link">
-        <span class="feature-icon">🤝</span>
-        <div class="feature-text">
-          <span class="feature-title">Fellowship Groups</span>
-          <span class="feature-desc">Find a community near you.</span>
-        </div>
-      </a>
-      <a href="/docs" class="feature-link">
-        <span class="feature-icon">📖</span>
-        <div class="feature-text">
-          <span class="feature-title">Bible API Docs</span>
-          <span class="feature-desc">Developer resources and health.</span>
-        </div>
-      </a>
-    </div>
+  <div class="shell">
+    <section class="hero">
+      <p class="eyebrow">Welcome Home</p>
+      <h1>{{service}}</h1>
+      <p class="tagline">{{vision}}</p>
 
-    <div class="footer">
-      <p>System Status: <span style="color:var(--success)">Healthy</span> • Version 1.0.0</p>
-    </div>
+      <div class="actions">
+        <a href="{{churchInfo.socialLinks.youtube}}" class="button button-primary">Watch Live</a>
+        <a href="/docs" class="button button-secondary">API Docs</a>
+      </div>
+
+      <div class="meta">
+        <article class="card">
+          <p class="label">Mission</p>
+          <h2 class="title">Built for worship and discipleship.</h2>
+          <p class="copy">{{about.mission}}</p>
+        </article>
+        <article class="card">
+          <p class="label">Leadership</p>
+          <h2 class="title">{{leadership.pastor}}</h2>
+          <p class="copy">{{leadership.message}}</p>
+        </article>
+      </div>
+
+      <div class="grid">
+        {{#each modules}}
+        <a href="/api/info" class="card feature-link">
+          <p class="label">{{for}}</p>
+          <h3 class="title">{{name}}</h3>
+          <p class="copy">{{#if active}}Available now{{else}}Coming soon{{/if}}</p>
+        </a>
+        {{/each}}
+      </div>
+
+      <div class="meta">
+        <article class="card">
+          <p class="label">Visit</p>
+          <h2 class="title">Gather with us</h2>
+          <p class="copy">{{churchInfo.serviceTime}}</p>
+          <p class="copy">{{churchInfo.address}}</p>
+        </article>
+        <article class="card">
+          <p class="label">Connect</p>
+          <h2 class="title">Reach the church</h2>
+          <ul>
+            <li>Email: {{churchInfo.contact}}</li>
+            <li><a href="{{links.health}}">Health status</a></li>
+            <li><a href="{{links.docs}}">Developer docs</a></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="footer">
+        <p>Production runtime is healthy when this page, <a href="{{links.health}}">/api/health</a>, and <a href="{{links.docs}}">/docs</a> respond successfully.</p>
+      </div>
+    </section>
   </div>
 </body>
 </html>

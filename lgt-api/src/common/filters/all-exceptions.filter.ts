@@ -1,55 +1,104 @@
-import { ExceptionFilter, Catch, ArgumentsHost, HttpException, HttpStatus, Logger } from '@nestjs/common';
+import {
+  ArgumentsHost,
+  Catch,
+  ExceptionFilter,
+  HttpException,
+  HttpStatus,
+  Logger,
+} from '@nestjs/common';
 import { HttpAdapterHost } from '@nestjs/core';
+import { Request, Response } from 'express';
+
+type DbLikeError = {
+  code?: string;
+  errno?: number;
+  message?: string;
+};
+
+type HttpErrorPayload = {
+  message?: string | string[];
+};
+
+function isDbLikeError(value: unknown): value is DbLikeError {
+  return typeof value === 'object' && value !== null;
+}
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
   private readonly logger = new Logger(AllExceptionsFilter.name);
+  private readonly internalServerErrorStatus = Number(
+    HttpStatus.INTERNAL_SERVER_ERROR,
+  );
 
   constructor(private readonly httpAdapterHost: HttpAdapterHost) {}
 
   catch(exception: unknown, host: ArgumentsHost): void {
     const { httpAdapter } = this.httpAdapterHost;
     const ctx = host.switchToHttp();
-    const request = ctx.getRequest();
-    const requestId = request.headers?.['x-request-id'] || '-';
+    const request = ctx.getRequest<Request>();
+    const response = ctx.getResponse<Response>();
+    const requestIdHeader = request.headers['x-request-id'];
+    const requestId = Array.isArray(requestIdHeader)
+      ? (requestIdHeader[0] ?? '-')
+      : (requestIdHeader ?? '-');
     const isHttpException = exception instanceof HttpException;
 
-    let httpStatus = isHttpException
+    let httpStatus: number = isHttpException
       ? exception.getStatus()
       : HttpStatus.INTERNAL_SERVER_ERROR;
 
-    let message = isHttpException
-      ? (exception.getResponse() as any).message || exception.message
-      : (exception as any)?.message || 'Internal server error';
+    let message = 'Internal server error';
+    if (isHttpException) {
+      const payload = exception.getResponse() as HttpErrorPayload | string;
+      const payloadMessage =
+        typeof payload === 'string'
+          ? payload
+          : Array.isArray(payload.message)
+            ? payload.message.join(', ')
+            : payload.message;
 
-    // Handle MySQL/MariaDB specific errors (e.g., Unique Constraints)
-    const dbError = exception as any;
-    if (!isHttpException && (dbError.code?.startsWith('ER_') || dbError.errno)) {
-      // Map ER_DUP_ENTRY (1062) to 409 Conflict
+      message = payloadMessage ?? exception.message;
+    } else if (exception instanceof Error) {
+      message = exception.message;
+    }
+
+    if (
+      !isHttpException &&
+      isDbLikeError(exception) &&
+      (exception.code?.startsWith('ER_') || typeof exception.errno === 'number')
+    ) {
+      const dbError = exception;
+
       if (dbError.errno === 1062) {
         httpStatus = HttpStatus.CONFLICT;
         message = 'A record with this unique value already exists.';
       }
-      this.logger.warn(`Database Error [${dbError.code}]: ${dbError.message}`);
+
+      this.logger.warn(
+        `Database Error [${dbError.code ?? 'UNKNOWN'}]: ${dbError.message ?? message}`,
+      );
     }
 
     const responseBody = {
       statusCode: httpStatus,
       timestamp: new Date().toISOString(),
-      path: httpAdapter.getRequestUrl(ctx.getRequest()),
+      path: request.url,
       message,
       requestId,
     };
 
-    // Log the stack trace for 500 errors
-    if (httpStatus === HttpStatus.INTERNAL_SERVER_ERROR) {
-      // Use a replacer to handle BigInt values often found in MariaDB/MySQL driver errors
-      const errorString = JSON.stringify(exception, (key, value) =>
-        typeof value === 'bigint' ? value.toString() : value,
+    if (httpStatus === this.internalServerErrorStatus) {
+      const errorString = JSON.stringify(
+        exception,
+        (_key: string, value: unknown) =>
+          typeof value === 'bigint' ? value.toString() : value,
       );
-      this.logger.error(`Unhandled Exception: ${errorString}`, (exception as Error).stack);
+      this.logger.error(
+        `Unhandled Exception: ${errorString}`,
+        exception instanceof Error ? exception.stack : undefined,
+      );
     }
 
-    httpAdapter.reply(ctx.getResponse(), responseBody, httpStatus);
+    httpAdapter.reply(response, responseBody, httpStatus);
   }
 }

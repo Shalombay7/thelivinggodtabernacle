@@ -7,6 +7,8 @@ dist/
 .next/
 out/
 build/
+lgt-frontend/public/sw.js
+lgt-frontend/public/workbox-*.js
 
 # Logs
 npm-debug.log*
@@ -30,4 +32,5 @@ Thumbs.db
 # Temporary files
 .npm
 .turbo
+.repo-backups/
 *.log

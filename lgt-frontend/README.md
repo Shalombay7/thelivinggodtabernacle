@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LGT Frontend
 
-## Getting Started
+Next.js frontend for The Living God Tabernacle.
 
-First, run the development server:
+## Purpose
+
+This workspace contains the public-facing landing page and frontend experience.
+It is intentionally separate from the deployed backend in `lgt-api`.
+
+## Development
+
+Run the frontend locally from the repository root:
+
+```bash
+npm run start:frontend
+```
+
+Or from this workspace directly:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+The build uses `--webpack` intentionally because `next-pwa` is currently wired
+through the existing config. This preserves compatibility with the current setup
+instead of changing the runtime architecture.
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `NEXT_PUBLIC_API_BASE_URL` should point to the deployed backend base URL.
+- The landing page is written to fail gracefully if the API is unavailable.
+- `next-pwa.d.ts` exists only to provide local type declarations for `next-pwa`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Important Boundaries
 
-## Deploy on Vercel
+- Do not change the backend deployment entrypoint from this workspace.
+- Do not move hosting paths or restructure UltraHost runtime directories without
+  verifying the existing deployment flow first.
+- Avoid committing generated PWA artifacts such as `public/sw.js` and
+  `public/workbox-*.js`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Key Files
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx`: landing page and API-backed fallback rendering
+- `src/app/layout.tsx`: metadata and font setup
+- `src/app/globals.css`: theme tokens and global presentation
+
+## Deployment Note
+
+This frontend was added after the backend deployment was already working. Treat
+frontend changes as an addition to the existing hosting setup, not a reason to
+restructure the backend runtime.

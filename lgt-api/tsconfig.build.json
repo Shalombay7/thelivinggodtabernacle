@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts",
+    "src/prisma/AuthContext.tsx",
+    "src/prisma/page.tsx",
+    "src/prisma/auth.controller.ts",
+    "src/prisma/bible.controller.ts",
+    "src/prisma/bible.service.ts",
+    "src/prisma/events.controller.ts",
+    "src/prisma/events.service.ts",
+    "src/prisma/fellowship.service.ts",
+    "src/prisma/jwt-auth.guard.ts",
+    "src/prisma/jwt.strategy.ts",
+    "src/prisma/personalization.service.ts",
+    "src/prisma/prayer-wall.controller.ts",
+    "src/prisma/prayer-wall.module.ts",
+    "src/prisma/prayer-wall.service.ts",
+    "src/prisma/reading-plans.controller.ts",
+    "src/prisma/reading-plans.service.ts",
+    "src/prisma/sermons.controller.ts",
+    "src/prisma/sermons.module.ts",
+    "src/prisma/sermons.service.ts",
+    "src/prisma/testimonies.controller.ts",
+    "src/prisma/testimonies.module.ts",
+    "src/prisma/testimonies.service.ts"
+  ]
+}

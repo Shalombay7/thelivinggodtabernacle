@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "The Living God Tabernacle",
   description:
     "A welcoming Christian home for worship, prayer, discipleship, and life-giving fellowship.",
+  applicationName: "The Living God Tabernacle",
 };
 
 export default function RootLayout({
@@ -30,7 +31,12 @@ export default function RootLayout({
       lang="en"
       className={`${bodyFont.variable} ${headingFont.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

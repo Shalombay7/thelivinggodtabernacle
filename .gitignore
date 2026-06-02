@@ -1,4 +1,3 @@
-# compiled output
 /dist
 /node_modules
 /build
@@ -55,3 +54,40 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+=======
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+.next/
+out/
+build/
+lgt-frontend/public/sw.js
+lgt-frontend/public/workbox-*.js
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables (Sensitive)
+.env
+.env.local
+.env.production
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Temporary files
+.npm
+.turbo
+.repo-backups/
+*.log

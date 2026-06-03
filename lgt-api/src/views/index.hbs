@@ -1,202 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{service}}</title>
+  <meta charset="utf-8" />
+  <title>{{service}} – Welcome Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --primary: #114734;
-      --primary-strong: #0b3325;
-      --accent: #b5872a;
-      --bg: #f6f0e4;
-      --surface: rgba(255, 255, 255, 0.88);
-      --text: #13261e;
-      --text-muted: #5d675f;
-      --success: #114734;
+      --bg: #050816;
+      --bg-alt: #020617;
+      --card: rgba(15, 23, 42, 0.95);
+      --accent: #4f46e5;
+      --accent-soft: rgba(79, 70, 229, 0.25);
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --border: rgba(148, 163, 184, 0.35);
+    }
+    * {
+      box-sizing: border-box;
     }
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(203, 161, 53, 0.18), transparent 32%),
-        linear-gradient(180deg, #fbf7ee 0%, var(--bg) 100%);
-      color: var(--text);
       margin: 0;
-      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, var(--bg) 40%, var(--bg-alt) 100%);
+      color: var(--text);
+      line-height: 1.6;
     }
     .shell {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .hero {
-      background: var(--surface);
-      border: 1px solid rgba(255, 255, 255, 0.65);
-      border-radius: 32px;
-      box-shadow: 0 28px 80px rgba(12, 33, 25, 0.09);
-      padding: 40px;
-      margin-top: 24px;
+    header {
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border);
+      color: #a5b4fc;
+    }
+    .badge-dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
     }
     h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
-      color: var(--primary);
-      font-family: Georgia, serif;
-      line-height: 1.02;
+      margin: 0.75rem 0 0.35rem;
+      font-size: clamp(2rem, 3vw, 2.6rem);
     }
-    .eyebrow {
-      color: var(--accent);
-      margin: 0 0 16px 0;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
+    .vision {
+      max-width: 42rem;
+      margin: 0 auto;
+      opacity: 0.92;
+      font-size: 0.98rem;
     }
-    .tagline {
-      color: var(--text-muted);
-      margin: 24px 0 0 0;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 760px;
+    .hero-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      border-radius: 999px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease-out;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      border-color: rgba(129, 140, 248, 0.4);
+      color: #eef2ff;
+      box-shadow: 0 18px 40px rgba(59, 130, 246, 0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 50px rgba(59, 130, 246, 0.45);
+    }
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.75);
+      border-color: var(--border);
+      color: var(--muted);
+    }
+    .btn-ghost:hover {
+      border-color: #e5e7eb;
+      color: #e5e7eb;
+    }
+    main {
+      padding: 0 1.5rem 3rem;
+      max-width: 1080px;
+      margin: 0 auto;
+      width: 100%;
     }
     .grid {
       display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      margin-top: 32px;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid-2 {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+        align-items: stretch;
+      }
     }
     .card {
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(17, 71, 52, 0.12);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 18px 45px rgba(12, 33, 25, 0.08);
+      background: var(--card);
+      border-radius: 0.9rem;
+      padding: 1.25rem 1.3rem 1.35rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.75);
     }
-    .feature-link {
-      display: block;
-      text-decoration: none;
-      color: var(--text);
-      transition: transform 0.2s ease, border-color 0.2s ease;
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
     }
-    .feature-link:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
     }
-    .meta {
-      margin-top: 32px;
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    strong {
+      font-weight: 600;
     }
-    .label {
-      color: var(--accent);
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+    .modules-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+    .modules-title {
+      font-size: 0.9rem;
       text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #bfdbfe;
     }
-    .title {
-      color: var(--primary);
-      font-family: Georgia, serif;
-      font-size: 1.55rem;
-      margin: 12px 0 0 0;
-    }
-    .copy {
-      color: var(--text-muted);
-      margin: 12px 0 0 0;
-      line-height: 1.75;
-    }
-    .actions {
+    .modules {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
+      gap: 0.45rem;
+      margin-top: 0.35rem;
     }
-    .button {
-      display: inline-block;
-      padding: 14px 22px;
+    .chip {
+      padding: 0.25rem 0.7rem;
       border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      white-space: nowrap;
+    }
+    .chip span {
+      opacity: 0.7;
+      font-size: 0.72rem;
+    }
+    .kids-highlight {
+      position: relative;
+      overflow: hidden;
+    }
+    .kids-highlight::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.33), transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    .kids-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #7dd3fc;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .kids-tag-dot {
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 999px;
+      background: #facc15;
+    }
+    a {
+      color: #93c5fd;
       text-decoration: none;
-      font-weight: 700;
     }
-    .button-primary {
-      background: var(--primary);
-      color: #fff;
+    a:hover {
+      text-decoration: underline;
     }
-    .button-secondary {
-      border: 1px solid var(--primary);
-      color: var(--primary);
-    }
-    .footer {
-      margin-top: 24px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-    ul {
-      margin: 16px 0 0 20px;
-      padding: 0;
-      color: var(--text-muted);
-      line-height: 1.7;
+    footer {
+      text-align: center;
+      padding: 1rem 0 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
   <div class="shell">
-    <section class="hero">
-      <p class="eyebrow">Welcome Home</p>
+    <header>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        A home for end-time message believers
+      </div>
       <h1>{{service}}</h1>
-      <p class="tagline">{{vision}}</p>
-
-      <div class="actions">
-        <a href="{{churchInfo.socialLinks.youtube}}" class="button button-primary">Watch Live</a>
-        <a href="/docs" class="button button-secondary">API Docs</a>
+      <p class="vision">{{vision}}</p>
+      <div class="hero-actions">
+        <a href="#visit" class="btn btn-primary">Plan a visit</a>
+        <a href="{{links.docs}}" class="btn btn-ghost">Developer docs</a>
       </div>
+    </header>
 
-      <div class="meta">
+    <main>
+      <section id="top" class="grid grid-3">
         <article class="card">
-          <p class="label">Mission</p>
-          <h2 class="title">Built for worship and discipleship.</h2>
-          <p class="copy">{{about.mission}}</p>
+          <h2>About</h2>
+          <p>{{about.mission}}</p>
+          <p class="muted">{{about.statementOfFaith}}</p>
         </article>
-        <article class="card">
-          <p class="label">Leadership</p>
-          <h2 class="title">{{leadership.pastor}}</h2>
-          <p class="copy">{{leadership.message}}</p>
-        </article>
-      </div>
 
-      <div class="grid">
-        {{#each modules}}
-        <a href="/api/info" class="card feature-link">
-          <p class="label">{{for}}</p>
-          <h3 class="title">{{name}}</h3>
-          <p class="copy">{{#if active}}Available now{{else}}Coming soon{{/if}}</p>
-        </a>
-        {{/each}}
-      </div>
-
-      <div class="meta">
-        <article class="card">
-          <p class="label">Visit</p>
-          <h2 class="title">Gather with us</h2>
-          <p class="copy">{{churchInfo.serviceTime}}</p>
-          <p class="copy">{{churchInfo.address}}</p>
+        <article id="visit" class="card">
+          <h2>Visit & gather</h2>
+          <p><strong>Location:</strong> {{churchInfo.address}}</p>
+          <p><strong>Service times:</strong> {{churchInfo.serviceTime}}</p>
+          <p><strong>Contact:</strong> {{churchInfo.contact}}</p>
         </article>
-        <article class="card">
-          <p class="label">Connect</p>
-          <h2 class="title">Reach the church</h2>
-          <ul>
-            <li>Email: {{churchInfo.contact}}</li>
-            <li><a href="{{links.health}}">Health status</a></li>
-            <li><a href="{{links.docs}}">Developer docs</a></li>
-          </ul>
-        </article>
-      </div>
 
-      <div class="footer">
-        <p>Production runtime is healthy when this page, <a href="{{links.health}}">/api/health</a>, and <a href="{{links.docs}}">/docs</a> respond successfully.</p>
-      </div>
-    </section>
+        <article class="card">
+          <h2>Connect online</h2>
+          <p>
+            <a href="{{churchInfo.socialLinks.facebook}}" target="_blank">Facebook</a> ·
+            <a href="{{churchInfo.socialLinks.youtube}}" target="_blank">YouTube</a> ·
+            <a href="{{churchInfo.socialLinks.instagram}}" target="_blank">Instagram</a>
+          </p>
+          <p class="muted">
+            <a href="{{links.docs}}">API Docs</a> · <a href="{{links.health}}">Health</a>
+          </p>
+        </article>
+      </section>
+
+      <section class="grid grid-2" style="margin-top: 1.5rem;">
+        <article class="card kids-highlight">
+          <div class="kids-tag">
+            <span class="kids-tag-dot"></span>
+            For kids & youth
+          </div>
+          <h2 style="margin-top: 0.7rem;">Next generation disciples</h2>
+          <p class="muted">
+            From Kingdom Explorers to Re-Gen Hub, we are raising children and youth
+            who know Christ personally and walk confidently in His Word.
+          </p>
+          <div class="modules">
+            {{#each modules}}
+              {{#if (or (eq id "explorers") (eq id "regen"))}}
+                <span class="chip">{{name}} <span>– {{for}}</span></span>
+              {{/if}}
+            {{/each}}
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="modules-header">
+            <span class="modules-title">For every believer</span>
+          </div>
+          <h2>Ministry modules</h2>
+          <p class="muted">
+            Gather, grow, and serve through focused ministries designed for every
+            believer and every season of life.
+          </p>
+          <div class="modules">
+            {{#each modules}}
+              <span class="chip">{{name}} <span>– {{for}}</span></span>
+            {{/each}}
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      &copy; {{service}} · Powered by LGT Platform · See <a href="{{links.docs}}">API docs</a>
+    </footer>
   </div>
 </body>
 </html>

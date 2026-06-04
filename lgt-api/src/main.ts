@@ -19,12 +19,17 @@ async function bootstrap() {
   const logger = new Logger('Bootstrap');
   app.useLogger(logger);
 
-  const runtimeRoot = join(__dirname, '..');
+  const runtimeRoot = __dirname;
   const publicDir = join(runtimeRoot, 'public');
   const viewsDir = join(runtimeRoot, 'views');
+  const partialsDir = join(viewsDir, 'partials');
 
   if (existsSync(publicDir)) {
     app.useStaticAssets(publicDir);
+  }
+
+  if (existsSync(partialsDir)) {
+    hbs.registerPartials(partialsDir);
   }
 
   const hbsEngine = (

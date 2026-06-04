@@ -2,303 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>{{service}} – Welcome Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #050816;
-      --bg-alt: #020617;
-      --card: rgba(15, 23, 42, 0.95);
-      --accent: #4f46e5;
-      --accent-soft: rgba(79, 70, 229, 0.25);
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --border: rgba(148, 163, 184, 0.35);
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, var(--bg) 40%, var(--bg-alt) 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .shell {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--border);
-      color: #a5b4fc;
-    }
-    .badge-dot {
-      width: 0.45rem;
-      height: 0.45rem;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
-    }
-    h1 {
-      margin: 0.75rem 0 0.35rem;
-      font-size: clamp(2rem, 3vw, 2.6rem);
-    }
-    .vision {
-      max-width: 42rem;
-      margin: 0 auto;
-      opacity: 0.92;
-      font-size: 0.98rem;
-    }
-    .hero-actions {
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .btn {
-      border-radius: 999px;
-      padding: 0.5rem 1.25rem;
-      font-size: 0.9rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.15s ease-out;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      border-color: rgba(129, 140, 248, 0.4);
-      color: #eef2ff;
-      box-shadow: 0 18px 40px rgba(59, 130, 246, 0.35);
-    }
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 50px rgba(59, 130, 246, 0.45);
-    }
-    .btn-ghost {
-      background: rgba(15, 23, 42, 0.75);
-      border-color: var(--border);
-      color: var(--muted);
-    }
-    .btn-ghost:hover {
-      border-color: #e5e7eb;
-      color: #e5e7eb;
-    }
-    main {
-      padding: 0 1.5rem 3rem;
-      max-width: 1080px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .grid {
-      display: grid;
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-    @media (min-width: 900px) {
-      .grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .grid-2 {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-        align-items: stretch;
-      }
-    }
-    .card {
-      background: var(--card);
-      border-radius: 0.9rem;
-      padding: 1.25rem 1.3rem 1.35rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.75);
-    }
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-    .muted {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-    strong {
-      font-weight: 600;
-    }
-    .modules-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.5rem;
-    }
-    .modules-title {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #bfdbfe;
-    }
-    .modules {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-top: 0.35rem;
-    }
-    .chip {
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-      white-space: nowrap;
-    }
-    .chip span {
-      opacity: 0.7;
-      font-size: 0.72rem;
-    }
-    .kids-highlight {
-      position: relative;
-      overflow: hidden;
-    }
-    .kids-highlight::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.33), transparent 60%);
-      opacity: 0.8;
-      pointer-events: none;
-    }
-    .kids-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.15rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.15);
-      color: #7dd3fc;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .kids-tag-dot {
-      width: 0.4rem;
-      height: 0.4rem;
-      border-radius: 999px;
-      background: #facc15;
-    }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0 1.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-  </style>
+  <meta name="description" content="{{meta.description}}" />
+  <title>{{meta.title}}</title>
+  <link rel="stylesheet" href="/styles/home.css" />
 </head>
 <body>
-  <div class="shell">
-    <header>
-      <div class="badge">
-        <span class="badge-dot"></span>
-        A home for end-time message believers
-      </div>
-      <h1>{{service}}</h1>
-      <p class="vision">{{vision}}</p>
-      <div class="hero-actions">
-        <a href="#visit" class="btn btn-primary">Plan a visit</a>
-        <a href="{{links.docs}}" class="btn btn-ghost">Developer docs</a>
-      </div>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <main>
-      <section id="top" class="grid grid-3">
-        <article class="card">
-          <h2>About</h2>
-          <p>{{about.mission}}</p>
-          <p class="muted">{{about.statementOfFaith}}</p>
-        </article>
+  <div class="page-shell" id="top">
+    {{> site-header}}
 
-        <article id="visit" class="card">
-          <h2>Visit & gather</h2>
-          <p><strong>Location:</strong> {{churchInfo.address}}</p>
-          <p><strong>Service times:</strong> {{churchInfo.serviceTime}}</p>
-          <p><strong>Contact:</strong> {{churchInfo.contact}}</p>
-        </article>
+    <main id="main-content">
+      {{> hero}}
+      {{> belief-strip}}
+      {{> message-section}}
 
-        <article class="card">
-          <h2>Connect online</h2>
-          <p>
-            <a href="{{churchInfo.socialLinks.facebook}}" target="_blank">Facebook</a> ·
-            <a href="{{churchInfo.socialLinks.youtube}}" target="_blank">YouTube</a> ·
-            <a href="{{churchInfo.socialLinks.instagram}}" target="_blank">Instagram</a>
-          </p>
-          <p class="muted">
-            <a href="{{links.docs}}">API Docs</a> · <a href="{{links.health}}">Health</a>
-          </p>
-        </article>
+      <section class="content-section" id="gather" aria-labelledby="gather-title">
+        <div class="section-heading">
+          <p class="eyebrow">Worship and gathering</p>
+          <h2 id="gather-title">Join us in person, live, or on the radio.</h2>
+          <p>{{churchInfo.serviceTime}}</p>
+        </div>
+
+        <div class="card-grid card-grid--three">
+          {{#each gatheringCards}}
+            {{> resource-card}}
+          {{/each}}
+        </div>
       </section>
 
-      <section class="grid grid-2" style="margin-top: 1.5rem;">
-        <article class="card kids-highlight">
-          <div class="kids-tag">
-            <span class="kids-tag-dot"></span>
-            For kids & youth
-          </div>
-          <h2 style="margin-top: 0.7rem;">Next generation disciples</h2>
-          <p class="muted">
-            From Kingdom Explorers to Re-Gen Hub, we are raising children and youth
-            who know Christ personally and walk confidently in His Word.
-          </p>
-          <div class="modules">
-            {{#each modules}}
-              {{#if (or (eq id "explorers") (eq id "regen"))}}
-                <span class="chip">{{name}} <span>– {{for}}</span></span>
-              {{/if}}
-            {{/each}}
-          </div>
-        </article>
+      <section class="content-section" id="resources" aria-labelledby="resources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Legacy resources, modernized</p>
+          <h2 id="resources-title">The existing ministry features are now clearer paths.</h2>
+          <p>Sermons, songs, Bible Q&A, teachings, videos, radio, and gallery content remain visible while the app grows native versions of each feature.</p>
+        </div>
 
-        <article class="card">
-          <div class="modules-header">
-            <span class="modules-title">For every believer</span>
-          </div>
-          <h2>Ministry modules</h2>
-          <p class="muted">
-            Gather, grow, and serve through focused ministries designed for every
-            believer and every season of life.
-          </p>
-          <div class="modules">
-            {{#each modules}}
-              <span class="chip">{{name}} <span>– {{for}}</span></span>
+        <div class="card-grid card-grid--three">
+          {{#each resources}}
+            {{> resource-card}}
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="content-section" id="modules" aria-labelledby="modules-title">
+        <div class="section-heading">
+          <p class="eyebrow">App modules</p>
+          <h2 id="modules-title">Built for discipleship across every stage of life.</h2>
+          <p>These modules keep the homepage aligned with the long-term platform vision instead of being only a static landing page.</p>
+        </div>
+
+        <div class="module-grid">
+          {{#each appModules}}
+            {{> module-card}}
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="prayer-section" id="prayer" aria-labelledby="prayer-title">
+        <div>
+          <p class="eyebrow">{{prayer.eyebrow}}</p>
+          <h2 id="prayer-title">{{prayer.title}}</h2>
+          <p>{{prayer.body}}</p>
+          <div class="action-row">
+            {{#each prayer.actions}}
+              <a
+                class="button button--{{variant}}"
+                href="{{url}}"
+                target="{{target}}"
+                rel="{{rel}}"
+              >
+                {{label}}
+              </a>
             {{/each}}
           </div>
-        </article>
+        </div>
+      </section>
+
+      <section class="content-section content-section--compact" aria-labelledby="questions-title">
+        <div class="section-heading">
+          <p class="eyebrow">Recent Bible questions</p>
+          <h2 id="questions-title">Keep the Q&A library discoverable.</h2>
+        </div>
+
+        <div class="question-list">
+          {{#each recentQuestions}}
+            <a href="{{url}}" target="{{target}}" rel="{{rel}}">
+              <span>{{title}}</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          {{/each}}
+        </div>
       </section>
     </main>
 
-    <footer>
-      &copy; {{service}} · Powered by LGT Platform · See <a href="{{links.docs}}">API docs</a>
-    </footer>
+    {{> site-footer}}
   </div>
 </body>
 </html>

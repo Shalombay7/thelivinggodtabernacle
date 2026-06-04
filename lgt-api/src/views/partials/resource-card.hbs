@@ -1,0 +1,21 @@
+<article class="resource-card">
+  <div class="resource-card__topline">
+    {{#if icon}}
+      <span class="resource-card__icon" aria-hidden="true">{{icon}}</span>
+    {{/if}}
+    {{#if label}}
+      <span class="resource-card__label">{{label}}</span>
+    {{/if}}
+  </div>
+  <h3>{{title}}</h3>
+  <p>{{body}}</p>
+  {{#if meta}}
+    <p class="resource-card__meta">{{meta}}</p>
+  {{/if}}
+  {{#if url}}
+    <a href="{{url}}"{{#if target}} target="{{target}}"{{/if}}{{#if rel}} rel="{{rel}}"{{/if}}>
+      {{actionLabel}}
+      <span aria-hidden="true">→</span>
+    </a>
+  {{/if}}
+</article>

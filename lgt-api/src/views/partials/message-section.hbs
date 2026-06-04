@@ -1,0 +1,22 @@
+<section class="feature-section feature-section--message" id="message" aria-labelledby="message-title">
+  <div class="section-copy">
+    <p class="eyebrow">{{message.eyebrow}}</p>
+    <h2 id="message-title">{{message.title}}</h2>
+    <p>{{message.body}}</p>
+    <a
+      class="button button--light"
+      href="{{message.action.url}}"
+      target="{{message.action.target}}"
+      rel="{{message.action.rel}}"
+    >
+      {{message.action.label}}
+    </a>
+  </div>
+
+  <blockquote class="scripture-card">
+    <p class="scripture-card__reference">{{message.scripture.reference}}</p>
+    {{#each message.scripture.lines}}
+      <p>{{this}}</p>
+    {{/each}}
+  </blockquote>
+</section>

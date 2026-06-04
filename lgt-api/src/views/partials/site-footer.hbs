@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div>
+    <p class="site-footer__name">{{service}}</p>
+    <p>{{tagline}} · Built as a scalable ministry and app platform.</p>
+  </div>
+  <nav aria-label="Footer links">
+    {{#each footerLinks}}
+      <a href="{{url}}"{{#if target}} target="{{target}}"{{/if}}{{#if rel}} rel="{{rel}}"{{/if}}>{{label}}</a>
+    {{/each}}
+  </nav>
+</footer>

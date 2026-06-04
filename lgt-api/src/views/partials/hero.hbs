@@ -1,0 +1,31 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__content">
+    <p class="eyebrow">{{hero.eyebrow}}</p>
+    <h1 id="hero-title">{{hero.title}}</h1>
+    <p class="hero__lead">{{hero.body}}</p>
+
+    <div class="action-row" aria-label="Primary actions">
+      <a class="button button--primary" href="{{hero.primaryAction.url}}">
+        {{hero.primaryAction.label}}
+      </a>
+      <a class="button button--secondary" href="{{hero.secondaryAction.url}}">
+        {{hero.secondaryAction.label}}
+      </a>
+    </div>
+  </div>
+
+  <aside class="hero-panel" aria-label="Platform highlights">
+    <span class="status-pill">
+      <span class="status-pill__dot" aria-hidden="true"></span>
+      {{badge}}
+    </span>
+    <div class="hero-panel__stats">
+      {{#each hero.stats}}
+        <div>
+          <strong>{{value}}</strong>
+          <span>{{label}}</span>
+        </div>
+      {{/each}}
+    </div>
+  </aside>
+</section>

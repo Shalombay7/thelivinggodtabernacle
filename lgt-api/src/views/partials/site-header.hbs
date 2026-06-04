@@ -1,0 +1,17 @@
+<header class="site-header" aria-label="Site header">
+  <div class="site-header__inner">
+    <a class="brand" href="#top" aria-label="{{service}} home">
+      <span class="brand__mark" aria-hidden="true">LGT</span>
+      <span>
+        <span class="brand__name">{{service}}</span>
+        <span class="brand__tagline">{{tagline}}</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      {{#each navigation}}
+        <a href="{{url}}">{{label}}</a>
+      {{/each}}
+    </nav>
+  </div>
+</header>

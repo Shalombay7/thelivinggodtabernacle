@@ -21,7 +21,7 @@ async function bootstrap() {
 
   const runtimeRoot = __dirname;
   const publicDir = join(runtimeRoot, 'public');
-  const viewsDir = join(runtimeRoot, 'views');
+  const viewsDir = join(runtimeRoot, '..', 'src', 'views');
   const partialsDir = join(viewsDir, 'partials');
 
   if (existsSync(publicDir)) {

@@ -37,7 +37,16 @@ async function bootstrap() {
   }
 
   if (existsSync(partialsDir)) {
-    hbs.registerPartials(partialsDir);
+    await new Promise<void>((resolve, reject) => {
+      hbs.registerPartials(partialsDir, (error) => {
+        if (error) {
+          reject(error);
+          return;
+        }
+
+        resolve();
+      });
+    });
   }
 
   const hbsEngine = (

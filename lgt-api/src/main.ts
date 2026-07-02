@@ -20,8 +20,16 @@ async function bootstrap() {
   app.useLogger(logger);
 
   const runtimeRoot = __dirname;
-  const publicDir = join(runtimeRoot, 'public');
-  const viewsDir = join(runtimeRoot, '..', 'src', 'views');
+  const bundledPublicDir = join(runtimeRoot, 'public');
+  const sourcePublicDir = join(runtimeRoot, '..', 'src', 'public');
+  const publicDir = existsSync(bundledPublicDir)
+    ? bundledPublicDir
+    : sourcePublicDir;
+  const bundledViewsDir = join(runtimeRoot, 'views');
+  const sourceViewsDir = join(runtimeRoot, '..', 'src', 'views');
+  const viewsDir = existsSync(bundledViewsDir)
+    ? bundledViewsDir
+    : sourceViewsDir;
   const partialsDir = join(viewsDir, 'partials');
 
   if (existsSync(publicDir)) {

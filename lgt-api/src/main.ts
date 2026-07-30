@@ -4,51 +4,63 @@ import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { existsSync } from 'fs';
+import { readdir, readFile } from 'fs/promises';
 import helmet from 'helmet';
 import hbs from 'hbs';
-import { join } from 'path';
+import { basename, join } from 'path';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 
-async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
-    bufferLogs: true,
-  });
+interface RuntimeAssets {
+  publicDir: string;
+  viewsDir: string;
+  partialsDir: string;
+}
 
-  const logger = new Logger('Bootstrap');
-  app.useLogger(logger);
-
-  const runtimeRoot = __dirname;
+function resolveRuntimeAssets(runtimeRoot: string): RuntimeAssets {
   const bundledPublicDir = join(runtimeRoot, 'public');
   const sourcePublicDir = join(runtimeRoot, '..', 'src', 'public');
   const publicDir = existsSync(bundledPublicDir)
     ? bundledPublicDir
     : sourcePublicDir;
+
   const bundledViewsDir = join(runtimeRoot, 'views');
   const sourceViewsDir = join(runtimeRoot, '..', 'src', 'views');
   const viewsDir = existsSync(bundledViewsDir)
     ? bundledViewsDir
     : sourceViewsDir;
-  const partialsDir = join(viewsDir, 'partials');
 
-  if (existsSync(publicDir)) {
-    app.useStaticAssets(publicDir);
+  return {
+    publicDir,
+    viewsDir,
+    partialsDir: join(viewsDir, 'partials'),
+  };
+}
+
+async function registerHandlebarsPartials(partialsDir: string) {
+  if (!existsSync(partialsDir)) {
+    return;
   }
 
-  if (existsSync(partialsDir)) {
-    await new Promise<void>((resolve, reject) => {
-      hbs.registerPartials(partialsDir, (error) => {
-        if (error) {
-          reject(error);
-          return;
-        }
+  const partialFiles = await readdir(partialsDir);
 
-        resolve();
-      });
-    });
-  }
+  await Promise.all(
+    partialFiles
+      .filter((partialFile) => partialFile.endsWith('.hbs'))
+      .map(async (partialFile) => {
+        const partialName = basename(partialFile, '.hbs');
+        const partialContent = await readFile(
+          join(partialsDir, partialFile),
+          'utf8',
+        );
 
+        hbs.registerPartial(partialName, partialContent);
+      }),
+  );
+}
+
+function configureViews(app: NestExpressApplication, viewsDir: string) {
   const hbsEngine = (
     hbs as unknown as {
       __express: (
@@ -62,6 +74,24 @@ async function bootstrap() {
   app.setBaseViewsDir(viewsDir);
   app.engine('hbs', hbsEngine);
   app.setViewEngine('hbs');
+}
+
+async function bootstrap() {
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    bufferLogs: true,
+  });
+
+  const logger = new Logger('Bootstrap');
+  app.useLogger(logger);
+
+  const { publicDir, viewsDir, partialsDir } = resolveRuntimeAssets(__dirname);
+
+  if (existsSync(publicDir)) {
+    app.useStaticAssets(publicDir);
+  }
+
+  await registerHandlebarsPartials(partialsDir);
+  configureViews(app, viewsDir);
 
   app.enableShutdownHooks();
   app.enableCors({ origin: true, credentials: true });

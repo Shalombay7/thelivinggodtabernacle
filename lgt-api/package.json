@@ -9,6 +9,7 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:prod": "node app.js",
+    "verify:views": "node scripts/verify-hbs-render.js",
     "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
     "test": "jest",
     "test:e2e": "jest --config ./test/jest-e2e.json",

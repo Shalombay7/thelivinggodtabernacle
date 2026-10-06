@@ -8,7 +8,7 @@ interface SiteFooterProps {
 
 export function SiteFooter({ data }: SiteFooterProps) {
   return (
-    <footer className="section-card-soft mt-8 rounded-[2rem] px-6 py-8 sm:px-8">
+    <footer className="section-card-soft mt-8 rounded-lg px-6 py-8 sm:px-8">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
           <p className="eyebrow">{data.service}</p>
@@ -22,14 +22,17 @@ export function SiteFooter({ data }: SiteFooterProps) {
         </div>
 
         <nav aria-label="Footer" className="flex flex-wrap gap-3 text-sm font-medium text-[var(--color-primary)]">
-          <SmartLink href="#about" className="rounded-full bg-white/85 px-4 py-2 transition hover:bg-white">
+          <SmartLink href="/about" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
             About
           </SmartLink>
-          <SmartLink href={getAbsoluteUrl(data.links.docs)} className="rounded-full bg-white/85 px-4 py-2 transition hover:bg-white">
-            API Docs
+          <SmartLink href="/resources" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
+            Resources
           </SmartLink>
-          <SmartLink href={getAbsoluteUrl(data.links.health)} className="rounded-full bg-white/85 px-4 py-2 transition hover:bg-white">
-            Health Status
+          <SmartLink href="/dashboard" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
+            Dashboard
+          </SmartLink>
+          <SmartLink href={getAbsoluteUrl(data.links.docs)} className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
+            API Docs
           </SmartLink>
         </nav>
       </div>

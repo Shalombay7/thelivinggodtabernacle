@@ -9,7 +9,7 @@ interface AboutSectionProps {
 export function AboutSection({ data }: AboutSectionProps) {
   return (
     <section id="about" aria-labelledby="about-title" className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-      <article className="section-card-soft rounded-[2rem] p-7 sm:p-8">
+      <article className="section-card-soft rounded-lg p-7 sm:p-8">
         <SectionHeading
           eyebrow="Our Mission"
           title="Built for worship, discipleship, and spiritual family."
@@ -20,7 +20,7 @@ export function AboutSection({ data }: AboutSectionProps) {
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {worshipPillars.map((pillar) => (
-            <div key={pillar.title} className="rounded-[1.5rem] border border-[rgba(31,90,67,0.08)] bg-white/55 p-4">
+            <div key={pillar.title} className="rounded-md border border-[rgba(31,90,67,0.08)] bg-white/55 p-4">
               <p className="serif-display text-xl text-[var(--color-primary)]">{pillar.title}</p>
               <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">{pillar.text}</p>
             </div>
@@ -28,7 +28,7 @@ export function AboutSection({ data }: AboutSectionProps) {
         </div>
       </article>
 
-      <article className="section-card-warm rounded-[2rem] p-7 sm:p-8">
+      <article className="section-card-warm rounded-lg p-7 sm:p-8">
         <p className="eyebrow">What We Believe</p>
         <blockquote className="mt-4 font-[family-name:var(--font-heading)] text-3xl leading-tight text-[var(--color-primary)]">
           “{data.about.statementOfFaith}”

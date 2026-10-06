@@ -15,11 +15,11 @@ export const fallbackData: ApiResponse = {
     serviceTime: "Sunday Worship at 8:00 AM and Wednesday Bible Study at 6:00 PM",
     contactEmail: "connect@thelivinggodtabernacle.org",
     socialLinks: {
-      facebook: "https://facebook.com",
-      youtube: "https://youtube.com",
-      instagram: "https://instagram.com",
+      facebook: "https://web.facebook.com/thelivinggodtabernacle/",
+      youtube: "https://web.facebook.com/thelivinggodtabernacle/",
+      instagram: "https://web.facebook.com/thelivinggodtabernacle/",
     },
-    givingUrl: "#connect",
+    givingUrl: "/prayer",
   },
   leadership: {
     pastor: "The Living God Tabernacle Leadership",
@@ -69,9 +69,13 @@ export const featureLabels: Record<string, string> = {
 };
 
 export const navigationItems = [
-  { href: "#about", label: "About" },
-  { href: "#ministries", label: "Ministries" },
-  { href: "#connect", label: "Connect" },
+  { href: "/message", label: "Message" },
+  { href: "/services", label: "Services" },
+  { href: "/resources", label: "Resources" },
+  { href: "/modules", label: "App Modules" },
+  { href: "/prayer", label: "Prayer" },
+  { href: "/about", label: "About" },
+  { href: "/dashboard", label: "Dashboard" },
 ];
 
 export const worshipPillars = [

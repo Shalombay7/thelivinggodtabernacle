@@ -1,0 +1,64 @@
+{{> site-header meta=meta navigation=navigation service=service }}
+
+<main class="content content--about">
+
+  <section class="content-section">
+    <div class="section-heading">
+      <p class="eyebrow">About The Living God Tabernacle</p>
+      <h1>{{aboutIntro.heading}}</h1>
+    </div>
+    <p class="body-text">
+      {{aboutIntro.body}}
+    </p>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <h2>{{aboutWord.heading}}</h2>
+    </div>
+    <p class="body-text">
+      {{aboutWord.body}}
+    </p>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <h2>{{aboutProphet.heading}}</h2>
+    </div>
+    <p class="body-text">
+      {{aboutProphet.body}}
+    </p>
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <h2>{{aboutEndTime.heading}}</h2>
+    </div>
+    <p class="body-text">
+      {{aboutEndTime.body}}
+    </p>
+  </section>
+
+  <section class="content-section content-section--compact">
+    <div class="section-heading">
+      <p class="eyebrow">Key Scriptures</p>
+      <h2>Our scriptural references</h2>
+    </div>
+    <ul class="scripture-list">
+      {{#each scriptureRefs}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{#if fullTextLink}}
+    <section class="content-section content-section--compact">
+      <a class="button button--variant" href="{{fullTextLink.url}}">
+        {{fullTextLink.label}}
+      </a>
+    </section>
+  {{/if}}
+
+</main>
+
+{{> site-footer footerLinks=footerLinks }}

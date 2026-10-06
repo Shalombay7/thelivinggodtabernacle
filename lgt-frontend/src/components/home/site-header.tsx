@@ -10,13 +10,11 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ serviceName, churchInfo }: SiteHeaderProps) {
   return (
-    <header className="glass-panel sticky top-4 z-20 mb-8 rounded-[2rem] px-4 py-3 md:px-6">
+    <header className="professional-panel sticky top-4 z-20 mb-8 px-4 py-3 md:px-5">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex items-start gap-3">
-          <div className="mt-1 flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(195,148,58,0.18),rgba(31,90,67,0.12))] text-[var(--color-primary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
-            <span aria-hidden="true" className="serif-display text-xl">
-              ✦
-            </span>
+          <div className="brand-mark mt-1" aria-hidden="true">
+            TLG
           </div>
           <div>
             <p className="font-[family-name:var(--font-heading)] text-lg tracking-[0.18em] text-[var(--color-accent)] uppercase">
@@ -36,7 +34,7 @@ export function SiteHeader({ serviceName, churchInfo }: SiteHeaderProps) {
             <SmartLink
               key={item.href}
               href={item.href}
-              className="interactive-link rounded-full px-3 py-2 hover:bg-white/50"
+              className="nav-link"
             >
               {item.label}
             </SmartLink>

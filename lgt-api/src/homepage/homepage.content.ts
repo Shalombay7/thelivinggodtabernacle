@@ -258,6 +258,12 @@ export const homepageContent = {
   recentQuestions: [
     {
       title:
+        'Romans 7:25: with the mind I serve the law of God, but with the flesh the law of sin.',
+      url: 'https://thelivinggodtabernacle.org/elementor-landing-page-3362/',
+      ...externalLink,
+    },
+    {
+      title:
         'Can a child born out of wedlock ever be saved or go in the rapture?',
       url: 'https://thelivinggodtabernacle.org/dear-brother-branham-if-a-baby-is-born-of-a-out-of-wedlock-can-this-child-ever-be-saved-or-go-in-the-rapture/',
       ...externalLink,

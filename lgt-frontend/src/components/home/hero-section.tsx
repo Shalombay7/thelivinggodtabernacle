@@ -11,8 +11,8 @@ export function HeroSection({ data }: HeroSectionProps) {
   const activeModules = data.modules.filter((module) => module.active).length;
 
   return (
-    <section aria-labelledby="hero-title" className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-      <div className="glass-panel relative overflow-hidden rounded-[2rem] p-7 sm:p-10">
+    <section aria-labelledby="hero-title" className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+      <div className="professional-panel relative overflow-hidden p-7 sm:p-10">
         <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(195,148,58,0.45),transparent)]" />
         <div className="hero-kicker mb-5">A House of Worship and Hope</div>
         <h1
@@ -35,8 +35,11 @@ export function HeroSection({ data }: HeroSectionProps) {
           >
             Join the Broadcast
           </SmartLink>
-          <SmartLink href="#connect" className="button-secondary px-6 py-3">
+          <SmartLink href="/services" className="button-secondary px-6 py-3">
             Plan Your Visit
+          </SmartLink>
+          <SmartLink href="/dashboard" className="button-secondary px-6 py-3">
+            Open Dashboard
           </SmartLink>
         </div>
 
@@ -71,7 +74,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           {highlights.map((highlight) => (
             <article
               key={highlight.title}
-              className="section-card-soft floating-card rounded-[1.7rem] p-5"
+              className="section-card-soft floating-card rounded-lg p-5"
             >
               <h2 className="font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]">
                 {highlight.title}
@@ -83,7 +86,7 @@ export function HeroSection({ data }: HeroSectionProps) {
       </div>
 
       <aside aria-label="Service details and leadership welcome" className="grid gap-5">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(160deg,#214f3d,#16372b_52%,#10261d)] p-7 text-white shadow-[0_28px_70px_rgba(17,71,52,0.28)]">
+        <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(160deg,#214f3d,#16372b_52%,#10261d)] p-7 text-white shadow-[0_24px_60px_rgba(17,71,52,0.24)]">
           <div className="pointer-events-none absolute -right-12 top-0 h-36 w-36 rounded-full bg-[rgba(255,255,255,0.09)] blur-3xl" />
           <div className="pointer-events-none absolute left-6 top-0 h-px w-32 bg-[linear-gradient(90deg,rgba(255,255,255,0.55),transparent)]" />
           <p className="text-sm uppercase tracking-[0.22em] text-white/75">Service Times</p>
@@ -94,12 +97,12 @@ export function HeroSection({ data }: HeroSectionProps) {
           <p className="mt-5 text-sm leading-7 text-white/76">
             Enter a gathering shaped by prayer, music, faithful teaching, and a sincere welcome.
           </p>
-          <SmartLink href="#connect" className="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:bg-[var(--color-surface-strong)]">
+          <SmartLink href="/services" className="mt-6 inline-flex rounded-md bg-white px-5 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:bg-[var(--color-surface-strong)]">
             Contact the Church
           </SmartLink>
         </div>
 
-        <div className="section-card-warm rounded-[2rem] p-7">
+        <div className="section-card-warm rounded-lg p-7">
           <p className="eyebrow">Pastor&apos;s Welcome</p>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]">
             {data.leadership.pastor}

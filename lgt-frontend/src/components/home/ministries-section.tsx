@@ -31,7 +31,7 @@ function getModuleIcon(id: string) {
 
 export function MinistriesSection({ modules }: MinistriesSectionProps) {
   return (
-    <section id="ministries" aria-labelledby="ministries-title" className="section-card-soft mt-8 rounded-[2.25rem] p-7 sm:p-9">
+    <section id="ministries" aria-labelledby="ministries-title" className="section-card-soft mt-8 rounded-lg p-7 sm:p-9">
       <SectionHeading
         eyebrow="Ministry Spaces"
         title="Designed for the whole church family."
@@ -45,7 +45,7 @@ export function MinistriesSection({ modules }: MinistriesSectionProps) {
           <article
             key={module.id}
             role="listitem"
-            className={`floating-card rounded-[1.75rem] border p-5 ${
+            className={`floating-card rounded-lg border p-5 ${
               module.active
                 ? "border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]"
                 : "border-[rgba(17,71,52,0.08)] bg-[rgba(242,238,228,0.72)] opacity-75"
@@ -55,7 +55,7 @@ export function MinistriesSection({ modules }: MinistriesSectionProps) {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden="true"
-                  className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]"
+                  className="flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]"
                 >
                   {getModuleIcon(module.id)}
                 </span>

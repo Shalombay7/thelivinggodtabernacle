@@ -70,9 +70,9 @@ export function LegacyPage({ page }: LegacyPageProps) {
               </div>
               {page.sourceUrl ? (
                 <p className="mt-5 text-xs leading-6 text-[var(--color-muted-soft)]">
-                  Content migrated from the legacy page at{" "}
+                  This legacy resource is now hosted inside{" "}
                   <SmartLink href={page.sourceUrl} className="interactive-link font-semibold text-[var(--color-primary)]">
-                    thelivinggodtabernacle.org
+                    this app
                   </SmartLink>
                   .
                 </p>

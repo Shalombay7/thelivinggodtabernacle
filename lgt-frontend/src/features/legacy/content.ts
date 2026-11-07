@@ -39,11 +39,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Legacy Teaching",
     summary:
       "The legacy site places Malachi 4:5-6 at the center of its message, pointing believers to God's promise of restoration before the coming of the Lord.",
-    sourceUrl: "https://thelivinggodtabernacle.org/malachi-4-5-6/",
+    sourceUrl: "/message",
     primaryAction: {
-      label: "Open original teaching",
-      href: "https://thelivinggodtabernacle.org/malachi-4-5-6/",
-      external: true,
+      label: "Read the message",
+      href: "/message",
     },
     highlights: ["Malachi 4:5-6", "Revelation 10:7", "Acts 3:19-21"],
     sections: [
@@ -75,7 +74,7 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Worship Rhythm",
     summary:
       "Service information from the legacy site is now presented as a direct app page for worship times, live streaming, and online radio.",
-    sourceUrl: "https://thelivinggodtabernacle.org/",
+    sourceUrl: "/services",
     primaryAction: {
       label: "Open live stream",
       href: "https://web.facebook.com/thelivinggodtabernacle/",
@@ -111,7 +110,7 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Legacy Content Paths",
     summary:
       "The legacy site's sermon, teaching, hymn, video, gallery, and Bible Q&A links are now grouped into a native resource hub.",
-    sourceUrl: "https://thelivinggodtabernacle.org/",
+    sourceUrl: "/resources",
     highlights: ["Audio sermons", "Did You Know?", "Only Believe songs", "Bible Q&A"],
     sections: [
       {
@@ -139,11 +138,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Sermon Archive",
     summary:
       "The legacy sermon archive is organized by year, with recent archives including 2026, 2025, 2024, 2023, 2022, 2021, 2020, and 2018.",
-    sourceUrl: "https://thelivinggodtabernacle.org/malachi-4-5-6/audio-sermons-2/",
+    sourceUrl: "/sermons",
     primaryAction: {
-      label: "Browse original archive",
-      href: "https://thelivinggodtabernacle.org/malachi-4-5-6/audio-sermons-2/",
-      external: true,
+      label: "Browse sermons",
+      href: "/sermons",
     },
     highlights: ["2026 sermons", "2025 sermons", "2024 sermons", "Download paths"],
     sections: [
@@ -171,11 +169,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Bible Teaching",
     summary:
       "The legacy teaching path highlights Revelation 10:7 and a series of doctrine and study articles for believers.",
-    sourceUrl: "https://thelivinggodtabernacle.org/did-you-know/",
+    sourceUrl: "/teachings",
     primaryAction: {
-      label: "Open original teachings",
-      href: "https://thelivinggodtabernacle.org/did-you-know/",
-      external: true,
+      label: "Explore teachings",
+      href: "/teachings",
     },
     highlights: ["Revelation 10:7", "Study topics", "Doctrine articles"],
     sections: [
@@ -202,11 +199,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Worship Songs",
     summary:
       "The legacy hymns area begins with familiar songs including Only Believe, Amazing Grace, Sweet Hour Of Prayer, Oh How I Love Jesus, and Victory In Jesus.",
-    sourceUrl: "https://thelivinggodtabernacle.org/malachi-4-5-6/hymns/",
+    sourceUrl: "/hymns",
     primaryAction: {
-      label: "Open original hymns",
-      href: "https://thelivinggodtabernacle.org/malachi-4-5-6/hymns/",
-      external: true,
+      label: "Open hymns",
+      href: "/hymns",
     },
     highlights: ["Only Believe", "Amazing Grace", "Sweet Hour Of Prayer", "Victory In Jesus"],
     sections: [
@@ -234,11 +230,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Watch",
     summary:
       "The legacy videos destination is preserved as a dedicated app route for sermons, testimonies, songs, and visual ministry resources.",
-    sourceUrl: "https://thelivinggodtabernacle.org/malachi-4-5-6/videos/",
+    sourceUrl: "/videos",
     primaryAction: {
-      label: "Open original videos",
-      href: "https://thelivinggodtabernacle.org/malachi-4-5-6/videos/",
-      external: true,
+      label: "Watch videos",
+      href: "/videos",
     },
     highlights: ["Sermon video", "Testimony video", "Song video"],
     sections: [
@@ -260,11 +255,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Ministry Moments",
     summary:
       "The legacy gallery and quotes destination is now represented by a polished app route for visual memories and inspirational material.",
-    sourceUrl: "https://thelivinggodtabernacle.org/malachi-4-5-6/gallery/",
+    sourceUrl: "/gallery",
     primaryAction: {
-      label: "Open original gallery",
-      href: "https://thelivinggodtabernacle.org/malachi-4-5-6/gallery/",
-      external: true,
+      label: "View gallery",
+      href: "/gallery",
     },
     highlights: ["Gallery", "Quotes", "Ministry memories"],
     sections: [
@@ -286,11 +280,10 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Study Help",
     summary:
       "The app now has a native Bible Q&A route for the recent questions and teaching articles that appear throughout the legacy site.",
-    sourceUrl: "https://thelivinggodtabernacle.org/elementor-landing-page-3362/",
+    sourceUrl: "/questions",
     primaryAction: {
-      label: "Open original Q&A",
-      href: "https://thelivinggodtabernacle.org/elementor-landing-page-3362/",
-      external: true,
+      label: "Open Q&A",
+      href: "/questions",
     },
     highlights: ["Romans 7:25", "Salvation questions", "Book of Life", "Body of Christ"],
     sections: [
@@ -324,7 +317,7 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Immediate Care",
     summary:
       "Prayer remains a first-class path in the upgraded app, connecting WhatsApp prayer support with the legacy prayer and testimonies archive.",
-    sourceUrl: "https://thelivinggodtabernacle.org/malachi-4-5-6/prayer-requests-and-testimonies/",
+    sourceUrl: "/prayer",
     primaryAction: {
       label: "Request prayer on WhatsApp",
       href: "https://api.whatsapp.com/send/?phone=233208171538&app_absent=0",
@@ -406,7 +399,7 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Biblical Foundation",
     summary:
       "The about page presents the ministry's foundation in Scripture, God's servants, prophetic promises, and end-time restoration.",
-    sourceUrl: "https://thelivinggodtabernacle.org/",
+    sourceUrl: "/about",
     highlights: ["John 13:20", "Amos 3:7", "Malachi 4:5-6", "Revelation 22:18-19"],
     sections: [
       {

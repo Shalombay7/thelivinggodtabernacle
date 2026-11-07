@@ -537,6 +537,70 @@ main {
   color: var(--text);
 }
 
+.content--legacy,
+.content--about {
+  padding-top: 4rem;
+}
+
+.legacy-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.42fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.legacy-snapshot,
+.legacy-related {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.legacy-chip-list {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.legacy-chip-list span,
+.legacy-list li {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  font-weight: 750;
+}
+
+.legacy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.34fr);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.legacy-sections {
+  display: grid;
+  gap: 1rem;
+}
+
+.legacy-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.legacy-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -594,7 +658,9 @@ main {
   }
 
   .hero,
-  .feature-section {
+  .feature-section,
+  .legacy-hero,
+  .legacy-layout {
     grid-template-columns: 1fr;
     min-height: auto;
   }
@@ -637,7 +703,8 @@ main {
   }
 
   .card-grid--three,
-  .module-grid {
+  .module-grid,
+  .legacy-list {
     grid-template-columns: 1fr;
   }
 

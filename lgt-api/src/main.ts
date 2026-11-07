@@ -99,6 +99,44 @@ async function bootstrap() {
   app.setGlobalPrefix('api', {
     exclude: [
       { path: '/', method: RequestMethod.GET },
+      { path: 'about', method: RequestMethod.GET },
+      { path: 'message', method: RequestMethod.GET },
+      { path: 'services', method: RequestMethod.GET },
+      { path: 'resources', method: RequestMethod.GET },
+      { path: 'sermons', method: RequestMethod.GET },
+      { path: 'teachings', method: RequestMethod.GET },
+      { path: 'hymns', method: RequestMethod.GET },
+      { path: 'videos', method: RequestMethod.GET },
+      { path: 'gallery', method: RequestMethod.GET },
+      { path: 'questions', method: RequestMethod.GET },
+      { path: 'prayer', method: RequestMethod.GET },
+      { path: 'radio', method: RequestMethod.GET },
+      { path: 'malachi-4-5-6', method: RequestMethod.GET },
+      { path: 'malachi-4-5-6/audio-sermons-2', method: RequestMethod.GET },
+      { path: 'did-you-know', method: RequestMethod.GET },
+      { path: 'malachi-4-5-6/hymns', method: RequestMethod.GET },
+      { path: 'malachi-4-5-6/hymns/01-2', method: RequestMethod.GET },
+      { path: 'malachi-4-5-6/videos', method: RequestMethod.GET },
+      { path: 'malachi-4-5-6/gallery', method: RequestMethod.GET },
+      { path: 'elementor-landing-page-3362', method: RequestMethod.GET },
+      {
+        path: 'malachi-4-5-6/prayer-requests-and-testimonies',
+        method: RequestMethod.GET,
+      },
+      { path: 'q-a002', method: RequestMethod.GET },
+      {
+        path:
+          'dear-brother-branham-if-a-baby-is-born-of-a-out-of-wedlock-can-this-child-ever-be-saved-or-go-in-the-rapture',
+        method: RequestMethod.GET,
+      },
+      {
+        path: 'how-can-a-person-have-their-name-on-the-book-of-life-and-still-be-lost',
+        method: RequestMethod.GET,
+      },
+      {
+        path: 'how-does-one-know-their-rightful-position-in-the-body-of-christ',
+        method: RequestMethod.GET,
+      },
       { path: 'favicon.ico', method: RequestMethod.GET },
     ],
   });

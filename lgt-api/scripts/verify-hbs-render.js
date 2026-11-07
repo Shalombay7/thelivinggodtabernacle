@@ -6,9 +6,14 @@ const projectRoot = path.resolve(__dirname, '..');
 const viewsDir = path.join(projectRoot, 'dist', 'views');
 const partialsDir = path.join(viewsDir, 'partials');
 const indexTemplate = path.join(viewsDir, 'index.hbs');
+const legacyTemplate = path.join(viewsDir, 'legacy-page.hbs');
 
 if (!fs.existsSync(indexTemplate)) {
   throw new Error(`Missing homepage template: ${indexTemplate}`);
+}
+
+if (!fs.existsSync(legacyTemplate)) {
+  throw new Error(`Missing legacy page template: ${legacyTemplate}`);
 }
 
 if (!fs.existsSync(partialsDir)) {
@@ -41,4 +46,18 @@ template({
   resources: [],
 });
 
-console.log('dist/views/index.hbs renders with registered partials');
+const legacyPageTemplate = hbs.handlebars.compile(
+  fs.readFileSync(legacyTemplate, 'utf8'),
+);
+
+legacyPageTemplate({
+  footerLinks: [],
+  highlights: [],
+  meta: {},
+  navigation: [],
+  primaryAction: {},
+  related: [],
+  sections: [],
+});
+
+console.log('dist/views render with registered partials');

@@ -1,0 +1,66 @@
+{{> site-header meta=meta navigation=navigation service=service tagline=tagline }}
+
+<main class="content content--legacy">
+  <section class="legacy-hero">
+    <div>
+      <p class="eyebrow">{{eyebrow}}</p>
+      <h1>{{title}}</h1>
+      <p class="hero__lead">{{summary}}</p>
+      {{#if primaryAction}}
+        <div class="action-row">
+          <a
+            class="button button--{{primaryAction.variant}}"
+            href="{{primaryAction.url}}"
+            {{#if primaryAction.target}}target="{{primaryAction.target}}"{{/if}}
+            {{#if primaryAction.rel}}rel="{{primaryAction.rel}}"{{/if}}
+          >
+            {{primaryAction.label}}
+          </a>
+          <a class="button button--secondary" href="/resources">View resource hub</a>
+        </div>
+      {{/if}}
+    </div>
+
+    <aside class="legacy-snapshot">
+      <p class="eyebrow">Page Snapshot</p>
+      <div class="legacy-chip-list">
+        {{#each highlights}}
+          <span>{{this}}</span>
+        {{/each}}
+      </div>
+      <p>This page is now hosted inside the app so visitors can keep browsing without returning to the legacy site.</p>
+    </aside>
+  </section>
+
+  <section class="legacy-layout">
+    <div class="legacy-sections">
+      {{#each sections}}
+        <article class="resource-card legacy-section" {{#if id}}id="{{id}}"{{/if}}>
+          <h2>{{title}}</h2>
+          <p>{{body}}</p>
+          {{#if items}}
+            <ul class="legacy-list">
+              {{#each items}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        </article>
+      {{/each}}
+    </div>
+
+    <aside class="legacy-related">
+      <p class="eyebrow">Related Pages</p>
+      <div class="question-list">
+        {{#each related}}
+          <a href="{{url}}">
+            <span>{{label}}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        {{/each}}
+      </div>
+    </aside>
+  </section>
+</main>
+
+{{> site-footer service=service tagline=tagline footerLinks=footerLinks }}

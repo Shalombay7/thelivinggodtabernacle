@@ -81,10 +81,9 @@ export const homepageContent = {
       ],
     },
     action: {
-      label: 'Read the legacy teaching',
-      url: 'https://thelivinggodtabernacle.org/malachi-4-5-6/',
+      label: 'Read the message',
+      url: '/message',
       variant: 'light',
-      ...externalLink,
     } satisfies HomepageAction,
   },
   churchInfo: {
@@ -142,9 +141,8 @@ export const homepageContent = {
       title: 'Audio sermons',
       body:
         'A clear entry point for sermon archives, downloads, and year-by-year message access.',
-      url: 'https://thelivinggodtabernacle.org/malachi-4-5-6/audio-sermons-2/',
+      url: '/sermons',
       actionLabel: 'Browse sermons',
-      ...externalLink,
     },
     {
       icon: '💡',
@@ -152,9 +150,8 @@ export const homepageContent = {
       title: 'Did You Know?',
       body:
         'Bible teaching topics from the legacy site, modernized as a resource pathway for the app.',
-      url: 'https://thelivinggodtabernacle.org/did-you-know/',
+      url: '/teachings',
       actionLabel: 'Explore teachings',
-      ...externalLink,
     },
     {
       icon: '🎵',
@@ -162,9 +159,8 @@ export const homepageContent = {
       title: 'Only Believe hymns',
       body:
         'Old-time hymns and song ministrations kept visible for worship, encouragement, and memory.',
-      url: 'https://thelivinggodtabernacle.org/malachi-4-5-6/hymns/01-2/',
+      url: '/hymns',
       actionLabel: 'Open hymns',
-      ...externalLink,
     },
     {
       icon: '🎬',
@@ -172,9 +168,8 @@ export const homepageContent = {
       title: 'Must-watch videos',
       body:
         'A curated video entry for testimonies, sermons, music collections, and spiritual encouragement.',
-      url: 'https://thelivinggodtabernacle.org/malachi-4-5-6/videos/',
+      url: '/videos',
       actionLabel: 'Watch videos',
-      ...externalLink,
     },
     {
       icon: '🖼️',
@@ -182,9 +177,8 @@ export const homepageContent = {
       title: 'Gallery and quotes',
       body:
         'Visual moments, inspirational quotes, and ministry memories organized for easier discovery.',
-      url: 'https://thelivinggodtabernacle.org/malachi-4-5-6/gallery/',
+      url: '/gallery',
       actionLabel: 'View gallery',
-      ...externalLink,
     },
     {
       icon: '❓',
@@ -192,9 +186,8 @@ export const homepageContent = {
       title: 'Questions and answers',
       body:
         'A dedicated pathway for Bible questions, scriptural answers, and faith-building study topics.',
-      url: 'https://thelivinggodtabernacle.org/elementor-landing-page-3362/',
+      url: '/questions',
       actionLabel: 'Open Q&A',
-      ...externalLink,
     },
   ] satisfies HomepageCard[],
   appModules: [
@@ -249,9 +242,8 @@ export const homepageContent = {
       },
       {
         label: 'Prayer and testimonies archive',
-        url: 'https://thelivinggodtabernacle.org/malachi-4-5-6/prayer-requests-and-testimonies/',
+        url: '/prayer',
         variant: 'secondary',
-        ...externalLink,
       },
     ] satisfies HomepageAction[],
   },
@@ -259,35 +251,30 @@ export const homepageContent = {
     {
       title:
         'Romans 7:25: with the mind I serve the law of God, but with the flesh the law of sin.',
-      url: 'https://thelivinggodtabernacle.org/elementor-landing-page-3362/',
-      ...externalLink,
+      url: '/questions#romans-7-25',
     },
     {
       title:
         'Can a child born out of wedlock ever be saved or go in the rapture?',
-      url: 'https://thelivinggodtabernacle.org/dear-brother-branham-if-a-baby-is-born-of-a-out-of-wedlock-can-this-child-ever-be-saved-or-go-in-the-rapture/',
-      ...externalLink,
+      url: '/questions',
     },
     {
       title:
         'How can a person have their name on the Book of Life and still be lost?',
-      url: 'https://thelivinggodtabernacle.org/how-can-a-person-have-their-name-on-the-book-of-life-and-still-be-lost/',
-      ...externalLink,
+      url: '/questions',
     },
     {
       title: 'How does one know their rightful position in the Body of Christ?',
-      url: 'https://thelivinggodtabernacle.org/how-does-one-know-their-rightful-position-in-the-body-of-christ/',
-      ...externalLink,
+      url: '/questions',
     },
     {
       title:
         'Are you saved only after receiving the Holy Ghost?',
-      url: 'https://thelivinggodtabernacle.org/q-a002/',
-      ...externalLink,
+      url: '/questions',
     },
   ],
   footerLinks: [
-    { label: 'Legacy website', url: 'https://thelivinggodtabernacle.org/', ...externalLink },
+    { label: 'App resources', url: '/resources' },
     { label: 'API docs', url: '/docs' },
     { label: 'Health', url: '/api/health' },
   ],

@@ -6,13 +6,16 @@ import { MinistriesSection } from "@/components/home/ministries-section";
 import { SiteFooter } from "@/components/home/site-footer";
 import { SiteHeader } from "@/components/home/site-header";
 import { StatusBanners } from "@/components/home/status-banners";
+import { SourceContentSection } from "@/components/ministry/source-content-page";
+import type { SourceArchiveEntry } from "@/features/ministry/archive-data";
 
 interface HomePageProps {
   data: ApiResponse;
   usingFallback: boolean;
+  sourceArchive?: SourceArchiveEntry;
 }
 
-export function HomePage({ data, usingFallback }: HomePageProps) {
+export function HomePage({ data, usingFallback, sourceArchive }: HomePageProps) {
   return (
     <main id="main-content" className="relative overflow-hidden bg-[var(--color-surface)] text-[var(--color-ink)]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[linear-gradient(180deg,rgba(31,90,67,0.08),transparent)]" />
@@ -27,6 +30,7 @@ export function HomePage({ data, usingFallback }: HomePageProps) {
         <ConnectSection churchInfo={data.churchInfo} />
         <SiteFooter data={data} />
       </div>
+      {sourceArchive ? <div className="page-shell"><SourceContentSection entry={sourceArchive} /></div> : null}
     </main>
   );
 }

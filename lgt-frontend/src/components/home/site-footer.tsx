@@ -28,6 +28,9 @@ export function SiteFooter({ data }: SiteFooterProps) {
           <SmartLink href="/resources" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
             Resources
           </SmartLink>
+          <SmartLink href="/posts" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
+            Recent Posts
+          </SmartLink>
           <SmartLink href="/dashboard" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
             Dashboard
           </SmartLink>

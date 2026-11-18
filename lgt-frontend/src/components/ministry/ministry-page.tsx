@@ -1,11 +1,26 @@
-import { legacyNavigation, type LegacyPage as LegacyPageContent } from "@/features/legacy/content";
+import { ministryNavigation, type MinistryPage } from "@/features/ministry/content";
+import type { SourceArchiveEntry } from "@/features/ministry/archive-data";
+import { sourceArchive as allSourceArchive } from "@/features/ministry/archive-data";
+import { SourceContentSection } from "@/components/ministry/source-content-page";
 import { SmartLink } from "@/components/home/smart-link";
 
-interface LegacyPageProps {
-  page: LegacyPageContent;
+interface MinistryPageProps {
+  page: MinistryPage;
+  sourceEntry?: SourceArchiveEntry;
 }
 
-export function LegacyPage({ page }: LegacyPageProps) {
+export function MinistryPage({ page, sourceEntry }: MinistryPageProps) {
+  const collectionPrefixes: Record<string, string[]> = {
+    sermons: ["/sermons/"],
+    teachings: ["/teachings/", "/pure-biblical-teachings/"],
+    hymns: ["/hymns/"],
+    "pure-biblical-teachings": ["/pure-biblical-teachings/"],
+    "water-baptism": ["/water-baptism/"],
+  };
+  const archiveItems = allSourceArchive.filter((entry) =>
+    collectionPrefixes[page.slug]?.some((prefix) => entry.appPath.startsWith(prefix)),
+  );
+
   return (
     <main id="main-content" className="min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]">
       <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10">
@@ -26,7 +41,7 @@ export function LegacyPage({ page }: LegacyPageProps) {
             </SmartLink>
 
             <nav aria-label="Primary" className="flex flex-wrap items-center gap-1 text-sm font-medium text-[var(--color-muted)]">
-              {legacyNavigation.map((item) => (
+              {ministryNavigation.map((item) => (
                 <SmartLink key={item.href} href={item.href} className="nav-link">
                   {item.label}
                 </SmartLink>
@@ -68,15 +83,6 @@ export function LegacyPage({ page }: LegacyPageProps) {
                   </div>
                 ))}
               </div>
-              {page.sourceUrl ? (
-                <p className="mt-5 text-xs leading-6 text-[var(--color-muted-soft)]">
-                  This legacy resource is now hosted inside{" "}
-                  <SmartLink href={page.sourceUrl} className="interactive-link font-semibold text-[var(--color-primary)]">
-                    this app
-                  </SmartLink>
-                  .
-                </p>
-              ) : null}
             </aside>
           </div>
         </section>
@@ -84,7 +90,11 @@ export function LegacyPage({ page }: LegacyPageProps) {
         <section className="mt-6 grid gap-5 lg:grid-cols-[1fr_20rem]">
           <div className="grid gap-5">
             {page.sections.map((section) => (
-              <article key={section.title} className="professional-panel p-6 sm:p-7">
+              <article
+                key={section.title}
+                id={page.slug === "sermons" && section.title === "Archive by Year" ? "archive-years" : undefined}
+                className="professional-panel p-6 sm:p-7"
+              >
                 <h2 className="font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]">
                   {section.title}
                 </h2>
@@ -115,6 +125,34 @@ export function LegacyPage({ page }: LegacyPageProps) {
             </div>
           </aside>
         </section>
+        {archiveItems.length > 0 ? (
+          <section className="professional-panel mt-6 p-5 sm:p-7" aria-labelledby="collection-index-title">
+            <p className="eyebrow">Explore the archive</p>
+            <h2 id="collection-index-title" className="mt-2 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]">More in this collection</h2>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {archiveItems.map((entry) => (
+                <SmartLink key={entry.appPath} href={entry.appPath} className="rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white">
+                  <p className="text-sm font-semibold leading-6 text-[var(--color-primary)]">{entry.title}</p>
+                  {entry.audioTracks?.length ? <p className="mt-2 text-xs text-[var(--color-muted-soft)]">{entry.audioTracks.length} recordings</p> : null}
+                </SmartLink>
+              ))}
+            </div>
+          </section>
+        ) : null}
+        {page.slug === "posts" ? (
+          <section className="professional-panel mt-6 p-5 sm:p-7" aria-labelledby="post-index-title">
+            <h2 id="post-index-title" className="font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]">All articles and questions</h2>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {allSourceArchive.filter((entry) => entry.type === "post").map((entry) => (
+                <SmartLink key={entry.appPath} href={entry.appPath} className="rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white">
+                  <p className="text-sm font-semibold leading-6 text-[var(--color-primary)]">{entry.title}</p>
+                  {entry.date ? <p className="mt-2 text-xs text-[var(--color-muted-soft)]">{new Date(entry.date).toLocaleDateString("en", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p> : null}
+                </SmartLink>
+              ))}
+            </div>
+          </section>
+        ) : null}
+        {sourceEntry ? <SourceContentSection entry={sourceEntry} /> : null}
       </div>
     </main>
   );

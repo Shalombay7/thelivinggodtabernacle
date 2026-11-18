@@ -73,6 +73,65 @@ a {
   transition: transform 160ms ease;
 }
 
+.archive-content {
+  overflow-wrap: anywhere;
+  color: var(--color-muted);
+  font-size: 0.975rem;
+  line-height: 1.85;
+}
+
+.archive-content :where(h1, h2, h3, h4, h5, h6) {
+  margin: 1.8em 0 0.65em;
+  color: var(--color-primary-strong);
+  font-family: var(--font-heading), serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.archive-content :where(p, ul, ol, blockquote, table, figure) {
+  margin: 0 0 1.15em;
+}
+
+.archive-content :where(ul, ol) {
+  padding-left: 1.5rem;
+}
+
+.archive-content :where(ul) {
+  list-style: disc;
+}
+
+.archive-content :where(ol) {
+  list-style: decimal;
+}
+
+.archive-content a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.archive-content :where(img, video, audio, iframe) {
+  max-width: 100%;
+}
+
+.archive-content :where(img, video, iframe) {
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.archive-content :where(table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.archive-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+  color: var(--color-primary-strong);
+}
+
 .skip-link:focus-visible {
   transform: translateY(0);
 }

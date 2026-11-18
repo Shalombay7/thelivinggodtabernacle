@@ -49,7 +49,7 @@ export const mediaLibrary: MediaItem[] = [
     status: "Review",
     audience: "Members",
     plays: "812",
-    source: "Legacy sermon archive",
+    source: "Sermon archive",
   },
   {
     title: "Only Believe Hymn Collection",

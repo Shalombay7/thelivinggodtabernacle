@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { WelcomeMessage } from "@/components/home/welcome-message";
+import { InstallPrompt } from "@/components/home/install-prompt";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -19,6 +21,25 @@ export const metadata: Metadata = {
   description:
     "A welcoming Christian home for worship, prayer, discipleship, and life-giving fellowship.",
   applicationName: "The Living God Tabernacle",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "LGT Connect",
+  },
+  icons: {
+    icon: [
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1f5a43",
 };
 
 export default function RootLayout({
@@ -36,6 +57,8 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <WelcomeMessage />
+        <InstallPrompt />
       </body>
     </html>
   );

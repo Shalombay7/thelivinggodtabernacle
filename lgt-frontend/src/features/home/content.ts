@@ -75,6 +75,8 @@ export const navigationItems = [
   { href: "/modules", label: "App Modules" },
   { href: "/prayer", label: "Prayer" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/posts", label: "Recent Posts" },
   { href: "/dashboard", label: "Dashboard" },
 ];
 

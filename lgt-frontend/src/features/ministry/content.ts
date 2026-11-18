@@ -1,9 +1,8 @@
-export type LegacyPage = {
+export type MinistryPage = {
   slug: string;
   title: string;
   eyebrow: string;
   summary: string;
-  sourceUrl?: string;
   primaryAction?: {
     label: string;
     href: string;
@@ -21,7 +20,7 @@ export type LegacyPage = {
   }[];
 };
 
-export const legacyNavigation = [
+export const ministryNavigation = [
   { href: "/", label: "Home" },
   { href: "/message", label: "Message" },
   { href: "/services", label: "Services" },
@@ -29,20 +28,21 @@ export const legacyNavigation = [
   { href: "/modules", label: "App Modules" },
   { href: "/prayer", label: "Prayer" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/posts", label: "Recent Posts" },
   { href: "/dashboard", label: "Dashboard" },
 ];
 
-export const legacyPages: LegacyPage[] = [
+export const ministryPages: MinistryPage[] = [
   {
     slug: "message",
     title: "Malachi 4:5-6",
-    eyebrow: "Legacy Teaching",
+    eyebrow: "The End Time Message",
     summary:
-      "The legacy site places Malachi 4:5-6 at the center of its message, pointing believers to God's promise of restoration before the coming of the Lord.",
-    sourceUrl: "/message",
+      "Malachi 4:5-6 places God's promise of restoration before the coming of the Lord at the center of this message.",
     primaryAction: {
-      label: "Read the message",
-      href: "/message",
+      label: "Explore the sermons",
+      href: "/sermons",
     },
     highlights: ["Malachi 4:5-6", "Revelation 10:7", "Acts 3:19-21"],
     sections: [
@@ -57,9 +57,9 @@ export const legacyPages: LegacyPage[] = [
           "Its teaching connects the ministry of John the Baptist, the words of Jesus in Matthew 17, and the end-time promise of a restoration of all things.",
       },
       {
-        title: "App Direction",
+        title: "Living the Message",
         body:
-          "This app now gives that message a clearer route, so visitors can move from the foundational teaching into sermons, study resources, prayer, and fellowship without leaving the new experience.",
+          "Follow the Scripture theme into sermons, Bible studies, prayer, and fellowship throughout the ministry.",
       },
     ],
     related: [
@@ -73,8 +73,7 @@ export const legacyPages: LegacyPage[] = [
     title: "Services and Live Fellowship",
     eyebrow: "Worship Rhythm",
     summary:
-      "Service information from the legacy site is now presented as a direct app page for worship times, live streaming, and online radio.",
-    sourceUrl: "/services",
+      "Join the Living God Tabernacle for in-person and online worship, prayer, and fellowship throughout the week.",
     primaryAction: {
       label: "Open live stream",
       href: "https://web.facebook.com/thelivinggodtabernacle/",
@@ -85,7 +84,7 @@ export const legacyPages: LegacyPage[] = [
       {
         title: "Gathering Times",
         body:
-          "The legacy homepage invites visitors to join live services on Sundays, Wednesdays, and Fridays, with streaming available when services are in session.",
+          "Join Sunday worship and Wednesday and Friday services. Online streaming is available when services are in session.",
       },
       {
         title: "Live Online Radio",
@@ -107,22 +106,21 @@ export const legacyPages: LegacyPage[] = [
   {
     slug: "resources",
     title: "Resource Library",
-    eyebrow: "Legacy Content Paths",
+    eyebrow: "Explore the Library",
     summary:
-      "The legacy site's sermon, teaching, hymn, video, gallery, and Bible Q&A links are now grouped into a native resource hub.",
-    sourceUrl: "/resources",
+      "Explore sermons, Bible studies, hymns, videos, ministry photographs, and Bible questions in one place.",
     highlights: ["Audio sermons", "Did You Know?", "Only Believe songs", "Bible Q&A"],
     sections: [
       {
         title: "Primary Resource Areas",
         body:
-          "The resource hub preserves the legacy site's main destinations while preparing them for cleaner app-native browsing.",
+          "Browse the ministry's teaching and worship resources directly in this app.",
         items: ["Audio sermons", "Did You Know? teachings", "Only Believe hymns", "Must-watch videos", "Gallery and quotes", "Bible questions and answers"],
       },
       {
-        title: "Migration Approach",
+        title: "Browse the Collections",
         body:
-          "Each legacy destination now has a matching app route. Visitors can read an app-ready overview first, then open the original source when they need the complete archive.",
+          "Choose a collection below to explore its available teaching, music, video, and community resources.",
       },
     ],
     related: [
@@ -130,6 +128,10 @@ export const legacyPages: LegacyPage[] = [
       { label: "Teachings", href: "/teachings" },
       { label: "Hymns", href: "/hymns" },
       { label: "Questions", href: "/questions" },
+      { label: "Pure Biblical Teachings", href: "/pure-biblical-teachings" },
+      { label: "Videos", href: "/videos" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Prayer and testimonies", href: "/prayer" },
     ],
   },
   {
@@ -137,18 +139,17 @@ export const legacyPages: LegacyPage[] = [
     title: "Audio Sermons",
     eyebrow: "Sermon Archive",
     summary:
-      "The legacy sermon archive is organized by year, with recent archives including 2026, 2025, 2024, 2023, 2022, 2021, 2020, and 2018.",
-    sourceUrl: "/sermons",
+      "Browse audio messages and Bible teaching from the Living God Tabernacle, with the archive arranged by year.",
     primaryAction: {
-      label: "Browse sermons",
-      href: "/sermons",
+      label: "Browse by year",
+      href: "/sermons#archive-years",
     },
     highlights: ["2026 sermons", "2025 sermons", "2024 sermons", "Download paths"],
     sections: [
       {
-        title: "Archive Structure",
+        title: "Archive by Year",
         body:
-          "The legacy page lists audio sermons by year so believers can move through the message archive chronologically.",
+          "The audio archive is arranged chronologically so listeners can find messages from each available year.",
         items: ["2026 Sermons", "2025 Sermons", "2024 Sermons", "2023 Sermons", "2022 Sermons", "2021 Sermons", "2020 Sermons", "2018 Sermons"],
       },
       {
@@ -168,23 +169,22 @@ export const legacyPages: LegacyPage[] = [
     title: "Did You Know?",
     eyebrow: "Bible Teaching",
     summary:
-      "The legacy teaching path highlights Revelation 10:7 and a series of doctrine and study articles for believers.",
-    sourceUrl: "/teachings",
+      "Explore Bible studies and teaching topics, with Scripture as the foundation for every subject.",
     primaryAction: {
-      label: "Explore teachings",
-      href: "/teachings",
+      label: "Browse Bible questions",
+      href: "/questions",
     },
     highlights: ["Revelation 10:7", "Study topics", "Doctrine articles"],
     sections: [
       {
-        title: "Legacy Emphasis",
+        title: "Scripture Focus",
         body:
           "The homepage introduces Did You Know? with Revelation 10:7, emphasizing the finishing of the mystery of God in the days of the seventh angel's voice.",
       },
       {
         title: "Article Pathways",
         body:
-          "Indexed legacy articles include Origins, Music and Religion Through the Ages, Spiritual Roots, The Music of Laodicea, and related study topics.",
+          "Study topics include Origins, Music and Religion Through the Ages, Spiritual Roots, The Music of Laodicea, and related Bible subjects.",
       },
     ],
     related: [
@@ -198,24 +198,23 @@ export const legacyPages: LegacyPage[] = [
     title: "Only Believe Songs",
     eyebrow: "Worship Songs",
     summary:
-      "The legacy hymns area begins with familiar songs including Only Believe, Amazing Grace, Sweet Hour Of Prayer, Oh How I Love Jesus, and Victory In Jesus.",
-    sourceUrl: "/hymns",
+      "Find familiar hymns and songs for worship, including Only Believe, Amazing Grace, Sweet Hour of Prayer, and Victory in Jesus.",
     primaryAction: {
-      label: "Open hymns",
-      href: "/hymns",
+      label: "Browse ministry audio",
+      href: "/sermons",
     },
     highlights: ["Only Believe", "Amazing Grace", "Sweet Hour Of Prayer", "Victory In Jesus"],
     sections: [
       {
         title: "Hymn Index",
         body:
-          "The legacy page lists numbered hymns and continues through additional song pages for worship and congregational singing.",
+          "Browse the numbered hymn collection and continue through additional song lists for personal and congregational worship.",
         items: ["0001 Only Believe", "0002 Amazing Grace", "0005 Sweet Hour Of Prayer", "0022 Victory In Jesus", "0031 Standing On The Promises"],
       },
       {
-        title: "App Direction",
+        title: "Worship in Song",
         body:
-          "This route gives hymns their own destination now, with room later for search, favorites, lyrics, and audio-safe worship resources.",
+          "Use this collection to find traditional hymns and songs for worship and congregational singing.",
       },
     ],
     related: [
@@ -229,18 +228,17 @@ export const legacyPages: LegacyPage[] = [
     title: "Videos",
     eyebrow: "Watch",
     summary:
-      "The legacy videos destination is preserved as a dedicated app route for sermons, testimonies, songs, and visual ministry resources.",
-    sourceUrl: "/videos",
+      "Watch ministry videos featuring sermons, testimonies, music, and encouragement for Christian life.",
     primaryAction: {
-      label: "Watch videos",
-      href: "/videos",
+      label: "Browse audio messages",
+      href: "/sermons",
     },
     highlights: ["Sermon video", "Testimony video", "Song video"],
     sections: [
       {
         title: "Video Library",
         body:
-          "The previous site directs visitors to must-watch videos. The app now gives that media pathway a cleaner landing page while the full archive remains available at the original link.",
+          "Explore video resources selected to encourage faith and draw hearts closer to the Lord Jesus Christ. Some videos may come from other sources.",
       },
     ],
     related: [
@@ -254,18 +252,17 @@ export const legacyPages: LegacyPage[] = [
     title: "Gallery and Quotes",
     eyebrow: "Ministry Moments",
     summary:
-      "The legacy gallery and quotes destination is now represented by a polished app route for visual memories and inspirational material.",
-    sourceUrl: "/gallery",
+      "Browse ministry photographs and inspirational quotes selected to encourage Christian life.",
     primaryAction: {
-      label: "View gallery",
-      href: "/gallery",
+      label: "Explore ministry resources",
+      href: "/resources",
     },
     highlights: ["Gallery", "Quotes", "Ministry memories"],
     sections: [
       {
         title: "Visual Archive",
         body:
-          "This page prepares a clear destination for church photos, quote graphics, and event memories while keeping the current legacy gallery one click away.",
+          "The gallery brings together church memories and faith-centered quotes in one place.",
       },
     ],
     related: [
@@ -279,18 +276,17 @@ export const legacyPages: LegacyPage[] = [
     title: "Bible Questions and Answers",
     eyebrow: "Study Help",
     summary:
-      "The app now has a native Bible Q&A route for the recent questions and teaching articles that appear throughout the legacy site.",
-    sourceUrl: "/questions",
+      "Bring sincere questions about the Bible and Christian faith to Scripture-centered answers and study.",
     primaryAction: {
-      label: "Open Q&A",
-      href: "/questions",
+      label: "Explore Bible studies",
+      href: "/teachings",
     },
     highlights: ["Romans 7:25", "Salvation questions", "Book of Life", "Body of Christ"],
     sections: [
       {
-        title: "Recent Legacy Questions",
+        title: "Recent Questions",
         body:
-          "The legacy site surfaces recent Q&A posts across its archive, giving visitors direct answers to common Bible and faith questions.",
+          "Explore questions about salvation, the Book of Life, the Body of Christ, and the new birth.",
         items: [
           "Can a child born out of wedlock ever be saved or go in the rapture?",
           "Romans 7:25: with the mind I myself serve the law of God, but with the flesh the law of sin.",
@@ -309,6 +305,26 @@ export const legacyPages: LegacyPage[] = [
       { label: "Teachings", href: "/teachings" },
       { label: "Sermons", href: "/sermons" },
       { label: "Prayer", href: "/prayer" },
+      { label: "All recent posts", href: "/posts" },
+    ],
+  },
+  {
+    slug: "posts",
+    title: "Recent Posts",
+    eyebrow: "Ministry Articles and Questions",
+    summary:
+      "Browse ministry articles, Bible questions, and recent posts from the Living God Tabernacle archive.",
+    highlights: ["Bible questions", "Ministry articles", "Christian encouragement"],
+    sections: [
+      {
+        title: "From the Archive",
+        body:
+          "Open any article below to read its full content in this app. Question-and-answer posts explore Scripture, Christian life, and the message of William Marrion Branham.",
+      },
+    ],
+    related: [
+      { label: "Bible questions and answers", href: "/questions" },
+      { label: "Bible teachings", href: "/teachings" },
     ],
   },
   {
@@ -316,8 +332,7 @@ export const legacyPages: LegacyPage[] = [
     title: "Prayer and Testimonies",
     eyebrow: "Immediate Care",
     summary:
-      "Prayer remains a first-class path in the upgraded app, connecting WhatsApp prayer support with the legacy prayer and testimonies archive.",
-    sourceUrl: "/prayer",
+      "Share a prayer need with the ministry and read testimonies of answered prayer and encouragement.",
     primaryAction: {
       label: "Request prayer on WhatsApp",
       href: "https://api.whatsapp.com/send/?phone=233208171538&app_absent=0",
@@ -328,12 +343,12 @@ export const legacyPages: LegacyPage[] = [
       {
         title: "Prayer Path",
         body:
-          "The legacy site points people directly to prayer. The app keeps that priority clear and prepares room for prayer requests, responses, moderation, and testimonies.",
+          "If you need prayer, contact the ministry. The prayer and testimony area is here to offer care, encouragement, and a place to share God's faithfulness.",
       },
       {
         title: "Archive",
         body:
-          "The existing prayer and testimonies archive remains linked as the source while the app grows a native prayer wall experience.",
+          "Read and share testimonies that encourage the church in prayer and faith.",
       },
     ],
     related: [
@@ -353,12 +368,12 @@ export const legacyPages: LegacyPage[] = [
       {
         title: "Ministry Spaces",
         body:
-          "Each module gives a familiar part of church life a more intentional digital home, while staying connected to the message and resources from the legacy site.",
+          "Each module gives a part of church life a dedicated space, connected to the message, worship, and fellowship of the ministry.",
       },
       {
-        title: "Growth Path",
+        title: "Ministry Life",
         body:
-          "This structure supports future native features such as saved sermons, reading plans, member care, event reminders, prayer requests, and testimonies.",
+          "Find teaching, prayer, fellowship, and ministry updates through these dedicated spaces.",
       },
     ],
     related: [
@@ -372,19 +387,17 @@ export const legacyPages: LegacyPage[] = [
     title: "Live Online Radio",
     eyebrow: "Audio Stream",
     summary:
-      "The legacy homepage links to live online radio for sermons, hymns, and ministry audio throughout the week.",
-    sourceUrl: "https://thelivinggodtab.radio12345.com/",
+      "Listen to ministry radio for sermons, hymns, and Bible teaching throughout the week.",
     primaryAction: {
-      label: "Listen online",
-      href: "https://thelivinggodtab.radio12345.com/",
-      external: true,
+      label: "Browse audio sermons",
+      href: "/sermons",
     },
     highlights: ["24/7 access", "Sermons", "Hymns"],
     sections: [
       {
         title: "Radio Access",
         body:
-          "This page keeps radio visible inside the app navigation while sending listeners to the current streaming service.",
+          "Visit the audio sermon collection for messages and Bible teaching available in the app.",
       },
     ],
     related: [
@@ -399,7 +412,6 @@ export const legacyPages: LegacyPage[] = [
     eyebrow: "Biblical Foundation",
     summary:
       "The about page presents the ministry's foundation in Scripture, God's servants, prophetic promises, and end-time restoration.",
-    sourceUrl: "/about",
     highlights: ["John 13:20", "Amos 3:7", "Malachi 4:5-6", "Revelation 22:18-19"],
     sections: [
       {
@@ -422,16 +434,97 @@ export const legacyPages: LegacyPage[] = [
       { label: "Message", href: "/message" },
       { label: "Services", href: "/services" },
       { label: "Prayer", href: "/prayer" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    slug: "contact",
+    title: "Contact The Living God Tabernacle",
+    eyebrow: "We Would Love to Hear From You",
+    summary:
+      "Reach out for service information, pastoral care, prayer, or help finding your way around the ministry.",
+    primaryAction: {
+      label: "Send an email",
+      href: "mailto:connect@thelivinggodtabernacle.org",
+      external: true,
+    },
+    highlights: ["Accra, Ghana", "connect@thelivinggodtabernacle.org", "Sunday, Wednesday, and Friday services"],
+    sections: [
+      {
+        title: "Get in Touch",
+        body:
+          "For questions about worship, ministry resources, or visiting the assembly, contact the church by email. We will be glad to help you connect.",
+      },
+      {
+        title: "Visit a Service",
+        body:
+          "The church gathers on Sundays, Wednesdays, and Fridays. Visit the services page for the current schedule and online stream information.",
+      },
+    ],
+    related: [
+      { label: "Service times", href: "/services" },
+      { label: "Prayer and testimonies", href: "/prayer" },
+      { label: "About the ministry", href: "/about" },
+    ],
+  },
+  {
+    slug: "pure-biblical-teachings",
+    title: "Pure Biblical Teachings",
+    eyebrow: "The Bible as Our Foundation",
+    summary:
+      "Study Bible teaching with Scripture as the source and final authority for Christian faith and practice.",
+    highlights: ["The Word of God", "Bible study", "Questions and answers"],
+    sections: [
+      {
+        title: "A Scripture-First Approach",
+        body:
+          "Bible questions should be answered from the Scriptures. Explore the teachings, compare each subject with the Word, and read in context.",
+      },
+      {
+        title: "Study Topics",
+        body:
+          "Explore Bible subjects including the Godhead, salvation, water baptism, the Holy Ghost, the church ages, and the promises for the end time.",
+      },
+    ],
+    related: [
+      { label: "Did You Know? studies", href: "/teachings" },
+      { label: "Bible questions and answers", href: "/questions" },
+      { label: "Water baptism", href: "/water-baptism" },
+    ],
+  },
+  {
+    slug: "water-baptism",
+    title: "Water Baptism",
+    eyebrow: "Bible Study",
+    summary:
+      "Explore the ministry's Bible study resources about Christian water baptism and its place in the believer's life.",
+    highlights: ["Matthew 28:19", "Acts 2:38", "Romans 6:3-4"],
+    sections: [
+      {
+        title: "Study the Scriptures",
+        body:
+          "Read the passages in their biblical context and compare the accounts of baptism in the Gospels and Acts.",
+      },
+      {
+        title: "Related Teaching",
+        body:
+          "Continue with Bible studies and questions that explore foundational Christian teaching.",
+      },
+    ],
+    related: [
+      { label: "Pure Biblical Teachings", href: "/pure-biblical-teachings" },
+      { label: "Did You Know? studies", href: "/teachings" },
+      { label: "Bible questions and answers", href: "/questions" },
     ],
   },
 ];
 
-export const legacyPageMap = new Map(legacyPages.map((page) => [page.slug, page]));
+export const ministryPageMap = new Map(ministryPages.map((page) => [page.slug, page]));
 
-export function getLegacyPage(slug: string) {
-  return legacyPageMap.get(slug);
+export function getMinistryPage(slug: string) {
+  return ministryPageMap.get(slug);
 }
 
-export function getLegacySlugs() {
-  return legacyPages.map((page) => page.slug);
+export function getMinistrySlugs() {
+  return ministryPages.map((page) => page.slug);
 }

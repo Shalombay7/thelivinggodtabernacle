@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState, type DragEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type DragEvent } from "react";
 import {
   contentPerformance,
   dashboardMetrics,
@@ -33,6 +33,27 @@ export function DashboardPage() {
   const [query, setQuery] = useState("");
   const [mediaFilter, setMediaFilter] = useState("All media");
   const [period, setPeriod] = useState("Last 30 days");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    try {
+      if (window.localStorage.getItem("lgt-dashboard-theme") === "dark") {
+        setTheme("dark");
+      }
+    } catch {
+      // Keep the dashboard usable when browser storage is unavailable.
+    }
+  }, []);
+
+  function toggleTheme() {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    try {
+      window.localStorage.setItem("lgt-dashboard-theme", nextTheme);
+    } catch {
+      // The selected theme remains active for this page session.
+    }
+  }
 
   const visibleMedia = useMemo(() => mediaLibrary.filter((item) => {
     const matchesQuery = `${item.title} ${item.type} ${item.audience}`.toLowerCase().includes(query.toLowerCase());
@@ -71,7 +92,7 @@ export function DashboardPage() {
   const queueSize = uploads.reduce((total, item) => total + item.file.size, 0);
 
   return (
-    <main id="main-content" className="min-h-screen bg-[#f6f7f4] text-[#1e3027]">
+    <main id="main-content" data-dashboard-theme={theme} className="dashboard-root min-h-screen bg-[#f6f7f4] text-[#1e3027]">
       <div className="mx-auto w-full max-w-[1440px] px-4 py-5 sm:px-7 lg:px-10">
         <header className="mb-8 flex flex-col gap-5 border-b border-emerald-950/10 pb-5 md:flex-row md:items-center md:justify-between">
           <SmartLink href="/" className="flex items-center gap-3">
@@ -86,6 +107,16 @@ export function DashboardPage() {
             <SmartLink href="/resources" className="nav-link">Resources</SmartLink>
             <SmartLink href="/sermons" className="nav-link">Sermons</SmartLink>
             <SmartLink href="/prayer" className="nav-link">Prayer</SmartLink>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-pressed={theme === "dark"}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              className="inline-flex items-center gap-2 rounded-lg border border-stone-200 bg-white px-3 py-2 text-xs font-semibold text-stone-700 shadow-sm transition hover:border-emerald-300"
+            >
+              <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
+              {theme === "dark" ? "Light mode" : "Dark mode"}
+            </button>
           </nav>
         </header>
 

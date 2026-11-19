@@ -326,6 +326,75 @@ a {
   letter-spacing: -0.03em;
 }
 
+.dashboard-root {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] {
+  color-scheme: dark;
+  background-color: #111914;
+  color: #e6eee8;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="bg-white"] {
+  background-color: #1b2720 !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="bg-stone-50"],
+.dashboard-root[data-dashboard-theme="dark"] [class*="bg-stone-100"] {
+  background-color: #243129 !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="bg-emerald-50"] {
+  background-color: #1b3b2b !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="bg-amber-50"] {
+  background-color: #3b311b !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="border-stone-"],
+.dashboard-root[data-dashboard-theme="dark"] [class*="border-emerald-"] {
+  border-color: rgba(220, 238, 225, 0.14) !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="border-amber-"] {
+  border-color: rgba(232, 194, 104, 0.28) !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-stone-"] {
+  color: #aab8ae !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-emerald-950"] {
+  color: #edf5ef !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-emerald-900"],
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-emerald-800"] {
+  color: #bde5ca !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-emerald-700"] {
+  color: #91d4a5 !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-amber-950"],
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-amber-800"] {
+  color: #f1d99a !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] [class*="text-[#a87923]"] {
+  color: #e2c277 !important;
+}
+
+.dashboard-root[data-dashboard-theme="dark"] .nav-link:hover {
+  background: rgba(220, 238, 225, 0.08);
+  color: #e6eee8;
+}
+
 @media (min-width: 640px) {
   .page-shell {
     padding-inline: 2rem;

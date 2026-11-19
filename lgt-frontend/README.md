@@ -56,10 +56,12 @@ instead of changing the runtime architecture.
 ## Deployment Note
 
 The frontend is exported as static files and served by the existing Express /
-Passenger application. Install this workspace's dependencies with
-`npm install --include=dev --workspaces=false` from `lgt-frontend`. Then
-`npm run build` from `lgt-api` builds the API, exports this workspace, and copies the export to
-`lgt-api/dist/public/next-site`. The API remains available under `/api`.
+Passenger application. To publish a frontend update, run `npm run build:frontend`
+and `npm run sync:frontend` from the repository root. Commit the generated
+`lgt-api/src/public/next-site` directory with the source changes. The server's
+`npm run build` from `lgt-api` copies that package into `dist/public/next-site`
+without needing Next.js installed on the server. The API remains available under
+`/api`.
 
 After pulling a change, activate the existing Node environment, run
 `npm run build` from `lgt-api`, run `npm run verify:views`, and restart Passenger

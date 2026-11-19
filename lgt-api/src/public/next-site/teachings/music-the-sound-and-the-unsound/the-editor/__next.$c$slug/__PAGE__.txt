@@ -1,0 +1,72 @@
+1:"$Sreact.fragment"
+2:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+6:I[1872,[],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1bb7,		<div data-elementor-type="wp-page" data-elementor-id="556" class="elementor elementor-556">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-6cdc67b9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6cdc67b9" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c3aaf59" data-id="c3aaf59" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-124733d elementor-section-height-min-height elementor-section-content-space-evenly elementor-section-boxed elementor-section-height-default" data-id="124733d" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-775a543" data-id="775a543" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a78c2dd elementor-widget elementor-widget-image" data-id="a78c2dd" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/music-01.jpg" data-elementor-open-lightbox="yes" data-elementor-lightbox-title="music 01" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NTY4LCJ1cmwiOiJodHRwczpcL1wvdGhlbGl2aW5nZ29kdGFiZXJuYWNsZS5vcmdcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMTlcLzAxXC9tdXNpYy0wMS5qcGcifQ%3D%3D">
+							<img loading="lazy" decoding="async" width="70" height="112" src="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/music-01.jpg" class="attachment-1536x1536 size-1536x1536 wp-image-568" alt="" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-502374a" data-id="502374a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2a9c153 elementor-widget elementor-widget-image" data-id="2a9c153" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/MUSIC2.jpg" data-elementor-open-lightbox="yes" data-elementor-lightbox-title="MUSIC2" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NTY5LCJ1cmwiOiJodHRwczpcL1wvdGhlbGl2aW5nZ29kdGFiZXJuYWNsZS5vcmdcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMTlcLzAxXC9NVVNJQzIuanBnIn0%3D">
+							<img loading="lazy" decoding="async" width="70" height="85" src="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/MUSIC2.jpg" class="attachment-large size-large wp-image-569" alt="" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-7b81e23c elementor-widget elementor-widget-text-editor" data-id="7b81e23c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h5>   In case you’re wondering why we selected such a ragged hymn book to feature on the back cover of this issue, I think you should know that it is not just an ordinary hymnal. That little green book and I started out together at a tall player piano more than thirty-five years ago. Sister Gertie Gibbs, who was the pianist at the Branham Tabernacle in those days, bought it new and gave it to me not long after I started piano lessons. “Learn to play ‘Only Believe’ first,” she told me.</h5>
+<h5>   Many of the pages are dog-eared, and a few have been scribbled on. That’s because there were always favorites that we wanted to be able to turn to quickly whenever Dad would say “Who has a favorite song for us to sing tonight.” Actually I always had the last say, because whether or not we sang it depended on whether or not I could play it, and then (as now) my repertoire was fairly limited.</h5>
+<h5>    Mother always liked the slow songs, Sarah liked the fast ones. Joseph preferred any loud song, and Dad’s favorites were the “work” songs. “Work for the night is coming, Work through the morning hours,” he’d sing.</h5>
+<h5>   Writing the article “Music, Sound and Unsound” for this issue of Only Believe has made me realize just how much I miss those old hymns. The difference between the old songs and some of the new ones that are being sung in our churches today is like comparing the King James Version of the Bible with the New International Version. Somehow, the poetry is just not there.</h5>
+<h5>    I believe the subject of music must receive the serious consideration of every Message Believer today. For too long we have underestimated our adversary’s skill in that field. But ask yourself this question: If you were Satan, where would you launch your attack against the young people of this Message?</h5>
+<h5>    Let’s make sure our music is in harmony with the Word.</h5>
+<h5>Rebekah Branham Smith, editor</h5>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-14d5c50 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="14d5c50" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7fea844" data-id="7fea844" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-91d91e4 elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="91d91e4" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="/teachings/table-of-contents/introduction">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Next Topic; Introduction</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main-content","className":"min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]","children":["$","div",null,{"className":"mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10","children":[["$","header",null,{"className":"professional-panel mb-6 px-4 py-3 sm:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-3","children":[["$","span",null,{"className":"brand-mark","aria-hidden":"true","children":"TLG"}],["$","span",null,{"children":[["$","span",null,{"className":"block text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]","children":"The Living God Tabernacle"}],["$","span",null,{"className":"block text-sm text-[var(--color-muted)]","children":"Scripture, worship, and ministry resources"}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap gap-1 text-sm font-medium text-[var(--color-muted)]","children":[["$","$L2","/",{"href":"/","className":"nav-link","children":"Home"}],["$","$L2","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$L2","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$L2","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$L2","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$L2","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$L2","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$L2","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$L2","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}],["$","$L2","/dashboard",{"href":"/dashboard","className":"nav-link","children":"Dashboard"}]]}]]}]}],["$","nav",null,{"aria-label":"Breadcrumb","className":"mb-4 text-sm text-[var(--color-muted-soft)]","children":["$","$L2",null,{"href":"/teachings/music-the-sound-and-the-unsound","className":"interactive-link","children":["Back to ","music the sound and the unsound"]}]}],["$","article",null,{"className":"professional-panel overflow-hidden","children":[["$","header",null,{"className":"border-b border-[rgba(31,90,67,0.08)] px-6 py-8 sm:px-9 sm:py-10","children":[["$","p",null,{"className":"eyebrow","children":"Ministry archive"}],["$","h1",null,{"className":"mt-3 max-w-5xl font-[family-name:var(--font-heading)] text-4xl leading-tight text-[var(--color-primary)] sm:text-5xl","children":"The editor"}],["$","p",null,{"className":"mt-3 text-sm text-[var(--color-muted-soft)]","children":"January 12, 2019"}]]}],["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$3"}}],null]}],"$L4"]}]}],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"BN53LXIjtOmve-TU8UV6E"}
+4:["$","footer",null,{"className":"py-7 text-center text-xs text-[var(--color-muted-soft)]","children":"The Living God Tabernacle · Ministry archive"}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

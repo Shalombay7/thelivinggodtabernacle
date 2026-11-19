@@ -1,0 +1,126 @@
+1:"$Sreact.fragment"
+2:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+7:I[9615,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],"AudioArchive"]
+8:I[1872,[],"OutletBoundary"]
+9:"$Sreact.suspense"
+3:T211e,		<div data-elementor-type="wp-page" data-elementor-id="2342" class="elementor elementor-2342">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-52459ce4 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="52459ce4" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5fd4a0d5" data-id="5fd4a0d5" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1595947c elementor-widget elementor-widget-heading" data-id="1595947c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">Enjoy Only Believe Hymn songs  .
+There's something about those OLD FASHION SONGS, THE OLD-TIME HYMNS.</h4>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e5a9133 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e5a9133" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ced267a" data-id="ced267a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1759d10 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="1759d10" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-61e74ec elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="61e74ec" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-60abd14" data-id="60abd14" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c5724bf elementor-widget elementor-widget-text-editor" data-id="c5724bf" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="color: #000080;"><strong>Only Believe Hymn song By Bro. Korley</strong></span></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-9ed70c0 elementor-align-center elementor-widget elementor-widget-button" data-id="9ed70c0" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="/hymns/bro-korley">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Listen Now</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2d5ba5a" data-id="2d5ba5a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4c61776 elementor-widget elementor-widget-text-editor" data-id="4c61776" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="color: #000080;"><strong>Only Believe Hymn song</strong></span></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-ed9d2ee elementor-align-center elementor-widget elementor-widget-button" data-id="ed9d2ee" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="/hymns">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Listen Now</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4e30020 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4e30020" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-376dd6e" data-id="376dd6e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-05ee2f1 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="05ee2f1" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3145c35f elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3145c35f" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3a6ef4d3" data-id="3a6ef4d3" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-17775d7e elementor-widget elementor-widget-heading" data-id="17775d7e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">Our Song Ministrations: Live Recordings</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-4f12fde3 elementor-widget elementor-widget-text-editor" data-id="4f12fde3" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Enjoy Live Recordings Of Inspiring Song Ministrations From The Living God Tabernacle Musicians.</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-11637077 elementor-align-center elementor-widget elementor-widget-button" data-id="11637077" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="/hymns/our-song-ministrations-live-recordings">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Listen Now</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main-content","className":"min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]","children":["$","div",null,{"className":"mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10","children":[["$","header",null,{"className":"professional-panel mb-6 px-4 py-3 sm:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-3","children":[["$","span",null,{"className":"brand-mark","aria-hidden":"true","children":"TLG"}],["$","span",null,{"children":[["$","span",null,{"className":"block text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]","children":"The Living God Tabernacle"}],["$","span",null,{"className":"block text-sm text-[var(--color-muted)]","children":"Scripture, worship, and ministry resources"}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap gap-1 text-sm font-medium text-[var(--color-muted)]","children":[["$","$L2","/",{"href":"/","className":"nav-link","children":"Home"}],["$","$L2","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$L2","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$L2","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$L2","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$L2","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$L2","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$L2","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$L2","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}],["$","$L2","/dashboard",{"href":"/dashboard","className":"nav-link","children":"Dashboard"}]]}]]}]}],["$","nav",null,{"aria-label":"Breadcrumb","className":"mb-4 text-sm text-[var(--color-muted-soft)]","children":["$","$L2",null,{"href":"/hymns","className":"interactive-link","children":["Back to ","hymns"]}]}],["$","article",null,{"className":"professional-panel overflow-hidden","children":[["$","header",null,{"className":"border-b border-[rgba(31,90,67,0.08)] px-6 py-8 sm:px-9 sm:py-10","children":[["$","p",null,{"className":"eyebrow","children":"Ministry archive"}],["$","h1",null,{"className":"mt-3 max-w-5xl font-[family-name:var(--font-heading)] text-4xl leading-tight text-[var(--color-primary)] sm:text-5xl","children":"Music hg"}],["$","p",null,{"className":"mt-3 text-sm text-[var(--color-muted-soft)]","children":"January 24, 2022"}]]}],["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}],"$L5"]}]}],null,"$L6"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"BN53LXIjtOmve-TU8UV6E"}
+4:["$","div",null,{"className":"px-6 pb-8 sm:px-9","children":["$","$L7",null,{"tracks":[{"title":"amazon polly 2342","url":"http://thelivinggodtabernacle.org/wp-content/uploads/2022/01/amazon_polly_2342.mp3"}]}]}]
+5:["$","footer",null,{"className":"py-7 text-center text-xs text-[var(--color-muted-soft)]","children":"The Living God Tabernacle · Ministry archive"}]
+6:["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]
+a:null

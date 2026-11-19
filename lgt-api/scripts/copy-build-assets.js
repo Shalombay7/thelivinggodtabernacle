@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { execFileSync } = require('child_process');
 
 const projectRoot = path.resolve(__dirname, '..');
 
@@ -23,35 +22,15 @@ for (const [from, to] of assets) {
   console.log(`Copied ${from} to ${to}`);
 }
 
-const repositoryRoot = path.resolve(projectRoot, '..');
-const frontendRoot = path.join(repositoryRoot, 'lgt-frontend');
-const frontendExport = path.join(frontendRoot, 'out');
-const frontendDestination = path.join(projectRoot, 'dist', 'public', 'next-site');
-const nextBinary = [
-  path.join(repositoryRoot, 'node_modules', 'next', 'dist', 'bin', 'next'),
-  path.join(frontendRoot, 'node_modules', 'next', 'dist', 'bin', 'next'),
-].find((candidate) => fs.existsSync(candidate));
-
-if (fs.existsSync(frontendRoot)) {
-  if (!nextBinary) {
-    throw new Error(
-      'Next.js is not installed. Run npm install --include=dev --workspaces=false from the lgt-frontend directory before building.',
-    );
-  }
-
-  execFileSync(process.execPath, [nextBinary, 'build', '--webpack'], {
-    cwd: frontendRoot,
-    stdio: 'inherit',
-  });
-
-  if (!fs.existsSync(frontendExport)) {
-    throw new Error(`Next.js export was not created at ${frontendExport}`);
-  }
-
-  fs.rmSync(frontendDestination, { force: true, recursive: true });
-  fs.mkdirSync(path.dirname(frontendDestination), { recursive: true });
-  fs.cpSync(frontendExport, frontendDestination, { recursive: true });
-  console.log(`Copied frontend export to ${frontendDestination}`);
-} else {
-  console.warn('Frontend workspace was not found; skipping its static export.');
+const packagedFrontend = path.join(projectRoot, 'src', 'public', 'next-site');
+if (!fs.existsSync(path.join(packagedFrontend, 'index.html'))) {
+  throw new Error(
+    `Packaged frontend export is missing at ${packagedFrontend}. Build and sync it before deploying.`,
+  );
 }
+
+if (!fs.existsSync(path.join(packagedFrontend, 'sw.js'))) {
+  throw new Error(`Packaged PWA service worker is missing at ${packagedFrontend}`);
+}
+
+console.log(`Using packaged frontend export from ${packagedFrontend}`);

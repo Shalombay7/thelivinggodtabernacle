@@ -1,0 +1,32 @@
+{
+  "name": "The Living God Tabernacle",
+  "short_name": "LGT Connect",
+  "description": "Worship, Scripture, sermons, prayer, and fellowship from The Living God Tabernacle.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f1e4",
+  "theme_color": "#1f5a43",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "display_override": ["standalone", "minimal-ui"],
+  "categories": ["lifestyle", "education"],
+  "orientation": "portrait",
+  "scope": "/",
+  "id": "/"
+}

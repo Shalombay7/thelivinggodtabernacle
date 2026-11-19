@@ -13,6 +13,7 @@
     "start:frontend": "npm run dev -w lgt-frontend",
     "build:api": "npm run build -w lgt-api",
     "build:frontend": "npm run build -w lgt-frontend",
+    "sync:frontend": "node lgt-api/scripts/sync-frontend-export.js",
     "prisma:migrate": "npm run prisma:migrate -w lgt-api",
     "prisma:studio": "npm run prisma:studio -w lgt-api"
   }

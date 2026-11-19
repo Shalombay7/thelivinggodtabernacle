@@ -1,0 +1,721 @@
+1:"$Sreact.fragment"
+2:I[1133,[],""]
+3:I[4297,[],""]
+4:I[6908,["568","static/chunks/568-095e932eb4a6770f.js","177","static/chunks/app/layout-477ef4076abaffd6.js"],"WelcomeMessage"]
+5:I[7478,["568","static/chunks/568-095e932eb4a6770f.js","177","static/chunks/app/layout-477ef4076abaffd6.js"],"InstallPrompt"]
+7:I[1872,[],"OutletBoundary"]
+8:"$Sreact.suspense"
+b:I[1872,[],"ViewportBoundary"]
+d:I[1872,[],"MetadataBoundary"]
+f:I[7567,[],"default",1]
+:HL["/_next/static/css/3d417b0e735b145d.css","style"]
+0:{"P":null,"c":["","gallery",""],"q":"","i":false,"f":[[["",{"children":[["slug","gallery","c",null],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3d417b0e735b145d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_855f89 __variable_ded346 h-full scroll-smooth antialiased","children":["$","body",null,{"className":"min-h-full flex flex-col","children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to main content"}],["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}],["$","$L5",null,{}]]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L6",null,["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]]}],{},null,false,null]},null,false,"$@a"]},null,false,null],["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$8",null,{"name":"Next.Metadata","children":"$Le"}]}]}],null]}],false]],"m":"$undefined","G":["$f",[]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"BN53LXIjtOmve-TU8UV6E"}
+10:[]
+a:"$W10"
+11:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+6:["$","main",null,{"id":"main-content","className":"min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]","children":["$","div",null,{"className":"mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10","children":[["$","header",null,{"className":"professional-panel sticky top-4 z-20 mb-8 px-4 py-3 sm:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between","children":[["$","$L11",null,{"href":"/","className":"flex items-center gap-3","children":[["$","span",null,{"className":"brand-mark","aria-hidden":"true","children":"TLG"}],["$","span",null,{"children":[["$","span",null,{"className":"block text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]","children":"The Living God Tabernacle"}],["$","span",null,{"className":"block text-sm text-[var(--color-muted)]","children":"God's Spoken Word Evangelism"}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap items-center gap-1 text-sm font-medium text-[var(--color-muted)]","children":[["$","$L11","/",{"href":"/","className":"nav-link","children":"Home"}],["$","$L11","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$L11","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$L11","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$L11","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$L11","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$L11","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$L11","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$L11","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}],["$","$L11","/dashboard",{"href":"/dashboard","className":"nav-link","children":"Dashboard"}]]}]]}]}],["$","section",null,{"className":"professional-panel overflow-hidden","children":["$","div",null,{"className":"grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10","children":[["$","div",null,{"children":[["$","p",null,{"className":"eyebrow","children":"Ministry Moments"}],["$","h1",null,{"className":"mt-4 max-w-4xl font-[family-name:var(--font-heading)] text-5xl leading-none text-[var(--color-primary)] sm:text-6xl","children":"Gallery and Quotes"}],["$","p",null,{"className":"mt-5 max-w-3xl text-lg leading-8 text-[var(--color-muted)]","children":"Browse ministry photographs and inspirational quotes selected to encourage Christian life."}],["$","div",null,{"className":"mt-7 flex flex-wrap gap-3","children":[["$","$L11",null,{"href":"/resources","className":"button-primary px-5 py-3","children":"Explore ministry resources"}],["$","$L11",null,{"href":"/resources","className":"button-secondary px-5 py-3","children":"View resource hub"}]]}]]}],["$","aside",null,{"className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-[var(--color-surface-strong)] p-5","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Page Snapshot"}],["$","div",null,{"className":"mt-4 grid gap-3","children":[["$","div","Gallery",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"Gallery"}],["$","div","Quotes",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"Quotes"}],["$","div","Ministry memories",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"Ministry memories"}]]}]]}]]}]}],["$","section",null,{"className":"mt-6 grid gap-5 lg:grid-cols-[1fr_20rem]","children":[["$","div",null,{"className":"grid gap-5","children":[["$","article","Visual Archive",{"id":"$undefined","className":"professional-panel p-6 sm:p-7","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"Visual Archive"}],["$","p",null,{"className":"mt-4 text-base leading-8 text-[var(--color-muted)]","children":"The gallery brings together church memories and faith-centered quotes in one place."}],null]}]]}],"$L12"]}],null,null,"$L13"]}]}]
+12:["$","aside",null,{"className":"professional-panel h-fit p-5","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Related Pages"}],["$","div",null,{"className":"mt-4 grid gap-2","children":[["$","$L11","/videos",{"href":"/videos","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Videos"}],["$","$L11","/resources",{"href":"/resources","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Resources"}],["$","$L11","/about",{"href":"/about","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"About"}]]}]]}]
+14:T10a13,<div  id="jtg-2030" class="modula modula-gallery modula-custom-grid" data-config="{&quot;height&quot;:800,&quot;tabletHeight&quot;:800,&quot;mobileHeight&quot;:800,&quot;desktopHeight&quot;:800,&quot;enableTwitter&quot;:false,&quot;enableWhatsapp&quot;:false,&quot;enableFacebook&quot;:false,&quot;enablePinterest&quot;:false,&quot;enableLinkedin&quot;:false,&quot;enableEmail&quot;:false,&quot;randomFactor&quot;:0.49,&quot;type&quot;:&quot;custom-grid&quot;,&quot;columns&quot;:12,&quot;gutter&quot;:10,&quot;mobileGutter&quot;:10,&quot;tabletGutter&quot;:10,&quot;desktopGutter&quot;:10,&quot;enableResponsive&quot;:&quot;0&quot;,&quot;tabletColumns&quot;:&quot;2&quot;,&quot;mobileColumns&quot;:&quot;1&quot;,&quot;lazyLoad&quot;:0,&quot;lightboxOpts&quot;:{&quot;animated&quot;:true,&quot;Thumbs&quot;:{&quot;type&quot;:&quot;modern&quot;,&quot;showOnStart&quot;:false},&quot;Toolbar&quot;:{&quot;display&quot;:{&quot;right&quot;:[&quot;close&quot;]},&quot;enabled&quot;:true},&quot;Carousel&quot;:{&quot;Panzoom&quot;:{&quot;touch&quot;:true},&quot;infinite&quot;:false},&quot;keyboard&quot;:{&quot;Escape&quot;:&quot;close&quot;,&quot;Delete&quot;:&quot;close&quot;,&quot;Backspace&quot;:&quot;close&quot;,&quot;PageUp&quot;:&quot;next&quot;,&quot;PageDown&quot;:&quot;prev&quot;,&quot;ArrowUp&quot;:&quot;prev&quot;,&quot;ArrowDown&quot;:&quot;next&quot;,&quot;ArrowRight&quot;:&quot;next&quot;,&quot;ArrowLeft&quot;:&quot;prev&quot;},&quot;wheel&quot;:&quot;slide&quot;,&quot;touch&quot;:true,&quot;backdropClick&quot;:&quot;close&quot;,&quot;l10n&quot;:{&quot;CLOSE&quot;:&quot;Close&quot;,&quot;NEXT&quot;:&quot;Next&quot;,&quot;PREV&quot;:&quot;Previous&quot;,&quot;Error&quot;:&quot;The requested content cannot be loaded. Please try again later.&quot;,&quot;PLAY_START&quot;:&quot;Start slideshow&quot;,&quot;PLAY_STOP&quot;:&quot;Pause slideshow&quot;,&quot;FULL_SCREEN&quot;:&quot;Full screen&quot;,&quot;THUMBS&quot;:&quot;Thumbnails&quot;,&quot;DOWNLOAD&quot;:&quot;Download&quot;,&quot;SHARE&quot;:&quot;Share&quot;,&quot;ZOOM&quot;:&quot;Zoom&quot;,&quot;EMAIL&quot;:&quot;Here is the link to the image : %%image_link%% and this is the link to the gallery : %%gallery_link%%&quot;,&quot;MODAL&quot;:&quot;You can close this modal content with the ESC key&quot;,&quot;ERROR&quot;:&quot;Something Went Wrong, Please Try Again Later&quot;,&quot;IMAGE_ERROR&quot;:&quot;Image Not Found&quot;,&quot;ELEMENT_NOT_FOUND&quot;:&quot;HTML Element Not Found&quot;,&quot;AJAX_NOT_FOUND&quot;:&quot;Error Loading AJAX : Not Found&quot;,&quot;AJAX_FORBIDDEN&quot;:&quot;Error Loading AJAX : Forbidden&quot;,&quot;IFRAME_ERROR&quot;:&quot;Error Loading Page&quot;,&quot;TOGGLE_ZOOM&quot;:&quot;Toggle zoom level&quot;,&quot;TOGGLE_THUMBS&quot;:&quot;Toggle thumbnails&quot;,&quot;TOGGLE_SLIDESHOW&quot;:&quot;Toggle slideshow&quot;,&quot;TOGGLE_FULLSCREEN&quot;:&quot;Toggle full-screen mode&quot;},&quot;Images&quot;:{&quot;Panzoom&quot;:{&quot;maxScale&quot;:2}},&quot;mainClass&quot;:&quot;modula-fancybox-container modula-lightbox-jtg-2030&quot;,&quot;Html&quot;:{&quot;videoAutoplay&quot;:0,&quot;videoTpl&quot;:&quot;&lt;video class=\&quot;fancybox__html5video\&quot; controls muted playsinline controlsList controlsList=\&quot;nodownload\&quot; poster=\&quot;{{poster}}\&quot; src=\&quot;{{src}}\&quot; type=\&quot;{{format}}\&quot; &gt;  Sorry, your browser doesn&#039;t support embedded videos, &lt;a href=\&quot;{{src}}\&quot;&gt; download &lt;\/a&gt; and watch with your favorite video player! &lt;\/video&gt;&quot;}},&quot;inView&quot;:false,&quot;email_subject&quot;:&quot;Check out this awesome image !!&quot;,&quot;email_message&quot;:&quot;Here is the link to the image : %%image_link%% and this is the link to the gallery : %%gallery_link%%&quot;,&quot;lightbox&quot;:&quot;fancybox&quot;,&quot;lightbox_devices&quot;:&quot;both&quot;}">
+		<div  class="modula-items">
+		<div class="modula-item effect-pufrobo"  data-width="5" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1882" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img fetchpriority="high" decoding="async" class="pic wp-image-1882"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/Stature-Of-A-Perfect-Man-1-1.jpg" title="Stature-Of-A-Perfect-Man-" crop="" width="300" height="232" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/Stature-Of-A-Perfect-Man-1-1-300x232.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/Stature-Of-A-Perfect-Man-1-1-300x232.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/Stature-Of-A-Perfect-Man-1-1.jpg 792w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/Stature-Of-A-Perfect-Man-1-1-300x232.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/Stature-Of-A-Perfect-Man-1-1-768x594.jpg 768w" sizes="(max-width: 600px) 53.88vw, (max-width: 1024px) 53.88vw, 53.88vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">Stature-Of-A-Perfect-Man-</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1876" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img decoding="async" class="pic wp-image-1876"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-1.jpg" title="screen-1" crop="" width="300" height="245" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-1-300x245.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-1-300x245.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-1.jpg 707w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-1-300x245.jpg 300w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">screen-1</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1866" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1866"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008.jpg" title="e2bc86c4655749328167fa25ddbeb008" crop="" width="300" height="268" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008-300x268.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008-300x268.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008.jpg 1200w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008-300x268.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008-1024x914.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/e2bc86c4655749328167fa25ddbeb008-768x685.jpg 768w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">e2bc86c4655749328167fa25ddbeb008</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="3" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1875" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1875"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-0.jpg" title="screen-0" crop="" width="165" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-0-165x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-0-165x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-0.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/screen-0-165x300.jpg 165w" sizes="(max-width: 600px) 25vw, (max-width: 1024px) 25vw, 25vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">screen-0</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1874" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1874"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/pillar.jpg" title="pillar" crop="" width="300" height="225" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/pillar-300x225.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/pillar-300x225.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/pillar.jpg 450w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/pillar-300x225.jpg 300w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">pillar</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1870" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1870"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images.jpg" title="images" crop="" width="300" height="232" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-300x232.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-300x232.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images.jpg 943w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-300x232.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-768x595.jpg 768w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">images</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1881" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1881"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/hqdefault-1.jpg" title="hqdefault" crop="" width="300" height="225" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/hqdefault-1-300x225.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/hqdefault-1-300x225.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/hqdefault-1.jpg 480w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/hqdefault-1-300x225.jpg 300w" sizes="(max-width: 600px) 55.56vw, (max-width: 1024px) 55.56vw, 55.56vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">hqdefault</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1860" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1860"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cd4fabad9f6b297f25fd201af342788c-message-quotes-hope-quotes.jpg" title="cd4fabad9f6b297f25fd201af342788c--message-quotes-hope-quotes" crop="" width="236" height="236" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cd4fabad9f6b297f25fd201af342788c-message-quotes-hope-quotes.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cd4fabad9f6b297f25fd201af342788c-message-quotes-hope-quotes.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cd4fabad9f6b297f25fd201af342788c-message-quotes-hope-quotes.jpg 236w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cd4fabad9f6b297f25fd201af342788c-message-quotes-hope-quotes-150x150.jpg 150w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">cd4fabad9f6b297f25fd201af342788c--message-quotes-hope-quotes</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="3" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1864" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1864"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-2.jpg" title="download (2)" crop="" width="293" height="172" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-2.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-2.jpg" data-caption=""/>
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">download (2)</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="3" data-height="2">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1843" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1843"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee.jpg" title="11b9e181dcc4723a3b7ccd09c1d56bee" crop="" width="300" height="268" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee-300x268.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee-300x268.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee.jpg 1201w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee-300x268.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee-1024x914.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/11b9e181dcc4723a3b7ccd09c1d56bee-768x686.jpg 768w" sizes="(max-width: 600px) 25vw, (max-width: 1024px) 25vw, 25vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">11b9e181dcc4723a3b7ccd09c1d56bee</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1849" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1849"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/823b24f1ed53b3360101382f21437bd4.jpg" title="823b24f1ed53b3360101382f21437bd4" crop="" width="213" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/823b24f1ed53b3360101382f21437bd4-213x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/823b24f1ed53b3360101382f21437bd4-213x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/823b24f1ed53b3360101382f21437bd4.jpg 236w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/823b24f1ed53b3360101382f21437bd4-213x300.jpg 213w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">823b24f1ed53b3360101382f21437bd4</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1872" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1872"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault.jpg" title="maxresdefault" crop="" width="300" height="169" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault-300x169.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault-300x169.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault.jpg 1280w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault-300x169.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault-1024x576.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/maxresdefault-768x432.jpg 768w" sizes="(max-width: 600px) 59.17vw, (max-width: 1024px) 59.17vw, 59.17vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">maxresdefault</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1878" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1878"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART.jpg" title="CHURCHISTORY-CHART" crop="" width="225" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART-225x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART-225x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART.jpg 864w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART-225x300.jpg 225w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART-767x1024.jpg 767w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/CHURCHISTORY-CHART-768x1025.jpg 768w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">CHURCHISTORY-CHART</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1844" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1844"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/14cda088005566105af22f4a41ca5319-message-quotes-fabulous-quotes.jpg" title="14cda088005566105af22f4a41ca5319--message-quotes-fabulous-quotes" crop="" width="300" height="265" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/14cda088005566105af22f4a41ca5319-message-quotes-fabulous-quotes-300x265.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/14cda088005566105af22f4a41ca5319-message-quotes-fabulous-quotes-300x265.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/14cda088005566105af22f4a41ca5319-message-quotes-fabulous-quotes.jpg 474w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/14cda088005566105af22f4a41ca5319-message-quotes-fabulous-quotes-300x265.jpg 300w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">14cda088005566105af22f4a41ca5319--message-quotes-fabulous-quotes</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="3" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="740" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="The Lord Is Watching Over His Own! " aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-740"  data-valign="middle" data-halign="center" alt="End- Time Message Mal. 4:5,6" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/IMG-20181111-WA0011.jpg" title="IMG-20181111-WA0011" crop="" width="300" height="225" src="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/IMG-20181111-WA0011-300x225.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/IMG-20181111-WA0011-300x225.jpg" data-caption="The Lord Is Watching Over His Own! " srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/IMG-20181111-WA0011.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/IMG-20181111-WA0011-300x225.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2019/01/IMG-20181111-WA0011-768x576.jpg 768w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">IMG-20181111-WA0011</div>
+																<div class="jtg-description modula-description">The Lord Is Watching Over His Own! </div>
+														</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="3" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1857" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1857"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e.jpg" title="b0d391eac656dc70bb378e27f2bffd7e" crop="" width="300" height="262" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e-300x262.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e-300x262.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e.jpg 1203w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e-300x262.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e-1024x893.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b0d391eac656dc70bb378e27f2bffd7e-768x670.jpg 768w" sizes="(max-width: 600px) 38.17vw, (max-width: 1024px) 38.17vw, 38.17vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">b0d391eac656dc70bb378e27f2bffd7e</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1840" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1840"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/02ae2a14baae8a558a88664279ab217c.jpg" title="02ae2a14baae8a558a88664279ab217c" crop="" width="300" height="267" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/02ae2a14baae8a558a88664279ab217c-300x267.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/02ae2a14baae8a558a88664279ab217c-300x267.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/02ae2a14baae8a558a88664279ab217c.jpg 474w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/02ae2a14baae8a558a88664279ab217c-300x267.jpg 300w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">02ae2a14baae8a558a88664279ab217c</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="6" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1850" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1850"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/3739.jpg" title="3739" crop="" width="300" height="158" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/3739-300x158.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/3739-300x158.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/3739.jpg 800w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/3739-300x158.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/3739-768x403.jpg 768w" sizes="(max-width: 600px) 63.29vw, (max-width: 1024px) 63.29vw, 63.29vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">3739</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1846" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1846"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21.jpg" title="44afe180fd46ac232a1ec37c27b15c21" crop="" width="300" height="261" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21-300x261.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21-300x261.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21.jpg 1201w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21-300x261.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21-1024x892.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/44afe180fd46ac232a1ec37c27b15c21-768x669.jpg 768w" sizes="(max-width: 600px) 38.31vw, (max-width: 1024px) 38.31vw, 38.31vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">44afe180fd46ac232a1ec37c27b15c21</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1863" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1863"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-1.jpg" title="download (1)" crop="" width="300" height="158" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-1-300x158.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-1-300x158.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-1.jpg 310w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-1-300x158.jpg 300w" sizes="(max-width: 600px) 63.29vw, (max-width: 1024px) 63.29vw, 63.29vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">download (1)</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1873" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1873"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/photo.jpg" title="photo" crop="" width="300" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/photo-300x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/photo-300x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/photo.jpg 512w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/photo-300x300.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/photo-150x150.jpg 150w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">photo</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1848" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1848"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/361ef54322f33e14f6a0dd575722b999.jpg" title="361ef54322f33e14f6a0dd575722b999" crop="" width="300" height="267" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/361ef54322f33e14f6a0dd575722b999-300x267.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/361ef54322f33e14f6a0dd575722b999-300x267.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/361ef54322f33e14f6a0dd575722b999.jpg 638w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/361ef54322f33e14f6a0dd575722b999-300x267.jpg 300w" sizes="(max-width: 600px) 46.82vw, (max-width: 1024px) 46.82vw, 46.82vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">361ef54322f33e14f6a0dd575722b999</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1865" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1865"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download.jpg" title="download" crop="" width="300" height="146" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-300x146.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-300x146.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download.jpg 620w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/download-300x146.jpg 300w" sizes="(max-width: 600px) 68.49vw, (max-width: 1024px) 68.49vw, 68.49vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">download</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1859" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1859"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/branham.jpg" title="branham" crop="" width="300" height="146" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/branham-300x146.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/branham-300x146.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/branham.jpg 500w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/branham-300x146.jpg 300w" sizes="(max-width: 600px) 68.49vw, (max-width: 1024px) 68.49vw, 68.49vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">branham</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1336" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1336"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/download-1.jpg" title="download (1)" crop="" width="225" height="225" src="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/download-1.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/download-1.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/download-1.jpg 225w, https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/download-1-150x150.jpg 150w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">download (1)</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1853" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1853"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563.jpg" title="5225e2b57700c15b55948a68b7805563" crop="" width="300" height="269" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563-300x269.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563-300x269.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563.jpg 1199w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563-300x269.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563-1024x918.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/5225e2b57700c15b55948a68b7805563-768x689.jpg 768w" sizes="(max-width: 600px) 37.17vw, (max-width: 1024px) 37.17vw, 37.17vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">5225e2b57700c15b55948a68b7805563</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1869" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1869"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-2.jpg" title="images (2)" crop="" width="200" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-2-200x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-2-200x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-2.jpg 366w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-2-200x300.jpg 200w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">images (2)</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1871" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1871"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images.png" title="images" crop="" width="300" height="146" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-300x146.png" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-300x146.png" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images.png 624w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-300x146.png 300w" sizes="(max-width: 600px) 51.37vw, (max-width: 1024px) 51.37vw, 51.37vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">images</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1855" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1855"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/a15c550171a18596a56ddc2fb2f35eea-william-branham-message-quotes.jpg" title="a15c550171a18596a56ddc2fb2f35eea--william-branham-message-quotes" crop="" width="236" height="237" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/a15c550171a18596a56ddc2fb2f35eea-william-branham-message-quotes.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/a15c550171a18596a56ddc2fb2f35eea-william-branham-message-quotes.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/a15c550171a18596a56ddc2fb2f35eea-william-branham-message-quotes.jpg 236w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/a15c550171a18596a56ddc2fb2f35eea-william-branham-message-quotes-150x150.jpg 150w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">a15c550171a18596a56ddc2fb2f35eea--william-branham-message-quotes</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1861" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1861"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cdc937c97471518172fbffd7c08d5df1-message-quotes-true-quotes.jpg" title="cdc937c97471518172fbffd7c08d5df1--message-quotes-true-quotes" crop="" width="236" height="236" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cdc937c97471518172fbffd7c08d5df1-message-quotes-true-quotes.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cdc937c97471518172fbffd7c08d5df1-message-quotes-true-quotes.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cdc937c97471518172fbffd7c08d5df1-message-quotes-true-quotes.jpg 236w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/cdc937c97471518172fbffd7c08d5df1-message-quotes-true-quotes-150x150.jpg 150w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">cdc937c97471518172fbffd7c08d5df1--message-quotes-true-quotes</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1856" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1856"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed.jpg" title="apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed" crop="" width="300" height="169" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed-300x169.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed-300x169.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed.jpg 672w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed-300x169.jpg 300w" sizes="(max-width: 600px) 44.38vw, (max-width: 1024px) 44.38vw, 44.38vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">apps.52756.13510798887615403.be1fa559-0fe9-42f7-ac8a-bf6f65fb14ed</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1854" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1854"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/1578331450_lH13DM_89-4.jpg" title="1578331450_lH13DM_89-4" crop="" width="300" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/1578331450_lH13DM_89-4-300x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/1578331450_lH13DM_89-4-300x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/1578331450_lH13DM_89-4.jpg 600w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/1578331450_lH13DM_89-4-300x300.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/1578331450_lH13DM_89-4-150x150.jpg 150w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">1578331450_lH13DM_89-4</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1867" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1867"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f5f37ecfb7bde5c410fa57a99c0fabb5-army-brother.jpg" title="f5f37ecfb7bde5c410fa57a99c0fabb5--army-brother" crop="" width="213" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f5f37ecfb7bde5c410fa57a99c0fabb5-army-brother-213x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f5f37ecfb7bde5c410fa57a99c0fabb5-army-brother-213x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f5f37ecfb7bde5c410fa57a99c0fabb5-army-brother.jpg 472w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f5f37ecfb7bde5c410fa57a99c0fabb5-army-brother-213x300.jpg 213w" sizes="(max-width: 600px) 33.33vw, (max-width: 1024px) 33.33vw, 33.33vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">f5f37ecfb7bde5c410fa57a99c0fabb5--army-brother</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1879" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1879"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f7623934ae667310432d0aab5a3a2340.jpg" title="f7623934ae667310432d0aab5a3a2340" crop="" width="300" height="225" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f7623934ae667310432d0aab5a3a2340-300x225.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f7623934ae667310432d0aab5a3a2340-300x225.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f7623934ae667310432d0aab5a3a2340.jpg 480w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/f7623934ae667310432d0aab5a3a2340-300x225.jpg 300w" sizes="(max-width: 600px) 55.56vw, (max-width: 1024px) 55.56vw, 55.56vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">f7623934ae667310432d0aab5a3a2340</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="42" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-42"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/cropped-images-6-1.jpg" title="cropped-images-6-1.jpg" crop="" width="142" height="102" src="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/cropped-images-6-1.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/cropped-images-6-1.jpg" data-caption=""/>
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">cropped-images-6-1.jpg</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1868" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1868"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-1.jpg" title="images (1)" crop="" width="300" height="261" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-1-300x261.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-1-300x261.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-1.jpg 450w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/images-1-300x261.jpg 300w" sizes="(max-width: 600px) 47.89vw, (max-width: 1024px) 47.89vw, 47.89vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">images (1)</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1842" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1842"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523.jpg" title="9d443260b878aafcea1a21d76c6ce523" crop="" width="300" height="261" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523-300x261.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523-300x261.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523.jpg 1203w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523-300x261.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523-1024x892.jpg 1024w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/9d443260b878aafcea1a21d76c6ce523-768x669.jpg 768w" sizes="(max-width: 600px) 47.89vw, (max-width: 1024px) 47.89vw, 47.89vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">9d443260b878aafcea1a21d76c6ce523</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="6" data-height="6">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1862" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1862"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/d496853ff9feedaf4d99017df981ed68-message-quotes-marion.jpg" title="d496853ff9feedaf4d99017df981ed68--message-quotes-marion" crop="" width="213" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/d496853ff9feedaf4d99017df981ed68-message-quotes-marion-213x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/d496853ff9feedaf4d99017df981ed68-message-quotes-marion-213x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/d496853ff9feedaf4d99017df981ed68-message-quotes-marion.jpg 472w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/d496853ff9feedaf4d99017df981ed68-message-quotes-marion-213x300.jpg 213w" sizes="(max-width: 600px) 50vw, (max-width: 1024px) 50vw, 50vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">d496853ff9feedaf4d99017df981ed68--message-quotes-marion</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1841" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1841"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/2b7cded4bdca2f2395a48efdbb006849.jpg" title="2b7cded4bdca2f2395a48efdbb006849" crop="" width="236" height="210" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/2b7cded4bdca2f2395a48efdbb006849.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/2b7cded4bdca2f2395a48efdbb006849.jpg" data-caption=""/>
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">2b7cded4bdca2f2395a48efdbb006849</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="6" data-height="5">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1858" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1858"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b5913901f7fb6595c9da2a6948885442-prophet-quotes-the-prophet.jpg" title="b5913901f7fb6595c9da2a6948885442--prophet-quotes-the-prophet" crop="" width="300" height="259" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b5913901f7fb6595c9da2a6948885442-prophet-quotes-the-prophet-300x259.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b5913901f7fb6595c9da2a6948885442-prophet-quotes-the-prophet-300x259.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b5913901f7fb6595c9da2a6948885442-prophet-quotes-the-prophet.jpg 474w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/b5913901f7fb6595c9da2a6948885442-prophet-quotes-the-prophet-300x259.jpg 300w" sizes="(max-width: 600px) 50vw, (max-width: 1024px) 50vw, 50vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">b5913901f7fb6595c9da2a6948885442--prophet-quotes-the-prophet</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="6" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="30" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-30"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/home_3-1.png" title="home_3 (1)" crop="" width="300" height="196" src="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/home_3-1-300x196.png" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/home_3-1-300x196.png" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/home_3-1.png 586w, https://thelivinggodtabernacle.org/wp-content/uploads/2018/07/home_3-1-300x196.png 300w" sizes="(max-width: 600px) 51.02vw, (max-width: 1024px) 51.02vw, 51.02vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">home_3 (1)</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="6" data-height="3">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1852" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1852"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4229.jpg" title="4229" crop="" width="300" height="158" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4229-300x158.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4229-300x158.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4229.jpg 800w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4229-300x158.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4229-768x403.jpg 768w" sizes="(max-width: 600px) 50vw, (max-width: 1024px) 50vw, 50vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">4229</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="8" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1851" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1851"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4069.jpg" title="4069" crop="" width="300" height="158" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4069-300x158.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4069-300x158.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4069.jpg 800w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4069-300x158.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/4069-768x403.jpg 768w" sizes="(max-width: 600px) 66.67vw, (max-width: 1024px) 66.67vw, 66.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">4069</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="4" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1847" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1847"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/53edcde72b845f7176a361e134e041eb-message-quotes-food.jpg" title="53edcde72b845f7176a361e134e041eb--message-quotes-food" crop="" width="300" height="291" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/53edcde72b845f7176a361e134e041eb-message-quotes-food-300x291.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/53edcde72b845f7176a361e134e041eb-message-quotes-food-300x291.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/53edcde72b845f7176a361e134e041eb-message-quotes-food.jpg 472w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/53edcde72b845f7176a361e134e041eb-message-quotes-food-300x291.jpg 300w" sizes="(max-width: 600px) 34.36vw, (max-width: 1024px) 34.36vw, 34.36vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">53edcde72b845f7176a361e134e041eb--message-quotes-food</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1845" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1845"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/22fb2333d413652114bf7d95128f6a79.jpg" title="22fb2333d413652114bf7d95128f6a79" crop="" width="300" height="300" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/22fb2333d413652114bf7d95128f6a79-300x300.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/22fb2333d413652114bf7d95128f6a79-300x300.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/22fb2333d413652114bf7d95128f6a79.jpg 640w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/22fb2333d413652114bf7d95128f6a79-300x300.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/03/22fb2333d413652114bf7d95128f6a79-150x150.jpg 150w" sizes="(max-width: 600px) 41.67vw, (max-width: 1024px) 41.67vw, 41.67vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">22fb2333d413652114bf7d95128f6a79</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div><div class="modula-item effect-pufrobo"  data-width="5" data-height="4">
+	<div class="modula-item-overlay"></div>
+
+	<div class="modula-item-content">
+
+				<a data-image-id="1328" role="button" data-elementor-open-lightbox="no" tabindex="0" rel="jtg-2030" data-caption="" aria-label="Open image in lightbox" class="tile-inner modula-item-link"></a>
+			<img loading="lazy" decoding="async" class="pic wp-image-1328"  data-valign="middle" data-halign="center" alt="" data-full="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/eagels-gathering.jpg" title="eagels gathering" crop="" width="300" height="213" src="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/eagels-gathering-300x213.jpg" data-src="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/eagels-gathering-300x213.jpg" data-caption="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/eagels-gathering.jpg 474w, https://thelivinggodtabernacle.org/wp-content/uploads/2020/02/eagels-gathering-300x213.jpg 300w" sizes="(max-width: 600px) 46.95vw, (max-width: 1024px) 46.95vw, 46.95vw" />
+			<div class="figc no-description">
+				<div class="figc-inner">
+											<div class="modula-title jtg-title">eagels gathering</div>
+																			</div>
+			</div>
+
+	</div>
+
+</div>	</div>
+	
+	
+
+	</div>
+
+13:["$","section",null,{"className":"professional-panel mt-6 overflow-hidden","children":[["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$14"}}],null]}]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#1f5a43"}]]
+15:I[2569,[],"IconMark"]
+9:null
+e:[["$","title","0",{"children":"Gallery and Quotes | The Living God Tabernacle"}],["$","meta","1",{"name":"description","content":"Browse ministry photographs and inspirational quotes selected to encourage Christian life."}],["$","meta","2",{"name":"application-name","content":"The Living God Tabernacle"}],["$","link","3",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","4",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","5",{"name":"apple-mobile-web-app-title","content":"LGT Connect"}],["$","meta","6",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","link","7",{"rel":"icon","href":"/favicon.ico?603d046c9a6fdfbb","type":"image/x-icon","sizes":"16x16"}],["$","link","8",{"rel":"icon","href":"/icons/icon-192x192.png","sizes":"192x192","type":"image/png"}],["$","link","9",{"rel":"icon","href":"/icons/icon-512x512.png","sizes":"512x512","type":"image/png"}],["$","link","10",{"rel":"apple-touch-icon","href":"/icons/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L15","11",{}]]

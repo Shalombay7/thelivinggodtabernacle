@@ -35,7 +35,7 @@ const nextBinary = [
 if (fs.existsSync(frontendRoot)) {
   if (!nextBinary) {
     throw new Error(
-      'Next.js is not installed. Install the repository workspaces from the repository root before building.',
+      'Next.js is not installed. Run npm install --include=dev from the lgt-frontend directory before building.',
     );
   }
 

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 
 const projectRoot = path.resolve(__dirname, '..');
 
@@ -27,10 +27,20 @@ const repositoryRoot = path.resolve(projectRoot, '..');
 const frontendRoot = path.join(repositoryRoot, 'lgt-frontend');
 const frontendExport = path.join(frontendRoot, 'out');
 const frontendDestination = path.join(projectRoot, 'dist', 'public', 'next-site');
+const nextBinary = [
+  path.join(repositoryRoot, 'node_modules', 'next', 'dist', 'bin', 'next'),
+  path.join(frontendRoot, 'node_modules', 'next', 'dist', 'bin', 'next'),
+].find((candidate) => fs.existsSync(candidate));
 
 if (fs.existsSync(frontendRoot)) {
-  execSync('npm run build --workspace=lgt-frontend', {
-    cwd: repositoryRoot,
+  if (!nextBinary) {
+    throw new Error(
+      'Next.js is not installed. Install the repository workspaces from the repository root before building.',
+    );
+  }
+
+  execFileSync(process.execPath, [nextBinary, 'build', '--webpack'], {
+    cwd: frontendRoot,
     stdio: 'inherit',
   });
 

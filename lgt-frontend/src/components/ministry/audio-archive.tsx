@@ -17,7 +17,7 @@ export function AudioArchive({ tracks }: { tracks: ArchiveTrack[] }) {
     <section className="mt-7 rounded-xl border border-emerald-950/10 bg-white p-5 shadow-sm sm:p-6" aria-label="Audio archive">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#a87923]">Listen to the archive</p>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-accent)]">Listen to the archive</p>
           <h2 className="mt-2 text-xl font-semibold text-emerald-950">{tracks.length} recordings</h2>
         </div>
         <label className="w-full sm:max-w-xs">

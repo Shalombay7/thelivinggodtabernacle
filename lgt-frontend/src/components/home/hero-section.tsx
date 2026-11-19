@@ -40,7 +40,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           </SmartLink>
         </div>
 
-        <div className="mt-8 grid gap-4 border-t border-[rgba(31,90,67,0.08)] pt-6 sm:grid-cols-3">
+        <div className="mt-8 grid gap-4 border-t border-[rgba(54,85,143,0.1)] pt-6 sm:grid-cols-3">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-soft)]">
               Gathering Rhythm
@@ -83,7 +83,7 @@ export function HeroSection({ data }: HeroSectionProps) {
       </div>
 
       <aside aria-label="Service details and leadership welcome" className="grid gap-5">
-        <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(160deg,#214f3d,#16372b_52%,#10261d)] p-7 text-white shadow-[0_24px_60px_rgba(17,71,52,0.24)]">
+        <div className="relative overflow-hidden rounded-lg bg-[linear-gradient(145deg,#36558f,#7654a5_58%,#263968)] p-7 text-white shadow-[0_24px_60px_rgba(54,85,143,0.24)]">
           <div className="pointer-events-none absolute -right-12 top-0 h-36 w-36 rounded-full bg-[rgba(255,255,255,0.09)] blur-3xl" />
           <div className="pointer-events-none absolute left-6 top-0 h-px w-32 bg-[linear-gradient(90deg,rgba(255,255,255,0.55),transparent)]" />
           <p className="text-sm uppercase tracking-[0.22em] text-white/75">Service Times</p>

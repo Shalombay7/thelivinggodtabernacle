@@ -20,7 +20,7 @@ export function AboutSection({ data }: AboutSectionProps) {
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {worshipPillars.map((pillar) => (
-            <div key={pillar.title} className="rounded-md border border-[rgba(31,90,67,0.08)] bg-white/55 p-4">
+            <div key={pillar.title} className="rounded-md border border-[rgba(54,85,143,0.09)] bg-white/65 p-4">
               <p className="serif-display text-xl text-[var(--color-primary)]">{pillar.title}</p>
               <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">{pillar.text}</p>
             </div>

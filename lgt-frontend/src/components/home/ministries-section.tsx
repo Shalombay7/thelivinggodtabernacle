@@ -47,15 +47,15 @@ export function MinistriesSection({ modules }: MinistriesSectionProps) {
             role="listitem"
             className={`floating-card rounded-lg border p-5 ${
               module.active
-                ? "border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]"
-                : "border-[rgba(17,71,52,0.08)] bg-[rgba(242,238,228,0.72)] opacity-75"
+                ? "border-[rgba(54,85,143,0.14)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(238,232,247,0.9))] shadow-[0_18px_45px_rgba(42,55,92,0.08)]"
+                : "border-[rgba(54,85,143,0.08)] bg-[rgba(237,240,248,0.72)] opacity-75"
             }`}
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden="true"
-                  className="flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]"
+                  className="flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(54,85,143,0.12),rgba(118,84,165,0.12),rgba(199,151,47,0.14))] text-2xl text-[var(--color-primary)]"
                 >
                   {getModuleIcon(module.id)}
                 </span>
@@ -71,7 +71,7 @@ export function MinistriesSection({ modules }: MinistriesSectionProps) {
               <span
                 className={`rounded-full px-3 py-1 text-xs font-semibold ${
                   module.active
-                    ? "bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]"
+                    ? "bg-[rgba(118,84,165,0.12)] text-[var(--color-secondary)]"
                     : "bg-[rgba(122,98,62,0.12)] text-[var(--color-muted)]"
                 }`}
               >
@@ -81,7 +81,7 @@ export function MinistriesSection({ modules }: MinistriesSectionProps) {
             <p className="mt-5 text-sm leading-7 text-[var(--color-muted)]">
               For {module.audience.toLowerCase()}, with a clearer sense of purpose and belonging.
             </p>
-            <div className="mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]" />
+            <div className="mt-5 h-px bg-[linear-gradient(90deg,rgba(54,85,143,0.18),rgba(118,84,165,0.16),transparent)]" />
             <p className="mt-4 text-sm text-[var(--color-muted-soft)]">
               Crafted to feel pastoral, intentional, and spiritually nourishing.
             </p>

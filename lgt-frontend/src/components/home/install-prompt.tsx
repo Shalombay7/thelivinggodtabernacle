@@ -83,7 +83,7 @@ export function InstallPrompt() {
   return (
     <aside
       aria-label="Install The Living God Tabernacle app"
-      className="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-lg rounded-2xl border border-emerald-950/10 bg-white p-4 text-[#1e3027] shadow-[0_16px_55px_rgba(16,36,27,0.22)] sm:bottom-6 sm:left-auto sm:right-6 sm:p-5"
+      className="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-lg rounded-2xl border border-emerald-950/10 bg-white p-4 text-[var(--color-ink)] shadow-[0_16px_55px_rgba(42,55,92,0.18)] sm:bottom-6 sm:left-auto sm:right-6 sm:p-5"
     >
       <div className="flex items-start gap-3">
         <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald-900 text-sm font-bold tracking-tight text-[#e4c47f]" aria-hidden="true">TLG</div>
@@ -99,7 +99,7 @@ export function InstallPrompt() {
       </button>
 
       {showInstructions && (
-        <div className="mt-3 rounded-lg bg-[#f6f7f4] p-3 text-xs leading-5 text-stone-700" role="status">
+        <div className="mt-3 rounded-lg bg-[var(--color-surface)] p-3 text-xs leading-5 text-stone-700" role="status">
           {ios ? (
             <ol className="list-inside list-decimal space-y-1">
               <li>Open this page in Safari, then tap the <strong>Share</strong> button.</li>

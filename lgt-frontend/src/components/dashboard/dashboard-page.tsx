@@ -92,7 +92,7 @@ export function DashboardPage() {
   const queueSize = uploads.reduce((total, item) => total + item.file.size, 0);
 
   return (
-    <main id="main-content" data-dashboard-theme={theme} className="dashboard-root min-h-screen bg-[#f6f7f4] text-[#1e3027]">
+    <main id="main-content" data-dashboard-theme={theme} className="dashboard-root min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]">
       <div className="mx-auto w-full max-w-[1440px] px-4 py-5 sm:px-7 lg:px-10">
         <header className="mb-8 flex flex-col gap-5 border-b border-emerald-950/10 pb-5 md:flex-row md:items-center md:justify-between">
           <SmartLink href="/" className="flex items-center gap-3">

@@ -18,7 +18,7 @@ interface HomePageProps {
 export function HomePage({ data, usingFallback, sourceArchive }: HomePageProps) {
   return (
     <main id="main-content" className="relative overflow-hidden bg-[var(--color-surface)] text-[var(--color-ink)]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[linear-gradient(180deg,rgba(31,90,67,0.08),transparent)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[linear-gradient(180deg,rgba(118,84,165,0.09),transparent)]" />
       <div className="grain-overlay" />
 
       <div className="page-shell">

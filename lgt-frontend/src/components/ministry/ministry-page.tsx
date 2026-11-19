@@ -72,13 +72,13 @@ export function MinistryPage({ page, sourceEntry }: MinistryPageProps) {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-[rgba(31,90,67,0.1)] bg-[var(--color-surface-strong)] p-5">
+            <aside className="rounded-lg border border-[rgba(54,85,143,0.12)] bg-[var(--color-surface-strong)] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">
                 Page Snapshot
               </p>
               <div className="mt-4 grid gap-3">
                 {page.highlights.map((item) => (
-                  <div key={item} className="rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]">
+                  <div key={item} className="rounded-md border border-[rgba(54,85,143,0.1)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]">
                     {item}
                   </div>
                 ))}
@@ -102,7 +102,7 @@ export function MinistryPage({ page, sourceEntry }: MinistryPageProps) {
                 {section.items ? (
                   <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                     {section.items.map((item) => (
-                      <li key={item} className="rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]">
+                      <li key={item} className="rounded-md border border-[rgba(54,85,143,0.1)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]">
                         {item}
                       </li>
                     ))}
@@ -118,7 +118,7 @@ export function MinistryPage({ page, sourceEntry }: MinistryPageProps) {
             </p>
             <div className="mt-4 grid gap-2">
               {page.related.map((item) => (
-                <SmartLink key={item.href} href={item.href} className="rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white">
+                <SmartLink key={item.href} href={item.href} className="rounded-md border border-[rgba(54,85,143,0.1)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(118,84,165,0.24)] hover:bg-white">
                   {item.label}
                 </SmartLink>
               ))}
@@ -131,7 +131,7 @@ export function MinistryPage({ page, sourceEntry }: MinistryPageProps) {
             <h2 id="collection-index-title" className="mt-2 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]">More in this collection</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               {archiveItems.map((entry) => (
-                <SmartLink key={entry.appPath} href={entry.appPath} className="rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white">
+                <SmartLink key={entry.appPath} href={entry.appPath} className="rounded-lg border border-[rgba(54,85,143,0.12)] bg-white/75 p-4 transition hover:border-[rgba(118,84,165,0.26)] hover:bg-white">
                   <p className="text-sm font-semibold leading-6 text-[var(--color-primary)]">{entry.title}</p>
                   {entry.audioTracks?.length ? <p className="mt-2 text-xs text-[var(--color-muted-soft)]">{entry.audioTracks.length} recordings</p> : null}
                 </SmartLink>
@@ -144,7 +144,7 @@ export function MinistryPage({ page, sourceEntry }: MinistryPageProps) {
             <h2 id="post-index-title" className="font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]">All articles and questions</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {allSourceArchive.filter((entry) => entry.type === "post").map((entry) => (
-                <SmartLink key={entry.appPath} href={entry.appPath} className="rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white">
+                <SmartLink key={entry.appPath} href={entry.appPath} className="rounded-lg border border-[rgba(54,85,143,0.12)] bg-white/75 p-4 transition hover:border-[rgba(118,84,165,0.26)] hover:bg-white">
                   <p className="text-sm font-semibold leading-6 text-[var(--color-primary)]">{entry.title}</p>
                   {entry.date ? <p className="mt-2 text-xs text-[var(--color-muted-soft)]">{new Date(entry.date).toLocaleDateString("en", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p> : null}
                 </SmartLink>

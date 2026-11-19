@@ -39,7 +39,7 @@ export function SourceContentPage({ entry }: { entry: SourceArchiveEntry }) {
         </nav>
 
         <article className="professional-panel overflow-hidden">
-          <header className="border-b border-[rgba(31,90,67,0.08)] px-6 py-8 sm:px-9 sm:py-10">
+          <header className="border-b border-[rgba(54,85,143,0.1)] px-6 py-8 sm:px-9 sm:py-10">
             <p className="eyebrow">{entry.type === "post" ? "Ministry article" : "Ministry archive"}</p>
             <h1 className="mt-3 max-w-5xl font-[family-name:var(--font-heading)] text-4xl leading-tight text-[var(--color-primary)] sm:text-5xl">{entry.title}</h1>
             {entry.date && <p className="mt-3 text-sm text-[var(--color-muted-soft)]">{new Date(entry.date).toLocaleDateString("en", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p>}

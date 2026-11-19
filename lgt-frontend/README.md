@@ -57,8 +57,8 @@ instead of changing the runtime architecture.
 
 The frontend is exported as static files and served by the existing Express /
 Passenger application. Install this workspace's dependencies with
-`npm install --include=dev` from `lgt-frontend`. Then `npm run build` from
-`lgt-api` builds the API, exports this workspace, and copies the export to
+`npm install --include=dev --workspaces=false` from `lgt-frontend`. Then
+`npm run build` from `lgt-api` builds the API, exports this workspace, and copies the export to
 `lgt-api/dist/public/next-site`. The API remains available under `/api`.
 
 After pulling a change, activate the existing Node environment, run

@@ -1,0 +1,152 @@
+1:"$Sreact.fragment"
+2:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+9:I[1872,[],"OutletBoundary"]
+a:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main-content","className":"min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]","children":["$","div",null,{"className":"mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10","children":[["$","header",null,{"className":"professional-panel sticky top-4 z-20 mb-8 px-4 py-3 sm:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-3","children":[["$","span",null,{"className":"brand-mark","aria-hidden":"true","children":"TLG"}],["$","span",null,{"children":[["$","span",null,{"className":"block text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]","children":"The Living God Tabernacle"}],["$","span",null,{"className":"block text-sm text-[var(--color-muted)]","children":"God's Spoken Word Evangelism"}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap items-center gap-1 text-sm font-medium text-[var(--color-muted)]","children":[["$","$L2","/",{"href":"/","className":"nav-link","children":"Home"}],["$","$L2","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$L2","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$L2","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$L2","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$L2","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$L2","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$L2","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$L2","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}]]}]]}]}],["$","section",null,{"className":"professional-panel overflow-hidden","children":["$","div",null,{"className":"grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10","children":[["$","div",null,{"children":[["$","p",null,{"className":"eyebrow","children":"The Bible as Our Foundation"}],["$","h1",null,{"className":"mt-4 max-w-4xl font-[family-name:var(--font-heading)] text-5xl leading-none text-[var(--color-primary)] sm:text-6xl","children":"Pure Biblical Teachings"}],["$","p",null,{"className":"mt-5 max-w-3xl text-lg leading-8 text-[var(--color-muted)]","children":"Study Bible teaching with Scripture as the source and final authority for Christian faith and practice."}],["$","div",null,{"className":"mt-7 flex flex-wrap gap-3","children":[null,["$","$L2",null,{"href":"/resources","className":"button-secondary px-5 py-3","children":"View resource hub"}]]}]]}],["$","aside",null,{"className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-[var(--color-surface-strong)] p-5","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Page Snapshot"}],["$","div",null,{"className":"mt-4 grid gap-3","children":[["$","div","The Word of God",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"The Word of God"}],["$","div","Bible study",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"Bible study"}],["$","div","Questions and answers",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"Questions and answers"}]]}]]}]]}]}],["$","section",null,{"className":"mt-6 grid gap-5 lg:grid-cols-[1fr_20rem]","children":[["$","div",null,{"className":"grid gap-5","children":[["$","article","A Scripture-First Approach",{"className":"professional-panel p-6 sm:p-7","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"A Scripture-First Approach"}],["$","p",null,{"className":"mt-4 text-base leading-8 text-[var(--color-muted)]","children":"Bible questions should be answered from the Scriptures. Explore the teachings, compare each subject with the Word, and read in context."}],null]}],"$L3"]}],"$L4"]}],"$L5",null,"$L6"]}]}],null,"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"FCXF-0Ddl3w7Cu7_by8z7"}
+3:["$","article","Study Topics",{"className":"professional-panel p-6 sm:p-7","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"Study Topics"}],["$","p",null,{"className":"mt-4 text-base leading-8 text-[var(--color-muted)]","children":"Explore Bible subjects including the Godhead, salvation, water baptism, the Holy Ghost, the church ages, and the promises for the end time."}],null]}]
+4:["$","aside",null,{"className":"professional-panel h-fit p-5","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Related Pages"}],["$","div",null,{"className":"mt-4 grid gap-2","children":[["$","$L2","/teachings",{"href":"/teachings","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Did You Know? studies"}],["$","$L2","/questions",{"href":"/questions","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Bible questions and answers"}],["$","$L2","/water-baptism",{"href":"/water-baptism","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Water baptism"}]]}]]}]
+5:["$","section",null,{"className":"professional-panel mt-6 p-5 sm:p-7","aria-labelledby":"collection-index-title","children":[["$","p",null,{"className":"eyebrow","children":"Explore the archive"}],["$","h2",null,{"id":"collection-index-title","className":"mt-2 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"More in this collection"}],["$","div",null,{"className":"mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3","children":[["$","$L2","/pure-biblical-teachings/the-mark-of-the-beast",{"href":"/pure-biblical-teachings/the-mark-of-the-beast","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"THE MARK OF THE BEAST"}],null]}],["$","$L2","/pure-biblical-teachings/how-to-receive-the-holy-ghost",{"href":"/pure-biblical-teachings/how-to-receive-the-holy-ghost","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"How to Receive the Holy Ghost."}],null]}]]}]]}]
+8:T38c6,		<div data-elementor-type="wp-page" data-elementor-id="118" class="elementor elementor-118">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-7a8d984e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7a8d984e" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-edbe5f2" data-id="edbe5f2" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-761ff55d elementor-widget elementor-widget-spacer" data-id="761ff55d" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-3262f9a elementor-widget elementor-widget-image" data-id="3262f9a" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="910" height="212" src="https://thelivinggodtabernacle.org/wp-content/uploads/2021/09/who-is-jesus-christ.jpg" class="attachment-large size-large wp-image-2058" alt="" srcset="https://thelivinggodtabernacle.org/wp-content/uploads/2021/09/who-is-jesus-christ.jpg 910w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/09/who-is-jesus-christ-300x70.jpg 300w, https://thelivinggodtabernacle.org/wp-content/uploads/2021/09/who-is-jesus-christ-768x179.jpg 768w" sizes="(max-width: 910px) 100vw, 910px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-4fa420d0 elementor-widget elementor-widget-text-editor" data-id="4fa420d0" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									&nbsp;
+<h4 style="color: black;">Matthew16:13 When Jesus came into the coasts of Caesarea Philippi, he asked his disciples, saying, Whom do men say that I the Son of man am?</h4>
+<h4 style="color: black;">14 And they said, Some say that thou art John the Baptist: some, Elias; and others, Jeremias, or one of the prophets.</h4>
+<h4 style="color: black;">15 He saith unto them, But whom say ye that I am?</p>
+
+16 And Simon Peter answered and said, Thou art the Christ, the Son of the living God.
+<h4 style="color: black;">17 And Jesus answered and said unto him, Blessed art thou, Simon Barjona: for flesh and blood hath not revealed it unto thee, but my Father which is in heaven.</h4>
+<h4 style="color: black;">18 And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.</p>
+
+&nbsp;								</div>
+				</div>
+				<div class="elementor-element elementor-element-0aed7a9 elementor-widget elementor-widget-text-editor" data-id="0aed7a9" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p style="color:black;">The Lord Jesus Christ was the first to asked the disciples this same question. “He asked his disciples, saying, Whom do men (others) say that I the Son of man am?” And they said, some say that thou art John the Baptist: some, Elias; and others, Jeremias, or one of the prophets”
+</p>
+
+<p style="color:black;"> Again,” He saith unto them, But whom say ye that I am? ”in other words what is your revelation about me, though am a Son of man? 16 And Simon Peter answered and said, “Thou art THE CHRIST, the Son of the living God”</p>
+
+<p style="color:black;">And Jesus answered and said unto him, Blessed art thou, Simon Barjona: for flesh and blood (theology) hath not revealed it unto thee, but my Father which is in heaven. And I say also unto thee, that thou art Peter, and upon this rock (the revelation of who JESUS CHRIST is) I will build my church; and the gates of hell shall not prevail against it</p
+
+</body>
+</html>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-4fac93dd elementor-widget elementor-widget-text-editor" data-id="4fac93dd" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Consider this</strong>:</p><p>What did Peter (a Jew) saw about a mortal being to the extend that &#8220;Simon Peter answered and said, “Thou art THE CHRIST, the Son of the living God” (i.e. The Anointed one/ the Messiah) &#8220;</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-a55e73f elementor-widget elementor-widget-text-editor" data-id="a55e73f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h1 style="color: black;">References</h1><h6><strong>Ephesians 4:6</strong></h6><p style="color: black;">One God and Father of all, who is above all, and through all, and in you all.</p><h6 style="color: black;">1 Timothy 3:16</h6><p style="color: black;">And without controversy great is the mystery of godliness: God was manifest in the flesh, justified in the Spirit, seen of angels, preached unto the Gentiles, believed on in the world, received up into glory.</p><h6 style="color: black;">Isaiah 9:6</h6><p style="color: black;">For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.</p><h6 style="color: black;">Deuteronomy 6:4</h6><p style="color: black;">Hear, O Israel: The Lord our God is one Lord:</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4cff92a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4cff92a1" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2029d36c" data-id="2029d36c" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-21de187d elementor-pagination-position-inside elementor-widget elementor-widget-image-carousel" data-id="21de187d" data-element_type="widget" data-e-type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;dots&quot;,&quot;speed&quot;:400,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;effect&quot;:&quot;slide&quot;}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
+			<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
+								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 2"><figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://thelivinggodtabernacle.org/wp-content/uploads/2018/09/Shield-Trinity-Scutum-Fidei-English.svg_.png" alt="Non Biblical Trinity" /><figcaption class="elementor-image-carousel-caption"> Non Biblical Trinity</figcaption></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 2"><figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="https://thelivinggodtabernacle.org/wp-content/uploads/2018/09/BIBLICAL-TRINITY.jpg" alt="Biblical Trinity" /><figcaption class="elementor-image-carousel-caption"> Biblical Trinity</figcaption></figure></div>			</div>
+							
+									<div class="swiper-pagination"></div>
+									</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1ecf7259 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1ecf7259" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-23cee1e1" data-id="23cee1e1" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7ee3f8ae elementor-widget elementor-widget-text-editor" data-id="7ee3f8ae" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span id="en-KJV-27218" class="text Acts-9-1"><span class="chapternum">Acts 9:1</span></span></p><p class="chapter-1"><span id="en-KJV-27218" class="text Acts-9-1">And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest,</span></p><p><span id="en-KJV-27219" class="text Acts-9-2"><sup class="versenum">2 </sup>And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem.</span></p><p><span id="en-KJV-27220" class="text Acts-9-3"><sup class="versenum">3 </sup>And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven:</span></p><p><span id="en-KJV-27221" class="text Acts-9-4"><sup class="versenum">4 </sup>And he fell to the earth, and heard a voice saying unto him, Saul, Saul, why persecutest thou me?</span></p><p><span id="en-KJV-27222" class="text Acts-9-5"><sup class="versenum">5 </sup>And he said, Who art thou, Lord? And the Lord said, I am Jesus whom thou persecutest: it is hard for thee to kick against the pricks.</span></p><p><span id="en-KJV-27223" class="text Acts-9-6"><sup class="versenum">6 </sup>And he trembling and astonished said, Lord, what wilt thou have me to do? And the Lord said unto him, Arise, and go into the city, and it shall be told thee what thou must do.</span></p><p><span id="en-KJV-27224" class="text Acts-9-7"><sup class="versenum">7 </sup>And the men which journeyed with him stood speechless, hearing a voice, but seeing no man.</span></p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5d56847 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d56847" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c1cf51b" data-id="c1cf51b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4a7d264 elementor-widget elementor-widget-text-editor" data-id="4a7d264" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:black;">Kindly Consider The Topics Below:</h1>
+
+</body>
+</html>								</div>
+				</div>
+				<div class="elementor-element elementor-element-d4ca469 elementor-widget elementor-widget-text-editor" data-id="d4ca469" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h6> </h6><h6><a href="/?page_id=287&amp;preview=true">Water Baptism</a></h6><h6><a href="/pure-biblical-teachings/how-to-receive-the-holy-ghost">How To Receive The Holy Ghost</a></h6><h6><a href="/pure-biblical-teachings/the-mark-of-the-beast">THE MARK OF THE BEAST</a></h6>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-30771d58 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="30771d58" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-72388641" data-id="72388641" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-50725670 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="50725670" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-3cb54bca elementor-shape-circle elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="3cb54bca" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-3bftaoh" href="https://web.facebook.com/thelivinggodtabernacle/" target="_blank">
+						<span class="elementor-screen-only">Facebook-f</span>
+						<i aria-hidden="true" class="fab fa-facebook-f"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		6:["$","section",null,{"className":"professional-panel mt-6 overflow-hidden","children":[["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$8"}}],null]}]
+7:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

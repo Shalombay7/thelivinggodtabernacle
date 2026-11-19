@@ -22,7 +22,7 @@ for (const [from, to] of assets) {
   console.log(`Copied ${from} to ${to}`);
 }
 
-const packagedFrontend = path.join(projectRoot, 'src', 'public', 'next-site');
+const packagedFrontend = path.join(projectRoot, 'src', 'next-site');
 if (!fs.existsSync(path.join(packagedFrontend, 'index.html'))) {
   throw new Error(
     `Packaged frontend export is missing at ${packagedFrontend}. Build and sync it before deploying.`,
@@ -33,4 +33,8 @@ if (!fs.existsSync(path.join(packagedFrontend, 'sw.js'))) {
   throw new Error(`Packaged PWA service worker is missing at ${packagedFrontend}`);
 }
 
-console.log(`Using packaged frontend export from ${packagedFrontend}`);
+const frontendDestination = path.join(projectRoot, 'dist', 'next-site');
+fs.rmSync(frontendDestination, { force: true, recursive: true });
+fs.mkdirSync(path.dirname(frontendDestination), { recursive: true });
+fs.cpSync(packagedFrontend, frontendDestination, { recursive: true });
+console.log(`Copied packaged frontend export to ${frontendDestination}`);

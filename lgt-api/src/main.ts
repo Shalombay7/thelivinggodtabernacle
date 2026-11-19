@@ -11,6 +11,7 @@ import { basename, join } from 'path';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
+import { adminDashboardAuth } from './common/middleware/admin-dashboard-auth.middleware';
 
 interface RuntimeAssets {
   publicDir: string;
@@ -34,7 +35,7 @@ function resolveRuntimeAssets(runtimeRoot: string): RuntimeAssets {
 
   return {
     publicDir,
-    nextSiteDir: join(publicDir, 'next-site'),
+    nextSiteDir: join(runtimeRoot, 'next-site'),
     viewsDir,
     partialsDir: join(viewsDir, 'partials'),
   };
@@ -87,6 +88,8 @@ async function bootstrap() {
   app.useLogger(logger);
 
   const { publicDir, nextSiteDir, viewsDir, partialsDir } = resolveRuntimeAssets(__dirname);
+
+  app.use('/dashboard', adminDashboardAuth);
 
   if (existsSync(nextSiteDir)) {
     app.useStaticAssets(nextSiteDir);

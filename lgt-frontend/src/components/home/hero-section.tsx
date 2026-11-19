@@ -38,9 +38,6 @@ export function HeroSection({ data }: HeroSectionProps) {
           <SmartLink href="/services" className="button-secondary px-6 py-3">
             Plan Your Visit
           </SmartLink>
-          <SmartLink href="/dashboard" className="button-secondary px-6 py-3">
-            Open Dashboard
-          </SmartLink>
         </div>
 
         <div className="mt-8 grid gap-4 border-t border-[rgba(31,90,67,0.08)] pt-6 sm:grid-cols-3">

@@ -59,9 +59,14 @@ The frontend is exported as static files and served by the existing Express /
 Passenger application. To publish a frontend update, run `npm run build:frontend`
 and `npm run sync:frontend` from the repository root. Commit the generated
 `lgt-api/src/public/next-site` directory with the source changes. The server's
-`npm run build` from `lgt-api` copies that package into `dist/public/next-site`
+`npm run build` from `lgt-api` copies that package into `dist/next-site`
 without needing Next.js installed on the server. The API remains available under
 `/api`.
+
+The dashboard is protected by the API's HTTP Basic authentication middleware.
+Set `ADMIN_DASHBOARD_USERNAME` and `ADMIN_DASHBOARD_PASSWORD` in the cPanel Node
+application environment before enabling dashboard access. The route returns
+`503` while either setting is missing and prompts for credentials when configured.
 
 After pulling a change, activate the existing Node environment, run
 `npm run build` from `lgt-api`, run `npm run verify:views`, and restart Passenger

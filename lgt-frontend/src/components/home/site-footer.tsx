@@ -31,9 +31,6 @@ export function SiteFooter({ data }: SiteFooterProps) {
           <SmartLink href="/posts" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
             Recent Posts
           </SmartLink>
-          <SmartLink href="/dashboard" className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
-            Dashboard
-          </SmartLink>
           <SmartLink href={getAbsoluteUrl(data.links.docs)} className="rounded-md bg-white/85 px-4 py-2 transition hover:bg-white">
             API Docs
           </SmartLink>

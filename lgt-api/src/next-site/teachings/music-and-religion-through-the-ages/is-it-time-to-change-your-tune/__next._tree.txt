@@ -1,0 +1,2 @@
+:HL["/_next/static/css/2d8edde7d7216fd8.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"slug","param":{"type":"c","key":"teachings/music-and-religion-through-the-ages/is-it-time-to-change-your-tune","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"FCXF-0Ddl3w7Cu7_by8z7"}

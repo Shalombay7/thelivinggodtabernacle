@@ -1,0 +1,368 @@
+1:"$Sreact.fragment"
+2:I[1133,[],""]
+3:I[4297,[],""]
+4:I[6908,["568","static/chunks/568-095e932eb4a6770f.js","177","static/chunks/app/layout-477ef4076abaffd6.js"],"WelcomeMessage"]
+5:I[7478,["568","static/chunks/568-095e932eb4a6770f.js","177","static/chunks/app/layout-477ef4076abaffd6.js"],"InstallPrompt"]
+7:I[1872,[],"OutletBoundary"]
+8:"$Sreact.suspense"
+a:I[1872,[],"ViewportBoundary"]
+c:I[1872,[],"MetadataBoundary"]
+e:I[7567,[],"default",1]
+:HL["/_next/static/css/2d8edde7d7216fd8.css","style"]
+0:{"P":null,"c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2d8edde7d7216fd8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_855f89 __variable_ded346 h-full scroll-smooth antialiased","children":["$","body",null,{"className":"min-h-full flex flex-col","children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to main content"}],["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L4",null,{}],["$","$L5",null,{}]]}]}]]}],{"children":[["$","$1","c",{"children":["$L6",null,["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]]}],{},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$La",null,{"children":"$Lb"}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$8",null,{"name":"Next.Metadata","children":"$Ld"}]}]}],null]}],false]],"m":"$undefined","G":["$e",[]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"FCXF-0Ddl3w7Cu7_by8z7"}
+f:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+6:["$","main",null,{"id":"main-content","className":"relative overflow-hidden bg-[var(--color-surface)] text-[var(--color-ink)]","children":[["$","div",null,{"className":"pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[linear-gradient(180deg,rgba(31,90,67,0.08),transparent)]"}],["$","div",null,{"className":"grain-overlay"}],["$","div",null,{"className":"page-shell","children":[["$","header",null,{"className":"professional-panel sticky top-4 z-20 mb-8 px-4 py-3 md:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 md:flex-row md:items-center md:justify-between","children":[["$","div",null,{"className":"flex items-start gap-3","children":[["$","div",null,{"className":"brand-mark mt-1","aria-hidden":"true","children":"TLG"}],["$","div",null,{"children":[["$","p",null,{"className":"font-[family-name:var(--font-heading)] text-lg tracking-[0.18em] text-[var(--color-accent)] uppercase","children":"The Living God Tabernacle"}],["$","p",null,{"className":"text-sm text-[var(--color-muted)]","children":"Christ-centered worship, discipleship, and belonging."}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap items-center gap-2 text-sm font-medium text-[var(--color-muted)]","children":[[["$","$Lf","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$Lf","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$Lf","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$Lf","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$Lf","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$Lf","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$Lf","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$Lf","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}]],["$","a",null,{"href":"https://web.facebook.com/thelivinggodtabernacle/","className":"button-primary","target":"_blank","rel":"noreferrer","aria-label":"Watch live on YouTube","children":"Watch Live"}]]}]]}]}],["$","div",null,{"className":"mb-8 flex flex-col gap-3 lg:flex-row lg:items-center","children":[null,["$","div",null,{"className":"section-card-soft rounded-3xl px-5 py-4 text-sm text-[var(--color-muted)]","role":"status","aria-live":"polite","children":"Live ministry data is temporarily unavailable, so this page is showing a reliable fallback experience instead of failing."}]]}],["$","section",null,{"aria-labelledby":"hero-title","className":"grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start","children":[["$","div",null,{"className":"professional-panel relative overflow-hidden p-7 sm:p-10","children":[["$","div",null,{"className":"pointer-events-none absolute inset-x-10 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(195,148,58,0.45),transparent)]"}],["$","div",null,{"className":"hero-kicker mb-5","children":"A House of Worship and Hope"}],["$","h1",null,{"id":"hero-title","className":"max-w-4xl font-[family-name:var(--font-heading)] text-5xl leading-[0.98] text-[var(--color-primary)] sm:text-6xl xl:text-7xl","children":"Come into a warmer, prayerful church experience shaped for belonging and renewal."}],["$","p",null,{"className":"mt-6 max-w-3xl text-lg leading-8 text-[var(--color-muted)] sm:text-xl","children":["A welcoming home for worship, discipleship, prayer, and transformed lives."," Every detail is meant to feel reassuring, spiritually uplifting, and deeply human for families, children, and every believer looking for a place to rest, grow, and worship together."]}],["$","div",null,{"className":"mt-8 flex flex-wrap gap-4","children":[["$","a",null,{"href":"https://web.facebook.com/thelivinggodtabernacle/","className":"button-primary px-6 py-3","target":"_blank","rel":"noreferrer","aria-label":"Join the live broadcast on YouTube","children":"Join the Broadcast"}],["$","$Lf",null,{"href":"/services","className":"button-secondary px-6 py-3","children":"Plan Your Visit"}]]}],"$L10","$L11"]}],"$L12"]}],"$L13","$L14","$L15","$L16"]}],"$L17"]}]
+10:["$","div",null,{"className":"mt-8 grid gap-4 border-t border-[rgba(31,90,67,0.08)] pt-6 sm:grid-cols-3","children":[["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-soft)]","children":"Gathering Rhythm"}],["$","p",null,{"className":"mt-2 text-base font-semibold text-[var(--color-primary)]","children":"Sunday Worship at 8:00 AM and Wednesday Bible Study at 6:00 PM"}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-soft)]","children":"Active Ministry Spaces"}],["$","p",null,{"className":"mt-2 text-base font-semibold text-[var(--color-primary)]","children":[6," pathways serving the church family"]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-soft)]","children":"Pastoral Tone"}],["$","p",null,{"className":"mt-2 text-base font-semibold text-[var(--color-primary)]","children":"Grace-filled, Scripture-rooted, community-led"}]]}]]}]
+11:["$","div",null,{"className":"mt-10 grid gap-4 md:grid-cols-3","children":[["$","article","A place to belong",{"className":"section-card-soft floating-card rounded-lg p-5","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"A place to belong"}],["$","p",null,{"className":"mt-3 text-sm leading-7 text-[var(--color-muted)]","children":"Warm fellowship, pastoral care, and a church family that makes room for every stage of the journey."}]]}],["$","article","Children are seen here",{"className":"section-card-soft floating-card rounded-lg p-5","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Children are seen here"}],["$","p",null,{"className":"mt-3 text-sm leading-7 text-[var(--color-muted)]","children":"Faith-building spaces designed to help children of God grow with joy, clarity, and confidence in Christ."}]]}],["$","article","Rooted in the Word",{"className":"section-card-soft floating-card rounded-lg p-5","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Rooted in the Word"}],["$","p",null,{"className":"mt-3 text-sm leading-7 text-[var(--color-muted)]","children":"Biblical teaching, prayer, and discipleship that strengthen daily living beyond Sunday gatherings."}]]}]]}]
+12:["$","aside",null,{"aria-label":"Service details and leadership welcome","className":"grid gap-5","children":[["$","div",null,{"className":"relative overflow-hidden rounded-lg bg-[linear-gradient(160deg,#214f3d,#16372b_52%,#10261d)] p-7 text-white shadow-[0_24px_60px_rgba(17,71,52,0.24)]","children":[["$","div",null,{"className":"pointer-events-none absolute -right-12 top-0 h-36 w-36 rounded-full bg-[rgba(255,255,255,0.09)] blur-3xl"}],["$","div",null,{"className":"pointer-events-none absolute left-6 top-0 h-px w-32 bg-[linear-gradient(90deg,rgba(255,255,255,0.55),transparent)]"}],["$","p",null,{"className":"text-sm uppercase tracking-[0.22em] text-white/75","children":"Service Times"}],["$","h2",null,{"className":"mt-3 font-[family-name:var(--font-heading)] text-3xl","children":"Worship with us"}],["$","p",null,{"className":"mt-4 text-base leading-7 text-white/85","children":"Sunday Worship at 8:00 AM and Wednesday Bible Study at 6:00 PM"}],["$","p",null,{"className":"mt-3 text-sm leading-6 text-white/72","children":"Accra, Ghana"}],["$","div",null,{"className":"divider-glow mt-6"}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-white/76","children":"Enter a gathering shaped by prayer, music, faithful teaching, and a sincere welcome."}],["$","$Lf",null,{"href":"/services","className":"mt-6 inline-flex rounded-md bg-white px-5 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:bg-[var(--color-surface-strong)]","children":"Contact the Church"}]]}],["$","div",null,{"className":"section-card-warm rounded-lg p-7","children":[["$","p",null,{"className":"eyebrow","children":"Pastor's Welcome"}],["$","h2",null,{"className":"mt-3 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"The Living God Tabernacle Leadership"}],["$","p",null,{"className":"mt-4 text-base leading-8 text-[var(--color-muted)]","children":"You belong here. We are building a Christ-centered family where children, youth, adults, and new believers can grow with confidence and hope."}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted-soft)]","children":"We want every visitor to feel seen, safe, and encouraged from the moment they arrive."}]]}]]}]
+13:["$","section",null,{"id":"about","aria-labelledby":"about-title","className":"mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]","children":[["$","article",null,{"className":"section-card-soft rounded-lg p-7 sm:p-8","children":[["$","div",null,{"className":"","children":[["$","div",null,{"children":[["$","p",null,{"className":"eyebrow","children":"Our Mission"}],["$","h2",null,{"id":"about-title","className":"section-title mt-3","children":"Built for worship, discipleship, and spiritual family."}]]}],null]}],["$","p",null,{"className":"mt-5 text-base leading-8 text-[var(--color-muted)]","children":"To raise wholehearted believers who know Christ, live His Word, and shine His love in every generation."}],["$","div",null,{"className":"mt-6 grid gap-4 sm:grid-cols-3","children":[["$","div","Prayer-Filled",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/55 p-4","children":[["$","p",null,{"className":"serif-display text-xl text-[var(--color-primary)]","children":"Prayer-Filled"}],["$","p",null,{"className":"mt-2 text-sm leading-7 text-[var(--color-muted)]","children":"Every gathering is shaped to feel reverent, expectant, and close to the presence of God."}]]}],["$","div","Family-Centered",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/55 p-4","children":[["$","p",null,{"className":"serif-display text-xl text-[var(--color-primary)]","children":"Family-Centered"}],["$","p",null,{"className":"mt-2 text-sm leading-7 text-[var(--color-muted)]","children":"Children, youth, adults, and new believers are welcomed with dignity and pastoral warmth."}]]}],["$","div","Word-Anchored",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/55 p-4","children":[["$","p",null,{"className":"serif-display text-xl text-[var(--color-primary)]","children":"Word-Anchored"}],["$","p",null,{"className":"mt-2 text-sm leading-7 text-[var(--color-muted)]","children":"Teaching, discipleship, and encouragement stay rooted in Scripture and daily transformation."}]]}]]}]]}],["$","article",null,{"className":"section-card-warm rounded-lg p-7 sm:p-8","children":[["$","p",null,{"className":"eyebrow","children":"What We Believe"}],["$","blockquote",null,{"className":"mt-4 font-[family-name:var(--font-heading)] text-3xl leading-tight text-[var(--color-primary)]","children":["“","We believe in salvation through Jesus Christ, the authority of Scripture, the power of prayer, and the work of the Holy Spirit in the Church.","”"]}],["$","p",null,{"className":"mt-6 text-sm leading-7 text-[var(--color-muted)]","children":"Our theology is not treated as abstract language. It is meant to shape a lived culture of prayer, compassion, holiness, and joyful service."}]]}]]}]
+14:["$","section",null,{"id":"ministries","aria-labelledby":"ministries-title","className":"section-card-soft mt-8 rounded-lg p-7 sm:p-9","children":[["$","div",null,{"className":"flex flex-col gap-3 md:flex-row md:items-end md:justify-between","children":[["$","div",null,{"children":[["$","p",null,{"className":"eyebrow","children":"Ministry Spaces"}],["$","h2",null,{"id":"ministries-title","className":"section-title mt-3","children":"Designed for the whole church family."}]]}],["$","p",null,{"className":"max-w-xl text-sm leading-7 text-[var(--color-muted)]","children":"Each space is presented as a meaningful invitation into discipleship, care, and shared spiritual life."}]]}],["$","div",null,{"className":"mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3","role":"list","aria-labelledby":"ministries-title","children":[["$","article","altar",{"role":"listitem","className":"floating-card rounded-lg border p-5 border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","div",null,{"className":"flex items-center gap-4","children":[["$","span",null,{"aria-hidden":"true","className":"flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]","children":"✦"}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Daily devotion"}],["$","h3",null,{"className":"mt-1 font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Daily Manna"}]]}]]}],["$","span",null,{"className":"rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]","children":"Available"}]]}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted)]","children":["For ","all believers",", with a clearer sense of purpose and belonging."]}],["$","div",null,{"className":"mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]"}],["$","p",null,{"className":"mt-4 text-sm text-[var(--color-muted-soft)]","children":"Crafted to feel pastoral, intentional, and spiritually nourishing."}]]}],["$","article","explorers",{"role":"listitem","className":"floating-card rounded-lg border p-5 border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","div",null,{"className":"flex items-center gap-4","children":[["$","span",null,{"aria-hidden":"true","className":"flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]","children":"☀"}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Children's growth"}],["$","h3",null,{"className":"mt-1 font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Kingdom Explorers"}]]}]]}],["$","span",null,{"className":"rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]","children":"Available"}]]}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted)]","children":["For ","children",", with a clearer sense of purpose and belonging."]}],["$","div",null,{"className":"mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]"}],["$","p",null,{"className":"mt-4 text-sm text-[var(--color-muted-soft)]","children":"Crafted to feel pastoral, intentional, and spiritually nourishing."}]]}],["$","article","regen",{"role":"listitem","className":"floating-card rounded-lg border p-5 border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]","children":["$L18","$L19","$L1a","$L1b"]}],"$L1c","$L1d","$L1e"]}]]}]
+15:["$","section",null,{"id":"connect","aria-labelledby":"connect-title","className":"mt-8 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]","children":[["$","article",null,{"className":"relative overflow-hidden rounded-lg bg-[linear-gradient(145deg,#224f3d,#174132_54%,#10271e)] p-7 text-white shadow-[0_24px_60px_rgba(17,71,52,0.24)] sm:p-8","children":[["$","div",null,{"className":"pointer-events-none absolute right-[-2rem] top-[-2rem] h-40 w-40 rounded-full bg-[rgba(255,255,255,0.08)] blur-3xl"}],["$","div",null,{"className":"","children":[["$","div",null,{"children":[["$","p",null,{"className":"text-sm font-semibold uppercase tracking-[0.22em] text-white/70","children":"Connect"}],["$","h2",null,{"id":"connect-title","className":"mt-3 font-[family-name:var(--font-heading)] text-4xl text-white","children":"Let us help you take the next step."}]]}],null]}],["$","p",null,{"className":"mt-4 max-w-2xl text-sm leading-7 text-white/78","children":"Reach the church through familiar spaces that still feel pastoral, calm, and grounded in ministry rather than noise."}],["$","div",null,{"className":"mt-6 grid gap-4 sm:grid-cols-2","children":[[["$","a","facebook",{"href":"https://web.facebook.com/thelivinggodtabernacle/","className":"floating-card rounded-md border border-white/15 bg-white/8 p-4 hover:bg-white/12","target":"_blank","rel":"noreferrer","children":[["$","p",null,{"className":"text-xs uppercase tracking-[0.2em] text-white/60","children":"Community"}],["$","p",null,{"className":"mt-2 text-lg font-semibold","children":"Facebook Fellowship"}]]}],["$","a","instagram",{"href":"https://web.facebook.com/thelivinggodtabernacle/","className":"floating-card rounded-md border border-white/15 bg-white/8 p-4 hover:bg-white/12","target":"_blank","rel":"noreferrer","children":[["$","p",null,{"className":"text-xs uppercase tracking-[0.2em] text-white/60","children":"Stories"}],["$","p",null,{"className":"mt-2 text-lg font-semibold","children":"Instagram Moments"}]]}],["$","a","youtube",{"href":"https://web.facebook.com/thelivinggodtabernacle/","className":"floating-card rounded-md border border-white/15 bg-white/8 p-4 hover:bg-white/12","target":"_blank","rel":"noreferrer","children":[["$","p",null,{"className":"text-xs uppercase tracking-[0.2em] text-white/60","children":"Messages"}],["$","p",null,{"className":"mt-2 text-lg font-semibold","children":"Watch and Listen"}]]}]],["$","a",null,{"href":"http://localhost:3009/prayer","className":"floating-card rounded-md border border-white/15 bg-white/8 p-4 hover:bg-white/12","target":"_blank","rel":"noreferrer","children":[["$","p",null,{"className":"text-xs uppercase tracking-[0.2em] text-white/60","children":"Stewardship"}],["$","p",null,{"className":"mt-2 text-lg font-semibold","children":"Support the Ministry"}]]}]]}]]}],["$","article",null,{"className":"section-card-warm rounded-lg p-7 sm:p-8","children":[["$","div",null,{"className":"","children":[["$","div",null,{"children":[["$","p",null,{"className":"eyebrow","children":"Reach Out"}],["$","h2",null,{"id":"$undefined","className":"section-title mt-3","children":"We would love to hear from you."}]]}],null]}],["$","address",null,{"className":"mt-6 space-y-4 text-sm leading-7 text-[var(--color-muted)] not-italic","children":[["$","p",null,{"children":[["$","span",null,{"className":"font-semibold text-[var(--color-primary)]","children":"Email:"}]," ",["$","a",null,{"href":"mailto:connect@thelivinggodtabernacle.org","className":"interactive-link text-[var(--color-muted)]","target":"_blank","rel":"noreferrer","children":"connect@thelivinggodtabernacle.org"}]]}],["$","p",null,{"children":[["$","span",null,{"className":"font-semibold text-[var(--color-primary)]","children":"Address:"}]," ","Accra, Ghana"]}],["$","p",null,{"children":[["$","span",null,{"className":"font-semibold text-[var(--color-primary)]","children":"Gathering Times:"}]," ","Sunday Worship at 8:00 AM and Wednesday Bible Study at 6:00 PM"]}]]}],["$","div",null,{"className":"divider-glow mt-6"}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted-soft)]","children":"If you are visiting for the first time, we want your first step to feel easy, clear, and genuinely cared for."}]]}]]}]
+16:["$","footer",null,{"className":"section-card-soft mt-8 rounded-lg px-6 py-8 sm:px-8","children":["$","div",null,{"className":"flex flex-col gap-6 md:flex-row md:items-end md:justify-between","children":[["$","div",null,{"className":"max-w-2xl","children":[["$","p",null,{"className":"eyebrow","children":"The Living God Tabernacle"}],["$","p",null,{"className":"mt-3 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"A church family shaped by worship, tenderness, truth, and steadfast faith."}],["$","p",null,{"className":"mt-3 text-sm leading-7 text-[var(--color-muted)]","children":"Designed to feel serene and trustworthy while still staying resilient, accessible, and fast when ministry data is unavailable."}]]}],["$","nav",null,{"aria-label":"Footer","className":"flex flex-wrap gap-3 text-sm font-medium text-[var(--color-primary)]","children":[["$","$Lf",null,{"href":"/about","className":"rounded-md bg-white/85 px-4 py-2 transition hover:bg-white","children":"About"}],["$","$Lf",null,{"href":"/resources","className":"rounded-md bg-white/85 px-4 py-2 transition hover:bg-white","children":"Resources"}],["$","$Lf",null,{"href":"/posts","className":"rounded-md bg-white/85 px-4 py-2 transition hover:bg-white","children":"Recent Posts"}],["$","a",null,{"href":"http://localhost:3009/docs","className":"rounded-md bg-white/85 px-4 py-2 transition hover:bg-white","target":"_blank","rel":"noreferrer","children":"API Docs"}]]}]]}]}]
+1f:T60b1,		<div data-elementor-type="wp-page" data-elementor-id="1585" class="elementor elementor-1585">
+						<header class="elementor-section elementor-top-section elementor-element elementor-element-30c25af0 elementor-section-height-min-height elementor-section-full_width elementor-section-items-top elementor-section-content-top elementor-reverse-tablet elementor-reverse-mobile elementor-section-height-default" data-id="30c25af0" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-48b027f7" data-id="48b027f7" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-76dd7e8e e-transform elementor-widget elementor-widget-heading" data-id="76dd7e8e" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_transform_rotate_3d&quot;:&quot;yes&quot;,&quot;_transform_rotateZ_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateZ_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateX_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_rotateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;deg&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_perspective_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_perspective_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_perspective_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<span class="elementor-heading-title elementor-size-default">HAVE YOU CONSIDERED MALACHI 4:5-6?</span>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2cf23d00 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="2cf23d00" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<blockquote class="elegant-quote"><p>“5 Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD:</p><p>6 And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse.”</p></blockquote>								</div>
+				</div>
+				<div class="elementor-element elementor-element-347daf0c elementor-align-center elementor-widget elementor-widget-button" data-id="347daf0c" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="/message">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">read more</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</header>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-21af6a3d elementor-section-content-middle elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle" data-id="21af6a3d" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4e8773b" data-id="4e8773b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e93fa08 elementor-widget elementor-widget-heading" data-id="e93fa08" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h5 class="elementor-heading-title elementor-size-default">No Creed, But Christ.</h5>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-944dca1" data-id="944dca1" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a97993a elementor-widget elementor-widget-heading" data-id="a97993a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h5 class="elementor-heading-title elementor-size-default">No Law, But Love.</h5>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-924a150" data-id="924a150" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-fffcbf7 elementor-widget elementor-widget-heading" data-id="fffcbf7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">No Book, But The Bible.</h4>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-6a9dc65b elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle" data-id="6a9dc65b" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3ebbd971" data-id="3ebbd971" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7413c20e elementor-widget elementor-widget-heading" data-id="7413c20e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-large">our services</h4>				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-718ce241 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="718ce241" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-4822a231" data-id="4822a231" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0d4c682 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-invisible elementor-widget elementor-widget-icon-box" data-id="0d4c682" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomInUp&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/teachings" class="elementor-icon" tabindex="-1" aria-label="Did You Know?">
+				<i aria-hidden="true" class="fas fa-question"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/teachings" >
+							Did You Know?						</a>
+					</h3>
+				
+									<p class="elementor-icon-box-description">
+						"But in the days of the voice of the seventh angel, when he shall begin to sound,
+the mystery of God should be finished,.." Revelation 10:7 (KJV)					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6da872fa elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-invisible elementor-widget elementor-widget-icon-box" data-id="6da872fa" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomInUp&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="https://web.facebook.com/thelivinggodtabernacle/" class="elementor-icon" tabindex="-1" aria-label="Live Streaming">
+				<i aria-hidden="true" class="fas fa-camera"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="https://web.facebook.com/thelivinggodtabernacle/" >
+							Live Streaming						</a>
+					</h3>
+				
+									<p class="elementor-icon-box-description">
+						Join Us Live: 
+Sundays 9:30 am -12 pm (GMT), Wednesdays and Fridays 6:30pm-8:00 pm(GMT).					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5de19605" data-id="5de19605" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-70117a36 elementor-view-framed elementor-shape-circle elementor-position-block-start elementor-mobile-position-block-start elementor-invisible elementor-widget elementor-widget-icon-box" data-id="70117a36" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;bounce&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons" class="elementor-icon" tabindex="-1" aria-label=" Sermons">
+				<i aria-hidden="true" class="fas fa-headphones"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons" >
+							 Sermons						</a>
+					</h3>
+				
+									<p class="elementor-icon-box-description">
+						Enjoy Old Time Religion, Holy Ghost Filled Sermons at your comfort.					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-16b45ffc elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-invisible elementor-widget elementor-widget-icon-box" data-id="16b45ffc" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;rotateInUpLeft&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="https://thelivinggodtab.radio12345.com/" class="elementor-icon" tabindex="-1" aria-label="Live Online Radio">
+				<i aria-hidden="true" class="fas fa-comment-dots"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="https://thelivinggodtab.radio12345.com/" >
+							Live Online Radio						</a>
+					</h3>
+				
+									<p class="elementor-icon-box-description">
+						Join Us Live: 
+Sundays 9:30 am -12 pm 
+(GMT), Wednesdays and Fridays 6:30 pm-8:00 pm(GMT).					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6566e3af" data-id="6566e3af" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-96f5559 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-invisible elementor-widget elementor-widget-icon-box" data-id="96f5559" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;rotateInUpLeft&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/hymns/01-2" class="elementor-icon" tabindex="-1" aria-label="Enjoy Only Believe Hymn songs">
+				<i aria-hidden="true" class="fas fa-music"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/hymns/01-2" >
+							Enjoy Only Believe Hymn songs						</a>
+					</h3>
+				
+									<p class="elementor-icon-box-description">
+						There's something about those OLD FASHION SONGS, THE OLD-TIME HYMNS. 					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-5bdd6bf elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-invisible elementor-widget elementor-widget-icon-box" data-id="5bdd6bf" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;rotateInUpLeft&quot;}" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="http://[modula%20id=2030]" class="elementor-icon" tabindex="-1" aria-label="Gallery">
+				<i aria-hidden="true" class="fas fa-photo-video"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="http://[modula%20id=2030]" >
+							Gallery						</a>
+					</h3>
+				
+									<p class="elementor-icon-box-description">
+						Divine Motivational and Inspirational Quotes to Enhance Your Christian Life Positively.					</p>
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a2f7c13 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a2f7c13" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9891e47" data-id="9891e47" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a7a3a13 elementor-widget elementor-widget-heading" data-id="a7a3a13" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-heading-title elementor-size-default">Welcome to Our Bible Q&amp;A Space</h4>				</div>
+				</div>
+				<div class="elementor-element elementor-element-66f478b elementor-widget elementor-widget-text-editor" data-id="66f478b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p> </p><p>           Now, if it is a Bible question, then it should have a Bible answer. It should not be able to come from a group of man, from any certain fellowship, or from some educator, or from some denomination. It should come straight from the Scripture, where God&#8217;s meeting place is, of worship. And surely, being God, there is a meeting place somewhere, that He meets.    </p><p>By William M. Branham</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-0c66439 elementor-align-center elementor-widget elementor-widget-button" data-id="0c66439" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="/archive/elementor-landing-page-3362">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Click Here</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5e2a155a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5e2a155a" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2558b029" data-id="2558b029" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5ee2b1e7 elementor-widget elementor-widget-heading" data-id="5ee2b1e7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">If You Have A Need For Prayer...</h3>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-123ce834" data-id="123ce834" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5eb2b05a elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="5eb2b05a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-lg" href="https://api.whatsapp.com/send/?phone=233208171538&#038;text&#038;app_absent=0">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-angle-double-right"></i>			</span>
+									<span class="elementor-button-text">Request Prayer </span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-52b5aadd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="52b5aadd" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6b454d95" data-id="6b454d95" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-679512a4 elementor-widget elementor-widget-heading" data-id="679512a4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-large">Must-Watch</h1>				</div>
+				</div>
+				<div class="elementor-element elementor-element-1a5f45aa elementor-widget elementor-widget-text-editor" data-id="1a5f45aa" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Watch unique videos of Testimonies, Sermons, Music collections, etc.  That will Encourage your Christian Life by drawing you more closer to The Lord Jesus Christ (some videos may be from different sources)</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-43642d77 elementor-widget elementor-widget-video" data-id="43642d77" data-element_type="widget" data-e-type="widget" data-settings="{&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;https:\/\/thelivinggodtabernacle.org\/wp-content\/uploads\/2021\/09\/The-cloud-forming-the-face-of-Jesus.jpeg&quot;,&quot;id&quot;:2057,&quot;size&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;source&quot;:&quot;library&quot;},&quot;autoplay&quot;:&quot;no&quot;,&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/v_bklXtxXpk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-wrapper elementor-open-inline">
+			<div class="elementor-video"></div>				<div class="elementor-custom-embed-image-overlay" style="background-image: url(https://thelivinggodtabernacle.org/wp-content/uploads/2021/09/The-cloud-forming-the-face-of-Jesus.jpeg);">
+																<div class="elementor-custom-embed-play" role="button" aria-label="Play Video" tabindex="0">
+							<i aria-hidden="true" class="eicon-play"></i>						</div>
+									</div>
+					</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-36f5dfcc elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="36f5dfcc" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-55f6c79f" data-id="55f6c79f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2ce9b474 elementor-widget elementor-widget-heading" data-id="2ce9b474" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-small">Enjoy more videos here</h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5751701e elementor-view-framed elementor-shape-circle elementor-widget elementor-widget-icon" data-id="5751701e" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="/videos">
+			<i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i>			</a>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		17:["$","div",null,{"className":"page-shell","children":["$","section",null,{"className":"professional-panel mt-6 overflow-hidden","children":[["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$1f"}}],null]}]}]
+18:["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","div",null,{"className":"flex items-center gap-4","children":[["$","span",null,{"aria-hidden":"true","className":"flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]","children":"➜"}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Youth formation"}],["$","h3",null,{"className":"mt-1 font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Re-Gen Hub"}]]}]]}],["$","span",null,{"className":"rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]","children":"Available"}]]}]
+19:["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted)]","children":["For ","youth",", with a clearer sense of purpose and belonging."]}]
+1a:["$","div",null,{"className":"mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]"}]
+1b:["$","p",null,{"className":"mt-4 text-sm text-[var(--color-muted-soft)]","children":"Crafted to feel pastoral, intentional, and spiritually nourishing."}]
+1c:["$","article","fellowship",{"role":"listitem","className":"floating-card rounded-lg border p-5 border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","div",null,{"className":"flex items-center gap-4","children":[["$","span",null,{"aria-hidden":"true","className":"flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]","children":"♡"}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Care groups"}],["$","h3",null,{"className":"mt-1 font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"LifeCircles"}]]}]]}],["$","span",null,{"className":"rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]","children":"Available"}]]}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted)]","children":["For ","adults",", with a clearer sense of purpose and belonging."]}],["$","div",null,{"className":"mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]"}],["$","p",null,{"className":"mt-4 text-sm text-[var(--color-muted-soft)]","children":"Crafted to feel pastoral, intentional, and spiritually nourishing."}]]}]
+1d:["$","article","prayer",{"role":"listitem","className":"floating-card rounded-lg border p-5 border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","div",null,{"className":"flex items-center gap-4","children":[["$","span",null,{"aria-hidden":"true","className":"flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]","children":"⌁"}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Prayer support"}],["$","h3",null,{"className":"mt-1 font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Prayer Wall"}]]}]]}],["$","span",null,{"className":"rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]","children":"Available"}]]}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted)]","children":["For ","community",", with a clearer sense of purpose and belonging."]}],["$","div",null,{"className":"mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]"}],["$","p",null,{"className":"mt-4 text-sm text-[var(--color-muted-soft)]","children":"Crafted to feel pastoral, intentional, and spiritually nourishing."}]]}]
+1e:["$","article","events",{"role":"listitem","className":"floating-card rounded-lg border p-5 border-[rgba(31,90,67,0.12)] bg-[linear-gradient(180deg,rgba(255,251,244,0.96),rgba(248,239,225,0.94))] shadow-[0_18px_45px_rgba(12,33,25,0.08)]","children":[["$","div",null,{"className":"flex items-start justify-between gap-4","children":[["$","div",null,{"className":"flex items-center gap-4","children":[["$","span",null,{"aria-hidden":"true","className":"flex h-12 w-12 items-center justify-center rounded-md bg-[linear-gradient(135deg,rgba(31,90,67,0.1),rgba(195,148,58,0.14))] text-2xl text-[var(--color-primary)]","children":"◫"}],["$","div",null,{"children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Church life"}],["$","h3",null,{"className":"mt-1 font-[family-name:var(--font-heading)] text-2xl text-[var(--color-primary)]","children":"Upcoming Events"}]]}]]}],["$","span",null,{"className":"rounded-full px-3 py-1 text-xs font-semibold bg-[rgba(17,71,52,0.1)] text-[var(--color-primary)]","children":"Available"}]]}],["$","p",null,{"className":"mt-5 text-sm leading-7 text-[var(--color-muted)]","children":["For ","everyone",", with a clearer sense of purpose and belonging."]}],["$","div",null,{"className":"mt-5 h-px bg-[linear-gradient(90deg,rgba(31,90,67,0.16),transparent)]"}],["$","p",null,{"className":"mt-4 text-sm text-[var(--color-muted-soft)]","children":"Crafted to feel pastoral, intentional, and spiritually nourishing."}]]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#1f5a43"}]]
+20:I[2569,[],"IconMark"]
+9:null
+d:[["$","title","0",{"children":"The Living God Tabernacle"}],["$","meta","1",{"name":"description","content":"A welcoming Christian home for worship, prayer, discipleship, and life-giving fellowship."}],["$","meta","2",{"name":"application-name","content":"The Living God Tabernacle"}],["$","link","3",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","4",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","5",{"name":"apple-mobile-web-app-title","content":"LGT Connect"}],["$","meta","6",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","link","7",{"rel":"icon","href":"/favicon.ico?603d046c9a6fdfbb","type":"image/x-icon","sizes":"16x16"}],["$","link","8",{"rel":"icon","href":"/icons/icon-192x192.png","sizes":"192x192","type":"image/png"}],["$","link","9",{"rel":"icon","href":"/icons/icon-512x512.png","sizes":"512x512","type":"image/png"}],["$","link","10",{"rel":"apple-touch-icon","href":"/icons/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L20","11",{}]]

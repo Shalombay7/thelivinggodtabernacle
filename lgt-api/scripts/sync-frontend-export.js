@@ -3,7 +3,7 @@ const path = require('path');
 
 const repositoryRoot = path.resolve(__dirname, '..', '..');
 const frontendExport = path.join(repositoryRoot, 'lgt-frontend', 'out');
-const packagedFrontend = path.join(__dirname, '..', 'src', 'public', 'next-site');
+const packagedFrontend = path.join(__dirname, '..', 'src', 'next-site');
 
 for (const requiredFile of ['index.html', 'sw.js']) {
   if (!fs.existsSync(path.join(frontendExport, requiredFile))) {

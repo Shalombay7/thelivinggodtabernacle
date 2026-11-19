@@ -1,0 +1,245 @@
+1:"$Sreact.fragment"
+2:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+13:I[1872,[],"OutletBoundary"]
+14:"$Sreact.suspense"
+16:I[9615,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],"AudioArchive"]
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main-content","className":"min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]","children":["$","div",null,{"className":"mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10","children":[["$","header",null,{"className":"professional-panel sticky top-4 z-20 mb-8 px-4 py-3 sm:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-3","children":[["$","span",null,{"className":"brand-mark","aria-hidden":"true","children":"TLG"}],["$","span",null,{"children":[["$","span",null,{"className":"block text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]","children":"The Living God Tabernacle"}],["$","span",null,{"className":"block text-sm text-[var(--color-muted)]","children":"God's Spoken Word Evangelism"}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap items-center gap-1 text-sm font-medium text-[var(--color-muted)]","children":[["$","$L2","/",{"href":"/","className":"nav-link","children":"Home"}],["$","$L2","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$L2","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$L2","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$L2","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$L2","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$L2","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$L2","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$L2","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}]]}]]}]}],["$","section",null,{"className":"professional-panel overflow-hidden","children":["$","div",null,{"className":"grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10","children":[["$","div",null,{"children":[["$","p",null,{"className":"eyebrow","children":"Sermon Archive"}],["$","h1",null,{"className":"mt-4 max-w-4xl font-[family-name:var(--font-heading)] text-5xl leading-none text-[var(--color-primary)] sm:text-6xl","children":"Audio Sermons"}],["$","p",null,{"className":"mt-5 max-w-3xl text-lg leading-8 text-[var(--color-muted)]","children":"Browse audio messages and Bible teaching from the Living God Tabernacle, with the archive arranged by year."}],["$","div",null,{"className":"mt-7 flex flex-wrap gap-3","children":[["$","$L2",null,{"href":"/sermons#archive-years","className":"button-primary px-5 py-3","children":"Browse by year"}],["$","$L2",null,{"href":"/resources","className":"button-secondary px-5 py-3","children":"View resource hub"}]]}]]}],["$","aside",null,{"className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-[var(--color-surface-strong)] p-5","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Page Snapshot"}],["$","div",null,{"className":"mt-4 grid gap-3","children":[["$","div","2026 sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"2026 sermons"}],["$","div","2025 sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"2025 sermons"}],["$","div","2024 sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"2024 sermons"}],["$","div","Download paths",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)]","children":"Download paths"}]]}]]}]]}]}],["$","section",null,{"className":"mt-6 grid gap-5 lg:grid-cols-[1fr_20rem]","children":[["$","div",null,{"className":"grid gap-5","children":[["$","article","Archive by Year",{"id":"archive-years","className":"professional-panel p-6 sm:p-7","children":["$L3","$L4","$L5"]}],"$L6"]}],"$L7"]}],"$L8",null,"$L9"]}]}],null,"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"FCXF-0Ddl3w7Cu7_by8z7"}
+3:["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"Archive by Year"}]
+4:["$","p",null,{"className":"mt-4 text-base leading-8 text-[var(--color-muted)]","children":"The audio archive is arranged chronologically so listeners can find messages from each available year."}]
+5:["$","ul",null,{"className":"mt-5 grid gap-3 sm:grid-cols-2","children":[["$","li","2026 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2026 Sermons"}],["$","li","2025 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2025 Sermons"}],["$","li","2024 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2024 Sermons"}],["$","li","2023 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2023 Sermons"}],["$","li","2022 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2022 Sermons"}],["$","li","2021 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2021 Sermons"}],["$","li","2020 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2020 Sermons"}],["$","li","2018 Sermons",{"className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm text-[var(--color-muted)]","children":"2018 Sermons"}]]}]
+6:["$","article","Recent Questions Nearby",{"className":"professional-panel p-6 sm:p-7","children":[["$","h2",null,{"className":"font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"Recent Questions Nearby"}],["$","p",null,{"className":"mt-4 text-base leading-8 text-[var(--color-muted)]","children":"The sermon archive also surfaces recent teaching questions, which are now connected through the app's Questions page."}],null]}]
+7:["$","aside",null,{"className":"professional-panel h-fit p-5","children":[["$","p",null,{"className":"text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]","children":"Related Pages"}],["$","div",null,{"className":"mt-4 grid gap-2","children":[["$","$L2","/message",{"href":"/message","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Message"}],["$","$L2","/questions",{"href":"/questions","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Questions"}],["$","$L2","/radio",{"href":"/radio","className":"rounded-md border border-[rgba(31,90,67,0.08)] bg-white/70 px-4 py-3 text-sm font-semibold text-[var(--color-primary)] transition hover:border-[rgba(31,90,67,0.2)] hover:bg-white","children":"Live Radio"}]]}]]}]
+8:["$","section",null,{"className":"professional-panel mt-6 p-5 sm:p-7","aria-labelledby":"collection-index-title","children":[["$","p",null,{"className":"eyebrow","children":"Explore the archive"}],["$","h2",null,{"id":"collection-index-title","className":"mt-2 font-[family-name:var(--font-heading)] text-3xl text-[var(--color-primary)]","children":"More in this collection"}],["$","div",null,{"className":"mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3","children":[["$","$L2","/sermons/2026-sermons",{"href":"/sermons/2026-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2026 Sermons"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[45," recordings"]}]]}],["$","$L2","/sermons/audio-sermon-2025",{"href":"/sermons/audio-sermon-2025","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"Audio Sermon 2025"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[145," recordings"]}]]}],["$","$L2","/sermons/2023-audio-sernoms",{"href":"/sermons/2023-audio-sernoms","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2023 Audio Sernoms"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[84," recordings"]}]]}],["$","$L2","/sermons/2024-audio-sermon",{"href":"/sermons/2024-audio-sermon","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2024 Audio Sermons"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[83," recordings"]}]]}],["$","$L2","/sermons/2024-audio-sermons",{"href":"/sermons/2024-audio-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2024 Audio Sermons"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[5," recordings"]}]]}],["$","$L2","/sermons/2024-audio-sermons/2022-sermons",{"href":"/sermons/2024-audio-sermons/2022-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2022 SERMONS"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[89," recordings"]}]]}],["$","$L2","/sermons/2024-audio-sermons/2022-sermons/2021-sermons",{"href":"/sermons/2024-audio-sermons/2022-sermons/2021-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2021 Audio Sermons"}],["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[82," recordings"]}]]}],["$","$L2","/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2",{"href":"/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":["$Lb","$Lc"]}],"$Ld","$Le","$Lf","$L10"]}]]}]
+11:T274a,		<div data-elementor-type="wp-post" data-elementor-id="1092" class="elementor elementor-1092">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-36299a94 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="36299a94" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2a611874" data-id="2a611874" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c07fe9f elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="c07fe9f" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2026-sermons" class="elementor-icon" tabindex="-1" aria-label="2026 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2026-sermons" >
+							2026 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-bb894a6 elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="bb894a6" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2024-audio-sermon" class="elementor-icon" tabindex="-1" aria-label="2024 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2024-audio-sermon" >
+							2024 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-67cb828 elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="67cb828" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2024-audio-sermons/2022-sermons" class="elementor-icon" tabindex="-1" aria-label="2022 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2024-audio-sermons/2022-sermons" >
+							2022 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-171a377c elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="171a377c" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2" class="elementor-icon" tabindex="-1" aria-label="2020 sermons">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2" >
+							2020 sermons						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-162a1b1e elementor-view-framed elementor-position-inline-start elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="162a1b1e" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons/2018-audio-sermons" class="elementor-icon" tabindex="-1" aria-label="2018 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons/2018-audio-sermons" >
+							2018 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-2140c45" data-id="2140c45" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e764c87 elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="e764c87" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/audio-sermon-2025" class="elementor-icon" tabindex="-1" aria-label="2025 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/audio-sermon-2025" >
+							2025 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1d2cc9a elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="1d2cc9a" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2023-audio-sernoms" class="elementor-icon" tabindex="-1" aria-label="2023 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2023-audio-sernoms" >
+							2023 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-daf1f6b elementor-position-inline-start elementor-view-framed elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="daf1f6b" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons" class="elementor-icon" tabindex="-1" aria-label="2021 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons" >
+							2021 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-0f2556e elementor-view-framed elementor-position-inline-start elementor-shape-circle elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="0f2556e" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons" class="elementor-icon" tabindex="-1" aria-label="2019 SERMONS">
+				<i aria-hidden="true" class="fas fa-bullhorn"></i>				</a>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<a href="/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons" >
+							2019 SERMONS						</a>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ea86be6" data-id="ea86be6" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2caf4569 elementor-widget elementor-widget-spacer" data-id="2caf4569" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		9:["$","section",null,{"className":"professional-panel mt-6 overflow-hidden","children":[["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$11"}}],"$L12"]}]
+a:["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]
+b:["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2020 Audio Sermons"}]
+c:["$","p",null,{"className":"mt-2 text-xs text-[var(--color-muted-soft)]","children":[44," recordings"]}]
+d:["$","$L2","/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-sunday-school",{"href":"/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-sunday-school","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2019 Sunday School"}],null]}]
+e:["$","$L2","/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons",{"href":"/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2019 Audio Sermons"}],null]}]
+f:["$","$L2","/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons/2018-audio-sermons/download-sermons",{"href":"/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons/2018-audio-sermons/download-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"Download Sermons"}],null]}]
+10:["$","$L2","/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons/2018-audio-sermons",{"href":"/sermons/2024-audio-sermons/2022-sermons/2021-sermons/2020-audio-sermons-2/2019-audio-sermons/2018-audio-sermons","className":"rounded-lg border border-[rgba(31,90,67,0.1)] bg-white/75 p-4 transition hover:border-[rgba(31,90,67,0.24)] hover:bg-white","children":[["$","p",null,{"className":"text-sm font-semibold leading-6 text-[var(--color-primary)]","children":"2018 Audio Sermons"}],null]}]
+12:["$","div",null,{"className":"px-6 pb-8 sm:px-9","children":["$","$L16",null,{"tracks":[{"title":"amazon polly 1092","url":"https://thelivinggodtabernacle.org/wp-content/uploads/2019/03/amazon_polly_1092.mp3"}]}]}]
+15:null

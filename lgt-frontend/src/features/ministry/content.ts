@@ -30,7 +30,6 @@ export const ministryNavigation = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/posts", label: "Recent Posts" },
-  { href: "/dashboard", label: "Dashboard" },
 ];
 
 export const ministryPages: MinistryPage[] = [

@@ -1,0 +1,61 @@
+1:"$Sreact.fragment"
+2:I[9568,["568","static/chunks/568-095e932eb4a6770f.js","48","static/chunks/app/%5B...slug%5D/page-f70ce4b12dc549f1.js"],""]
+6:I[1872,[],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1d2e,		<div data-elementor-type="wp-page" data-elementor-id="772" class="elementor elementor-772">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-190ea99 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="190ea99" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-398a2ac0" data-id="398a2ac0" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-539e3ec1 elementor-widget elementor-widget-text-editor" data-id="539e3ec1" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h5><em>     “A human has to worship. You have to worship something. It’s just in you to worship.”<sup>6</sup></em></h5>
+<h5>     The Bible tells us that the Lord finds pleasure in the praises of His people (Psalms 22:3). There are over 500 specific references in the Bible to music and musical instruments<sup>7</sup> – evidence that this is not a subject that God treats lightly. As a matter of fact, the lengthiest book in the Bible is a song book, and it is here that God demonstrates His concern for the kind of music that His children enjoy and perform by providing this example for us to follow: The Book of Psalms.</h5>
+<h5>      The collection of 150 poems that make up the Book of Psalms mirrors the ideals of religious piety and communion with God. They were written by David, Moses (Psalms 90), Solomon, Asaph (David’s choir leader), the sons of Korah (a family of official musicians), and others, for the express purpose of being set to music for worship. They even include musical notations to indicate when key changes are to be made. For example, the instruction selah, meaning “to modulate to the next key,” appears 71 times in the Book of Psalms and is not normally articulated when Scripture is being read aloud.</h5>
+<h5>From the Hebrew language, Psalms translates as “Book of Praise.” This was the prayer book that our Lord Jesus used in the synagogue service, and it was His hymnbook at the Temple festival. He used it in His teaching, met temptation with it, sang the Halle (Psalms115-118) from it after the Last Supper, quoted from it as He hung on the cross, and died with it on His lips.<sup>8  </sup>The Book of Psalms remains the national hymnbook of Israel today.</h5>
+<h5>     Far from advocating a single style, Psalms range from the classical presentations, written for the temple musicians, to the simple but expressive ballads, which David composed while tending his sheep. In the Book of Psalms you will find rally songs, marching songs, victory songs, teaching songs; there are songs of repentance, lamentation, petition, praise, renewal, and thanksgiving; there are songs for saints and songs for sinners.</h5>
+<h5>   The  Book of Psalms has been called the door into the temple of praise and prayer, and in all ages and in more than a thousand languages, the church has found through the Psalter a means of access to God</h5>
+<h5>     The Bible also shows us that man has long been aware of the effect of music upon our daily existence and its power to influence people both physically and emotionally.</h5>
+<h5>   In I Samuel 16:14-23, Scripture relate an example of how a man was made well – body, soul, and spirit – through the music of a young shepherd boy.</h5>
+<h5>     <em>“And it came to past, when the evil spirit from God was upon Saul, that David took an harp, and played with his hand: so Saul was refreshed [physical], and was well [mental], and the evil spirit departed from him [spiritual].”</em></h5>
+<h5>  In II Kings 3:15 we learn that the prophet Elisha once used music to create an atmosphere so that he could “inquire of the Lord” for the kings of Israel, Judah, and Edom.</h5>
+<h5>    <em>“But now bring me a minstrel. And it came to past, when the minstrel played, that the hand of the Lord came upon him.”</em></h5>
+<h5>As the tribes of Israel were set to war against their enemies, II Chronicles 20:21-22 tells us that they put a choir and musical instruments in front of the army.</h5>
+<h5>   <em>“… he [Jehoshaphat] appointed singers unto the Lord, that should praise the beauty of holiness, as they went out before the army, and to say, Praise the Lord; for his mercy endureth for ever.</em></h5>
+<h5><em>      And when they began to sind and to praise, the Lord set ambushments against the children of Ammon, Moab, and mount Seir, which were come against Judah; and they were smitted.”</em></h5>
+<h5>   In the New Testament Book Of Acts, chapter 16, we find the account of two early Christian leaders, Paul and Silas, who were cast into prison for preaching the Gosple. They used the opportunity to minister, through song, and glorify God.</h5>
+<h5><em>“And at midnight Paul and Silas prayed, and song praises unto God: the prisoners heard them. And suddenly there was a great earthquake, so that the foundations of the prison were shaken: and immediately all the doors were opened, and every one’s bands were loosed.”</em></h5>
+<h5>    Now, let’s review what we have just learned from these Biblical passages:1) In both the Old and the New Testament, music was vital to the life of the believer, both as an expression of joy and as act of obedience unto God; 2) God has given us instruction (by way of examples) as to the kinds of music that He wants His people to have; 3) Far from being merely a neutral recreation, music has the power to influence us mentally, physically, and spiritually; 4) There are certain types of music which can make demons feel very uncomfortable; and 5) Music can create an atmosphere wherein God can work miracles.</h5>
+
+
+<p class="wp-block-paragraph"></p>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f9bd4e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f9bd4e1" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bffd341" data-id="bffd341" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ff93cab elementor-align-center elementor-widget elementor-widget-button" data-id="ff93cab" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="/teachings/music-and-religion-through-the-ages">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Music And Religion Through The Ages</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"id":"main-content","className":"min-h-screen bg-[var(--color-surface)] text-[var(--color-ink)]","children":["$","div",null,{"className":"mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 py-5 sm:px-8 lg:px-10","children":[["$","header",null,{"className":"professional-panel mb-6 px-4 py-3 sm:px-5","children":["$","div",null,{"className":"flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-3","children":[["$","span",null,{"className":"brand-mark","aria-hidden":"true","children":"TLG"}],["$","span",null,{"children":[["$","span",null,{"className":"block text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-accent)]","children":"The Living God Tabernacle"}],["$","span",null,{"className":"block text-sm text-[var(--color-muted)]","children":"Scripture, worship, and ministry resources"}]]}]]}],["$","nav",null,{"aria-label":"Primary","className":"flex flex-wrap gap-1 text-sm font-medium text-[var(--color-muted)]","children":[["$","$L2","/",{"href":"/","className":"nav-link","children":"Home"}],["$","$L2","/message",{"href":"/message","className":"nav-link","children":"Message"}],["$","$L2","/services",{"href":"/services","className":"nav-link","children":"Services"}],["$","$L2","/resources",{"href":"/resources","className":"nav-link","children":"Resources"}],["$","$L2","/modules",{"href":"/modules","className":"nav-link","children":"App Modules"}],["$","$L2","/prayer",{"href":"/prayer","className":"nav-link","children":"Prayer"}],["$","$L2","/about",{"href":"/about","className":"nav-link","children":"About"}],["$","$L2","/contact",{"href":"/contact","className":"nav-link","children":"Contact"}],["$","$L2","/posts",{"href":"/posts","className":"nav-link","children":"Recent Posts"}]]}]]}]}],["$","nav",null,{"aria-label":"Breadcrumb","className":"mb-4 text-sm text-[var(--color-muted-soft)]","children":["$","$L2",null,{"href":"/teachings","className":"interactive-link","children":["Back to ","teachings"]}]}],["$","article",null,{"className":"professional-panel overflow-hidden","children":[["$","header",null,{"className":"border-b border-[rgba(31,90,67,0.08)] px-6 py-8 sm:px-9 sm:py-10","children":[["$","p",null,{"className":"eyebrow","children":"Ministry archive"}],["$","h1",null,{"className":"mt-3 max-w-5xl font-[family-name:var(--font-heading)] text-4xl leading-tight text-[var(--color-primary)] sm:text-5xl","children":"WHAT THE BIBLE TEACHES  US ABOUT MUSIC"}],["$","p",null,{"className":"mt-3 text-sm text-[var(--color-muted-soft)]","children":"January 31, 2019"}]]}],["$","div",null,{"className":"archive-content px-6 py-7 sm:px-9 sm:py-9","dangerouslySetInnerHTML":{"__html":"$3"}}],null]}],"$L4"]}]}],null,"$L5"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"FCXF-0Ddl3w7Cu7_by8z7"}
+4:["$","footer",null,{"className":"py-7 text-center text-xs text-[var(--color-muted-soft)]","children":"The Living God Tabernacle · Ministry archive"}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

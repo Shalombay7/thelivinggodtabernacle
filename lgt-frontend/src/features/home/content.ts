@@ -77,7 +77,6 @@ export const navigationItems = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/posts", label: "Recent Posts" },
-  { href: "/dashboard", label: "Dashboard" },
 ];
 
 export const worshipPillars = [

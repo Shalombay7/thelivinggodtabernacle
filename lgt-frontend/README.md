@@ -55,6 +55,11 @@ instead of changing the runtime architecture.
 
 ## Deployment Note
 
-This frontend was added after the backend deployment was already working. Treat
-frontend changes as an addition to the existing hosting setup, not a reason to
-restructure the backend runtime.
+The frontend is exported as static files and served by the existing Express /
+Passenger application. In a full repository checkout, `npm run build` from
+`lgt-api` builds the API, exports this workspace, and copies the export to
+`lgt-api/dist/public/next-site`. The API remains available under `/api`.
+
+After pulling a change, activate the existing Node environment, run
+`npm run build` from `lgt-api`, run `npm run verify:views`, and restart Passenger
+with the hosting account's configured restart file.

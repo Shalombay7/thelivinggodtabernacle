@@ -11,6 +11,8 @@ interface PageProps {
   }>;
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   const paths = [
     ...getMinistrySlugs().map((slug) => [slug]),

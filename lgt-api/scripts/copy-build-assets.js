@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const projectRoot = path.resolve(__dirname, '..');
 
@@ -20,4 +21,27 @@ for (const [from, to] of assets) {
   fs.mkdirSync(path.dirname(destination), { recursive: true });
   fs.cpSync(source, destination, { recursive: true });
   console.log(`Copied ${from} to ${to}`);
+}
+
+const repositoryRoot = path.resolve(projectRoot, '..');
+const frontendRoot = path.join(repositoryRoot, 'lgt-frontend');
+const frontendExport = path.join(frontendRoot, 'out');
+const frontendDestination = path.join(projectRoot, 'dist', 'public', 'next-site');
+
+if (fs.existsSync(frontendRoot)) {
+  execSync('npm run build --workspace=lgt-frontend', {
+    cwd: repositoryRoot,
+    stdio: 'inherit',
+  });
+
+  if (!fs.existsSync(frontendExport)) {
+    throw new Error(`Next.js export was not created at ${frontendExport}`);
+  }
+
+  fs.rmSync(frontendDestination, { force: true, recursive: true });
+  fs.mkdirSync(path.dirname(frontendDestination), { recursive: true });
+  fs.cpSync(frontendExport, frontendDestination, { recursive: true });
+  console.log(`Copied frontend export to ${frontendDestination}`);
+} else {
+  console.warn('Frontend workspace was not found; skipping its static export.');
 }

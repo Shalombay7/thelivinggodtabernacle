@@ -14,6 +14,7 @@ import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 
 interface RuntimeAssets {
   publicDir: string;
+  nextSiteDir: string;
   viewsDir: string;
   partialsDir: string;
 }
@@ -33,6 +34,7 @@ function resolveRuntimeAssets(runtimeRoot: string): RuntimeAssets {
 
   return {
     publicDir,
+    nextSiteDir: join(publicDir, 'next-site'),
     viewsDir,
     partialsDir: join(viewsDir, 'partials'),
   };
@@ -84,7 +86,11 @@ async function bootstrap() {
   const logger = new Logger('Bootstrap');
   app.useLogger(logger);
 
-  const { publicDir, viewsDir, partialsDir } = resolveRuntimeAssets(__dirname);
+  const { publicDir, nextSiteDir, viewsDir, partialsDir } = resolveRuntimeAssets(__dirname);
+
+  if (existsSync(nextSiteDir)) {
+    app.useStaticAssets(nextSiteDir);
+  }
 
   if (existsSync(publicDir)) {
     app.useStaticAssets(publicDir);

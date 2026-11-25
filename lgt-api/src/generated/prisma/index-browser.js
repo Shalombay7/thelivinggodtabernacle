@@ -201,6 +201,34 @@ exports.Prisma.SermonTopicMapScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.MediaAssetScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  kind: 'kind',
+  mimeType: 'mimeType',
+  size: 'size',
+  storageKey: 'storageKey',
+  url: 'url',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.MediaPlaylistScalarFieldEnum = {
+  id: 'id',
+  slug: 'slug',
+  title: 'title',
+  year: 'year',
+  description: 'description',
+  replaceExisting: 'replaceExisting',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PlaylistMediaScalarFieldEnum = {
+  playlistId: 'playlistId',
+  mediaId: 'mediaId',
+  orderIndex: 'orderIndex'
+};
+
 exports.Prisma.ReadingPlanScalarFieldEnum = {
   id: 'id',
   name: 'name',
@@ -465,6 +493,26 @@ exports.Prisma.SermonTopicMapOrderByRelevanceFieldEnum = {
   topicId: 'topicId'
 };
 
+exports.Prisma.MediaAssetOrderByRelevanceFieldEnum = {
+  id: 'id',
+  title: 'title',
+  mimeType: 'mimeType',
+  storageKey: 'storageKey',
+  url: 'url'
+};
+
+exports.Prisma.MediaPlaylistOrderByRelevanceFieldEnum = {
+  id: 'id',
+  slug: 'slug',
+  title: 'title',
+  description: 'description'
+};
+
+exports.Prisma.PlaylistMediaOrderByRelevanceFieldEnum = {
+  playlistId: 'playlistId',
+  mediaId: 'mediaId'
+};
+
 exports.Prisma.ReadingPlanOrderByRelevanceFieldEnum = {
   id: 'id',
   name: 'name',
@@ -601,6 +649,12 @@ exports.SermonLanguage = exports.$Enums.SermonLanguage = {
   OTHER: 'OTHER'
 };
 
+exports.MediaKind = exports.$Enums.MediaKind = {
+  AUDIO: 'AUDIO',
+  VIDEO: 'VIDEO',
+  IMAGE: 'IMAGE'
+};
+
 exports.ReadingPlanType = exports.$Enums.ReadingPlanType = {
   BIBLE: 'BIBLE',
   SERMON: 'SERMON',
@@ -671,6 +725,9 @@ exports.Prisma.ModelName = {
   Sermon: 'Sermon',
   SermonTopic: 'SermonTopic',
   SermonTopicMap: 'SermonTopicMap',
+  MediaAsset: 'MediaAsset',
+  MediaPlaylist: 'MediaPlaylist',
+  PlaylistMedia: 'PlaylistMedia',
   ReadingPlan: 'ReadingPlan',
   ReadingPlanItem: 'ReadingPlanItem',
   Bookmark: 'Bookmark',

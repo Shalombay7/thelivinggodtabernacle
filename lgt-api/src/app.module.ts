@@ -5,6 +5,7 @@ import { validateEnv } from './config/validation';
 import { RequestIdMiddleware } from './common/middleware/request-id.middleware';
 import { HealthModule } from './health/health.module';
 import { AdminMediaController, PublicMediaController } from './media/media.controller';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { AdminMediaController, PublicMediaController } from './media/media.contr
       validate: validateEnv,
     }),
     HealthModule,
+    PrismaModule,
   ],
   controllers: [AppController, AdminMediaController, PublicMediaController],
   providers: [],

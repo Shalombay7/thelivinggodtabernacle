@@ -12,7 +12,7 @@ import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 import { adminDashboardAuth } from './common/middleware/admin-dashboard-auth.middleware';
-import { ensureMediaDirectories, mediaDirectory } from './media/media-library';
+import { ensureMediaDirectories, mediaDirectory } from './media/media-storage';
 
 interface RuntimeAssets {
   publicDir: string;

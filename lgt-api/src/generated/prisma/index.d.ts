@@ -49,6 +49,21 @@ export type SermonTopic = $Result.DefaultSelection<Prisma.$SermonTopicPayload>
  */
 export type SermonTopicMap = $Result.DefaultSelection<Prisma.$SermonTopicMapPayload>
 /**
+ * Model MediaAsset
+ * 
+ */
+export type MediaAsset = $Result.DefaultSelection<Prisma.$MediaAssetPayload>
+/**
+ * Model MediaPlaylist
+ * 
+ */
+export type MediaPlaylist = $Result.DefaultSelection<Prisma.$MediaPlaylistPayload>
+/**
+ * Model PlaylistMedia
+ * 
+ */
+export type PlaylistMedia = $Result.DefaultSelection<Prisma.$PlaylistMediaPayload>
+/**
  * Model ReadingPlan
  * 
  */
@@ -243,6 +258,15 @@ export const ModerationStatus: {
 
 export type ModerationStatus = (typeof ModerationStatus)[keyof typeof ModerationStatus]
 
+
+export const MediaKind: {
+  AUDIO: 'AUDIO',
+  VIDEO: 'VIDEO',
+  IMAGE: 'IMAGE'
+};
+
+export type MediaKind = (typeof MediaKind)[keyof typeof MediaKind]
+
 }
 
 export type UserRole = $Enums.UserRole
@@ -288,6 +312,10 @@ export const LocationType: typeof $Enums.LocationType
 export type ModerationStatus = $Enums.ModerationStatus
 
 export const ModerationStatus: typeof $Enums.ModerationStatus
+
+export type MediaKind = $Enums.MediaKind
+
+export const MediaKind: typeof $Enums.MediaKind
 
 /**
  * ##  Prisma Client ʲˢ
@@ -476,6 +504,36 @@ export class PrismaClient<
     * ```
     */
   get sermonTopicMap(): Prisma.SermonTopicMapDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.mediaAsset`: Exposes CRUD operations for the **MediaAsset** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more MediaAssets
+    * const mediaAssets = await prisma.mediaAsset.findMany()
+    * ```
+    */
+  get mediaAsset(): Prisma.MediaAssetDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.mediaPlaylist`: Exposes CRUD operations for the **MediaPlaylist** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more MediaPlaylists
+    * const mediaPlaylists = await prisma.mediaPlaylist.findMany()
+    * ```
+    */
+  get mediaPlaylist(): Prisma.MediaPlaylistDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.playlistMedia`: Exposes CRUD operations for the **PlaylistMedia** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PlaylistMedias
+    * const playlistMedias = await prisma.playlistMedia.findMany()
+    * ```
+    */
+  get playlistMedia(): Prisma.PlaylistMediaDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.readingPlan`: Exposes CRUD operations for the **ReadingPlan** model.
@@ -1094,6 +1152,9 @@ export namespace Prisma {
     Sermon: 'Sermon',
     SermonTopic: 'SermonTopic',
     SermonTopicMap: 'SermonTopicMap',
+    MediaAsset: 'MediaAsset',
+    MediaPlaylist: 'MediaPlaylist',
+    PlaylistMedia: 'PlaylistMedia',
     ReadingPlan: 'ReadingPlan',
     ReadingPlanItem: 'ReadingPlanItem',
     Bookmark: 'Bookmark',
@@ -1129,7 +1190,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "bibleBook" | "bibleChapter" | "bibleVerse" | "sermon" | "sermonTopic" | "sermonTopicMap" | "readingPlan" | "readingPlanItem" | "bookmark" | "note" | "highlight" | "prayerRequest" | "prayerResponse" | "testimony" | "fellowshipGroup" | "fellowshipMember" | "groupPost" | "event" | "eventRsvp" | "location" | "download" | "announcement" | "moderationQueue"
+      modelProps: "user" | "bibleBook" | "bibleChapter" | "bibleVerse" | "sermon" | "sermonTopic" | "sermonTopicMap" | "mediaAsset" | "mediaPlaylist" | "playlistMedia" | "readingPlan" | "readingPlanItem" | "bookmark" | "note" | "highlight" | "prayerRequest" | "prayerResponse" | "testimony" | "fellowshipGroup" | "fellowshipMember" | "groupPost" | "event" | "eventRsvp" | "location" | "download" | "announcement" | "moderationQueue"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1592,6 +1653,204 @@ export namespace Prisma {
           count: {
             args: Prisma.SermonTopicMapCountArgs<ExtArgs>
             result: $Utils.Optional<SermonTopicMapCountAggregateOutputType> | number
+          }
+        }
+      }
+      MediaAsset: {
+        payload: Prisma.$MediaAssetPayload<ExtArgs>
+        fields: Prisma.MediaAssetFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.MediaAssetFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.MediaAssetFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>
+          }
+          findFirst: {
+            args: Prisma.MediaAssetFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.MediaAssetFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>
+          }
+          findMany: {
+            args: Prisma.MediaAssetFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>[]
+          }
+          create: {
+            args: Prisma.MediaAssetCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>
+          }
+          createMany: {
+            args: Prisma.MediaAssetCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.MediaAssetDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>
+          }
+          update: {
+            args: Prisma.MediaAssetUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>
+          }
+          deleteMany: {
+            args: Prisma.MediaAssetDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.MediaAssetUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.MediaAssetUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaAssetPayload>
+          }
+          aggregate: {
+            args: Prisma.MediaAssetAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMediaAsset>
+          }
+          groupBy: {
+            args: Prisma.MediaAssetGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MediaAssetGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.MediaAssetCountArgs<ExtArgs>
+            result: $Utils.Optional<MediaAssetCountAggregateOutputType> | number
+          }
+        }
+      }
+      MediaPlaylist: {
+        payload: Prisma.$MediaPlaylistPayload<ExtArgs>
+        fields: Prisma.MediaPlaylistFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.MediaPlaylistFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.MediaPlaylistFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>
+          }
+          findFirst: {
+            args: Prisma.MediaPlaylistFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.MediaPlaylistFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>
+          }
+          findMany: {
+            args: Prisma.MediaPlaylistFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>[]
+          }
+          create: {
+            args: Prisma.MediaPlaylistCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>
+          }
+          createMany: {
+            args: Prisma.MediaPlaylistCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.MediaPlaylistDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>
+          }
+          update: {
+            args: Prisma.MediaPlaylistUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>
+          }
+          deleteMany: {
+            args: Prisma.MediaPlaylistDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.MediaPlaylistUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.MediaPlaylistUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MediaPlaylistPayload>
+          }
+          aggregate: {
+            args: Prisma.MediaPlaylistAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMediaPlaylist>
+          }
+          groupBy: {
+            args: Prisma.MediaPlaylistGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MediaPlaylistGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.MediaPlaylistCountArgs<ExtArgs>
+            result: $Utils.Optional<MediaPlaylistCountAggregateOutputType> | number
+          }
+        }
+      }
+      PlaylistMedia: {
+        payload: Prisma.$PlaylistMediaPayload<ExtArgs>
+        fields: Prisma.PlaylistMediaFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.PlaylistMediaFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.PlaylistMediaFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>
+          }
+          findFirst: {
+            args: Prisma.PlaylistMediaFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.PlaylistMediaFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>
+          }
+          findMany: {
+            args: Prisma.PlaylistMediaFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>[]
+          }
+          create: {
+            args: Prisma.PlaylistMediaCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>
+          }
+          createMany: {
+            args: Prisma.PlaylistMediaCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.PlaylistMediaDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>
+          }
+          update: {
+            args: Prisma.PlaylistMediaUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>
+          }
+          deleteMany: {
+            args: Prisma.PlaylistMediaDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.PlaylistMediaUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.PlaylistMediaUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlaylistMediaPayload>
+          }
+          aggregate: {
+            args: Prisma.PlaylistMediaAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePlaylistMedia>
+          }
+          groupBy: {
+            args: Prisma.PlaylistMediaGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PlaylistMediaGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.PlaylistMediaCountArgs<ExtArgs>
+            result: $Utils.Optional<PlaylistMediaCountAggregateOutputType> | number
           }
         }
       }
@@ -2820,6 +3079,9 @@ export namespace Prisma {
     sermon?: SermonOmit
     sermonTopic?: SermonTopicOmit
     sermonTopicMap?: SermonTopicMapOmit
+    mediaAsset?: MediaAssetOmit
+    mediaPlaylist?: MediaPlaylistOmit
+    playlistMedia?: PlaylistMediaOmit
     readingPlan?: ReadingPlanOmit
     readingPlanItem?: ReadingPlanItemOmit
     bookmark?: BookmarkOmit
@@ -3190,6 +3452,68 @@ export namespace Prisma {
    */
   export type SermonTopicCountOutputTypeCountSermonMapsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: SermonTopicMapWhereInput
+  }
+
+
+  /**
+   * Count Type MediaAssetCountOutputType
+   */
+
+  export type MediaAssetCountOutputType = {
+    playlistMap: number
+  }
+
+  export type MediaAssetCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    playlistMap?: boolean | MediaAssetCountOutputTypeCountPlaylistMapArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * MediaAssetCountOutputType without action
+   */
+  export type MediaAssetCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAssetCountOutputType
+     */
+    select?: MediaAssetCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * MediaAssetCountOutputType without action
+   */
+  export type MediaAssetCountOutputTypeCountPlaylistMapArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlaylistMediaWhereInput
+  }
+
+
+  /**
+   * Count Type MediaPlaylistCountOutputType
+   */
+
+  export type MediaPlaylistCountOutputType = {
+    mediaItems: number
+  }
+
+  export type MediaPlaylistCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    mediaItems?: boolean | MediaPlaylistCountOutputTypeCountMediaItemsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * MediaPlaylistCountOutputType without action
+   */
+  export type MediaPlaylistCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylistCountOutputType
+     */
+    select?: MediaPlaylistCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * MediaPlaylistCountOutputType without action
+   */
+  export type MediaPlaylistCountOutputTypeCountMediaItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlaylistMediaWhereInput
   }
 
 
@@ -10756,6 +11080,2995 @@ export namespace Prisma {
      * Choose, which related nodes to fetch as well
      */
     include?: SermonTopicMapInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model MediaAsset
+   */
+
+  export type AggregateMediaAsset = {
+    _count: MediaAssetCountAggregateOutputType | null
+    _avg: MediaAssetAvgAggregateOutputType | null
+    _sum: MediaAssetSumAggregateOutputType | null
+    _min: MediaAssetMinAggregateOutputType | null
+    _max: MediaAssetMaxAggregateOutputType | null
+  }
+
+  export type MediaAssetAvgAggregateOutputType = {
+    size: number | null
+  }
+
+  export type MediaAssetSumAggregateOutputType = {
+    size: number | null
+  }
+
+  export type MediaAssetMinAggregateOutputType = {
+    id: string | null
+    title: string | null
+    kind: $Enums.MediaKind | null
+    mimeType: string | null
+    size: number | null
+    storageKey: string | null
+    url: string | null
+    createdAt: Date | null
+  }
+
+  export type MediaAssetMaxAggregateOutputType = {
+    id: string | null
+    title: string | null
+    kind: $Enums.MediaKind | null
+    mimeType: string | null
+    size: number | null
+    storageKey: string | null
+    url: string | null
+    createdAt: Date | null
+  }
+
+  export type MediaAssetCountAggregateOutputType = {
+    id: number
+    title: number
+    kind: number
+    mimeType: number
+    size: number
+    storageKey: number
+    url: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type MediaAssetAvgAggregateInputType = {
+    size?: true
+  }
+
+  export type MediaAssetSumAggregateInputType = {
+    size?: true
+  }
+
+  export type MediaAssetMinAggregateInputType = {
+    id?: true
+    title?: true
+    kind?: true
+    mimeType?: true
+    size?: true
+    storageKey?: true
+    url?: true
+    createdAt?: true
+  }
+
+  export type MediaAssetMaxAggregateInputType = {
+    id?: true
+    title?: true
+    kind?: true
+    mimeType?: true
+    size?: true
+    storageKey?: true
+    url?: true
+    createdAt?: true
+  }
+
+  export type MediaAssetCountAggregateInputType = {
+    id?: true
+    title?: true
+    kind?: true
+    mimeType?: true
+    size?: true
+    storageKey?: true
+    url?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type MediaAssetAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MediaAsset to aggregate.
+     */
+    where?: MediaAssetWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaAssets to fetch.
+     */
+    orderBy?: MediaAssetOrderByWithRelationInput | MediaAssetOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: MediaAssetWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaAssets from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaAssets.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned MediaAssets
+    **/
+    _count?: true | MediaAssetCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: MediaAssetAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: MediaAssetSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: MediaAssetMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: MediaAssetMaxAggregateInputType
+  }
+
+  export type GetMediaAssetAggregateType<T extends MediaAssetAggregateArgs> = {
+        [P in keyof T & keyof AggregateMediaAsset]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateMediaAsset[P]>
+      : GetScalarType<T[P], AggregateMediaAsset[P]>
+  }
+
+
+
+
+  export type MediaAssetGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MediaAssetWhereInput
+    orderBy?: MediaAssetOrderByWithAggregationInput | MediaAssetOrderByWithAggregationInput[]
+    by: MediaAssetScalarFieldEnum[] | MediaAssetScalarFieldEnum
+    having?: MediaAssetScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: MediaAssetCountAggregateInputType | true
+    _avg?: MediaAssetAvgAggregateInputType
+    _sum?: MediaAssetSumAggregateInputType
+    _min?: MediaAssetMinAggregateInputType
+    _max?: MediaAssetMaxAggregateInputType
+  }
+
+  export type MediaAssetGroupByOutputType = {
+    id: string
+    title: string
+    kind: $Enums.MediaKind
+    mimeType: string
+    size: number
+    storageKey: string
+    url: string
+    createdAt: Date
+    _count: MediaAssetCountAggregateOutputType | null
+    _avg: MediaAssetAvgAggregateOutputType | null
+    _sum: MediaAssetSumAggregateOutputType | null
+    _min: MediaAssetMinAggregateOutputType | null
+    _max: MediaAssetMaxAggregateOutputType | null
+  }
+
+  type GetMediaAssetGroupByPayload<T extends MediaAssetGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<MediaAssetGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof MediaAssetGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], MediaAssetGroupByOutputType[P]>
+            : GetScalarType<T[P], MediaAssetGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type MediaAssetSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    kind?: boolean
+    mimeType?: boolean
+    size?: boolean
+    storageKey?: boolean
+    url?: boolean
+    createdAt?: boolean
+    playlistMap?: boolean | MediaAsset$playlistMapArgs<ExtArgs>
+    _count?: boolean | MediaAssetCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["mediaAsset"]>
+
+
+
+  export type MediaAssetSelectScalar = {
+    id?: boolean
+    title?: boolean
+    kind?: boolean
+    mimeType?: boolean
+    size?: boolean
+    storageKey?: boolean
+    url?: boolean
+    createdAt?: boolean
+  }
+
+  export type MediaAssetOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "kind" | "mimeType" | "size" | "storageKey" | "url" | "createdAt", ExtArgs["result"]["mediaAsset"]>
+  export type MediaAssetInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    playlistMap?: boolean | MediaAsset$playlistMapArgs<ExtArgs>
+    _count?: boolean | MediaAssetCountOutputTypeDefaultArgs<ExtArgs>
+  }
+
+  export type $MediaAssetPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "MediaAsset"
+    objects: {
+      playlistMap: Prisma.$PlaylistMediaPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      title: string
+      kind: $Enums.MediaKind
+      mimeType: string
+      size: number
+      storageKey: string
+      url: string
+      createdAt: Date
+    }, ExtArgs["result"]["mediaAsset"]>
+    composites: {}
+  }
+
+  type MediaAssetGetPayload<S extends boolean | null | undefined | MediaAssetDefaultArgs> = $Result.GetResult<Prisma.$MediaAssetPayload, S>
+
+  type MediaAssetCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<MediaAssetFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: MediaAssetCountAggregateInputType | true
+    }
+
+  export interface MediaAssetDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MediaAsset'], meta: { name: 'MediaAsset' } }
+    /**
+     * Find zero or one MediaAsset that matches the filter.
+     * @param {MediaAssetFindUniqueArgs} args - Arguments to find a MediaAsset
+     * @example
+     * // Get one MediaAsset
+     * const mediaAsset = await prisma.mediaAsset.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends MediaAssetFindUniqueArgs>(args: SelectSubset<T, MediaAssetFindUniqueArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one MediaAsset that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {MediaAssetFindUniqueOrThrowArgs} args - Arguments to find a MediaAsset
+     * @example
+     * // Get one MediaAsset
+     * const mediaAsset = await prisma.mediaAsset.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends MediaAssetFindUniqueOrThrowArgs>(args: SelectSubset<T, MediaAssetFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first MediaAsset that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetFindFirstArgs} args - Arguments to find a MediaAsset
+     * @example
+     * // Get one MediaAsset
+     * const mediaAsset = await prisma.mediaAsset.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends MediaAssetFindFirstArgs>(args?: SelectSubset<T, MediaAssetFindFirstArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first MediaAsset that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetFindFirstOrThrowArgs} args - Arguments to find a MediaAsset
+     * @example
+     * // Get one MediaAsset
+     * const mediaAsset = await prisma.mediaAsset.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends MediaAssetFindFirstOrThrowArgs>(args?: SelectSubset<T, MediaAssetFindFirstOrThrowArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more MediaAssets that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all MediaAssets
+     * const mediaAssets = await prisma.mediaAsset.findMany()
+     * 
+     * // Get first 10 MediaAssets
+     * const mediaAssets = await prisma.mediaAsset.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const mediaAssetWithIdOnly = await prisma.mediaAsset.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends MediaAssetFindManyArgs>(args?: SelectSubset<T, MediaAssetFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a MediaAsset.
+     * @param {MediaAssetCreateArgs} args - Arguments to create a MediaAsset.
+     * @example
+     * // Create one MediaAsset
+     * const MediaAsset = await prisma.mediaAsset.create({
+     *   data: {
+     *     // ... data to create a MediaAsset
+     *   }
+     * })
+     * 
+     */
+    create<T extends MediaAssetCreateArgs>(args: SelectSubset<T, MediaAssetCreateArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many MediaAssets.
+     * @param {MediaAssetCreateManyArgs} args - Arguments to create many MediaAssets.
+     * @example
+     * // Create many MediaAssets
+     * const mediaAsset = await prisma.mediaAsset.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends MediaAssetCreateManyArgs>(args?: SelectSubset<T, MediaAssetCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a MediaAsset.
+     * @param {MediaAssetDeleteArgs} args - Arguments to delete one MediaAsset.
+     * @example
+     * // Delete one MediaAsset
+     * const MediaAsset = await prisma.mediaAsset.delete({
+     *   where: {
+     *     // ... filter to delete one MediaAsset
+     *   }
+     * })
+     * 
+     */
+    delete<T extends MediaAssetDeleteArgs>(args: SelectSubset<T, MediaAssetDeleteArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one MediaAsset.
+     * @param {MediaAssetUpdateArgs} args - Arguments to update one MediaAsset.
+     * @example
+     * // Update one MediaAsset
+     * const mediaAsset = await prisma.mediaAsset.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends MediaAssetUpdateArgs>(args: SelectSubset<T, MediaAssetUpdateArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more MediaAssets.
+     * @param {MediaAssetDeleteManyArgs} args - Arguments to filter MediaAssets to delete.
+     * @example
+     * // Delete a few MediaAssets
+     * const { count } = await prisma.mediaAsset.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends MediaAssetDeleteManyArgs>(args?: SelectSubset<T, MediaAssetDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MediaAssets.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many MediaAssets
+     * const mediaAsset = await prisma.mediaAsset.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends MediaAssetUpdateManyArgs>(args: SelectSubset<T, MediaAssetUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one MediaAsset.
+     * @param {MediaAssetUpsertArgs} args - Arguments to update or create a MediaAsset.
+     * @example
+     * // Update or create a MediaAsset
+     * const mediaAsset = await prisma.mediaAsset.upsert({
+     *   create: {
+     *     // ... data to create a MediaAsset
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the MediaAsset we want to update
+     *   }
+     * })
+     */
+    upsert<T extends MediaAssetUpsertArgs>(args: SelectSubset<T, MediaAssetUpsertArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of MediaAssets.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetCountArgs} args - Arguments to filter MediaAssets to count.
+     * @example
+     * // Count the number of MediaAssets
+     * const count = await prisma.mediaAsset.count({
+     *   where: {
+     *     // ... the filter for the MediaAssets we want to count
+     *   }
+     * })
+    **/
+    count<T extends MediaAssetCountArgs>(
+      args?: Subset<T, MediaAssetCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], MediaAssetCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a MediaAsset.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends MediaAssetAggregateArgs>(args: Subset<T, MediaAssetAggregateArgs>): Prisma.PrismaPromise<GetMediaAssetAggregateType<T>>
+
+    /**
+     * Group by MediaAsset.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaAssetGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends MediaAssetGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: MediaAssetGroupByArgs['orderBy'] }
+        : { orderBy?: MediaAssetGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, MediaAssetGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMediaAssetGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the MediaAsset model
+   */
+  readonly fields: MediaAssetFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for MediaAsset.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__MediaAssetClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    playlistMap<T extends MediaAsset$playlistMapArgs<ExtArgs> = {}>(args?: Subset<T, MediaAsset$playlistMapArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the MediaAsset model
+   */
+  interface MediaAssetFieldRefs {
+    readonly id: FieldRef<"MediaAsset", 'String'>
+    readonly title: FieldRef<"MediaAsset", 'String'>
+    readonly kind: FieldRef<"MediaAsset", 'MediaKind'>
+    readonly mimeType: FieldRef<"MediaAsset", 'String'>
+    readonly size: FieldRef<"MediaAsset", 'Int'>
+    readonly storageKey: FieldRef<"MediaAsset", 'String'>
+    readonly url: FieldRef<"MediaAsset", 'String'>
+    readonly createdAt: FieldRef<"MediaAsset", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * MediaAsset findUnique
+   */
+  export type MediaAssetFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaAsset to fetch.
+     */
+    where: MediaAssetWhereUniqueInput
+  }
+
+  /**
+   * MediaAsset findUniqueOrThrow
+   */
+  export type MediaAssetFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaAsset to fetch.
+     */
+    where: MediaAssetWhereUniqueInput
+  }
+
+  /**
+   * MediaAsset findFirst
+   */
+  export type MediaAssetFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaAsset to fetch.
+     */
+    where?: MediaAssetWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaAssets to fetch.
+     */
+    orderBy?: MediaAssetOrderByWithRelationInput | MediaAssetOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MediaAssets.
+     */
+    cursor?: MediaAssetWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaAssets from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaAssets.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MediaAssets.
+     */
+    distinct?: MediaAssetScalarFieldEnum | MediaAssetScalarFieldEnum[]
+  }
+
+  /**
+   * MediaAsset findFirstOrThrow
+   */
+  export type MediaAssetFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaAsset to fetch.
+     */
+    where?: MediaAssetWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaAssets to fetch.
+     */
+    orderBy?: MediaAssetOrderByWithRelationInput | MediaAssetOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MediaAssets.
+     */
+    cursor?: MediaAssetWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaAssets from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaAssets.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MediaAssets.
+     */
+    distinct?: MediaAssetScalarFieldEnum | MediaAssetScalarFieldEnum[]
+  }
+
+  /**
+   * MediaAsset findMany
+   */
+  export type MediaAssetFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaAssets to fetch.
+     */
+    where?: MediaAssetWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaAssets to fetch.
+     */
+    orderBy?: MediaAssetOrderByWithRelationInput | MediaAssetOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing MediaAssets.
+     */
+    cursor?: MediaAssetWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaAssets from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaAssets.
+     */
+    skip?: number
+    distinct?: MediaAssetScalarFieldEnum | MediaAssetScalarFieldEnum[]
+  }
+
+  /**
+   * MediaAsset create
+   */
+  export type MediaAssetCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * The data needed to create a MediaAsset.
+     */
+    data: XOR<MediaAssetCreateInput, MediaAssetUncheckedCreateInput>
+  }
+
+  /**
+   * MediaAsset createMany
+   */
+  export type MediaAssetCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many MediaAssets.
+     */
+    data: MediaAssetCreateManyInput | MediaAssetCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * MediaAsset update
+   */
+  export type MediaAssetUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * The data needed to update a MediaAsset.
+     */
+    data: XOR<MediaAssetUpdateInput, MediaAssetUncheckedUpdateInput>
+    /**
+     * Choose, which MediaAsset to update.
+     */
+    where: MediaAssetWhereUniqueInput
+  }
+
+  /**
+   * MediaAsset updateMany
+   */
+  export type MediaAssetUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update MediaAssets.
+     */
+    data: XOR<MediaAssetUpdateManyMutationInput, MediaAssetUncheckedUpdateManyInput>
+    /**
+     * Filter which MediaAssets to update
+     */
+    where?: MediaAssetWhereInput
+    /**
+     * Limit how many MediaAssets to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * MediaAsset upsert
+   */
+  export type MediaAssetUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * The filter to search for the MediaAsset to update in case it exists.
+     */
+    where: MediaAssetWhereUniqueInput
+    /**
+     * In case the MediaAsset found by the `where` argument doesn't exist, create a new MediaAsset with this data.
+     */
+    create: XOR<MediaAssetCreateInput, MediaAssetUncheckedCreateInput>
+    /**
+     * In case the MediaAsset was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<MediaAssetUpdateInput, MediaAssetUncheckedUpdateInput>
+  }
+
+  /**
+   * MediaAsset delete
+   */
+  export type MediaAssetDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+    /**
+     * Filter which MediaAsset to delete.
+     */
+    where: MediaAssetWhereUniqueInput
+  }
+
+  /**
+   * MediaAsset deleteMany
+   */
+  export type MediaAssetDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MediaAssets to delete
+     */
+    where?: MediaAssetWhereInput
+    /**
+     * Limit how many MediaAssets to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * MediaAsset.playlistMap
+   */
+  export type MediaAsset$playlistMapArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    where?: PlaylistMediaWhereInput
+    orderBy?: PlaylistMediaOrderByWithRelationInput | PlaylistMediaOrderByWithRelationInput[]
+    cursor?: PlaylistMediaWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PlaylistMediaScalarFieldEnum | PlaylistMediaScalarFieldEnum[]
+  }
+
+  /**
+   * MediaAsset without action
+   */
+  export type MediaAssetDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaAsset
+     */
+    select?: MediaAssetSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaAsset
+     */
+    omit?: MediaAssetOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaAssetInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model MediaPlaylist
+   */
+
+  export type AggregateMediaPlaylist = {
+    _count: MediaPlaylistCountAggregateOutputType | null
+    _avg: MediaPlaylistAvgAggregateOutputType | null
+    _sum: MediaPlaylistSumAggregateOutputType | null
+    _min: MediaPlaylistMinAggregateOutputType | null
+    _max: MediaPlaylistMaxAggregateOutputType | null
+  }
+
+  export type MediaPlaylistAvgAggregateOutputType = {
+    year: number | null
+  }
+
+  export type MediaPlaylistSumAggregateOutputType = {
+    year: number | null
+  }
+
+  export type MediaPlaylistMinAggregateOutputType = {
+    id: string | null
+    slug: string | null
+    title: string | null
+    year: number | null
+    description: string | null
+    replaceExisting: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type MediaPlaylistMaxAggregateOutputType = {
+    id: string | null
+    slug: string | null
+    title: string | null
+    year: number | null
+    description: string | null
+    replaceExisting: boolean | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type MediaPlaylistCountAggregateOutputType = {
+    id: number
+    slug: number
+    title: number
+    year: number
+    description: number
+    replaceExisting: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type MediaPlaylistAvgAggregateInputType = {
+    year?: true
+  }
+
+  export type MediaPlaylistSumAggregateInputType = {
+    year?: true
+  }
+
+  export type MediaPlaylistMinAggregateInputType = {
+    id?: true
+    slug?: true
+    title?: true
+    year?: true
+    description?: true
+    replaceExisting?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type MediaPlaylistMaxAggregateInputType = {
+    id?: true
+    slug?: true
+    title?: true
+    year?: true
+    description?: true
+    replaceExisting?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type MediaPlaylistCountAggregateInputType = {
+    id?: true
+    slug?: true
+    title?: true
+    year?: true
+    description?: true
+    replaceExisting?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type MediaPlaylistAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MediaPlaylist to aggregate.
+     */
+    where?: MediaPlaylistWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaPlaylists to fetch.
+     */
+    orderBy?: MediaPlaylistOrderByWithRelationInput | MediaPlaylistOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: MediaPlaylistWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaPlaylists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaPlaylists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned MediaPlaylists
+    **/
+    _count?: true | MediaPlaylistCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: MediaPlaylistAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: MediaPlaylistSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: MediaPlaylistMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: MediaPlaylistMaxAggregateInputType
+  }
+
+  export type GetMediaPlaylistAggregateType<T extends MediaPlaylistAggregateArgs> = {
+        [P in keyof T & keyof AggregateMediaPlaylist]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateMediaPlaylist[P]>
+      : GetScalarType<T[P], AggregateMediaPlaylist[P]>
+  }
+
+
+
+
+  export type MediaPlaylistGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MediaPlaylistWhereInput
+    orderBy?: MediaPlaylistOrderByWithAggregationInput | MediaPlaylistOrderByWithAggregationInput[]
+    by: MediaPlaylistScalarFieldEnum[] | MediaPlaylistScalarFieldEnum
+    having?: MediaPlaylistScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: MediaPlaylistCountAggregateInputType | true
+    _avg?: MediaPlaylistAvgAggregateInputType
+    _sum?: MediaPlaylistSumAggregateInputType
+    _min?: MediaPlaylistMinAggregateInputType
+    _max?: MediaPlaylistMaxAggregateInputType
+  }
+
+  export type MediaPlaylistGroupByOutputType = {
+    id: string
+    slug: string
+    title: string
+    year: number | null
+    description: string
+    replaceExisting: boolean
+    createdAt: Date
+    updatedAt: Date
+    _count: MediaPlaylistCountAggregateOutputType | null
+    _avg: MediaPlaylistAvgAggregateOutputType | null
+    _sum: MediaPlaylistSumAggregateOutputType | null
+    _min: MediaPlaylistMinAggregateOutputType | null
+    _max: MediaPlaylistMaxAggregateOutputType | null
+  }
+
+  type GetMediaPlaylistGroupByPayload<T extends MediaPlaylistGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<MediaPlaylistGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof MediaPlaylistGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], MediaPlaylistGroupByOutputType[P]>
+            : GetScalarType<T[P], MediaPlaylistGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type MediaPlaylistSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    slug?: boolean
+    title?: boolean
+    year?: boolean
+    description?: boolean
+    replaceExisting?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    mediaItems?: boolean | MediaPlaylist$mediaItemsArgs<ExtArgs>
+    _count?: boolean | MediaPlaylistCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["mediaPlaylist"]>
+
+
+
+  export type MediaPlaylistSelectScalar = {
+    id?: boolean
+    slug?: boolean
+    title?: boolean
+    year?: boolean
+    description?: boolean
+    replaceExisting?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type MediaPlaylistOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "slug" | "title" | "year" | "description" | "replaceExisting" | "createdAt" | "updatedAt", ExtArgs["result"]["mediaPlaylist"]>
+  export type MediaPlaylistInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    mediaItems?: boolean | MediaPlaylist$mediaItemsArgs<ExtArgs>
+    _count?: boolean | MediaPlaylistCountOutputTypeDefaultArgs<ExtArgs>
+  }
+
+  export type $MediaPlaylistPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "MediaPlaylist"
+    objects: {
+      mediaItems: Prisma.$PlaylistMediaPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      slug: string
+      title: string
+      year: number | null
+      description: string
+      replaceExisting: boolean
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["mediaPlaylist"]>
+    composites: {}
+  }
+
+  type MediaPlaylistGetPayload<S extends boolean | null | undefined | MediaPlaylistDefaultArgs> = $Result.GetResult<Prisma.$MediaPlaylistPayload, S>
+
+  type MediaPlaylistCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<MediaPlaylistFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: MediaPlaylistCountAggregateInputType | true
+    }
+
+  export interface MediaPlaylistDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MediaPlaylist'], meta: { name: 'MediaPlaylist' } }
+    /**
+     * Find zero or one MediaPlaylist that matches the filter.
+     * @param {MediaPlaylistFindUniqueArgs} args - Arguments to find a MediaPlaylist
+     * @example
+     * // Get one MediaPlaylist
+     * const mediaPlaylist = await prisma.mediaPlaylist.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends MediaPlaylistFindUniqueArgs>(args: SelectSubset<T, MediaPlaylistFindUniqueArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one MediaPlaylist that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {MediaPlaylistFindUniqueOrThrowArgs} args - Arguments to find a MediaPlaylist
+     * @example
+     * // Get one MediaPlaylist
+     * const mediaPlaylist = await prisma.mediaPlaylist.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends MediaPlaylistFindUniqueOrThrowArgs>(args: SelectSubset<T, MediaPlaylistFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first MediaPlaylist that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistFindFirstArgs} args - Arguments to find a MediaPlaylist
+     * @example
+     * // Get one MediaPlaylist
+     * const mediaPlaylist = await prisma.mediaPlaylist.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends MediaPlaylistFindFirstArgs>(args?: SelectSubset<T, MediaPlaylistFindFirstArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first MediaPlaylist that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistFindFirstOrThrowArgs} args - Arguments to find a MediaPlaylist
+     * @example
+     * // Get one MediaPlaylist
+     * const mediaPlaylist = await prisma.mediaPlaylist.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends MediaPlaylistFindFirstOrThrowArgs>(args?: SelectSubset<T, MediaPlaylistFindFirstOrThrowArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more MediaPlaylists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all MediaPlaylists
+     * const mediaPlaylists = await prisma.mediaPlaylist.findMany()
+     * 
+     * // Get first 10 MediaPlaylists
+     * const mediaPlaylists = await prisma.mediaPlaylist.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const mediaPlaylistWithIdOnly = await prisma.mediaPlaylist.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends MediaPlaylistFindManyArgs>(args?: SelectSubset<T, MediaPlaylistFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a MediaPlaylist.
+     * @param {MediaPlaylistCreateArgs} args - Arguments to create a MediaPlaylist.
+     * @example
+     * // Create one MediaPlaylist
+     * const MediaPlaylist = await prisma.mediaPlaylist.create({
+     *   data: {
+     *     // ... data to create a MediaPlaylist
+     *   }
+     * })
+     * 
+     */
+    create<T extends MediaPlaylistCreateArgs>(args: SelectSubset<T, MediaPlaylistCreateArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many MediaPlaylists.
+     * @param {MediaPlaylistCreateManyArgs} args - Arguments to create many MediaPlaylists.
+     * @example
+     * // Create many MediaPlaylists
+     * const mediaPlaylist = await prisma.mediaPlaylist.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends MediaPlaylistCreateManyArgs>(args?: SelectSubset<T, MediaPlaylistCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a MediaPlaylist.
+     * @param {MediaPlaylistDeleteArgs} args - Arguments to delete one MediaPlaylist.
+     * @example
+     * // Delete one MediaPlaylist
+     * const MediaPlaylist = await prisma.mediaPlaylist.delete({
+     *   where: {
+     *     // ... filter to delete one MediaPlaylist
+     *   }
+     * })
+     * 
+     */
+    delete<T extends MediaPlaylistDeleteArgs>(args: SelectSubset<T, MediaPlaylistDeleteArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one MediaPlaylist.
+     * @param {MediaPlaylistUpdateArgs} args - Arguments to update one MediaPlaylist.
+     * @example
+     * // Update one MediaPlaylist
+     * const mediaPlaylist = await prisma.mediaPlaylist.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends MediaPlaylistUpdateArgs>(args: SelectSubset<T, MediaPlaylistUpdateArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more MediaPlaylists.
+     * @param {MediaPlaylistDeleteManyArgs} args - Arguments to filter MediaPlaylists to delete.
+     * @example
+     * // Delete a few MediaPlaylists
+     * const { count } = await prisma.mediaPlaylist.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends MediaPlaylistDeleteManyArgs>(args?: SelectSubset<T, MediaPlaylistDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MediaPlaylists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many MediaPlaylists
+     * const mediaPlaylist = await prisma.mediaPlaylist.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends MediaPlaylistUpdateManyArgs>(args: SelectSubset<T, MediaPlaylistUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one MediaPlaylist.
+     * @param {MediaPlaylistUpsertArgs} args - Arguments to update or create a MediaPlaylist.
+     * @example
+     * // Update or create a MediaPlaylist
+     * const mediaPlaylist = await prisma.mediaPlaylist.upsert({
+     *   create: {
+     *     // ... data to create a MediaPlaylist
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the MediaPlaylist we want to update
+     *   }
+     * })
+     */
+    upsert<T extends MediaPlaylistUpsertArgs>(args: SelectSubset<T, MediaPlaylistUpsertArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of MediaPlaylists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistCountArgs} args - Arguments to filter MediaPlaylists to count.
+     * @example
+     * // Count the number of MediaPlaylists
+     * const count = await prisma.mediaPlaylist.count({
+     *   where: {
+     *     // ... the filter for the MediaPlaylists we want to count
+     *   }
+     * })
+    **/
+    count<T extends MediaPlaylistCountArgs>(
+      args?: Subset<T, MediaPlaylistCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], MediaPlaylistCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a MediaPlaylist.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends MediaPlaylistAggregateArgs>(args: Subset<T, MediaPlaylistAggregateArgs>): Prisma.PrismaPromise<GetMediaPlaylistAggregateType<T>>
+
+    /**
+     * Group by MediaPlaylist.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MediaPlaylistGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends MediaPlaylistGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: MediaPlaylistGroupByArgs['orderBy'] }
+        : { orderBy?: MediaPlaylistGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, MediaPlaylistGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMediaPlaylistGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the MediaPlaylist model
+   */
+  readonly fields: MediaPlaylistFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for MediaPlaylist.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__MediaPlaylistClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    mediaItems<T extends MediaPlaylist$mediaItemsArgs<ExtArgs> = {}>(args?: Subset<T, MediaPlaylist$mediaItemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the MediaPlaylist model
+   */
+  interface MediaPlaylistFieldRefs {
+    readonly id: FieldRef<"MediaPlaylist", 'String'>
+    readonly slug: FieldRef<"MediaPlaylist", 'String'>
+    readonly title: FieldRef<"MediaPlaylist", 'String'>
+    readonly year: FieldRef<"MediaPlaylist", 'Int'>
+    readonly description: FieldRef<"MediaPlaylist", 'String'>
+    readonly replaceExisting: FieldRef<"MediaPlaylist", 'Boolean'>
+    readonly createdAt: FieldRef<"MediaPlaylist", 'DateTime'>
+    readonly updatedAt: FieldRef<"MediaPlaylist", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * MediaPlaylist findUnique
+   */
+  export type MediaPlaylistFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaPlaylist to fetch.
+     */
+    where: MediaPlaylistWhereUniqueInput
+  }
+
+  /**
+   * MediaPlaylist findUniqueOrThrow
+   */
+  export type MediaPlaylistFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaPlaylist to fetch.
+     */
+    where: MediaPlaylistWhereUniqueInput
+  }
+
+  /**
+   * MediaPlaylist findFirst
+   */
+  export type MediaPlaylistFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaPlaylist to fetch.
+     */
+    where?: MediaPlaylistWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaPlaylists to fetch.
+     */
+    orderBy?: MediaPlaylistOrderByWithRelationInput | MediaPlaylistOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MediaPlaylists.
+     */
+    cursor?: MediaPlaylistWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaPlaylists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaPlaylists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MediaPlaylists.
+     */
+    distinct?: MediaPlaylistScalarFieldEnum | MediaPlaylistScalarFieldEnum[]
+  }
+
+  /**
+   * MediaPlaylist findFirstOrThrow
+   */
+  export type MediaPlaylistFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaPlaylist to fetch.
+     */
+    where?: MediaPlaylistWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaPlaylists to fetch.
+     */
+    orderBy?: MediaPlaylistOrderByWithRelationInput | MediaPlaylistOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MediaPlaylists.
+     */
+    cursor?: MediaPlaylistWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaPlaylists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaPlaylists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MediaPlaylists.
+     */
+    distinct?: MediaPlaylistScalarFieldEnum | MediaPlaylistScalarFieldEnum[]
+  }
+
+  /**
+   * MediaPlaylist findMany
+   */
+  export type MediaPlaylistFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * Filter, which MediaPlaylists to fetch.
+     */
+    where?: MediaPlaylistWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MediaPlaylists to fetch.
+     */
+    orderBy?: MediaPlaylistOrderByWithRelationInput | MediaPlaylistOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing MediaPlaylists.
+     */
+    cursor?: MediaPlaylistWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MediaPlaylists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MediaPlaylists.
+     */
+    skip?: number
+    distinct?: MediaPlaylistScalarFieldEnum | MediaPlaylistScalarFieldEnum[]
+  }
+
+  /**
+   * MediaPlaylist create
+   */
+  export type MediaPlaylistCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * The data needed to create a MediaPlaylist.
+     */
+    data: XOR<MediaPlaylistCreateInput, MediaPlaylistUncheckedCreateInput>
+  }
+
+  /**
+   * MediaPlaylist createMany
+   */
+  export type MediaPlaylistCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many MediaPlaylists.
+     */
+    data: MediaPlaylistCreateManyInput | MediaPlaylistCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * MediaPlaylist update
+   */
+  export type MediaPlaylistUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * The data needed to update a MediaPlaylist.
+     */
+    data: XOR<MediaPlaylistUpdateInput, MediaPlaylistUncheckedUpdateInput>
+    /**
+     * Choose, which MediaPlaylist to update.
+     */
+    where: MediaPlaylistWhereUniqueInput
+  }
+
+  /**
+   * MediaPlaylist updateMany
+   */
+  export type MediaPlaylistUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update MediaPlaylists.
+     */
+    data: XOR<MediaPlaylistUpdateManyMutationInput, MediaPlaylistUncheckedUpdateManyInput>
+    /**
+     * Filter which MediaPlaylists to update
+     */
+    where?: MediaPlaylistWhereInput
+    /**
+     * Limit how many MediaPlaylists to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * MediaPlaylist upsert
+   */
+  export type MediaPlaylistUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * The filter to search for the MediaPlaylist to update in case it exists.
+     */
+    where: MediaPlaylistWhereUniqueInput
+    /**
+     * In case the MediaPlaylist found by the `where` argument doesn't exist, create a new MediaPlaylist with this data.
+     */
+    create: XOR<MediaPlaylistCreateInput, MediaPlaylistUncheckedCreateInput>
+    /**
+     * In case the MediaPlaylist was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<MediaPlaylistUpdateInput, MediaPlaylistUncheckedUpdateInput>
+  }
+
+  /**
+   * MediaPlaylist delete
+   */
+  export type MediaPlaylistDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+    /**
+     * Filter which MediaPlaylist to delete.
+     */
+    where: MediaPlaylistWhereUniqueInput
+  }
+
+  /**
+   * MediaPlaylist deleteMany
+   */
+  export type MediaPlaylistDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MediaPlaylists to delete
+     */
+    where?: MediaPlaylistWhereInput
+    /**
+     * Limit how many MediaPlaylists to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * MediaPlaylist.mediaItems
+   */
+  export type MediaPlaylist$mediaItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    where?: PlaylistMediaWhereInput
+    orderBy?: PlaylistMediaOrderByWithRelationInput | PlaylistMediaOrderByWithRelationInput[]
+    cursor?: PlaylistMediaWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PlaylistMediaScalarFieldEnum | PlaylistMediaScalarFieldEnum[]
+  }
+
+  /**
+   * MediaPlaylist without action
+   */
+  export type MediaPlaylistDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MediaPlaylist
+     */
+    select?: MediaPlaylistSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MediaPlaylist
+     */
+    omit?: MediaPlaylistOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MediaPlaylistInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model PlaylistMedia
+   */
+
+  export type AggregatePlaylistMedia = {
+    _count: PlaylistMediaCountAggregateOutputType | null
+    _avg: PlaylistMediaAvgAggregateOutputType | null
+    _sum: PlaylistMediaSumAggregateOutputType | null
+    _min: PlaylistMediaMinAggregateOutputType | null
+    _max: PlaylistMediaMaxAggregateOutputType | null
+  }
+
+  export type PlaylistMediaAvgAggregateOutputType = {
+    orderIndex: number | null
+  }
+
+  export type PlaylistMediaSumAggregateOutputType = {
+    orderIndex: number | null
+  }
+
+  export type PlaylistMediaMinAggregateOutputType = {
+    playlistId: string | null
+    mediaId: string | null
+    orderIndex: number | null
+  }
+
+  export type PlaylistMediaMaxAggregateOutputType = {
+    playlistId: string | null
+    mediaId: string | null
+    orderIndex: number | null
+  }
+
+  export type PlaylistMediaCountAggregateOutputType = {
+    playlistId: number
+    mediaId: number
+    orderIndex: number
+    _all: number
+  }
+
+
+  export type PlaylistMediaAvgAggregateInputType = {
+    orderIndex?: true
+  }
+
+  export type PlaylistMediaSumAggregateInputType = {
+    orderIndex?: true
+  }
+
+  export type PlaylistMediaMinAggregateInputType = {
+    playlistId?: true
+    mediaId?: true
+    orderIndex?: true
+  }
+
+  export type PlaylistMediaMaxAggregateInputType = {
+    playlistId?: true
+    mediaId?: true
+    orderIndex?: true
+  }
+
+  export type PlaylistMediaCountAggregateInputType = {
+    playlistId?: true
+    mediaId?: true
+    orderIndex?: true
+    _all?: true
+  }
+
+  export type PlaylistMediaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlaylistMedia to aggregate.
+     */
+    where?: PlaylistMediaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaylistMedias to fetch.
+     */
+    orderBy?: PlaylistMediaOrderByWithRelationInput | PlaylistMediaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: PlaylistMediaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaylistMedias from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaylistMedias.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned PlaylistMedias
+    **/
+    _count?: true | PlaylistMediaCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: PlaylistMediaAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: PlaylistMediaSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: PlaylistMediaMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: PlaylistMediaMaxAggregateInputType
+  }
+
+  export type GetPlaylistMediaAggregateType<T extends PlaylistMediaAggregateArgs> = {
+        [P in keyof T & keyof AggregatePlaylistMedia]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregatePlaylistMedia[P]>
+      : GetScalarType<T[P], AggregatePlaylistMedia[P]>
+  }
+
+
+
+
+  export type PlaylistMediaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlaylistMediaWhereInput
+    orderBy?: PlaylistMediaOrderByWithAggregationInput | PlaylistMediaOrderByWithAggregationInput[]
+    by: PlaylistMediaScalarFieldEnum[] | PlaylistMediaScalarFieldEnum
+    having?: PlaylistMediaScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: PlaylistMediaCountAggregateInputType | true
+    _avg?: PlaylistMediaAvgAggregateInputType
+    _sum?: PlaylistMediaSumAggregateInputType
+    _min?: PlaylistMediaMinAggregateInputType
+    _max?: PlaylistMediaMaxAggregateInputType
+  }
+
+  export type PlaylistMediaGroupByOutputType = {
+    playlistId: string
+    mediaId: string
+    orderIndex: number
+    _count: PlaylistMediaCountAggregateOutputType | null
+    _avg: PlaylistMediaAvgAggregateOutputType | null
+    _sum: PlaylistMediaSumAggregateOutputType | null
+    _min: PlaylistMediaMinAggregateOutputType | null
+    _max: PlaylistMediaMaxAggregateOutputType | null
+  }
+
+  type GetPlaylistMediaGroupByPayload<T extends PlaylistMediaGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<PlaylistMediaGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof PlaylistMediaGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], PlaylistMediaGroupByOutputType[P]>
+            : GetScalarType<T[P], PlaylistMediaGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type PlaylistMediaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    playlistId?: boolean
+    mediaId?: boolean
+    orderIndex?: boolean
+    playlist?: boolean | MediaPlaylistDefaultArgs<ExtArgs>
+    media?: boolean | MediaAssetDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["playlistMedia"]>
+
+
+
+  export type PlaylistMediaSelectScalar = {
+    playlistId?: boolean
+    mediaId?: boolean
+    orderIndex?: boolean
+  }
+
+  export type PlaylistMediaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"playlistId" | "mediaId" | "orderIndex", ExtArgs["result"]["playlistMedia"]>
+  export type PlaylistMediaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    playlist?: boolean | MediaPlaylistDefaultArgs<ExtArgs>
+    media?: boolean | MediaAssetDefaultArgs<ExtArgs>
+  }
+
+  export type $PlaylistMediaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PlaylistMedia"
+    objects: {
+      playlist: Prisma.$MediaPlaylistPayload<ExtArgs>
+      media: Prisma.$MediaAssetPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      playlistId: string
+      mediaId: string
+      orderIndex: number
+    }, ExtArgs["result"]["playlistMedia"]>
+    composites: {}
+  }
+
+  type PlaylistMediaGetPayload<S extends boolean | null | undefined | PlaylistMediaDefaultArgs> = $Result.GetResult<Prisma.$PlaylistMediaPayload, S>
+
+  type PlaylistMediaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PlaylistMediaFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PlaylistMediaCountAggregateInputType | true
+    }
+
+  export interface PlaylistMediaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PlaylistMedia'], meta: { name: 'PlaylistMedia' } }
+    /**
+     * Find zero or one PlaylistMedia that matches the filter.
+     * @param {PlaylistMediaFindUniqueArgs} args - Arguments to find a PlaylistMedia
+     * @example
+     * // Get one PlaylistMedia
+     * const playlistMedia = await prisma.playlistMedia.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends PlaylistMediaFindUniqueArgs>(args: SelectSubset<T, PlaylistMediaFindUniqueArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one PlaylistMedia that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {PlaylistMediaFindUniqueOrThrowArgs} args - Arguments to find a PlaylistMedia
+     * @example
+     * // Get one PlaylistMedia
+     * const playlistMedia = await prisma.playlistMedia.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends PlaylistMediaFindUniqueOrThrowArgs>(args: SelectSubset<T, PlaylistMediaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlaylistMedia that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaFindFirstArgs} args - Arguments to find a PlaylistMedia
+     * @example
+     * // Get one PlaylistMedia
+     * const playlistMedia = await prisma.playlistMedia.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends PlaylistMediaFindFirstArgs>(args?: SelectSubset<T, PlaylistMediaFindFirstArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlaylistMedia that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaFindFirstOrThrowArgs} args - Arguments to find a PlaylistMedia
+     * @example
+     * // Get one PlaylistMedia
+     * const playlistMedia = await prisma.playlistMedia.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends PlaylistMediaFindFirstOrThrowArgs>(args?: SelectSubset<T, PlaylistMediaFindFirstOrThrowArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more PlaylistMedias that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all PlaylistMedias
+     * const playlistMedias = await prisma.playlistMedia.findMany()
+     * 
+     * // Get first 10 PlaylistMedias
+     * const playlistMedias = await prisma.playlistMedia.findMany({ take: 10 })
+     * 
+     * // Only select the `playlistId`
+     * const playlistMediaWithPlaylistIdOnly = await prisma.playlistMedia.findMany({ select: { playlistId: true } })
+     * 
+     */
+    findMany<T extends PlaylistMediaFindManyArgs>(args?: SelectSubset<T, PlaylistMediaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a PlaylistMedia.
+     * @param {PlaylistMediaCreateArgs} args - Arguments to create a PlaylistMedia.
+     * @example
+     * // Create one PlaylistMedia
+     * const PlaylistMedia = await prisma.playlistMedia.create({
+     *   data: {
+     *     // ... data to create a PlaylistMedia
+     *   }
+     * })
+     * 
+     */
+    create<T extends PlaylistMediaCreateArgs>(args: SelectSubset<T, PlaylistMediaCreateArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many PlaylistMedias.
+     * @param {PlaylistMediaCreateManyArgs} args - Arguments to create many PlaylistMedias.
+     * @example
+     * // Create many PlaylistMedias
+     * const playlistMedia = await prisma.playlistMedia.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends PlaylistMediaCreateManyArgs>(args?: SelectSubset<T, PlaylistMediaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a PlaylistMedia.
+     * @param {PlaylistMediaDeleteArgs} args - Arguments to delete one PlaylistMedia.
+     * @example
+     * // Delete one PlaylistMedia
+     * const PlaylistMedia = await prisma.playlistMedia.delete({
+     *   where: {
+     *     // ... filter to delete one PlaylistMedia
+     *   }
+     * })
+     * 
+     */
+    delete<T extends PlaylistMediaDeleteArgs>(args: SelectSubset<T, PlaylistMediaDeleteArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one PlaylistMedia.
+     * @param {PlaylistMediaUpdateArgs} args - Arguments to update one PlaylistMedia.
+     * @example
+     * // Update one PlaylistMedia
+     * const playlistMedia = await prisma.playlistMedia.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends PlaylistMediaUpdateArgs>(args: SelectSubset<T, PlaylistMediaUpdateArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more PlaylistMedias.
+     * @param {PlaylistMediaDeleteManyArgs} args - Arguments to filter PlaylistMedias to delete.
+     * @example
+     * // Delete a few PlaylistMedias
+     * const { count } = await prisma.playlistMedia.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends PlaylistMediaDeleteManyArgs>(args?: SelectSubset<T, PlaylistMediaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlaylistMedias.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many PlaylistMedias
+     * const playlistMedia = await prisma.playlistMedia.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends PlaylistMediaUpdateManyArgs>(args: SelectSubset<T, PlaylistMediaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one PlaylistMedia.
+     * @param {PlaylistMediaUpsertArgs} args - Arguments to update or create a PlaylistMedia.
+     * @example
+     * // Update or create a PlaylistMedia
+     * const playlistMedia = await prisma.playlistMedia.upsert({
+     *   create: {
+     *     // ... data to create a PlaylistMedia
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the PlaylistMedia we want to update
+     *   }
+     * })
+     */
+    upsert<T extends PlaylistMediaUpsertArgs>(args: SelectSubset<T, PlaylistMediaUpsertArgs<ExtArgs>>): Prisma__PlaylistMediaClient<$Result.GetResult<Prisma.$PlaylistMediaPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of PlaylistMedias.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaCountArgs} args - Arguments to filter PlaylistMedias to count.
+     * @example
+     * // Count the number of PlaylistMedias
+     * const count = await prisma.playlistMedia.count({
+     *   where: {
+     *     // ... the filter for the PlaylistMedias we want to count
+     *   }
+     * })
+    **/
+    count<T extends PlaylistMediaCountArgs>(
+      args?: Subset<T, PlaylistMediaCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], PlaylistMediaCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a PlaylistMedia.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends PlaylistMediaAggregateArgs>(args: Subset<T, PlaylistMediaAggregateArgs>): Prisma.PrismaPromise<GetPlaylistMediaAggregateType<T>>
+
+    /**
+     * Group by PlaylistMedia.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlaylistMediaGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends PlaylistMediaGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: PlaylistMediaGroupByArgs['orderBy'] }
+        : { orderBy?: PlaylistMediaGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, PlaylistMediaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPlaylistMediaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the PlaylistMedia model
+   */
+  readonly fields: PlaylistMediaFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for PlaylistMedia.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__PlaylistMediaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    playlist<T extends MediaPlaylistDefaultArgs<ExtArgs> = {}>(args?: Subset<T, MediaPlaylistDefaultArgs<ExtArgs>>): Prisma__MediaPlaylistClient<$Result.GetResult<Prisma.$MediaPlaylistPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    media<T extends MediaAssetDefaultArgs<ExtArgs> = {}>(args?: Subset<T, MediaAssetDefaultArgs<ExtArgs>>): Prisma__MediaAssetClient<$Result.GetResult<Prisma.$MediaAssetPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the PlaylistMedia model
+   */
+  interface PlaylistMediaFieldRefs {
+    readonly playlistId: FieldRef<"PlaylistMedia", 'String'>
+    readonly mediaId: FieldRef<"PlaylistMedia", 'String'>
+    readonly orderIndex: FieldRef<"PlaylistMedia", 'Int'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * PlaylistMedia findUnique
+   */
+  export type PlaylistMediaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaylistMedia to fetch.
+     */
+    where: PlaylistMediaWhereUniqueInput
+  }
+
+  /**
+   * PlaylistMedia findUniqueOrThrow
+   */
+  export type PlaylistMediaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaylistMedia to fetch.
+     */
+    where: PlaylistMediaWhereUniqueInput
+  }
+
+  /**
+   * PlaylistMedia findFirst
+   */
+  export type PlaylistMediaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaylistMedia to fetch.
+     */
+    where?: PlaylistMediaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaylistMedias to fetch.
+     */
+    orderBy?: PlaylistMediaOrderByWithRelationInput | PlaylistMediaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlaylistMedias.
+     */
+    cursor?: PlaylistMediaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaylistMedias from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaylistMedias.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlaylistMedias.
+     */
+    distinct?: PlaylistMediaScalarFieldEnum | PlaylistMediaScalarFieldEnum[]
+  }
+
+  /**
+   * PlaylistMedia findFirstOrThrow
+   */
+  export type PlaylistMediaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaylistMedia to fetch.
+     */
+    where?: PlaylistMediaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaylistMedias to fetch.
+     */
+    orderBy?: PlaylistMediaOrderByWithRelationInput | PlaylistMediaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlaylistMedias.
+     */
+    cursor?: PlaylistMediaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaylistMedias from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaylistMedias.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlaylistMedias.
+     */
+    distinct?: PlaylistMediaScalarFieldEnum | PlaylistMediaScalarFieldEnum[]
+  }
+
+  /**
+   * PlaylistMedia findMany
+   */
+  export type PlaylistMediaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * Filter, which PlaylistMedias to fetch.
+     */
+    where?: PlaylistMediaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlaylistMedias to fetch.
+     */
+    orderBy?: PlaylistMediaOrderByWithRelationInput | PlaylistMediaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing PlaylistMedias.
+     */
+    cursor?: PlaylistMediaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlaylistMedias from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlaylistMedias.
+     */
+    skip?: number
+    distinct?: PlaylistMediaScalarFieldEnum | PlaylistMediaScalarFieldEnum[]
+  }
+
+  /**
+   * PlaylistMedia create
+   */
+  export type PlaylistMediaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * The data needed to create a PlaylistMedia.
+     */
+    data: XOR<PlaylistMediaCreateInput, PlaylistMediaUncheckedCreateInput>
+  }
+
+  /**
+   * PlaylistMedia createMany
+   */
+  export type PlaylistMediaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many PlaylistMedias.
+     */
+    data: PlaylistMediaCreateManyInput | PlaylistMediaCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PlaylistMedia update
+   */
+  export type PlaylistMediaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * The data needed to update a PlaylistMedia.
+     */
+    data: XOR<PlaylistMediaUpdateInput, PlaylistMediaUncheckedUpdateInput>
+    /**
+     * Choose, which PlaylistMedia to update.
+     */
+    where: PlaylistMediaWhereUniqueInput
+  }
+
+  /**
+   * PlaylistMedia updateMany
+   */
+  export type PlaylistMediaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update PlaylistMedias.
+     */
+    data: XOR<PlaylistMediaUpdateManyMutationInput, PlaylistMediaUncheckedUpdateManyInput>
+    /**
+     * Filter which PlaylistMedias to update
+     */
+    where?: PlaylistMediaWhereInput
+    /**
+     * Limit how many PlaylistMedias to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlaylistMedia upsert
+   */
+  export type PlaylistMediaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * The filter to search for the PlaylistMedia to update in case it exists.
+     */
+    where: PlaylistMediaWhereUniqueInput
+    /**
+     * In case the PlaylistMedia found by the `where` argument doesn't exist, create a new PlaylistMedia with this data.
+     */
+    create: XOR<PlaylistMediaCreateInput, PlaylistMediaUncheckedCreateInput>
+    /**
+     * In case the PlaylistMedia was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PlaylistMediaUpdateInput, PlaylistMediaUncheckedUpdateInput>
+  }
+
+  /**
+   * PlaylistMedia delete
+   */
+  export type PlaylistMediaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
+    /**
+     * Filter which PlaylistMedia to delete.
+     */
+    where: PlaylistMediaWhereUniqueInput
+  }
+
+  /**
+   * PlaylistMedia deleteMany
+   */
+  export type PlaylistMediaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlaylistMedias to delete
+     */
+    where?: PlaylistMediaWhereInput
+    /**
+     * Limit how many PlaylistMedias to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlaylistMedia without action
+   */
+  export type PlaylistMediaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlaylistMedia
+     */
+    select?: PlaylistMediaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlaylistMedia
+     */
+    omit?: PlaylistMediaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlaylistMediaInclude<ExtArgs> | null
   }
 
 
@@ -27536,6 +30849,43 @@ export namespace Prisma {
   export type SermonTopicMapScalarFieldEnum = (typeof SermonTopicMapScalarFieldEnum)[keyof typeof SermonTopicMapScalarFieldEnum]
 
 
+  export const MediaAssetScalarFieldEnum: {
+    id: 'id',
+    title: 'title',
+    kind: 'kind',
+    mimeType: 'mimeType',
+    size: 'size',
+    storageKey: 'storageKey',
+    url: 'url',
+    createdAt: 'createdAt'
+  };
+
+  export type MediaAssetScalarFieldEnum = (typeof MediaAssetScalarFieldEnum)[keyof typeof MediaAssetScalarFieldEnum]
+
+
+  export const MediaPlaylistScalarFieldEnum: {
+    id: 'id',
+    slug: 'slug',
+    title: 'title',
+    year: 'year',
+    description: 'description',
+    replaceExisting: 'replaceExisting',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type MediaPlaylistScalarFieldEnum = (typeof MediaPlaylistScalarFieldEnum)[keyof typeof MediaPlaylistScalarFieldEnum]
+
+
+  export const PlaylistMediaScalarFieldEnum: {
+    playlistId: 'playlistId',
+    mediaId: 'mediaId',
+    orderIndex: 'orderIndex'
+  };
+
+  export type PlaylistMediaScalarFieldEnum = (typeof PlaylistMediaScalarFieldEnum)[keyof typeof PlaylistMediaScalarFieldEnum]
+
+
   export const ReadingPlanScalarFieldEnum: {
     id: 'id',
     name: 'name',
@@ -27887,6 +31237,35 @@ export namespace Prisma {
   export type SermonTopicMapOrderByRelevanceFieldEnum = (typeof SermonTopicMapOrderByRelevanceFieldEnum)[keyof typeof SermonTopicMapOrderByRelevanceFieldEnum]
 
 
+  export const MediaAssetOrderByRelevanceFieldEnum: {
+    id: 'id',
+    title: 'title',
+    mimeType: 'mimeType',
+    storageKey: 'storageKey',
+    url: 'url'
+  };
+
+  export type MediaAssetOrderByRelevanceFieldEnum = (typeof MediaAssetOrderByRelevanceFieldEnum)[keyof typeof MediaAssetOrderByRelevanceFieldEnum]
+
+
+  export const MediaPlaylistOrderByRelevanceFieldEnum: {
+    id: 'id',
+    slug: 'slug',
+    title: 'title',
+    description: 'description'
+  };
+
+  export type MediaPlaylistOrderByRelevanceFieldEnum = (typeof MediaPlaylistOrderByRelevanceFieldEnum)[keyof typeof MediaPlaylistOrderByRelevanceFieldEnum]
+
+
+  export const PlaylistMediaOrderByRelevanceFieldEnum: {
+    playlistId: 'playlistId',
+    mediaId: 'mediaId'
+  };
+
+  export type PlaylistMediaOrderByRelevanceFieldEnum = (typeof PlaylistMediaOrderByRelevanceFieldEnum)[keyof typeof PlaylistMediaOrderByRelevanceFieldEnum]
+
+
   export const ReadingPlanOrderByRelevanceFieldEnum: {
     id: 'id',
     name: 'name',
@@ -28122,6 +31501,13 @@ export namespace Prisma {
    * Reference to a field of type 'Boolean'
    */
   export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
+
+  /**
+   * Reference to a field of type 'MediaKind'
+   */
+  export type EnumMediaKindFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'MediaKind'>
     
 
 
@@ -28777,6 +32163,205 @@ export namespace Prisma {
     sermonId?: StringWithAggregatesFilter<"SermonTopicMap"> | string
     topicId?: StringWithAggregatesFilter<"SermonTopicMap"> | string
     createdAt?: DateTimeWithAggregatesFilter<"SermonTopicMap"> | Date | string
+  }
+
+  export type MediaAssetWhereInput = {
+    AND?: MediaAssetWhereInput | MediaAssetWhereInput[]
+    OR?: MediaAssetWhereInput[]
+    NOT?: MediaAssetWhereInput | MediaAssetWhereInput[]
+    id?: StringFilter<"MediaAsset"> | string
+    title?: StringFilter<"MediaAsset"> | string
+    kind?: EnumMediaKindFilter<"MediaAsset"> | $Enums.MediaKind
+    mimeType?: StringFilter<"MediaAsset"> | string
+    size?: IntFilter<"MediaAsset"> | number
+    storageKey?: StringFilter<"MediaAsset"> | string
+    url?: StringFilter<"MediaAsset"> | string
+    createdAt?: DateTimeFilter<"MediaAsset"> | Date | string
+    playlistMap?: PlaylistMediaListRelationFilter
+  }
+
+  export type MediaAssetOrderByWithRelationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    kind?: SortOrder
+    mimeType?: SortOrder
+    size?: SortOrder
+    storageKey?: SortOrder
+    url?: SortOrder
+    createdAt?: SortOrder
+    playlistMap?: PlaylistMediaOrderByRelationAggregateInput
+    _relevance?: MediaAssetOrderByRelevanceInput
+  }
+
+  export type MediaAssetWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    storageKey?: string
+    AND?: MediaAssetWhereInput | MediaAssetWhereInput[]
+    OR?: MediaAssetWhereInput[]
+    NOT?: MediaAssetWhereInput | MediaAssetWhereInput[]
+    title?: StringFilter<"MediaAsset"> | string
+    kind?: EnumMediaKindFilter<"MediaAsset"> | $Enums.MediaKind
+    mimeType?: StringFilter<"MediaAsset"> | string
+    size?: IntFilter<"MediaAsset"> | number
+    url?: StringFilter<"MediaAsset"> | string
+    createdAt?: DateTimeFilter<"MediaAsset"> | Date | string
+    playlistMap?: PlaylistMediaListRelationFilter
+  }, "id" | "storageKey">
+
+  export type MediaAssetOrderByWithAggregationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    kind?: SortOrder
+    mimeType?: SortOrder
+    size?: SortOrder
+    storageKey?: SortOrder
+    url?: SortOrder
+    createdAt?: SortOrder
+    _count?: MediaAssetCountOrderByAggregateInput
+    _avg?: MediaAssetAvgOrderByAggregateInput
+    _max?: MediaAssetMaxOrderByAggregateInput
+    _min?: MediaAssetMinOrderByAggregateInput
+    _sum?: MediaAssetSumOrderByAggregateInput
+  }
+
+  export type MediaAssetScalarWhereWithAggregatesInput = {
+    AND?: MediaAssetScalarWhereWithAggregatesInput | MediaAssetScalarWhereWithAggregatesInput[]
+    OR?: MediaAssetScalarWhereWithAggregatesInput[]
+    NOT?: MediaAssetScalarWhereWithAggregatesInput | MediaAssetScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"MediaAsset"> | string
+    title?: StringWithAggregatesFilter<"MediaAsset"> | string
+    kind?: EnumMediaKindWithAggregatesFilter<"MediaAsset"> | $Enums.MediaKind
+    mimeType?: StringWithAggregatesFilter<"MediaAsset"> | string
+    size?: IntWithAggregatesFilter<"MediaAsset"> | number
+    storageKey?: StringWithAggregatesFilter<"MediaAsset"> | string
+    url?: StringWithAggregatesFilter<"MediaAsset"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"MediaAsset"> | Date | string
+  }
+
+  export type MediaPlaylistWhereInput = {
+    AND?: MediaPlaylistWhereInput | MediaPlaylistWhereInput[]
+    OR?: MediaPlaylistWhereInput[]
+    NOT?: MediaPlaylistWhereInput | MediaPlaylistWhereInput[]
+    id?: StringFilter<"MediaPlaylist"> | string
+    slug?: StringFilter<"MediaPlaylist"> | string
+    title?: StringFilter<"MediaPlaylist"> | string
+    year?: IntNullableFilter<"MediaPlaylist"> | number | null
+    description?: StringFilter<"MediaPlaylist"> | string
+    replaceExisting?: BoolFilter<"MediaPlaylist"> | boolean
+    createdAt?: DateTimeFilter<"MediaPlaylist"> | Date | string
+    updatedAt?: DateTimeFilter<"MediaPlaylist"> | Date | string
+    mediaItems?: PlaylistMediaListRelationFilter
+  }
+
+  export type MediaPlaylistOrderByWithRelationInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    year?: SortOrderInput | SortOrder
+    description?: SortOrder
+    replaceExisting?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    mediaItems?: PlaylistMediaOrderByRelationAggregateInput
+    _relevance?: MediaPlaylistOrderByRelevanceInput
+  }
+
+  export type MediaPlaylistWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    slug?: string
+    AND?: MediaPlaylistWhereInput | MediaPlaylistWhereInput[]
+    OR?: MediaPlaylistWhereInput[]
+    NOT?: MediaPlaylistWhereInput | MediaPlaylistWhereInput[]
+    title?: StringFilter<"MediaPlaylist"> | string
+    year?: IntNullableFilter<"MediaPlaylist"> | number | null
+    description?: StringFilter<"MediaPlaylist"> | string
+    replaceExisting?: BoolFilter<"MediaPlaylist"> | boolean
+    createdAt?: DateTimeFilter<"MediaPlaylist"> | Date | string
+    updatedAt?: DateTimeFilter<"MediaPlaylist"> | Date | string
+    mediaItems?: PlaylistMediaListRelationFilter
+  }, "id" | "slug">
+
+  export type MediaPlaylistOrderByWithAggregationInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    year?: SortOrderInput | SortOrder
+    description?: SortOrder
+    replaceExisting?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: MediaPlaylistCountOrderByAggregateInput
+    _avg?: MediaPlaylistAvgOrderByAggregateInput
+    _max?: MediaPlaylistMaxOrderByAggregateInput
+    _min?: MediaPlaylistMinOrderByAggregateInput
+    _sum?: MediaPlaylistSumOrderByAggregateInput
+  }
+
+  export type MediaPlaylistScalarWhereWithAggregatesInput = {
+    AND?: MediaPlaylistScalarWhereWithAggregatesInput | MediaPlaylistScalarWhereWithAggregatesInput[]
+    OR?: MediaPlaylistScalarWhereWithAggregatesInput[]
+    NOT?: MediaPlaylistScalarWhereWithAggregatesInput | MediaPlaylistScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"MediaPlaylist"> | string
+    slug?: StringWithAggregatesFilter<"MediaPlaylist"> | string
+    title?: StringWithAggregatesFilter<"MediaPlaylist"> | string
+    year?: IntNullableWithAggregatesFilter<"MediaPlaylist"> | number | null
+    description?: StringWithAggregatesFilter<"MediaPlaylist"> | string
+    replaceExisting?: BoolWithAggregatesFilter<"MediaPlaylist"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"MediaPlaylist"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"MediaPlaylist"> | Date | string
+  }
+
+  export type PlaylistMediaWhereInput = {
+    AND?: PlaylistMediaWhereInput | PlaylistMediaWhereInput[]
+    OR?: PlaylistMediaWhereInput[]
+    NOT?: PlaylistMediaWhereInput | PlaylistMediaWhereInput[]
+    playlistId?: StringFilter<"PlaylistMedia"> | string
+    mediaId?: StringFilter<"PlaylistMedia"> | string
+    orderIndex?: IntFilter<"PlaylistMedia"> | number
+    playlist?: XOR<MediaPlaylistScalarRelationFilter, MediaPlaylistWhereInput>
+    media?: XOR<MediaAssetScalarRelationFilter, MediaAssetWhereInput>
+  }
+
+  export type PlaylistMediaOrderByWithRelationInput = {
+    playlistId?: SortOrder
+    mediaId?: SortOrder
+    orderIndex?: SortOrder
+    playlist?: MediaPlaylistOrderByWithRelationInput
+    media?: MediaAssetOrderByWithRelationInput
+    _relevance?: PlaylistMediaOrderByRelevanceInput
+  }
+
+  export type PlaylistMediaWhereUniqueInput = Prisma.AtLeast<{
+    playlistId_orderIndex?: PlaylistMediaPlaylistIdOrderIndexCompoundUniqueInput
+    playlistId_mediaId?: PlaylistMediaPlaylistIdMediaIdCompoundUniqueInput
+    AND?: PlaylistMediaWhereInput | PlaylistMediaWhereInput[]
+    OR?: PlaylistMediaWhereInput[]
+    NOT?: PlaylistMediaWhereInput | PlaylistMediaWhereInput[]
+    playlistId?: StringFilter<"PlaylistMedia"> | string
+    mediaId?: StringFilter<"PlaylistMedia"> | string
+    orderIndex?: IntFilter<"PlaylistMedia"> | number
+    playlist?: XOR<MediaPlaylistScalarRelationFilter, MediaPlaylistWhereInput>
+    media?: XOR<MediaAssetScalarRelationFilter, MediaAssetWhereInput>
+  }, "playlistId_mediaId" | "playlistId_orderIndex">
+
+  export type PlaylistMediaOrderByWithAggregationInput = {
+    playlistId?: SortOrder
+    mediaId?: SortOrder
+    orderIndex?: SortOrder
+    _count?: PlaylistMediaCountOrderByAggregateInput
+    _avg?: PlaylistMediaAvgOrderByAggregateInput
+    _max?: PlaylistMediaMaxOrderByAggregateInput
+    _min?: PlaylistMediaMinOrderByAggregateInput
+    _sum?: PlaylistMediaSumOrderByAggregateInput
+  }
+
+  export type PlaylistMediaScalarWhereWithAggregatesInput = {
+    AND?: PlaylistMediaScalarWhereWithAggregatesInput | PlaylistMediaScalarWhereWithAggregatesInput[]
+    OR?: PlaylistMediaScalarWhereWithAggregatesInput[]
+    NOT?: PlaylistMediaScalarWhereWithAggregatesInput | PlaylistMediaScalarWhereWithAggregatesInput[]
+    playlistId?: StringWithAggregatesFilter<"PlaylistMedia"> | string
+    mediaId?: StringWithAggregatesFilter<"PlaylistMedia"> | string
+    orderIndex?: IntWithAggregatesFilter<"PlaylistMedia"> | number
   }
 
   export type ReadingPlanWhereInput = {
@@ -30627,6 +34212,208 @@ export namespace Prisma {
     sermonId?: StringFieldUpdateOperationsInput | string
     topicId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaAssetCreateInput = {
+    id?: string
+    title: string
+    kind: $Enums.MediaKind
+    mimeType: string
+    size: number
+    storageKey: string
+    url: string
+    createdAt?: Date | string
+    playlistMap?: PlaylistMediaCreateNestedManyWithoutMediaInput
+  }
+
+  export type MediaAssetUncheckedCreateInput = {
+    id?: string
+    title: string
+    kind: $Enums.MediaKind
+    mimeType: string
+    size: number
+    storageKey: string
+    url: string
+    createdAt?: Date | string
+    playlistMap?: PlaylistMediaUncheckedCreateNestedManyWithoutMediaInput
+  }
+
+  export type MediaAssetUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    kind?: EnumMediaKindFieldUpdateOperationsInput | $Enums.MediaKind
+    mimeType?: StringFieldUpdateOperationsInput | string
+    size?: IntFieldUpdateOperationsInput | number
+    storageKey?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    playlistMap?: PlaylistMediaUpdateManyWithoutMediaNestedInput
+  }
+
+  export type MediaAssetUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    kind?: EnumMediaKindFieldUpdateOperationsInput | $Enums.MediaKind
+    mimeType?: StringFieldUpdateOperationsInput | string
+    size?: IntFieldUpdateOperationsInput | number
+    storageKey?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    playlistMap?: PlaylistMediaUncheckedUpdateManyWithoutMediaNestedInput
+  }
+
+  export type MediaAssetCreateManyInput = {
+    id?: string
+    title: string
+    kind: $Enums.MediaKind
+    mimeType: string
+    size: number
+    storageKey: string
+    url: string
+    createdAt?: Date | string
+  }
+
+  export type MediaAssetUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    kind?: EnumMediaKindFieldUpdateOperationsInput | $Enums.MediaKind
+    mimeType?: StringFieldUpdateOperationsInput | string
+    size?: IntFieldUpdateOperationsInput | number
+    storageKey?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaAssetUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    kind?: EnumMediaKindFieldUpdateOperationsInput | $Enums.MediaKind
+    mimeType?: StringFieldUpdateOperationsInput | string
+    size?: IntFieldUpdateOperationsInput | number
+    storageKey?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaPlaylistCreateInput = {
+    id?: string
+    slug: string
+    title: string
+    year?: number | null
+    description: string
+    replaceExisting?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mediaItems?: PlaylistMediaCreateNestedManyWithoutPlaylistInput
+  }
+
+  export type MediaPlaylistUncheckedCreateInput = {
+    id?: string
+    slug: string
+    title: string
+    year?: number | null
+    description: string
+    replaceExisting?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    mediaItems?: PlaylistMediaUncheckedCreateNestedManyWithoutPlaylistInput
+  }
+
+  export type MediaPlaylistUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    year?: NullableIntFieldUpdateOperationsInput | number | null
+    description?: StringFieldUpdateOperationsInput | string
+    replaceExisting?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mediaItems?: PlaylistMediaUpdateManyWithoutPlaylistNestedInput
+  }
+
+  export type MediaPlaylistUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    year?: NullableIntFieldUpdateOperationsInput | number | null
+    description?: StringFieldUpdateOperationsInput | string
+    replaceExisting?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    mediaItems?: PlaylistMediaUncheckedUpdateManyWithoutPlaylistNestedInput
+  }
+
+  export type MediaPlaylistCreateManyInput = {
+    id?: string
+    slug: string
+    title: string
+    year?: number | null
+    description: string
+    replaceExisting?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MediaPlaylistUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    year?: NullableIntFieldUpdateOperationsInput | number | null
+    description?: StringFieldUpdateOperationsInput | string
+    replaceExisting?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaPlaylistUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    year?: NullableIntFieldUpdateOperationsInput | number | null
+    description?: StringFieldUpdateOperationsInput | string
+    replaceExisting?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlaylistMediaCreateInput = {
+    orderIndex?: number
+    playlist: MediaPlaylistCreateNestedOneWithoutMediaItemsInput
+    media: MediaAssetCreateNestedOneWithoutPlaylistMapInput
+  }
+
+  export type PlaylistMediaUncheckedCreateInput = {
+    playlistId: string
+    mediaId: string
+    orderIndex?: number
+  }
+
+  export type PlaylistMediaUpdateInput = {
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    playlist?: MediaPlaylistUpdateOneRequiredWithoutMediaItemsNestedInput
+    media?: MediaAssetUpdateOneRequiredWithoutPlaylistMapNestedInput
+  }
+
+  export type PlaylistMediaUncheckedUpdateInput = {
+    playlistId?: StringFieldUpdateOperationsInput | string
+    mediaId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type PlaylistMediaCreateManyInput = {
+    playlistId: string
+    mediaId: string
+    orderIndex?: number
+  }
+
+  export type PlaylistMediaUpdateManyMutationInput = {
+    orderIndex?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type PlaylistMediaUncheckedUpdateManyInput = {
+    playlistId?: StringFieldUpdateOperationsInput | string
+    mediaId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReadingPlanCreateInput = {
@@ -32672,6 +36459,179 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
+  export type EnumMediaKindFilter<$PrismaModel = never> = {
+    equals?: $Enums.MediaKind | EnumMediaKindFieldRefInput<$PrismaModel>
+    in?: $Enums.MediaKind[]
+    notIn?: $Enums.MediaKind[]
+    not?: NestedEnumMediaKindFilter<$PrismaModel> | $Enums.MediaKind
+  }
+
+  export type PlaylistMediaListRelationFilter = {
+    every?: PlaylistMediaWhereInput
+    some?: PlaylistMediaWhereInput
+    none?: PlaylistMediaWhereInput
+  }
+
+  export type PlaylistMediaOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type MediaAssetOrderByRelevanceInput = {
+    fields: MediaAssetOrderByRelevanceFieldEnum | MediaAssetOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
+  export type MediaAssetCountOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    kind?: SortOrder
+    mimeType?: SortOrder
+    size?: SortOrder
+    storageKey?: SortOrder
+    url?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MediaAssetAvgOrderByAggregateInput = {
+    size?: SortOrder
+  }
+
+  export type MediaAssetMaxOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    kind?: SortOrder
+    mimeType?: SortOrder
+    size?: SortOrder
+    storageKey?: SortOrder
+    url?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MediaAssetMinOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    kind?: SortOrder
+    mimeType?: SortOrder
+    size?: SortOrder
+    storageKey?: SortOrder
+    url?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MediaAssetSumOrderByAggregateInput = {
+    size?: SortOrder
+  }
+
+  export type EnumMediaKindWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.MediaKind | EnumMediaKindFieldRefInput<$PrismaModel>
+    in?: $Enums.MediaKind[]
+    notIn?: $Enums.MediaKind[]
+    not?: NestedEnumMediaKindWithAggregatesFilter<$PrismaModel> | $Enums.MediaKind
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumMediaKindFilter<$PrismaModel>
+    _max?: NestedEnumMediaKindFilter<$PrismaModel>
+  }
+
+  export type MediaPlaylistOrderByRelevanceInput = {
+    fields: MediaPlaylistOrderByRelevanceFieldEnum | MediaPlaylistOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
+  export type MediaPlaylistCountOrderByAggregateInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    year?: SortOrder
+    description?: SortOrder
+    replaceExisting?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type MediaPlaylistAvgOrderByAggregateInput = {
+    year?: SortOrder
+  }
+
+  export type MediaPlaylistMaxOrderByAggregateInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    year?: SortOrder
+    description?: SortOrder
+    replaceExisting?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type MediaPlaylistMinOrderByAggregateInput = {
+    id?: SortOrder
+    slug?: SortOrder
+    title?: SortOrder
+    year?: SortOrder
+    description?: SortOrder
+    replaceExisting?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type MediaPlaylistSumOrderByAggregateInput = {
+    year?: SortOrder
+  }
+
+  export type MediaPlaylistScalarRelationFilter = {
+    is?: MediaPlaylistWhereInput
+    isNot?: MediaPlaylistWhereInput
+  }
+
+  export type MediaAssetScalarRelationFilter = {
+    is?: MediaAssetWhereInput
+    isNot?: MediaAssetWhereInput
+  }
+
+  export type PlaylistMediaOrderByRelevanceInput = {
+    fields: PlaylistMediaOrderByRelevanceFieldEnum | PlaylistMediaOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
+  export type PlaylistMediaPlaylistIdOrderIndexCompoundUniqueInput = {
+    playlistId: string
+    orderIndex: number
+  }
+
+  export type PlaylistMediaPlaylistIdMediaIdCompoundUniqueInput = {
+    playlistId: string
+    mediaId: string
+  }
+
+  export type PlaylistMediaCountOrderByAggregateInput = {
+    playlistId?: SortOrder
+    mediaId?: SortOrder
+    orderIndex?: SortOrder
+  }
+
+  export type PlaylistMediaAvgOrderByAggregateInput = {
+    orderIndex?: SortOrder
+  }
+
+  export type PlaylistMediaMaxOrderByAggregateInput = {
+    playlistId?: SortOrder
+    mediaId?: SortOrder
+    orderIndex?: SortOrder
+  }
+
+  export type PlaylistMediaMinOrderByAggregateInput = {
+    playlistId?: SortOrder
+    mediaId?: SortOrder
+    orderIndex?: SortOrder
+  }
+
+  export type PlaylistMediaSumOrderByAggregateInput = {
+    orderIndex?: SortOrder
+  }
+
   export type EnumReadingPlanTypeFilter<$PrismaModel = never> = {
     equals?: $Enums.ReadingPlanType | EnumReadingPlanTypeFieldRefInput<$PrismaModel>
     in?: $Enums.ReadingPlanType[]
@@ -34530,6 +38490,122 @@ export namespace Prisma {
     update?: XOR<XOR<SermonTopicUpdateToOneWithWhereWithoutSermonMapsInput, SermonTopicUpdateWithoutSermonMapsInput>, SermonTopicUncheckedUpdateWithoutSermonMapsInput>
   }
 
+  export type PlaylistMediaCreateNestedManyWithoutMediaInput = {
+    create?: XOR<PlaylistMediaCreateWithoutMediaInput, PlaylistMediaUncheckedCreateWithoutMediaInput> | PlaylistMediaCreateWithoutMediaInput[] | PlaylistMediaUncheckedCreateWithoutMediaInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutMediaInput | PlaylistMediaCreateOrConnectWithoutMediaInput[]
+    createMany?: PlaylistMediaCreateManyMediaInputEnvelope
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+  }
+
+  export type PlaylistMediaUncheckedCreateNestedManyWithoutMediaInput = {
+    create?: XOR<PlaylistMediaCreateWithoutMediaInput, PlaylistMediaUncheckedCreateWithoutMediaInput> | PlaylistMediaCreateWithoutMediaInput[] | PlaylistMediaUncheckedCreateWithoutMediaInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutMediaInput | PlaylistMediaCreateOrConnectWithoutMediaInput[]
+    createMany?: PlaylistMediaCreateManyMediaInputEnvelope
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+  }
+
+  export type EnumMediaKindFieldUpdateOperationsInput = {
+    set?: $Enums.MediaKind
+  }
+
+  export type PlaylistMediaUpdateManyWithoutMediaNestedInput = {
+    create?: XOR<PlaylistMediaCreateWithoutMediaInput, PlaylistMediaUncheckedCreateWithoutMediaInput> | PlaylistMediaCreateWithoutMediaInput[] | PlaylistMediaUncheckedCreateWithoutMediaInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutMediaInput | PlaylistMediaCreateOrConnectWithoutMediaInput[]
+    upsert?: PlaylistMediaUpsertWithWhereUniqueWithoutMediaInput | PlaylistMediaUpsertWithWhereUniqueWithoutMediaInput[]
+    createMany?: PlaylistMediaCreateManyMediaInputEnvelope
+    set?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    disconnect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    delete?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    update?: PlaylistMediaUpdateWithWhereUniqueWithoutMediaInput | PlaylistMediaUpdateWithWhereUniqueWithoutMediaInput[]
+    updateMany?: PlaylistMediaUpdateManyWithWhereWithoutMediaInput | PlaylistMediaUpdateManyWithWhereWithoutMediaInput[]
+    deleteMany?: PlaylistMediaScalarWhereInput | PlaylistMediaScalarWhereInput[]
+  }
+
+  export type PlaylistMediaUncheckedUpdateManyWithoutMediaNestedInput = {
+    create?: XOR<PlaylistMediaCreateWithoutMediaInput, PlaylistMediaUncheckedCreateWithoutMediaInput> | PlaylistMediaCreateWithoutMediaInput[] | PlaylistMediaUncheckedCreateWithoutMediaInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutMediaInput | PlaylistMediaCreateOrConnectWithoutMediaInput[]
+    upsert?: PlaylistMediaUpsertWithWhereUniqueWithoutMediaInput | PlaylistMediaUpsertWithWhereUniqueWithoutMediaInput[]
+    createMany?: PlaylistMediaCreateManyMediaInputEnvelope
+    set?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    disconnect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    delete?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    update?: PlaylistMediaUpdateWithWhereUniqueWithoutMediaInput | PlaylistMediaUpdateWithWhereUniqueWithoutMediaInput[]
+    updateMany?: PlaylistMediaUpdateManyWithWhereWithoutMediaInput | PlaylistMediaUpdateManyWithWhereWithoutMediaInput[]
+    deleteMany?: PlaylistMediaScalarWhereInput | PlaylistMediaScalarWhereInput[]
+  }
+
+  export type PlaylistMediaCreateNestedManyWithoutPlaylistInput = {
+    create?: XOR<PlaylistMediaCreateWithoutPlaylistInput, PlaylistMediaUncheckedCreateWithoutPlaylistInput> | PlaylistMediaCreateWithoutPlaylistInput[] | PlaylistMediaUncheckedCreateWithoutPlaylistInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutPlaylistInput | PlaylistMediaCreateOrConnectWithoutPlaylistInput[]
+    createMany?: PlaylistMediaCreateManyPlaylistInputEnvelope
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+  }
+
+  export type PlaylistMediaUncheckedCreateNestedManyWithoutPlaylistInput = {
+    create?: XOR<PlaylistMediaCreateWithoutPlaylistInput, PlaylistMediaUncheckedCreateWithoutPlaylistInput> | PlaylistMediaCreateWithoutPlaylistInput[] | PlaylistMediaUncheckedCreateWithoutPlaylistInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutPlaylistInput | PlaylistMediaCreateOrConnectWithoutPlaylistInput[]
+    createMany?: PlaylistMediaCreateManyPlaylistInputEnvelope
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+  }
+
+  export type PlaylistMediaUpdateManyWithoutPlaylistNestedInput = {
+    create?: XOR<PlaylistMediaCreateWithoutPlaylistInput, PlaylistMediaUncheckedCreateWithoutPlaylistInput> | PlaylistMediaCreateWithoutPlaylistInput[] | PlaylistMediaUncheckedCreateWithoutPlaylistInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutPlaylistInput | PlaylistMediaCreateOrConnectWithoutPlaylistInput[]
+    upsert?: PlaylistMediaUpsertWithWhereUniqueWithoutPlaylistInput | PlaylistMediaUpsertWithWhereUniqueWithoutPlaylistInput[]
+    createMany?: PlaylistMediaCreateManyPlaylistInputEnvelope
+    set?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    disconnect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    delete?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    update?: PlaylistMediaUpdateWithWhereUniqueWithoutPlaylistInput | PlaylistMediaUpdateWithWhereUniqueWithoutPlaylistInput[]
+    updateMany?: PlaylistMediaUpdateManyWithWhereWithoutPlaylistInput | PlaylistMediaUpdateManyWithWhereWithoutPlaylistInput[]
+    deleteMany?: PlaylistMediaScalarWhereInput | PlaylistMediaScalarWhereInput[]
+  }
+
+  export type PlaylistMediaUncheckedUpdateManyWithoutPlaylistNestedInput = {
+    create?: XOR<PlaylistMediaCreateWithoutPlaylistInput, PlaylistMediaUncheckedCreateWithoutPlaylistInput> | PlaylistMediaCreateWithoutPlaylistInput[] | PlaylistMediaUncheckedCreateWithoutPlaylistInput[]
+    connectOrCreate?: PlaylistMediaCreateOrConnectWithoutPlaylistInput | PlaylistMediaCreateOrConnectWithoutPlaylistInput[]
+    upsert?: PlaylistMediaUpsertWithWhereUniqueWithoutPlaylistInput | PlaylistMediaUpsertWithWhereUniqueWithoutPlaylistInput[]
+    createMany?: PlaylistMediaCreateManyPlaylistInputEnvelope
+    set?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    disconnect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    delete?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    connect?: PlaylistMediaWhereUniqueInput | PlaylistMediaWhereUniqueInput[]
+    update?: PlaylistMediaUpdateWithWhereUniqueWithoutPlaylistInput | PlaylistMediaUpdateWithWhereUniqueWithoutPlaylistInput[]
+    updateMany?: PlaylistMediaUpdateManyWithWhereWithoutPlaylistInput | PlaylistMediaUpdateManyWithWhereWithoutPlaylistInput[]
+    deleteMany?: PlaylistMediaScalarWhereInput | PlaylistMediaScalarWhereInput[]
+  }
+
+  export type MediaPlaylistCreateNestedOneWithoutMediaItemsInput = {
+    create?: XOR<MediaPlaylistCreateWithoutMediaItemsInput, MediaPlaylistUncheckedCreateWithoutMediaItemsInput>
+    connectOrCreate?: MediaPlaylistCreateOrConnectWithoutMediaItemsInput
+    connect?: MediaPlaylistWhereUniqueInput
+  }
+
+  export type MediaAssetCreateNestedOneWithoutPlaylistMapInput = {
+    create?: XOR<MediaAssetCreateWithoutPlaylistMapInput, MediaAssetUncheckedCreateWithoutPlaylistMapInput>
+    connectOrCreate?: MediaAssetCreateOrConnectWithoutPlaylistMapInput
+    connect?: MediaAssetWhereUniqueInput
+  }
+
+  export type MediaPlaylistUpdateOneRequiredWithoutMediaItemsNestedInput = {
+    create?: XOR<MediaPlaylistCreateWithoutMediaItemsInput, MediaPlaylistUncheckedCreateWithoutMediaItemsInput>
+    connectOrCreate?: MediaPlaylistCreateOrConnectWithoutMediaItemsInput
+    upsert?: MediaPlaylistUpsertWithoutMediaItemsInput
+    connect?: MediaPlaylistWhereUniqueInput
+    update?: XOR<XOR<MediaPlaylistUpdateToOneWithWhereWithoutMediaItemsInput, MediaPlaylistUpdateWithoutMediaItemsInput>, MediaPlaylistUncheckedUpdateWithoutMediaItemsInput>
+  }
+
+  export type MediaAssetUpdateOneRequiredWithoutPlaylistMapNestedInput = {
+    create?: XOR<MediaAssetCreateWithoutPlaylistMapInput, MediaAssetUncheckedCreateWithoutPlaylistMapInput>
+    connectOrCreate?: MediaAssetCreateOrConnectWithoutPlaylistMapInput
+    upsert?: MediaAssetUpsertWithoutPlaylistMapInput
+    connect?: MediaAssetWhereUniqueInput
+    update?: XOR<XOR<MediaAssetUpdateToOneWithWhereWithoutPlaylistMapInput, MediaAssetUpdateWithoutPlaylistMapInput>, MediaAssetUncheckedUpdateWithoutPlaylistMapInput>
+  }
+
   export type ReadingPlanItemCreateNestedManyWithoutPlanInput = {
     create?: XOR<ReadingPlanItemCreateWithoutPlanInput, ReadingPlanItemUncheckedCreateWithoutPlanInput> | ReadingPlanItemCreateWithoutPlanInput[] | ReadingPlanItemUncheckedCreateWithoutPlanInput[]
     connectOrCreate?: ReadingPlanItemCreateOrConnectWithoutPlanInput | ReadingPlanItemCreateOrConnectWithoutPlanInput[]
@@ -35303,6 +39379,23 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type NestedEnumMediaKindFilter<$PrismaModel = never> = {
+    equals?: $Enums.MediaKind | EnumMediaKindFieldRefInput<$PrismaModel>
+    in?: $Enums.MediaKind[]
+    notIn?: $Enums.MediaKind[]
+    not?: NestedEnumMediaKindFilter<$PrismaModel> | $Enums.MediaKind
+  }
+
+  export type NestedEnumMediaKindWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.MediaKind | EnumMediaKindFieldRefInput<$PrismaModel>
+    in?: $Enums.MediaKind[]
+    notIn?: $Enums.MediaKind[]
+    not?: NestedEnumMediaKindWithAggregatesFilter<$PrismaModel> | $Enums.MediaKind
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumMediaKindFilter<$PrismaModel>
+    _max?: NestedEnumMediaKindFilter<$PrismaModel>
   }
 
   export type NestedEnumReadingPlanTypeFilter<$PrismaModel = never> = {
@@ -36906,6 +40999,207 @@ export namespace Prisma {
     slug?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlaylistMediaCreateWithoutMediaInput = {
+    orderIndex?: number
+    playlist: MediaPlaylistCreateNestedOneWithoutMediaItemsInput
+  }
+
+  export type PlaylistMediaUncheckedCreateWithoutMediaInput = {
+    playlistId: string
+    orderIndex?: number
+  }
+
+  export type PlaylistMediaCreateOrConnectWithoutMediaInput = {
+    where: PlaylistMediaWhereUniqueInput
+    create: XOR<PlaylistMediaCreateWithoutMediaInput, PlaylistMediaUncheckedCreateWithoutMediaInput>
+  }
+
+  export type PlaylistMediaCreateManyMediaInputEnvelope = {
+    data: PlaylistMediaCreateManyMediaInput | PlaylistMediaCreateManyMediaInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PlaylistMediaUpsertWithWhereUniqueWithoutMediaInput = {
+    where: PlaylistMediaWhereUniqueInput
+    update: XOR<PlaylistMediaUpdateWithoutMediaInput, PlaylistMediaUncheckedUpdateWithoutMediaInput>
+    create: XOR<PlaylistMediaCreateWithoutMediaInput, PlaylistMediaUncheckedCreateWithoutMediaInput>
+  }
+
+  export type PlaylistMediaUpdateWithWhereUniqueWithoutMediaInput = {
+    where: PlaylistMediaWhereUniqueInput
+    data: XOR<PlaylistMediaUpdateWithoutMediaInput, PlaylistMediaUncheckedUpdateWithoutMediaInput>
+  }
+
+  export type PlaylistMediaUpdateManyWithWhereWithoutMediaInput = {
+    where: PlaylistMediaScalarWhereInput
+    data: XOR<PlaylistMediaUpdateManyMutationInput, PlaylistMediaUncheckedUpdateManyWithoutMediaInput>
+  }
+
+  export type PlaylistMediaScalarWhereInput = {
+    AND?: PlaylistMediaScalarWhereInput | PlaylistMediaScalarWhereInput[]
+    OR?: PlaylistMediaScalarWhereInput[]
+    NOT?: PlaylistMediaScalarWhereInput | PlaylistMediaScalarWhereInput[]
+    playlistId?: StringFilter<"PlaylistMedia"> | string
+    mediaId?: StringFilter<"PlaylistMedia"> | string
+    orderIndex?: IntFilter<"PlaylistMedia"> | number
+  }
+
+  export type PlaylistMediaCreateWithoutPlaylistInput = {
+    orderIndex?: number
+    media: MediaAssetCreateNestedOneWithoutPlaylistMapInput
+  }
+
+  export type PlaylistMediaUncheckedCreateWithoutPlaylistInput = {
+    mediaId: string
+    orderIndex?: number
+  }
+
+  export type PlaylistMediaCreateOrConnectWithoutPlaylistInput = {
+    where: PlaylistMediaWhereUniqueInput
+    create: XOR<PlaylistMediaCreateWithoutPlaylistInput, PlaylistMediaUncheckedCreateWithoutPlaylistInput>
+  }
+
+  export type PlaylistMediaCreateManyPlaylistInputEnvelope = {
+    data: PlaylistMediaCreateManyPlaylistInput | PlaylistMediaCreateManyPlaylistInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PlaylistMediaUpsertWithWhereUniqueWithoutPlaylistInput = {
+    where: PlaylistMediaWhereUniqueInput
+    update: XOR<PlaylistMediaUpdateWithoutPlaylistInput, PlaylistMediaUncheckedUpdateWithoutPlaylistInput>
+    create: XOR<PlaylistMediaCreateWithoutPlaylistInput, PlaylistMediaUncheckedCreateWithoutPlaylistInput>
+  }
+
+  export type PlaylistMediaUpdateWithWhereUniqueWithoutPlaylistInput = {
+    where: PlaylistMediaWhereUniqueInput
+    data: XOR<PlaylistMediaUpdateWithoutPlaylistInput, PlaylistMediaUncheckedUpdateWithoutPlaylistInput>
+  }
+
+  export type PlaylistMediaUpdateManyWithWhereWithoutPlaylistInput = {
+    where: PlaylistMediaScalarWhereInput
+    data: XOR<PlaylistMediaUpdateManyMutationInput, PlaylistMediaUncheckedUpdateManyWithoutPlaylistInput>
+  }
+
+  export type MediaPlaylistCreateWithoutMediaItemsInput = {
+    id?: string
+    slug: string
+    title: string
+    year?: number | null
+    description: string
+    replaceExisting?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MediaPlaylistUncheckedCreateWithoutMediaItemsInput = {
+    id?: string
+    slug: string
+    title: string
+    year?: number | null
+    description: string
+    replaceExisting?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type MediaPlaylistCreateOrConnectWithoutMediaItemsInput = {
+    where: MediaPlaylistWhereUniqueInput
+    create: XOR<MediaPlaylistCreateWithoutMediaItemsInput, MediaPlaylistUncheckedCreateWithoutMediaItemsInput>
+  }
+
+  export type MediaAssetCreateWithoutPlaylistMapInput = {
+    id?: string
+    title: string
+    kind: $Enums.MediaKind
+    mimeType: string
+    size: number
+    storageKey: string
+    url: string
+    createdAt?: Date | string
+  }
+
+  export type MediaAssetUncheckedCreateWithoutPlaylistMapInput = {
+    id?: string
+    title: string
+    kind: $Enums.MediaKind
+    mimeType: string
+    size: number
+    storageKey: string
+    url: string
+    createdAt?: Date | string
+  }
+
+  export type MediaAssetCreateOrConnectWithoutPlaylistMapInput = {
+    where: MediaAssetWhereUniqueInput
+    create: XOR<MediaAssetCreateWithoutPlaylistMapInput, MediaAssetUncheckedCreateWithoutPlaylistMapInput>
+  }
+
+  export type MediaPlaylistUpsertWithoutMediaItemsInput = {
+    update: XOR<MediaPlaylistUpdateWithoutMediaItemsInput, MediaPlaylistUncheckedUpdateWithoutMediaItemsInput>
+    create: XOR<MediaPlaylistCreateWithoutMediaItemsInput, MediaPlaylistUncheckedCreateWithoutMediaItemsInput>
+    where?: MediaPlaylistWhereInput
+  }
+
+  export type MediaPlaylistUpdateToOneWithWhereWithoutMediaItemsInput = {
+    where?: MediaPlaylistWhereInput
+    data: XOR<MediaPlaylistUpdateWithoutMediaItemsInput, MediaPlaylistUncheckedUpdateWithoutMediaItemsInput>
+  }
+
+  export type MediaPlaylistUpdateWithoutMediaItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    year?: NullableIntFieldUpdateOperationsInput | number | null
+    description?: StringFieldUpdateOperationsInput | string
+    replaceExisting?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaPlaylistUncheckedUpdateWithoutMediaItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    year?: NullableIntFieldUpdateOperationsInput | number | null
+    description?: StringFieldUpdateOperationsInput | string
+    replaceExisting?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaAssetUpsertWithoutPlaylistMapInput = {
+    update: XOR<MediaAssetUpdateWithoutPlaylistMapInput, MediaAssetUncheckedUpdateWithoutPlaylistMapInput>
+    create: XOR<MediaAssetCreateWithoutPlaylistMapInput, MediaAssetUncheckedCreateWithoutPlaylistMapInput>
+    where?: MediaAssetWhereInput
+  }
+
+  export type MediaAssetUpdateToOneWithWhereWithoutPlaylistMapInput = {
+    where?: MediaAssetWhereInput
+    data: XOR<MediaAssetUpdateWithoutPlaylistMapInput, MediaAssetUncheckedUpdateWithoutPlaylistMapInput>
+  }
+
+  export type MediaAssetUpdateWithoutPlaylistMapInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    kind?: EnumMediaKindFieldUpdateOperationsInput | $Enums.MediaKind
+    mimeType?: StringFieldUpdateOperationsInput | string
+    size?: IntFieldUpdateOperationsInput | number
+    storageKey?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MediaAssetUncheckedUpdateWithoutPlaylistMapInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    kind?: EnumMediaKindFieldUpdateOperationsInput | $Enums.MediaKind
+    mimeType?: StringFieldUpdateOperationsInput | string
+    size?: IntFieldUpdateOperationsInput | number
+    storageKey?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReadingPlanItemCreateWithoutPlanInput = {
@@ -39916,6 +44210,46 @@ export namespace Prisma {
   export type SermonTopicMapUncheckedUpdateManyWithoutTopicInput = {
     sermonId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlaylistMediaCreateManyMediaInput = {
+    playlistId: string
+    orderIndex?: number
+  }
+
+  export type PlaylistMediaUpdateWithoutMediaInput = {
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    playlist?: MediaPlaylistUpdateOneRequiredWithoutMediaItemsNestedInput
+  }
+
+  export type PlaylistMediaUncheckedUpdateWithoutMediaInput = {
+    playlistId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type PlaylistMediaUncheckedUpdateManyWithoutMediaInput = {
+    playlistId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type PlaylistMediaCreateManyPlaylistInput = {
+    mediaId: string
+    orderIndex?: number
+  }
+
+  export type PlaylistMediaUpdateWithoutPlaylistInput = {
+    orderIndex?: IntFieldUpdateOperationsInput | number
+    media?: MediaAssetUpdateOneRequiredWithoutPlaylistMapNestedInput
+  }
+
+  export type PlaylistMediaUncheckedUpdateWithoutPlaylistInput = {
+    mediaId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type PlaylistMediaUncheckedUpdateManyWithoutPlaylistInput = {
+    mediaId?: StringFieldUpdateOperationsInput | string
+    orderIndex?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReadingPlanItemCreateManyPlanInput = {

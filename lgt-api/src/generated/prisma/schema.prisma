@@ -81,6 +81,12 @@ enum ModerationStatus {
   REJECTED
 }
 
+enum MediaKind {
+  AUDIO
+  VIDEO
+  IMAGE
+}
+
 model User {
   id                    String             @id @default(cuid())
   name                  String
@@ -193,6 +199,45 @@ model SermonTopicMap {
 
   @@id([sermonId, topicId])
   @@index([topicId])
+}
+
+model MediaAsset {
+  id          String          @id @default(cuid())
+  title       String
+  kind        MediaKind
+  mimeType    String
+  size        Int
+  storageKey  String          @unique
+  url         String
+  createdAt   DateTime        @default(now())
+  playlistMap PlaylistMedia[]
+
+  @@index([kind])
+  @@index([createdAt])
+}
+
+model MediaPlaylist {
+  id              String          @id @default(cuid())
+  slug            String          @unique
+  title           String
+  year            Int?
+  description     String          @db.Text
+  replaceExisting Boolean         @default(false)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  mediaItems      PlaylistMedia[]
+}
+
+model PlaylistMedia {
+  playlistId String
+  mediaId    String
+  orderIndex Int           @default(0)
+  playlist   MediaPlaylist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  media      MediaAsset    @relation(fields: [mediaId], references: [id], onDelete: Cascade)
+
+  @@id([playlistId, mediaId])
+  @@unique([playlistId, orderIndex])
+  @@index([mediaId])
 }
 
 model ReadingPlan {

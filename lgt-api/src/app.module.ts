@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { validateEnv } from './config/validation';
 import { RequestIdMiddleware } from './common/middleware/request-id.middleware';
 import { HealthModule } from './health/health.module';
+import { AdminMediaController, PublicMediaController } from './media/media.controller';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { HealthModule } from './health/health.module';
     }),
     HealthModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, AdminMediaController, PublicMediaController],
   providers: [],
 })
 export class AppModule implements NestModule {

@@ -2,6 +2,7 @@ import { getSourceArchiveEntry, type SourceArchiveEntry } from "@/features/minis
 import { ministryNavigation } from "@/features/ministry/content";
 import { AudioArchive } from "@/components/ministry/audio-archive";
 import { SmartLink } from "@/components/home/smart-link";
+import { UploadedPlaylistMedia } from "@/components/ministry/public-playlists";
 
 export function SourceContentPage({ entry }: { entry: SourceArchiveEntry }) {
   const parts = entry.appPath.split("/").filter(Boolean).slice(0, -1);
@@ -45,7 +46,8 @@ export function SourceContentPage({ entry }: { entry: SourceArchiveEntry }) {
             {entry.date && <p className="mt-3 text-sm text-[var(--color-muted-soft)]">{new Date(entry.date).toLocaleDateString("en", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</p>}
           </header>
           <div className="archive-content px-6 py-7 sm:px-9 sm:py-9" dangerouslySetInnerHTML={{ __html: entry.content }} />
-          {entry.audioTracks?.length ? <div className="px-6 pb-8 sm:px-9"><AudioArchive tracks={entry.audioTracks} /></div> : null}
+          {entry.appPath === "/sermons/audio-sermon-2025" ? <div className="px-6 pb-8 sm:px-9"><UploadedPlaylistMedia slug="audio-sermon-2025" fallbackTracks={entry.audioTracks ?? []} /></div> : entry.audioTracks?.length ? <div className="px-6 pb-8 sm:px-9"><AudioArchive tracks={entry.audioTracks} /></div> : null}
+          {entry.appPath === "/sermons" ? <div className="px-6 pb-8 sm:px-9"><SmartLink href="/sermons/playlists" className="inline-flex items-center rounded-lg bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-white">Open audio and media playlists <span className="ml-2" aria-hidden="true">→</span></SmartLink></div> : null}
         </article>
         <footer className="py-7 text-center text-xs text-[var(--color-muted-soft)]">The Living God Tabernacle · Ministry archive</footer>
       </div>

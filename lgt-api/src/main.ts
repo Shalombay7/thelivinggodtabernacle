@@ -12,6 +12,7 @@ import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 import { adminDashboardAuth } from './common/middleware/admin-dashboard-auth.middleware';
+import { ensureMediaDirectories, mediaDirectory } from './media/media-library';
 
 interface RuntimeAssets {
   publicDir: string;
@@ -90,6 +91,9 @@ async function bootstrap() {
   const { publicDir, nextSiteDir, viewsDir, partialsDir } = resolveRuntimeAssets(__dirname);
 
   app.use('/dashboard', adminDashboardAuth);
+  app.use('/api/admin', adminDashboardAuth);
+  await ensureMediaDirectories();
+  app.useStaticAssets(mediaDirectory, { prefix: '/media' });
 
   if (existsSync(nextSiteDir)) {
     app.useStaticAssets(nextSiteDir);

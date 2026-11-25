@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { VisitorMessage } from "@/components/home/visitor-notifications";
 
 const DISMISSAL_KEY = "tlg-word-welcome-dismissed";
 
-export function WelcomeMessage() {
+export function WelcomeMessage({ firstVisit, message }: { firstVisit: boolean; message: VisitorMessage }) {
   const [open, setOpen] = useState(true);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLElementTagNameMap["section"]>(null);
@@ -90,23 +91,23 @@ export function WelcomeMessage() {
           id="word-welcome-title"
           className="mt-7 font-[family-name:var(--font-heading)] text-5xl leading-[0.98] text-white sm:text-6xl lg:text-7xl"
         >
-          Take a moment<br className="hidden sm:block" /> with the Word.
+          {firstVisit ? <>Take a moment<br className="hidden sm:block" /> with the Word.</> : message.heading}
         </h1>
         <p className="mt-5 text-sm font-medium uppercase tracking-[0.18em] text-white/65">
-          The End Time Message · Scripture first
+          {firstVisit ? "The End Time Message · Scripture first" : "A moment in the Word · Scripture first"}
         </p>
 
         <blockquote id="word-welcome-scripture" className="mx-auto mt-9 max-w-2xl">
           <p className="font-[family-name:var(--font-heading)] text-2xl leading-relaxed text-[#f4e8cb] sm:text-3xl">
-            “Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD.”
+            “{message.verse}”
           </p>
           <cite className="mt-4 block text-xs font-semibold not-italic uppercase tracking-[0.2em] text-[#e4c47f]">
-            Malachi 4:5 · King James Version
+            {message.reference}
           </cite>
         </blockquote>
 
         <p className="mx-auto mt-8 max-w-xl text-sm leading-7 text-white/75 sm:text-base">
-          Pause, reflect on the promise in Scripture, and explore the sermons and teachings of William Marrion Branham, shared here to direct hearts to the Word of God.
+          {message.reflection}
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -125,7 +126,7 @@ export function WelcomeMessage() {
             Continue to the site
           </button>
         </div>
-        <p className="mt-6 text-[11px] text-white/45">This welcome appears once per browser session.</p>
+        <p className="mt-6 text-[11px] text-white/45">{firstVisit ? "Welcome. This first-visit message is shown once per browser." : "A new Scripture reflection is shown each day."}</p>
       </section>
     </div>
   );

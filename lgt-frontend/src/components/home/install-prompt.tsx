@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import type { VisitorMessage } from "@/components/home/visitor-notifications";
 
 const DISMISSED_KEY = "tlg-install-prompt-dismissed";
 
@@ -15,7 +16,7 @@ function isIosDevice() {
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 }
 
-export function InstallPrompt() {
+export function InstallPrompt({ firstVisit, message }: { firstVisit: boolean; message: VisitorMessage }) {
   const [visible, setVisible] = useState(false);
   const [ios, setIos] = useState(false);
   const [installEvent, setInstallEvent] = useState<InstallPromptEvent | null>(null);
@@ -88,8 +89,8 @@ export function InstallPrompt() {
       <div className="flex items-start gap-3">
         <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald-900 text-sm font-bold tracking-tight text-[#e4c47f]" aria-hidden="true">TLG</div>
         <div className="min-w-0 flex-1 pr-5">
-          <h2 className="text-sm font-bold text-emerald-950">Keep the Word close</h2>
-          <p className="mt-1 text-xs leading-5 text-stone-600">Add The Living God Tabernacle to your home screen for quick access to sermons, Scripture, and fellowship.</p>
+          <h2 className="text-sm font-bold text-emerald-950">{firstVisit ? "A promise for this generation" : message.heading}</h2>
+          <p className="mt-1 text-xs leading-5 text-stone-600">{firstVisit ? "Malachi 4:5–6 speaks of turning hearts back to God’s Word. Take a moment to reflect, then keep Scripture close by adding this app to your home screen." : `“${message.verse}” — ${message.reference}`}</p>
         </div>
         <button type="button" onClick={dismiss} className="-mr-1 -mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full text-xl text-stone-400 hover:bg-stone-100 hover:text-stone-700" aria-label="Not now">×</button>
       </div>

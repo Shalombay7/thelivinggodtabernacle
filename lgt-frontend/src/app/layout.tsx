@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { WelcomeMessage } from "@/components/home/welcome-message";
-import { InstallPrompt } from "@/components/home/install-prompt";
+import { VisitorNotifications } from "@/components/home/visitor-notifications";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -57,8 +56,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
-        <WelcomeMessage />
-        <InstallPrompt />
+        <VisitorNotifications />
       </body>
     </html>
   );
